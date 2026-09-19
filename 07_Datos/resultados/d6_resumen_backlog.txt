@@ -1,0 +1,30 @@
+D6 - RESUMEN DEL BACKLOG DE JIRA
+Fuente: 04_Trazabilidad\backlog_export.csv
+============================================================
+
+Total de incidencias en el export: 175
+
+Estado:
+   175  (100.0%)  Tareas por hacer
+
+Asignacion:
+   175  (100.0%)  sin persona asignada
+     0  (  0.0%)  con persona asignada
+
+Creador:
+    89  ( 50.9%)  ALLAN NOE VILLAFUERTE ROSERO
+    84  ( 48.0%)  ALEX JOSE MORA DUARTE   <- AJENO A AHMRV
+     2  (  1.1%)  erizzov
+
+Informador:
+    89  ( 50.9%)  ALLAN NOE VILLAFUERTE ROSERO
+    84  ( 48.0%)  ALEX JOSE MORA DUARTE
+     2  (  1.1%)  erizzov
+
+============================================================
+LECTURA
+  Incidencias sin asignar ni iniciar: 175 de 175
+  Incidencias creadas por persona ajena a AHMRV: 84 de 175
+
+  El backlog documenta la DEFINICION de los elementos de trabajo,
+  no su ejecucion: ninguna incidencia fue asignada ni iniciada.
