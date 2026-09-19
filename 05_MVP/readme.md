@@ -78,13 +78,39 @@ La V2 incorpora o refuerza los siguientes flujos:
 | RF-35 | Registro delegado del avance | ✅ Funcional |
 | RF-36 | Catálogo de tarifas por labor | ✅ Funcional |
 | RF-37 | Cálculo de remuneración semanal | ✅ Funcional |
-| RF-40 | Exportación de datos personales | ✅ Flujo incorporado |
-| RF-41 | Rectificación con bitácora | ✅ Flujo incorporado |
-| RF-42 | Supresión/disociación del histórico | ✅ Flujo incorporado |
+| RF-40 | Exportación de datos personales | ⚠️ Simulado |
+| RF-41 | Rectificación con bitácora | ⚠️ Simulado |
+| RF-42 | Supresión/disociación del histórico | ⚠️ Simulado |
 
 ## Limitaciones declaradas
 
 **Análisis de imagen: resultado fijo, no inferencia.** `handleAnalyze` (`src/app/App.tsx`, líneas 296–302 del árbol V2) devuelve siempre el mismo objeto: condición «Deficiencia de Magnesio», confianza 87 %, severidad «Moderada» y la misma recomendación, tras un `setTimeout` de 2 500 ms que solo simula tiempo de procesamiento. El resultado no depende de la imagen capturada: no hay modelo ni inferencia. Esto afecta a RF-07, RF-08 y a la clasificación visual de RF-21.
+**Derechos LOPDP (RF-40, RF-41, RF-42): simulados.** Los tres flujos existen
+como interfaz en la pestaña «Derechos LOPDP» de Gestión agrícola, pero no
+ejecutan la operación que declaran:
+
+- **RF-40** descarga un CSV construido a partir de un objeto literal escrito
+  en el código fuente (`"Trabajador 1"`, teléfono `3001234567`), no de los
+  datos de la persona autenticada. El texto de pantalla afirma que «la
+  solicitud queda registrada con marca temporal»; no existe tal registro.
+- **RF-41** escribe en `localStorage` una entrada de bitácora cuyos campos
+  `valorAnterior` y `motivo` están fijos en el código. Los tres campos de
+  entrada que ve la persona usuaria no tienen estado asociado, de modo que lo
+  que escriba se descarta: no se rectifica ningún dato.
+- **RF-42** muestra una confirmación y un aviso de éxito. No suprime ni
+  disocia ningún registro. El propio código lo declara como simulación.
+
+Ninguno de los tres debe contarse como evidencia de cumplimiento de los
+artículos de la LOPDP que motivaron su especificación.
+
+**Control de acceso por rol: parcialmente implementado.** `NAV_ITEMS`
+(`App.tsx`, líneas 134–144) restringe por rol una sola entrada de navegación,
+`Personal`, reservada a Administrador. Las demás pantallas —incluidas
+**Reportes** y **Gestión agrícola**, que contiene la pestaña de derechos
+LOPDP y la gestión de tarifas— no declaran restricción, por lo que la cuenta
+Operario accede a todas. La única comprobación efectiva de rol en el árbol de
+render es la de `personal` (línea 471). RF-01 se cumple en cuanto a
+autenticación, pero no en cuanto a autorización diferenciada.
 
 **Calidad de cámara: valor aleatorio.** `handleCameraActivate` (línea 304 en adelante) calcula el indicador con `Math.min(q + 8 + Math.floor(Math.random() * 6), 92)` (línea 308). El porcentaje que se muestra en pantalla no mide la imagen real; es un número generado aleatoriamente.
 
