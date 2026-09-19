@@ -52,10 +52,10 @@ declara explícitamente, no se omite.
 |---|---|
 | ¿Se usó IA? | **Sí** |
 | Herramienta | Figma Make (generación de interfaces) + Claude, Anthropic (apoyo en la verificación) |
-| Finalidad | Generación de las interfaces del prototipo (mockups funcionales) en Figma Make; apoyo de Claude para contrastar la correspondencia entre pantallas y catálogo de requisitos |
+| Finalidad | Generación con Figma Make del **código fuente** del prototipo, no únicamente de los mockups: el árbol evaluado de la V2 es un proyecto de Figma Make (`package-lock.json` declara el paquete `@figma/my-make-file`, `ATTRIBUTIONS.md` lo identifica como «Figma Make file» y `vite.config.ts` incluye el resolver `figma:asset/`). El equipo editó posteriormente ese código generado. Apoyo de Claude para contrastar la correspondencia entre pantallas y catálogo de requisitos |
 | Responsable | Macías Herrera Josthyn Esteban |
 | Quién verificó | Rizzo Vélez Edson Nagib |
-| Método de verificación | Revisión pantalla por pantalla contra el catálogo de requisitos, con apoyo de Claude para esa verificación |
+| Método de verificación | Revisión pantalla por pantalla contra el catálogo de requisitos, con apoyo de Claude para esa verificación. La procedencia del código se verificó sobre el árbol canónico `prototipo_v2/Prottotipo_Simpa-main/Prototipo/` mediante inspección de `package-lock.json`, `ATTRIBUTIONS.md` y `vite.config.ts` |
 
 ## 5. Datos (`07_Datos`, scripts de análisis)
 
