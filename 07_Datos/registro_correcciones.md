@@ -32,8 +32,8 @@ PDF afectado y de las capturas/fotos, incluyendo verificación del
 tatuaje identificable en la Foto 01 del consentimiento complementario y
 en Fotos_Aplicacion/.
 
-Avance capa visual (Arboleda): A01 (commit 2bae024), A05 (commit 9fd0fd6), A06 (commit 0351872), A07 (commit 4e9c742), A09 (commit 787d7d5) y A12 (commit ae5b00c) enmascarados y reemplazados.
-Pendiente revisar C1, C2 y la Foto 01; solo se modifican los que contengan cédula, RUC, teléfono o el nombre real de la organización.
+Avance capa visual (Arboleda): A01 (commit 2bae024), A05 (commit 9fd0fd6), A06 (commit 0351872), A07 (commit 4e9c742), A09 (commit 787d7d5), A12 (commit ae5b00c) y C1 (commit 651d21c) enmascarados y reemplazados.
+Pendiente revisar C2 y la Foto 01; solo se modifican los que contengan cédula, RUC, teléfono o el nombre real de la organización.
 
 ### Evidencia utilizada
 - Archivo: los 8 PDF de 09_Etica/ listados arriba
@@ -55,6 +55,7 @@ Pendiente revisar C1, C2 y la Foto 01; solo se modifican los que contengan cédu
 - `09_Etica/A07_Compromiso_Confidencialidad.pdf` (commit 4e9c742)
 - `09_Etica/A09_Nomina_Equipo.pdf` (commit 787d7d5)
 - `09_Etica/A12_Certificado_Etica.pdf` (commit ae5b00c)
+- `09_Etica/Categoria_C/C1_Aval_Unidad_Productiva.pdf` (commit 651d21c)
 
 
 ### Criterio de aceptación
@@ -85,6 +86,7 @@ Resultado:
 - `4e9c742` — datos personales enmascarados en A07 (versión pública)
 - `787d7d5` — datos personales enmascarados en A09 (versión pública)
 - `ae5b00c` — datos personales enmascarados en A12 (versión pública)
+- `651d21c` — datos personales enmascarados en C1 (versión pública)
 
 ### Limitaciones
 Los 8 PDF no tienen fuente LaTeX en el repositorio, así que la redacción
