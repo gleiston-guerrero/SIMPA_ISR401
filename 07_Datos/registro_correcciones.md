@@ -32,6 +32,9 @@ PDF afectado y de las capturas/fotos, incluyendo verificación del
 tatuaje identificable en la Foto 01 del consentimiento complementario y
 en Fotos_Aplicacion/.
 
+Avance capa visual (Arboleda): A01 enmascarado y reemplazado (commit HASH); 
+el resto de los PDF y la Foto 01 siguen pendientes.
+
 ### Evidencia utilizada
 - Archivo: los 8 PDF de 09_Etica/ listados arriba
 - Fuente: texto extraído con pdftotext -layout
@@ -46,6 +49,7 @@ en Fotos_Aplicacion/.
 - `02_Evidencias/Documentos_Organizacion/2026-07-27_WhatsApp_...png` (commit d6a9434)
 - `07_Datos/scripts/plan_mejora/buscar_cedulas_ruc.py` (nuevo)
 - `07_Datos/resultados/g1a_deteccion_cedulas_ruc.txt` (nuevo)
+- `09_Etica/- 09_Etica/NOMBRE_DEL_A01.pdf` (commit 2bae024)
 
 ### Criterio de aceptación
 - [x] Capa automatizada ejecutada y commiteada con salida real
@@ -69,6 +73,7 @@ Resultado:
 - `778ab60` — nombre de organización enmascarado en A03
 - `d355638`, `d6a9434` — capturas de WhatsApp enmascaradas
 - `<pendiente>` — docs(G1): agregar script y salida de deteccion de cedulas/RUC
+- `2bae024` — datos personales enmascarados en A01 (versión pública)
 
 ### Limitaciones
 Los 8 PDF no tienen fuente LaTeX en el repositorio, así que la redacción
