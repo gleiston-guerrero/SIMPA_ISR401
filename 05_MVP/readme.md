@@ -8,7 +8,10 @@ Prototipo funcional de interfaz desarrollado para el proyecto grupal de Ingenier
 
 - Repositorio grupal y documentación: https://github.com/gleiston-guerrero/SIMPA_ISR401
 - Repositorio del código del prototipo: https://github.com/jmaciasherr4/Prottotipo_Simpa
-- Commit evaluado del prototipo: `ba33002dcf680f8b39d42df04553733bd5389f6d` (2026-08-31)
+- Commit evaluado del prototipo (V2): `ba33002dcf680f8b39d42df04553733bd5389f6d` (2026-08-31)
+- Commit al que apunta hoy el submódulo `05_MVP/prototipo/`: `deefe3d9da405ba8961a5d0d52936a85c7c5f428` (2026-09-04)
+
+> El submódulo apunta a un commit posterior al evaluado. La diferencia entre ambos es verificable y no toca el árbol canónico: `git diff ba33002 deefe3d -- prototipo_v2/` no devuelve ninguna diferencia. Los únicos cambios entre los dos commits están en la raíz del repositorio del prototipo (`.mailmap`, `LICENSE` y una línea del `README.md`). Se mantiene el puntero actual y se declaran ambos commits para que la equivalencia sea comprobable.
 - Árbol canónico evaluado de la V2: `prototipo_v2/Prottotipo_Simpa-main/Prototipo/`. La carpeta `Prototipo/` ubicada en la raíz del repositorio externo no corresponde al árbol utilizado para la evaluación de la V2.
 
 ## Ubicación del prototipo dentro de este repositorio
@@ -30,15 +33,13 @@ Una vez inicializado, `05_MVP/prototipo/` refleja la raíz completa de `Prottoti
 
 **Para revisar el código evaluado, ir directamente a `05_MVP/prototipo/prototipo_v2/Prottotipo_Simpa-main/Prototipo/`.**
 
-## Prototipos en vivo
+## Prototipo en vivo
 
-### V1 — versión anterior
-
-https://prototipo-simpa.netlify.app/
-
-### V2 — versión actual recomendada
+### V2 — versión evaluada
 
 https://prototipov2-correcion.netlify.app/
+
+> Se publica una sola URL para que no haya ambigüedad sobre cuál es la versión evaluada. El código de la V1 permanece en el árbol `Prototipo/` del submódulo, sin despliegue de referencia.
 
 ### Cuentas de demostración
 
@@ -82,6 +83,12 @@ La V2 incorpora o refuerza los siguientes flujos:
 | RF-42 | Supresión/disociación del histórico | ✅ Flujo incorporado |
 
 ## Limitaciones declaradas
+
+**Análisis de imagen: resultado fijo, no inferencia.** `handleAnalyze` (`src/app/App.tsx`, líneas 296–302 del árbol V2) devuelve siempre el mismo objeto: condición «Deficiencia de Magnesio», confianza 87 %, severidad «Moderada» y la misma recomendación, tras un `setTimeout` de 2 500 ms que solo simula tiempo de procesamiento. El resultado no depende de la imagen capturada: no hay modelo ni inferencia. Esto afecta a RF-07, RF-08 y a la clasificación visual de RF-21.
+
+**Calidad de cámara: valor aleatorio.** `handleCameraActivate` (línea 304 en adelante) calcula el indicador con `Math.min(q + 8 + Math.floor(Math.random() * 6), 92)` (línea 308). El porcentaje que se muestra en pantalla no mide la imagen real; es un número generado aleatoriamente.
+
+**Credenciales fijas en el código.** Las tres cuentas de demostración están escritas en claro en `DEFAULT_ACCOUNTS` (líneas 58–61), con la contraseña en texto plano, y se persisten en `localStorage`. No hay hash ni backend de autenticación. RF-01 debe leerse con esa limitación.
 
 **IA / análisis de imágenes.** RF-07, RF-08 y la clasificación visual relacionada con RF-21 se presentan como flujos de interfaz. La versión entregada no debe afirmar que realiza inferencia real o que cumple métricas de exactitud sin un modelo entrenado y un conjunto de datos del dominio.
 
