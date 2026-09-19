@@ -150,6 +150,49 @@ Actualmente incluye evidencias relacionadas con:
 Estos archivos constituyen evidencia complementaria de la gestión y
 sincronización del backlog.
 
+### Alcance real de la gestión en Jira
+
+Las cifras siguientes se obtienen del propio `backlog_export.csv` incluido en
+esta carpeta y son reproducibles con el script
+`07_Datos/scripts/plan_mejora/resumen_backlog.py`:
+
+| Hecho verificado | Valor |
+|---|---|
+| Incidencias en el export | 175 |
+| Incidencias en estado «Tareas por hacer» | 175 (100 %) |
+| Incidencias sin persona asignada | 175 (100 %) |
+| Creadas por ALLAN NOE VILLAFUERTE ROSERO | 89 |
+| Creadas por ALEX JOSE MORA DUARTE | 84 |
+| Creadas por erizzov (Rizzo Vélez Edson Nagib) | 2 |
+
+Ninguna incidencia fue asignada ni iniciada: el backlog documenta la
+**definición** de los elementos de trabajo, no su ejecución. No debe leerse
+como evidencia de gestión ágil ni de avance de desarrollo, y ninguna métrica
+de progreso del proyecto se sustenta en él.
+
+**Alex José Mora Duarte no es integrante de AHMRV.** Creó 84 de las 175
+incidencias en el marco de la práctica de laboratorio en que se configuró el
+proyecto Jira, cuando formaba grupo de trabajo con Villafuerte Rosero y Rizzo
+Vélez. Su participación se declara aquí para que la autoría del backlog no se
+atribuya íntegramente al equipo.
+
+### Composición del CCB
+
+El acta `01_ERS/anexos/Acta_CCB.pdf` registra tres asientos:
+
+| Rol declarado | Persona | Vínculo real |
+|---|---|---|
+| Presidente | Rizzo Vélez Edson Nagib | Integrante de AHMRV |
+| Representante del cliente | Mora Duarte Alex José | Estudiante ajeno a AHMRV y ajeno a la organización |
+| Analista y desarrollador | Villafuerte Rosero Allan Noe | Integrante de AHMRV |
+
+**Ninguna persona de la organización cliente participó en el CCB.** El asiento
+rotulado «representante del cliente» lo ocupó un estudiante sin vínculo con la
+palmicultora, de modo que las decisiones sobre RFC-01, RFC-02 y RFC-03 se
+tomaron sin validación de la parte cuyo interés decía representar. La
+aprobación «por unanimidad» que consta en el acta debe leerse con esa
+limitación: no expresa conformidad del cliente.
+
 ---
 
 ## 6. Relación entre los principales artefactos
