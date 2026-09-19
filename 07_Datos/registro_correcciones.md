@@ -48,8 +48,12 @@ Avance capa visual (Arboleda): A01 (commit 2bae024) y A05 (commit 9fd0fd6) enmas
 - `02_Evidencias/Documentos_Organizacion/2026-07-27_WhatsApp_...png` (commit d6a9434)
 - `07_Datos/scripts/plan_mejora/buscar_cedulas_ruc.py` (nuevo)
 - `07_Datos/resultados/g1a_deteccion_cedulas_ruc.txt` (nuevo)
-- `09_Etica/- 09_Etica/A01_Protocolo_Investigacion.pdf` (commit 2bae024)
-- `09_Etica/- 09_Etica/A01_A05_Aval_Institucional.pdf` (commit 9fd0fd6)
+- `09_Etica/A01_Protocolo_Investigacion.pdf` (commit 2bae024)
+- `09_Etica/A05_Aval_Institucional.pdf` (commit 9fd0fd6)
+- 
+
+
+
 ### Criterio de aceptación
 - [x] Capa automatizada ejecutada y commiteada con salida real
 - [ ] Capa visual ejecutada, checklist por archivo commiteada
