@@ -59,12 +59,13 @@ Avance capa visual (Arboleda): A01 (commit 2bae024), A05 (commit 9fd0fd6), A06 (
 - `09_Etica/Categoria_C/C2_Compromiso_Confidencialidad_Estrategica.pdf` (commit 2b692a5)
 - `02_Evidencias/Cuestionario/Fotos_Aplicacion/2026-09-15_ConsentimientoComplementario_Foto-01.jpg` (commit e837e32)
 - `09_Etica/A02_Instrumentos_Recoleccion.pdf` (commit 89da033)
+- `09_Etica/A04_Plan_Gestion_Datos.pdf` (commit d4c1fea)
 
 ### Criterio de aceptación
 - [x] Capa automatizada ejecutada y commiteada con salida real
 - [ ] Capa visual ejecutada, checklist por archivo commiteada
 - [ ] Los 61 identificadores detectados quedan enmascarados en los 8 PDF
-- [ ] Tatuaje revisado
+- [x] Tatuaje revisado
 - [ ] G1b (historial) — bloqueada, requiere autorización escrita del docente
 
 ### Verificación
@@ -92,6 +93,7 @@ Resultado:
 - `2b692a5` — datos personales enmascarados en C2 (versión pública)
 - `e837e32` — zona identificable enmascarada en foto 01 del consentimiento complementario
 - `89da033` — cédula enmascarada en A02 (versión pública)
+- `d4c1fea` — cédula enmascarada en A04 (versión pública)
 
 ### Limitaciones
 Los 8 PDF no tienen fuente LaTeX en el repositorio, así que la redacción
