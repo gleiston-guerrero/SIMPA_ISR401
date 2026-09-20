@@ -1145,41 +1145,51 @@ Consulta por mensaje al líder del equipo (20/09/2026): no supo indicar a quién
 
 ## D1 — Tabla de procedencia por requisito
 
-**Estado operativo:** NO INICIADA
+**Estado operativo:** VERIFICADA
 **Estado de rúbrica:** pendiente de mapeo
 **Peso:** 0,40 pts
-**Responsable(s):** Sin asignar (fuera del núcleo de la rev. 8)
-**Dependencias:** Ninguna
+**Responsable:** Macías Herrera Josthyn Esteban
+**Dependencias:** ninguna
 
 ### Problema detectado
-RF-03, 07, 08 y 18 ya estaban en la propuesta del 05/05, antes de la primera entrevista (23/05); RF-36 y EV-13 aparecen el 02/08 con una evidencia fechada del 03 al 07/08; RF-40 a 42 y los requisitos de IA aparecen el 31/08 sin entrevista.
+
+La procedencia de cada requisito funcional estaba declarada dentro de la
+ficha individual de cada RF en el ERS (macro `\RF{}`, argumento «Actor /
+Origen»), dispersa en 42 fichas distintas. No existía como tabla
+consolidada y verificable por script, que es lo que D3, D4, D5 y E2
+necesitan como base.
 
 ### Acción aplicada
-Ninguna todavía.
 
-### Evidencia utilizada
-- Ninguna todavía.
-
-### Archivos modificados
-- Ninguno todavía.
-
-### Criterio de aceptación
-- [ ] 100 % de RF, RNF y requisitos de IA clasificados
-- [ ] Ningún requisito anterior a su evidencia sin declararlo
+Script que extrae los 42 `\RF{}` del ERS, separa el actor declarado y los
+códigos `EV-XX` citados, y contrasta cada código contra las transcripciones
+realmente presentes en `02_Evidencias/Transcripciones/`. Los tres RF cuyo
+origen es una base legal (LOPDP) en vez de una entrevista se reconocen por
+la cita `\id{RL-XX}` y no se marcan como defecto.
 
 ### Verificación
-Aún no ejecutada.
+
+    python3 07_Datos/scripts/plan_mejora/tabla_procedencia_D1.py
+
+Resultado:
+
+    Requisitos extraídos: 42
+    Entrevistas reales detectadas: [1..16]
+    Filas con observación: 0
+
+Las 42 citas de procedencia del ERS son verificables: corresponden a una
+transcripción real o a una base legal explícita.
+
+### Evidencia utilizada
+
+| Archivo | Contenido |
+|---|---|
+| `07_Datos/scripts/plan_mejora/tabla_procedencia_D1.py` | Script de extracción y verificación |
+| `07_Datos/datos_procesados/tabla_procedencia_requisitos.csv` | Los 42 RF con actor, evidencias citadas y observación |
 
 ### Commits
-- Ninguno todavía.
 
-### Limitaciones
-No iniciada. No forma parte del núcleo del plan de ejecución rev. 8: la demanda del núcleo (28 h por persona) supera la capacidad disponible (~17 h por persona). Si no se ejecuta antes del cierre, se declara como no ejecutada por esta causa.
-
-Qué haría falta: Tabla con clasificación (elicitado, propuesta del equipo, normativo o derivado), fecha de la fuente y commit de alta de cada requisito.
-
-### Evidencia entregada fuera del repositorio
-No aplica todavía.
+- Ver el commit `feat(D1): extraer y verificar tabla de procedencia de los 42 RF`
 
 ---
 
