@@ -1,139 +1,139 @@
-Fragmento;Codigo;Categoria;Requisito_derivado;ID_evidencia;Analista_codificador
-La supervision se organiza por equipos: administracion, polinizacion, fitosanitario, riego y labores;EQUIPOS_TRABAJO;Organizacion del trabajo;RF-03;EV-01;VER
-El administrador recorre y verifica el cumplimiento de cada equipo;SUPERVISION_RECORRIDO;Organizacion del trabajo;RF-15;EV-01;VER
-El recorrido completo de la plantacion toma una semana;LATENCIA_INSPECCION;Deteccion de afectaciones;RF-30;EV-01;VER
-El control fitosanitario se hace por monitoreo visual diario;MONITOREO_VISUAL;Deteccion de afectaciones;RF-05;EV-01;VER
-Las plagas se identifican por signos visibles en la planta;SIGNO_VISIBLE_PLAGA;Deteccion de afectaciones;RF-07;EV-01;VER
-Los defoliadores son la plaga mas frecuente del cultivo;PLAGA_DEFOLIADOR;Deteccion de afectaciones;RF-09;EV-01;VER
-La pudricion de flecha aparece como enfermedad recurrente;ENFERMEDAD_FLECHA;Deteccion de afectaciones;RF-07;EV-01;VER
-El control combina producto quimico y trampas segun la etapa del insecto;CONTROL_POR_ETAPA;Tratamiento;RF-09;EV-01;VER
-Los problemas fitosanitarios se intensifican en epoca invernal;ESTACIONALIDAD_PLAGA;Clima;RF-17;EV-01;VER
-El riego y la nutricion son los factores mas determinantes de la productividad;FACTOR_PRODUCTIVIDAD;Manejo del cultivo;RF-04;EV-01;VER
-La acumulacion de flechas indica que la palma no recibe agua;INDICADOR_DEFICIT_HIDRICO;Manejo del cultivo;RF-05;EV-01;VER
-La estimacion de produccion se hace con censo de flores cada seis meses;CENSO_FLORES;Estimacion;RF-18;EV-01;VER
-El rendimiento depende de la variedad de palma sembrada;RENDIMIENTO_POR_VARIEDAD;Estimacion;RF-10;EV-01;VER
-El clima se registra con pluviometro y estaciones meteorologicas;REGISTRO_CLIMA;Clima;RF-17;EV-01;VER
-Interes alto en identificar plagas a partir de fotografia;DIAGNOSTICO_POR_IMAGEN;Tecnologia;RF-07;EV-01;VER
-El sistema seria util sobre todo para personal sin conocimiento especializado;USUARIO_NO_EXPERTO;Tecnologia;RNF-16;EV-01;VER
-El desempeno se evalua por rendimiento y produccion;EVALUACION_DESEMPENO;Organizacion del trabajo;RF-16;EV-01;VER
-Se cuenta el numero de flores polinizadas por trabajador;CONTEO_FLORES;Polinizacion;RF-14;EV-01;VER
-La calidad del racimo refleja el trabajo del polinizador;CALIDAD_COMO_INDICADOR;Polinizacion;RF-16;EV-01;VER
-Los reportes se consolidan por semana;CONSOLIDADO_SEMANAL;Reportes;RF-19;EV-01;VER
-La escasez y rotacion de mano de obra calificada es el problema mas critico;ESCASEZ_MANO_OBRA;Organizacion del trabajo;RNF-16;EV-01;VER
-Se emplea una aplicacion de registro de recorrido que opera sin internet;APP_OFFLINE_EXISTENTE;Tecnologia;RNF-11;EV-01;VER
-Todo el personal dispone de telefono movil;DISPONIBILIDAD_MOVIL;Tecnologia;RD-01;EV-01;VER
-Se requiere historial de actividades y diagnosticos por lote;HISTORIAL_LOTE;Reportes;RF-20;EV-01;VER
-La revision del cultivo es diaria e incluye chapia, corona y control de maleza;LABOR_MANTENIMIENTO;Manejo del cultivo;RF-04;EV-02;VER
-La nutricion es el problema mas frecuente del cultivo;PROBLEMA_NUTRICIONAL;Nutricion;RF-08;EV-02;VER
-Se apoya en analisis de suelo y foliar para determinar niveles de nutrientes;ANALISIS_LABORATORIO;Nutricion;RF-11;EV-02;VER
-Las deficiencias nutricionales son visibles en la hoja;SIGNO_FOLIAR;Nutricion;RF-08;EV-02;VER
-El estrategus perfora el suelo y dana el meristema de la palma joven;PLAGA_ESTRATEGUS;Deteccion de afectaciones;RF-09;EV-02;VER
-Desde la antesis hasta la cosecha transcurren unos seis meses;CICLO_ANTESIS_COSECHA;Estimacion;RF-18;EV-02;VER
-La meta es de 40 a 45 toneladas por hectarea al ano;META_RENDIMIENTO;Estimacion;RF-18;EV-02;VER
-Sin riego la planta emite mas inflorescencia masculina que femenina;EFECTO_DEFICIT_HIDRICO;Manejo del cultivo;RF-17;EV-02;VER
-Seria util que a partir de una fotografia el sistema indique que aplicar;RECOMENDACION_ACCIONABLE;Tecnologia;RNF-16;EV-02;VER
-Se revisa diariamente el estado del follaje, raices, flores y racimos;MONITOREO_VISUAL;Deteccion de afectaciones;RF-05;EV-02;VER
-El hongo pudre la flecha sobre todo en epoca humeda;ENFERMEDAD_FLECHA;Deteccion de afectaciones;RF-07;EV-02;VER
-Se aplica insecticida y fungicida en la flecha, repetido cada semana;CONTROL_POR_ETAPA;Tratamiento;RF-09;EV-02;VER
-Las plagas se agravan al inicio del invierno;ESTACIONALIDAD_PLAGA;Clima;RF-17;EV-02;VER
-Sin riego ni humedad la planta produce muy poco y deja de ser rentable;FACTOR_PRODUCTIVIDAD;Manejo del cultivo;RF-04;EV-02;VER
-Se mide la humedad y los milimetros de lluvia caidos;REGISTRO_CLIMA;Clima;RF-17;EV-02;VER
-Una fotografia de la hoja amarilla deberia indicar que le falta a la planta;DIAGNOSTICO_POR_IMAGEN;Tecnologia;RF-08;EV-02;VER
-Serviria para el personal que no tiene tanto conocimiento;USUARIO_NO_EXPERTO;Tecnologia;RNF-16;EV-02;VER
-Una aplicacion en el telefono indica por donde anda el trabajador;SUPERVISION_RECORRIDO;Organizacion del trabajo;RF-15;EV-02;VER
-El administrador revisa que el trabajo este bien hecho;EVALUACION_DESEMPENO;Organizacion del trabajo;RF-16;EV-02;VER
-Se paga una parte al diario y otra por avance;TRANSPARENCIA_PAGO;Remuneracion;RF-29;EV-02;VER
-Convendria generar reportes sobre cultivo, cosechas y trabajadores;CONSOLIDADO_SEMANAL;Reportes;RF-19;EV-02;VER
-La polinizacion asistida es la labor que mas determina la produccion;POLINIZACION_CRITICA;Polinizacion;RF-13;EV-03;VER
-El momento adecuado es cuando la antesis presenta coloracion amarilla o negra;ESTADO_ANTESIS;Polinizacion;RF-13;EV-03;VER
-Si el polinizador no ejecuta bien la labor se pierde hasta la mitad de la produccion;RIESGO_LABORAL_POLINIZACION;Polinizacion;RF-16;EV-03;VER
-La efectividad es visible por el talco con hormona aplicado;VERIFICACION_VISUAL;Polinizacion;RF-13;EV-03;VER
-La palma requiere entre 8 y 12 horas de luz para formar y madurar el racimo;HORAS_LUZ;Clima;RF-17;EV-03;VER
-Se requiere un rastreador con marcaciones del numero de flores polinizadas al dia;RASTREO_GPS;Polinizacion;RF-14;EV-03;VER
-La labor de polinizacion determina la produccion de la finca;FACTOR_PRODUCTIVIDAD;Manejo del cultivo;RF-13;EV-03;VER
-Si el polinizador no hace bien la labor no se obtiene un buen racimo;CALIDAD_COMO_INDICADOR;Polinizacion;RF-16;EV-03;VER
-Se cuentan las flores polinizadas diariamente por trabajador;CONTEO_FLORES;Polinizacion;RF-14;EV-03;VER
-En dias nublados el racimo demora mas en madurar;ESTACIONALIDAD_PLAGA;Clima;RF-17;EV-03;VER
-Se requiere control del trabajo del polinizador;SUPERVISION_RECORRIDO;Organizacion del trabajo;RF-15;EV-03;VER
-Un racimo del primer ano productivo pesa entre 3 y 5 kilogramos;RENDIMIENTO_POR_VARIEDAD;Estimacion;RF-18;EV-03;VER
-Se busca que cada racimo se forme al cien por ciento;CALIDAD_COMO_INDICADOR;Polinizacion;RF-13;EV-03;VER
-Se necesita que el registro no dependa de anotar planta por planta;RASTREO_GPS;Polinizacion;RF-14;EV-03;VER
-El umbral de madurez es de 3 frutos desprendidos en guineensis y 5 en hibrido;UMBRAL_POR_VARIEDAD;Calidad de la fruta;RF-10;EV-04;VER
-Se emiten criterios de calidad establecidos por la empresa para recibir la fruta;CRITERIO_RECEPCION;Calidad de la fruta;RF-23;EV-04;VER
-El pedunculo por encima de 5 cm absorbe aceite durante la extraccion;DEFECTO_PEDUNCULO;Calidad de la fruta;RF-23;EV-04;VER
-La malformacion por encima del 30 por ciento provoca rechazo del racimo;DEFECTO_MALFORMACION;Calidad de la fruta;RF-23;EV-04;VER
-El principal problema es que la fruta llega verde, sin desprendimiento;PROBLEMA_FRUTA_VERDE;Calidad de la fruta;RF-22;EV-04;VER
-En temporada baja se corta fruta verde porque el pago es por tonelada;INCENTIVO_PERVERSO;Calidad de la fruta;RF-22;EV-04;VER
-La fruta no conforme se devuelve al productor en el mismo vehiculo;RECHAZO_LOTE;Calidad de la fruta;RF-24;EV-04;VER
-Se recomienda entregar dentro de 24 horas, aunque se llega a 48;VENTANA_CORTE_ENTREGA;Calidad de la fruta;RF-25;EV-04;VER
-El material hibrido tolera mas tiempo en campo por su contenido de antioxidantes;TOLERANCIA_HIBRIDO;Calidad de la fruta;RF-25;EV-04;VER
-El ticket de pesaje registra peso bruto, tara y neto;TICKET_PESAJE;Trazabilidad;RF-23;EV-04;VER
-El ticket incluye la calificacion: tamano, verde, sobremadura, malformada y pedunculo;CALIFICACION_TICKET;Trazabilidad;RF-23;EV-04;VER
-La guia de remision es exigida por la normativa y muchos productores no la manejan;GUIA_REMISION;Cumplimiento normativo;RF-33;EV-04;VER
-La extractora tambien proyecta cuantas toneladas puede recibir y procesar;PROYECCION_CAPACIDAD;Estimacion;RF-32;EV-04;VER
-Hay informacion sensible del productor que no puede compartirse;MINIMIZACION_DATOS;Proteccion de datos;RD-09;EV-04;VER
-Interesa recibir el conteo de racimos y el peso promedio estimado;DATO_COMPARTIBLE;Estimacion;RF-32;EV-04;VER
-La formacion de un polinizador toma dos o tres meses;CURVA_APRENDIZAJE;Organizacion del trabajo;RF-16;EV-04;VER
-El amarillamiento de hojas bajeras sugiere deficiencia de magnesio o bloqueo en suelo;DIAGNOSTICO_SITIO;Nutricion;RF-08;EV-04;VER
-Se revisa todo lo que llega, y por muestra si el proveedor maneja bien la fruta;CRITERIO_RECEPCION;Calidad de la fruta;RF-23;EV-04;VER
-El grupo de seleccionadores califica el fruto tras el pesaje;CRITERIO_RECEPCION;Calidad de la fruta;RF-23;EV-04;VER
-La sobremaduracion eleva la acidez del aceite;PROBLEMA_FRUTA_VERDE;Calidad de la fruta;RF-25;EV-04;VER
-Se realizan visitas tecnicas al productor antes de aplicar el castigo;LATENCIA_INSPECCION;Deteccion de afectaciones;RF-24;EV-04;VER
-El error mas frecuente del cosechador es la mala seleccion del fruto;INCENTIVO_PERVERSO;Calidad de la fruta;RF-22;EV-04;VER
-Se hace una proyeccion de toneladas a recibir y procesar;CENSO_FLORES;Estimacion;RF-18;EV-04;VER
-Interesa llevar un historico de como mejora la produccion de la finca;HISTORIAL_LOTE;Reportes;RF-20;EV-04;VER
-El ticket se envia por correo al productor registrado;TICKET_PESAJE;Trazabilidad;RF-23;EV-04;VER
-Es util que la finca comparta su estimacion de cosecha;PROYECCION_CAPACIDAD;Estimacion;RF-32;EV-04;VER
-El avance diario se anota en una libreta personal;REGISTRO_PAPEL;Registro operativo;RF-04;EV-05;VER
-El conteo se entrega verbalmente al encargado al final de la jornada;ENTREGA_VERBAL;Registro operativo;RF-28;EV-05;VER
-Se hacen labores de chapia, cosecha y polinizacion;LABOR_MANTENIMIENTO;Manejo del cultivo;RF-04;EV-05;VER
-El administrador indica cada dia en que lote trabajar;SUPERVISION_RECORRIDO;Organizacion del trabajo;RF-03;EV-05;VER
-Al ver una planta enferma se avisa al encargado;EVIDENCIA_FOTOGRAFICA;Deteccion de afectaciones;RF-30;EV-05;VER
-Se reconoce el lote por conocimiento del terreno;LATENCIA_INSPECCION;Deteccion de afectaciones;RF-30;EV-05;VER
-Todos disponen de telefono con mensajeria;DISPONIBILIDAD_MOVIL;Tecnologia;RD-01;EV-05;VER
-La senal solo llega a la parte principal de la hacienda;CONECTIVIDAD_PARCIAL;Tecnologia;RNF-11;EV-05;VER
-Convendria que la aplicacion guarde los dias de labores realizadas;REGISTRO_PAPEL;Registro operativo;RF-04;EV-05;VER
-La chapia se cuenta por mata y la cosecha por racimo cortado;UNIDAD_DE_AVANCE;Registro operativo;RF-28;EV-06;VER
-El trabajador quiere saber cuanto lleva ganado en la quincena;TRANSPARENCIA_PAGO;Remuneracion;RF-29;EV-06;VER
-La senal de internet solo llega a la casa, no a todo el cultivo;CONECTIVIDAD_PARCIAL;Tecnologia;RNF-11;EV-06;VER
-Se anota la plantacion trabajada en un cuaderno, diariamente;REGISTRO_PAPEL;Registro operativo;RF-04;EV-06;VER
-El jefe indica que lote corresponde trabajar;SUPERVISION_RECORRIDO;Organizacion del trabajo;RF-03;EV-06;VER
-El conteo se entrega al encargado al terminar la jornada;ENTREGA_VERBAL;Registro operativo;RF-28;EV-06;VER
-Se dispone de telefono con mensajeria e internet;DISPONIBILIDAD_MOVIL;Tecnologia;RD-01;EV-06;VER
-Convendria que la aplicacion cuente las plantas trabajadas;UNIDAD_DE_AVANCE;Registro operativo;RF-28;EV-06;VER
-Se verifica lo anotado contra lo que sale en la quincena;TRANSPARENCIA_PAGO;Remuneracion;RF-29;EV-06;VER
-Las jornadas varian segun el clima;ESTACIONALIDAD_PLAGA;Clima;RF-17;EV-06;VER
-Se avisa de inmediato cuando se detecta un problema en la planta;EVIDENCIA_FOTOGRAFICA;Deteccion de afectaciones;RF-30;EV-06;VER
-Los reportes del jefe de campo llegan por mensajeria instantanea;CANAL_INFORMAL;Registro operativo;RF-30;EV-07;VER
-Ante una planta enferma se toma evidencia fotografica para verificar el tipo;EVIDENCIA_FOTOGRAFICA;Deteccion de afectaciones;RF-30;EV-07;VER
-Las visitas presenciales de verificacion son dos veces por semana;LATENCIA_VERIFICACION;Deteccion de afectaciones;RF-31;EV-07;VER
-Se lleva una lista de actividades pendientes de verificar en cada visita;LISTA_PENDIENTES;Deteccion de afectaciones;RF-31;EV-07;VER
-Seria util registrar las coordenadas del lugar donde se encontro la afectacion;GEORREFERENCIA_INCIDENCIA;Deteccion de afectaciones;RF-30;EV-07;VER
-La labor consiste en el seguimiento de los trabajos de campo;SUPERVISION_RECORRIDO;Organizacion del trabajo;RF-15;EV-07;VER
-El jefe de campo lleva la libreta con el registro;REGISTRO_PAPEL;Registro operativo;RF-04;EV-07;VER
-Los reportes no siempre llegan suficientemente especificados;ENTREGA_VERBAL;Registro operativo;RF-30;EV-07;VER
-Se verifica el tipo de enfermedad para iniciar el tratamiento;SIGNO_VISIBLE_PLAGA;Deteccion de afectaciones;RF-07;EV-07;VER
-El internet satelital solo es estable en el campamento;CONECTIVIDAD_PARCIAL;Tecnologia;RNF-11;EV-07;VER
-La dificultad estaria en el personal de labores manuales, no en el tecnico;USUARIO_NO_EXPERTO;Tecnologia;RNF-08;EV-07;VER
-Seria util ver cuanto se trabajo y cuanto se lleva ganado;TRANSPARENCIA_PAGO;Remuneracion;RF-29;EV-07;VER
-Convendria guardar los seguimientos con evidencia fotografica;DIAGNOSTICO_POR_IMAGEN;Tecnologia;RF-30;EV-07;VER
-Los errores de conteo se corrigen en la revision;ENTREGA_VERBAL;Registro operativo;RF-29;EV-07;VER
-Solo se utiliza mensajeria instantanea como herramienta;CANAL_INFORMAL;Registro operativo;RF-30;EV-07;VER
-Con 5 pepas desprendidas el racimo esta listo para el corte;UMBRAL_DESPRENDIMIENTO;Calidad de la fruta;RF-21;EV-08;VER
-No se usa el color como criterio porque el color engana;COLOR_NO_FIABLE;Calidad de la fruta;RD-07;EV-08;VER
-El racimo con desprendimiento visible esta listo para la cosecha;UMBRAL_DESPRENDIMIENTO;Calidad de la fruta;RF-21;EV-08;VER
-Sin desprendimiento el racimo esta verde;UMBRAL_DESPRENDIMIENTO;Calidad de la fruta;RF-21;EV-08;VER
-Solo se maneja el metodo de desprendimiento para la maduracion;COLOR_NO_FIABLE;Calidad de la fruta;RD-07;EV-08;VER
-Primero se revisa todo lo que llega;CRITERIO_RECEPCION;Calidad de la fruta;RF-23;EV-08;VER
-El grupo de seleccionadores revisa el fruto despues del pesaje;CRITERIO_RECEPCION;Calidad de la fruta;RF-23;EV-08;VER
-Si supera el 3, 4 o 5 por ciento se aplica un castigo;PROBLEMA_FRUTA_VERDE;Calidad de la fruta;RF-22;EV-08;VER
-La acidez se mide en el laboratorio de la extractora;DEFECTO_PEDUNCULO;Calidad de la fruta;RF-23;EV-08;VER
-El resultado de laboratorio se obtiene al terminar la semana;CONSOLIDADO_SEMANAL;Reportes;RF-23;EV-08;VER
-Se hace visita tecnica para ver si el problema es de cosecha o de cultivo;LATENCIA_INSPECCION;Deteccion de afectaciones;RF-24;EV-08;VER
-Los trabajadores cobran por avance y por tonelada;INCENTIVO_PERVERSO;Calidad de la fruta;RF-22;EV-08;VER
-Se cosecha fruto verde cuando hay menos toneladas disponibles;INCENTIVO_PERVERSO;Calidad de la fruta;RF-22;EV-08;VER
-Un racimo verde no rinde aceite en la extraccion;PROBLEMA_FRUTA_VERDE;Calidad de la fruta;RF-21;EV-08;VER
-El problema se debe mas al grupo de cosecha que al transporte;RECHAZO_LOTE;Calidad de la fruta;RF-24;EV-08;VER
-Se observa la parte basal para decidir el corte;UMBRAL_DESPRENDIMIENTO;Calidad de la fruta;RF-21;EV-08;VER
-El cosechador toma foto o graba video del insecto encontrado;DIAGNOSTICO_POR_IMAGEN;Tecnologia;RF-07;EV-08;VER
-Se monitorean los insectos por la manana;MONITOREO_VISUAL;Deteccion de afectaciones;RF-05;EV-08;VER
+archivo_origen;linea_csv;ID_evidencia;transcripcion;Fragmento_parafraseado;Codigo;Requisito_derivado;Analista_codificador;CITA_LITERAL;LINEA_TRANSCRIPCION;ESTADO
+codificacion.csv;2;EV-01;2026-05-23_ENTR-01_Transcripcion.md;La supervision se organiza por equipos: administracion, polinizacion, fitosanitario, riego y labores;EQUIPOS_TRABAJO;RF-03;VER;"La supervisión se organiza por equipos: administración, polinización, fitosanitario, riego y labores";ENTREVISTADO;VER
+codificacion.csv;3;EV-01;2026-05-23_ENTR-01_Transcripcion.md;El administrador recorre y verifica el cumplimiento de cada equipo;SUPERVISION_RECORRIDO;RF-15;VER;"El administrador recorre y verifica el cumplimiento de cada equipo";ENTREVISTADO;VER
+codificacion.csv;4;EV-01;2026-05-23_ENTR-01_Transcripcion.md;El recorrido completo de la plantacion toma una semana;LATENCIA_INSPECCION;RF-30;VER;"El recorrido completo de la plantación toma una semana";ENTREVISTADO;VER
+codificacion.csv;5;EV-01;2026-05-23_ENTR-01_Transcripcion.md;El control fitosanitario se hace por monitoreo visual diario;MONITOREO_VISUAL;RF-05;VER;"El control fitosanitario se hace por monitoreo visual diario";ENTREVISTADO;VER
+codificacion.csv;6;EV-01;2026-05-23_ENTR-01_Transcripcion.md;Las plagas se identifican por signos visibles en la planta;SIGNO_VISIBLE_PLAGA;RF-07;VER;"Las plagas se identifican por signos visibles en la planta";ENTREVISTADO;VER
+codificacion.csv;7;EV-01;2026-05-23_ENTR-01_Transcripcion.md;Los defoliadores son la plaga mas frecuente del cultivo;PLAGA_DEFOLIADOR;RF-09;VER;"Los defoliadores son la plaga más frecuente del cultivo";ENTREVISTADO;VER
+codificacion.csv;8;EV-01;2026-05-23_ENTR-01_Transcripcion.md;La pudricion de flecha aparece como enfermedad recurrente;ENFERMEDAD_FLECHA;RF-07;VER;"La pudrición de flecha aparece como enfermedad recurrente";ENTREVISTADO;VER
+codificacion.csv;9;EV-01;2026-05-23_ENTR-01_Transcripcion.md;El control combina producto quimico y trampas segun la etapa del insecto;CONTROL_POR_ETAPA;RF-09;VER;"El control combina producto químico y trampas según la etapa del insecto";ENTREVISTADO;VER
+codificacion.csv;10;EV-01;2026-05-23_ENTR-01_Transcripcion.md;Los problemas fitosanitarios se intensifican en epoca invernal;ESTACIONALIDAD_PLAGA;RF-17;VER;"Los problemas fitosanitarios se intensifican en época invernal";ENTREVISTADO;VER
+codificacion.csv;11;EV-01;2026-05-23_ENTR-01_Transcripcion.md;El riego y la nutricion son los factores mas determinantes de la productividad;FACTOR_PRODUCTIVIDAD;RF-04;VER;"El riego y la nutrición son los factores más determinantes de la productividad";ENTREVISTADO;VER
+codificacion.csv;12;EV-01;2026-05-23_ENTR-01_Transcripcion.md;La acumulacion de flechas indica que la palma no recibe agua;INDICADOR_DEFICIT_HIDRICO;RF-05;VER;"La acumulación de flechas indica que la palma no recibe agua";ENTREVISTADO;VER
+codificacion.csv;13;EV-01;2026-05-23_ENTR-01_Transcripcion.md;La estimacion de produccion se hace con censo de flores cada seis meses;CENSO_FLORES;RF-18;VER;"La estimación de producción se hace con censo de flores cada seis meses";ENTREVISTADO;VER
+codificacion.csv;14;EV-01;2026-05-23_ENTR-01_Transcripcion.md;El rendimiento depende de la variedad de palma sembrada;RENDIMIENTO_POR_VARIEDAD;RF-10;VER;"El rendimiento depende de la variedad de palma sembrada";ENTREVISTADO;VER
+codificacion.csv;15;EV-01;2026-05-23_ENTR-01_Transcripcion.md;El clima se registra con pluviometro y estaciones meteorologicas;REGISTRO_CLIMA;RF-17;VER;"El clima se registra con pluviómetro y estaciones meteorológicas";ENTREVISTADO;VER
+codificacion.csv;16;EV-01;2026-05-23_ENTR-01_Transcripcion.md;Interes alto en identificar plagas a partir de fotografia;DIAGNOSTICO_POR_IMAGEN;RF-07;VER;"Interés alto en identificar plagas a partir de fotografía";ENTREVISTADO;VER
+codificacion.csv;17;EV-01;2026-05-23_ENTR-01_Transcripcion.md;El sistema seria util sobre todo para personal sin conocimiento especializado;USUARIO_NO_EXPERTO;RNF-16;VER;"El sistema sería útil sobre todo para personal sin conocimiento especializado";ENTREVISTADO;VER
+codificacion.csv;18;EV-01;2026-05-23_ENTR-01_Transcripcion.md;El desempeno se evalua por rendimiento y produccion;EVALUACION_DESEMPENO;RF-16;VER;"El desempeño se evalúa por rendimiento y producción";ENTREVISTADO;VER
+codificacion.csv;19;EV-01;2026-05-23_ENTR-01_Transcripcion.md;Se cuenta el numero de flores polinizadas por trabajador;CONTEO_FLORES;RF-14;VER;"Se cuenta el número de flores polinizadas por trabajador";ENTREVISTADO;VER
+codificacion.csv;20;EV-01;2026-05-23_ENTR-01_Transcripcion.md;La calidad del racimo refleja el trabajo del polinizador;CALIDAD_COMO_INDICADOR;RF-16;VER;"La calidad del racimo refleja el trabajo del polinizador";ENTREVISTADO;VER
+codificacion.csv;21;EV-01;2026-05-23_ENTR-01_Transcripcion.md;Los reportes se consolidan por semana;CONSOLIDADO_SEMANAL;RF-19;VER;"Los reportes se consolidan por semana";ENTREVISTADO;VER
+codificacion.csv;22;EV-01;2026-05-23_ENTR-01_Transcripcion.md;La escasez y rotacion de mano de obra calificada es el problema mas critico;ESCASEZ_MANO_OBRA;RNF-16;VER;"La escasez y rotación de mano de obra calificada es el problema más crítico";ENTREVISTADO;VER
+codificacion.csv;23;EV-01;2026-05-23_ENTR-01_Transcripcion.md;Se emplea una aplicacion de registro de recorrido que opera sin internet;APP_OFFLINE_EXISTENTE;RNF-11;VER;"Se emplea una aplicación de registro de recorrido que opera sin internet";ENTREVISTADO;VER
+codificacion.csv;24;EV-01;2026-05-23_ENTR-01_Transcripcion.md;Todo el personal dispone de telefono movil;DISPONIBILIDAD_MOVIL;RD-01;VER;"Todo el personal dispone de teléfono móvil";ENTREVISTADO;VER
+codificacion.csv;25;EV-01;2026-05-23_ENTR-01_Transcripcion.md;Se requiere historial de actividades y diagnosticos por lote;HISTORIAL_LOTE;RF-20;VER;"Se requiere historial de actividades y diagnósticos por lote";ENTREVISTADO;VER
+codificacion.csv;26;EV-02;2026-05-23_ENTR-02_Transcripcion.md;La revision del cultivo es diaria e incluye chapia, corona y control de maleza;LABOR_MANTENIMIENTO;RF-04;VER;"La revisión del cultivo es diaria e incluye chapia, corona y control de maleza";ENTREVISTADO;VER
+codificacion.csv;27;EV-02;2026-05-23_ENTR-02_Transcripcion.md;La nutricion es el problema mas frecuente del cultivo;PROBLEMA_NUTRICIONAL;RF-08;VER;"La nutrición es el problema más frecuente del cultivo";ENTREVISTADO;VER
+codificacion.csv;28;EV-02;2026-05-23_ENTR-02_Transcripcion.md;Se apoya en analisis de suelo y foliar para determinar niveles de nutrientes;ANALISIS_LABORATORIO;RF-11;VER;"Se apoya en análisis de suelo y foliar para determinar niveles de nutrientes";ENTREVISTADO;VER
+codificacion.csv;29;EV-02;2026-05-23_ENTR-02_Transcripcion.md;Las deficiencias nutricionales son visibles en la hoja;SIGNO_FOLIAR;RF-08;VER;"Las deficiencias nutricionales son visibles en la hoja";ENTREVISTADO;VER
+codificacion.csv;30;EV-02;2026-05-23_ENTR-02_Transcripcion.md;El estrategus perfora el suelo y dana el meristema de la palma joven;PLAGA_ESTRATEGUS;RF-09;VER;"El estrategus perfora el suelo y daña el meristema de la palma joven";ENTREVISTADO;VER
+codificacion.csv;31;EV-02;2026-05-23_ENTR-02_Transcripcion.md;Desde la antesis hasta la cosecha transcurren unos seis meses;CICLO_ANTESIS_COSECHA;RF-18;VER;"Desde la antesis hasta la cosecha transcurren unos seis meses";ENTREVISTADO;VER
+codificacion.csv;32;EV-02;2026-05-23_ENTR-02_Transcripcion.md;La meta es de 40 a 45 toneladas por hectarea al ano;META_RENDIMIENTO;RF-18;VER;"La meta es de 40 a 45 toneladas por hectárea al año";ENTREVISTADO;VER
+codificacion.csv;33;EV-02;2026-05-23_ENTR-02_Transcripcion.md;Sin riego la planta emite mas inflorescencia masculina que femenina;EFECTO_DEFICIT_HIDRICO;RF-17;VER;"Sin riego la planta emite más inflorescencia masculina que femenina";ENTREVISTADO;VER
+codificacion.csv;34;EV-02;2026-05-23_ENTR-02_Transcripcion.md;Seria util que a partir de una fotografia el sistema indique que aplicar;RECOMENDACION_ACCIONABLE;RNF-16;VER;"Sería útil que a partir de una fotografía el sistema indique qué aplicar";ENTREVISTADO;VER
+codificacion.csv;35;EV-02;2026-05-23_ENTR-02_Transcripcion.md;Se revisa diariamente el estado del follaje, raices, flores y racimos;MONITOREO_VISUAL;RF-05;VER;"Se revisa diariamente el estado del follaje, raíces, flores y racimos";ENTREVISTADO;VER
+codificacion.csv;36;EV-02;2026-05-23_ENTR-02_Transcripcion.md;El hongo pudre la flecha sobre todo en epoca humeda;ENFERMEDAD_FLECHA;RF-07;VER;"El hongo pudre la flecha sobre todo en época húmeda";ENTREVISTADO;VER
+codificacion.csv;37;EV-02;2026-05-23_ENTR-02_Transcripcion.md;Se aplica insecticida y fungicida en la flecha, repetido cada semana;CONTROL_POR_ETAPA;RF-09;VER;"Se aplica insecticida y fungicida en la flecha, repetido cada semana";ENTREVISTADO;VER
+codificacion.csv;38;EV-02;2026-05-23_ENTR-02_Transcripcion.md;Las plagas se agravan al inicio del invierno;ESTACIONALIDAD_PLAGA;RF-17;VER;"Las plagas se agravan al inicio del invierno";ENTREVISTADO;VER
+codificacion.csv;39;EV-02;2026-05-23_ENTR-02_Transcripcion.md;Sin riego ni humedad la planta produce muy poco y deja de ser rentable;FACTOR_PRODUCTIVIDAD;RF-04;VER;"Sin riego ni humedad la planta produce muy poco y deja de ser rentable";ENTREVISTADO;VER
+codificacion.csv;40;EV-02;2026-05-23_ENTR-02_Transcripcion.md;Se mide la humedad y los milimetros de lluvia caidos;REGISTRO_CLIMA;RF-17;VER;"Se mide la humedad y los milímetros de lluvia caídos";ENTREVISTADO;VER
+codificacion.csv;41;EV-02;2026-05-23_ENTR-02_Transcripcion.md;Una fotografia de la hoja amarilla deberia indicar que le falta a la planta;DIAGNOSTICO_POR_IMAGEN;RF-08;VER;"Una fotografía de la hoja amarilla debería indicar qué le falta a la planta";ENTREVISTADO;VER
+codificacion.csv;42;EV-02;2026-05-23_ENTR-02_Transcripcion.md;Serviria para el personal que no tiene tanto conocimiento;USUARIO_NO_EXPERTO;RNF-16;VER;"Serviría para el personal que no tiene tanto conocimiento";ENTREVISTADO;VER
+codificacion.csv;43;EV-02;2026-05-23_ENTR-02_Transcripcion.md;Una aplicacion en el telefono indica por donde anda el trabajador;SUPERVISION_RECORRIDO;RF-15;VER;"Una aplicación en el teléfono indica por dónde anda el trabajador";ENTREVISTADO;VER
+codificacion.csv;44;EV-02;2026-05-23_ENTR-02_Transcripcion.md;El administrador revisa que el trabajo este bien hecho;EVALUACION_DESEMPENO;RF-16;VER;"El administrador revisa que el trabajo esté bien hecho";ENTREVISTADO;VER
+codificacion.csv;45;EV-02;2026-05-23_ENTR-02_Transcripcion.md;Se paga una parte al diario y otra por avance;TRANSPARENCIA_PAGO;RF-29;VER;"Se paga una parte al diario y otra por avance";ENTREVISTADO;VER
+codificacion.csv;46;EV-02;2026-05-23_ENTR-02_Transcripcion.md;Convendria generar reportes sobre cultivo, cosechas y trabajadores;CONSOLIDADO_SEMANAL;RF-19;VER;"Convendría generar reportes sobre cultivo, cosechas y trabajadores";ENTREVISTADO;VER
+codificacion.csv;47;EV-03;2026-05-23_ENTR-03_Transcripcion.md;La polinizacion asistida es la labor que mas determina la produccion;POLINIZACION_CRITICA;RF-13;VER;"La polinización asistida es la labor que más determina la producción";ENTREVISTADO;VER
+codificacion.csv;48;EV-03;2026-05-23_ENTR-03_Transcripcion.md;El momento adecuado es cuando la antesis presenta coloracion amarilla o negra;ESTADO_ANTESIS;RF-13;VER;"El momento adecuado es cuando la antesis presenta coloración amarilla o negra";ENTREVISTADO;VER
+codificacion.csv;49;EV-03;2026-05-23_ENTR-03_Transcripcion.md;Si el polinizador no ejecuta bien la labor se pierde hasta la mitad de la produccion;RIESGO_LABORAL_POLINIZACION;RF-16;VER;"Si el polinizador no ejecuta bien la labor se pierde hasta la mitad de la producción";ENTREVISTADO;VER
+codificacion.csv;50;EV-03;2026-05-23_ENTR-03_Transcripcion.md;La efectividad es visible por el talco con hormona aplicado;VERIFICACION_VISUAL;RF-13;VER;"La efectividad es visible por el talco con hormona aplicado";ENTREVISTADO;VER
+codificacion.csv;51;EV-03;2026-05-23_ENTR-03_Transcripcion.md;La palma requiere entre 8 y 12 horas de luz para formar y madurar el racimo;HORAS_LUZ;RF-17;VER;"La palma requiere entre 8 y 12 horas de luz para formar y madurar el racimo";ENTREVISTADO;VER
+codificacion.csv;52;EV-03;2026-05-23_ENTR-03_Transcripcion.md;Se requiere un rastreador con marcaciones del numero de flores polinizadas al dia;RASTREO_GPS;RF-14;VER;"Se requiere un rastreador con marcaciones del número de flores polinizadas al día";ENTREVISTADO;VER
+codificacion.csv;53;EV-03;2026-05-23_ENTR-03_Transcripcion.md;La labor de polinizacion determina la produccion de la finca;FACTOR_PRODUCTIVIDAD;RF-13;VER;"La labor de polinización determina la producción de la finca";ENTREVISTADO;VER
+codificacion.csv;54;EV-03;2026-05-23_ENTR-03_Transcripcion.md;Si el polinizador no hace bien la labor no se obtiene un buen racimo;CALIDAD_COMO_INDICADOR;RF-16;VER;"Si el polinizador no hace bien la labor no se obtiene un buen racimo";ENTREVISTADO;VER
+codificacion.csv;55;EV-03;2026-05-23_ENTR-03_Transcripcion.md;Se cuentan las flores polinizadas diariamente por trabajador;CONTEO_FLORES;RF-14;VER;"Se cuentan las flores polinizadas diariamente por trabajador";ENTREVISTADO;VER
+codificacion.csv;56;EV-03;2026-05-23_ENTR-03_Transcripcion.md;En dias nublados el racimo demora mas en madurar;ESTACIONALIDAD_PLAGA;RF-17;VER;"En días nublados el racimo demora más en madurar";ENTREVISTADO;VER
+codificacion.csv;57;EV-03;2026-05-23_ENTR-03_Transcripcion.md;Se requiere control del trabajo del polinizador;SUPERVISION_RECORRIDO;RF-15;VER;"Se requiere control del trabajo del polinizador";ENTREVISTADO;VER
+codificacion.csv;58;EV-03;2026-05-23_ENTR-03_Transcripcion.md;Un racimo del primer ano productivo pesa entre 3 y 5 kilogramos;RENDIMIENTO_POR_VARIEDAD;RF-18;VER;"Un racimo del primer año productivo pesa entre 3 y 5 kilogramos";ENTREVISTADO;VER
+codificacion.csv;59;EV-03;2026-05-23_ENTR-03_Transcripcion.md;Se busca que cada racimo se forme al cien por ciento;CALIDAD_COMO_INDICADOR;RF-13;VER;"Se busca que cada racimo se forme al cien por ciento";ENTREVISTADO;VER
+codificacion.csv;60;EV-03;2026-05-23_ENTR-03_Transcripcion.md;Se necesita que el registro no dependa de anotar planta por planta;RASTREO_GPS;RF-14;VER;"Se necesita que el registro no dependa de anotar planta por planta";ENTREVISTADO;VER
+codificacion.csv;61;EV-04;2026-07-28_ENTR-04_Transcripcion.md;El umbral de madurez es de 3 frutos desprendidos en guineensis y 5 en hibrido;UMBRAL_POR_VARIEDAD;RF-10;VER;"El umbral de madurez es de 3 frutos desprendidos en guineensis y 5 en híbrido";ENTREVISTADO;VER
+codificacion.csv;62;EV-04;2026-07-28_ENTR-04_Transcripcion.md;Se emiten criterios de calidad establecidos por la empresa para recibir la fruta;CRITERIO_RECEPCION;RF-23;VER;"Se emiten criterios de calidad establecidos por la empresa para recibir la fruta";ENTREVISTADO;VER
+codificacion.csv;63;EV-04;2026-07-28_ENTR-04_Transcripcion.md;El pedunculo por encima de 5 cm absorbe aceite durante la extraccion;DEFECTO_PEDUNCULO;RF-23;VER;"El pedúnculo por encima de 5 cm absorbe aceite durante la extracción";ENTREVISTADO;VER
+codificacion.csv;64;EV-04;2026-07-28_ENTR-04_Transcripcion.md;La malformacion por encima del 30 por ciento provoca rechazo del racimo;DEFECTO_MALFORMACION;RF-23;VER;"La malformación por encima del 30 por ciento provoca rechazo del racimo";ENTREVISTADO;VER
+codificacion.csv;65;EV-04;2026-07-28_ENTR-04_Transcripcion.md;El principal problema es que la fruta llega verde, sin desprendimiento;PROBLEMA_FRUTA_VERDE;RF-22;VER;"El principal problema es que la fruta llega verde, sin desprendimiento";ENTREVISTADO;VER
+codificacion.csv;66;EV-04;2026-07-28_ENTR-04_Transcripcion.md;En temporada baja se corta fruta verde porque el pago es por tonelada;INCENTIVO_PERVERSO;RF-22;VER;"En temporada baja se corta fruta verde porque el pago es por tonelada";ENTREVISTADO;VER
+codificacion.csv;67;EV-04;2026-07-28_ENTR-04_Transcripcion.md;La fruta no conforme se devuelve al productor en el mismo vehiculo;RECHAZO_LOTE;RF-24;VER;"La fruta no conforme se devuelve al productor en el mismo vehículo";ENTREVISTADO;VER
+codificacion.csv;68;EV-04;2026-07-28_ENTR-04_Transcripcion.md;Se recomienda entregar dentro de 24 horas, aunque se llega a 48;VENTANA_CORTE_ENTREGA;RF-25;VER;"Se recomienda entregar dentro de 24 horas, aunque se llega a 48";ENTREVISTADO;VER
+codificacion.csv;69;EV-04;2026-07-28_ENTR-04_Transcripcion.md;El material hibrido tolera mas tiempo en campo por su contenido de antioxidantes;TOLERANCIA_HIBRIDO;RF-25;VER;"El material híbrido tolera más tiempo en campo por su contenido de antioxidantes";ENTREVISTADO;VER
+codificacion.csv;70;EV-04;2026-07-28_ENTR-04_Transcripcion.md;El ticket de pesaje registra peso bruto, tara y neto;TICKET_PESAJE;RF-23;VER;"El ticket de pesaje registra peso bruto, tara y neto";ENTREVISTADO;VER
+codificacion.csv;71;EV-04;2026-07-28_ENTR-04_Transcripcion.md;El ticket incluye la calificacion: tamano, verde, sobremadura, malformada y pedunculo;CALIFICACION_TICKET;RF-23;VER;"El ticket incluye la calificación: tamaño, verde, sobremadura, malformada y pedúnculo";ENTREVISTADO;VER
+codificacion.csv;72;EV-04;2026-07-28_ENTR-04_Transcripcion.md;La guia de remision es exigida por la normativa y muchos productores no la manejan;GUIA_REMISION;RF-33;VER;"La guía de remisión es exigida por la normativa y muchos productores no la manejan";ENTREVISTADO;VER
+codificacion.csv;73;EV-04;2026-07-28_ENTR-04_Transcripcion.md;La extractora tambien proyecta cuantas toneladas puede recibir y procesar;PROYECCION_CAPACIDAD;RF-32;VER;"La extractora también proyecta cuántas toneladas puede recibir y procesar";ENTREVISTADO;VER
+codificacion.csv;74;EV-04;2026-07-28_ENTR-04_Transcripcion.md;Hay informacion sensible del productor que no puede compartirse;MINIMIZACION_DATOS;RD-09;VER;"Hay información sensible del productor que no puede compartirse";ENTREVISTADO;VER
+codificacion.csv;75;EV-04;2026-07-28_ENTR-04_Transcripcion.md;Interesa recibir el conteo de racimos y el peso promedio estimado;DATO_COMPARTIBLE;RF-32;VER;"Interesa recibir el conteo de racimos y el peso promedio estimado";ENTREVISTADO;VER
+codificacion.csv;76;EV-04;2026-07-28_ENTR-04_Transcripcion.md;La formacion de un polinizador toma dos o tres meses;CURVA_APRENDIZAJE;RF-16;VER;"La formación de un polinizador toma dos o tres meses";ENTREVISTADO;VER
+codificacion.csv;77;EV-04;2026-07-28_ENTR-04_Transcripcion.md;El amarillamiento de hojas bajeras sugiere deficiencia de magnesio o bloqueo en suelo;DIAGNOSTICO_SITIO;RF-08;VER;"El amarillamiento de hojas bajeras sugiere deficiencia de magnesio o bloqueo en suelo";ENTREVISTADO;VER
+codificacion.csv;78;EV-04;2026-07-28_ENTR-04_Transcripcion.md;Se revisa todo lo que llega, y por muestra si el proveedor maneja bien la fruta;CRITERIO_RECEPCION;RF-23;VER;"Se revisa todo lo que llega, y por muestra si el proveedor maneja bien la fruta";ENTREVISTADO;VER
+codificacion.csv;79;EV-04;2026-07-28_ENTR-04_Transcripcion.md;El grupo de seleccionadores califica el fruto tras el pesaje;CRITERIO_RECEPCION;RF-23;VER;"El grupo de seleccionadores califica el fruto tras el pesaje";ENTREVISTADO;VER
+codificacion.csv;80;EV-04;2026-07-28_ENTR-04_Transcripcion.md;La sobremaduracion eleva la acidez del aceite;PROBLEMA_FRUTA_VERDE;RF-25;VER;"La sobremaduración eleva la acidez del aceite";ENTREVISTADO;VER
+codificacion.csv;81;EV-04;2026-07-28_ENTR-04_Transcripcion.md;Se realizan visitas tecnicas al productor antes de aplicar el castigo;LATENCIA_INSPECCION;RF-24;VER;"Se realizan visitas técnicas al productor antes de aplicar el castigo";ENTREVISTADO;VER
+codificacion.csv;82;EV-04;2026-07-28_ENTR-04_Transcripcion.md;El error mas frecuente del cosechador es la mala seleccion del fruto;INCENTIVO_PERVERSO;RF-22;VER;"El error más frecuente del cosechador es la mala selección del fruto";ENTREVISTADO;VER
+codificacion.csv;83;EV-04;2026-07-28_ENTR-04_Transcripcion.md;Se hace una proyeccion de toneladas a recibir y procesar;CENSO_FLORES;RF-18;VER;"Se hace una proyección de toneladas a recibir y procesar";ENTREVISTADO;VER
+codificacion.csv;84;EV-04;2026-07-28_ENTR-04_Transcripcion.md;Interesa llevar un historico de como mejora la produccion de la finca;HISTORIAL_LOTE;RF-20;VER;"Interesa llevar un histórico de cómo mejora la producción de la finca";ENTREVISTADO;VER
+codificacion.csv;85;EV-04;2026-07-28_ENTR-04_Transcripcion.md;El ticket se envia por correo al productor registrado;TICKET_PESAJE;RF-23;VER;"El ticket se envía por correo al productor registrado";ENTREVISTADO;VER
+codificacion.csv;86;EV-04;2026-07-28_ENTR-04_Transcripcion.md;Es util que la finca comparta su estimacion de cosecha;PROYECCION_CAPACIDAD;RF-32;VER;"Es útil que la finca comparta su estimación de cosecha";ENTREVISTADO;VER
+codificacion.csv;87;EV-05;2026-07-28_ENTR-05_Transcripcion.md;El avance diario se anota en una libreta personal;REGISTRO_PAPEL;RF-04;VER;"El avance diario se anota en una libreta personal";ENTREVISTADO;VER
+codificacion.csv;88;EV-05;2026-07-28_ENTR-05_Transcripcion.md;El conteo se entrega verbalmente al encargado al final de la jornada;ENTREGA_VERBAL;RF-28;VER;"El conteo se entrega verbalmente al encargado al final de la jornada";ENTREVISTADO;VER
+codificacion.csv;89;EV-05;2026-07-28_ENTR-05_Transcripcion.md;Se hacen labores de chapia, cosecha y polinizacion;LABOR_MANTENIMIENTO;RF-04;VER;"Se hacen labores de chapia, cosecha y polinización";ENTREVISTADO;VER
+codificacion.csv;90;EV-05;2026-07-28_ENTR-05_Transcripcion.md;El administrador indica cada dia en que lote trabajar;SUPERVISION_RECORRIDO;RF-03;VER;"El administrador indica cada día en qué lote trabajar";ENTREVISTADO;VER
+codificacion.csv;91;EV-05;2026-07-28_ENTR-05_Transcripcion.md;Al ver una planta enferma se avisa al encargado;EVIDENCIA_FOTOGRAFICA;RF-30;VER;"Al ver una planta enferma se avisa al encargado";ENTREVISTADO;VER
+codificacion.csv;92;EV-05;2026-07-28_ENTR-05_Transcripcion.md;Se reconoce el lote por conocimiento del terreno;LATENCIA_INSPECCION;RF-30;VER;"Se reconoce el lote por conocimiento del terreno";ENTREVISTADO;VER
+codificacion.csv;93;EV-05;2026-07-28_ENTR-05_Transcripcion.md;Todos disponen de telefono con mensajeria;DISPONIBILIDAD_MOVIL;RD-01;VER;"Todos disponen de teléfono con mensajería";ENTREVISTADO;VER
+codificacion.csv;94;EV-05;2026-07-28_ENTR-05_Transcripcion.md;La senal solo llega a la parte principal de la hacienda;CONECTIVIDAD_PARCIAL;RNF-11;VER;"La señal solo llega a la parte principal de la hacienda";ENTREVISTADO;VER
+codificacion.csv;95;EV-05;2026-07-28_ENTR-05_Transcripcion.md;Convendria que la aplicacion guarde los dias de labores realizadas;REGISTRO_PAPEL;RF-04;VER;"Convendría que la aplicación guarde los días de labores realizadas";ENTREVISTADO;VER
+codificacion.csv;96;EV-06;2026-07-28_ENTR-06_Transcripcion.md;La chapia se cuenta por mata y la cosecha por racimo cortado;UNIDAD_DE_AVANCE;RF-28;VER;"La chapia se cuenta por mata y la cosecha por racimo cortado";ENTREVISTADO;VER
+codificacion.csv;97;EV-06;2026-07-28_ENTR-06_Transcripcion.md;El trabajador quiere saber cuanto lleva ganado en la quincena;TRANSPARENCIA_PAGO;RF-29;VER;"El trabajador quiere saber cuánto lleva ganado en la quincena";ENTREVISTADO;VER
+codificacion.csv;98;EV-06;2026-07-28_ENTR-06_Transcripcion.md;La senal de internet solo llega a la casa, no a todo el cultivo;CONECTIVIDAD_PARCIAL;RNF-11;VER;"La señal de internet solo llega a la casa, no a todo el cultivo";ENTREVISTADO;VER
+codificacion.csv;99;EV-06;2026-07-28_ENTR-06_Transcripcion.md;Se anota la plantacion trabajada en un cuaderno, diariamente;REGISTRO_PAPEL;RF-04;VER;"Se anota la plantación trabajada en un cuaderno, diariamente";ENTREVISTADO;VER
+codificacion.csv;100;EV-06;2026-07-28_ENTR-06_Transcripcion.md;El jefe indica que lote corresponde trabajar;SUPERVISION_RECORRIDO;RF-03;VER;"El jefe indica qué lote corresponde trabajar";ENTREVISTADO;VER
+codificacion.csv;101;EV-06;2026-07-28_ENTR-06_Transcripcion.md;El conteo se entrega al encargado al terminar la jornada;ENTREGA_VERBAL;RF-28;VER;"El conteo se entrega al encargado al terminar la jornada";ENTREVISTADO;VER
+codificacion.csv;102;EV-06;2026-07-28_ENTR-06_Transcripcion.md;Se dispone de telefono con mensajeria e internet;DISPONIBILIDAD_MOVIL;RD-01;VER;"Se dispone de teléfono con mensajería e internet";ENTREVISTADO;VER
+codificacion.csv;103;EV-06;2026-07-28_ENTR-06_Transcripcion.md;Convendria que la aplicacion cuente las plantas trabajadas;UNIDAD_DE_AVANCE;RF-28;VER;"Convendría que la aplicación cuente las plantas trabajadas";ENTREVISTADO;VER
+codificacion.csv;104;EV-06;2026-07-28_ENTR-06_Transcripcion.md;Se verifica lo anotado contra lo que sale en la quincena;TRANSPARENCIA_PAGO;RF-29;VER;"Se verifica lo anotado contra lo que sale en la quincena";ENTREVISTADO;VER
+codificacion.csv;105;EV-06;2026-07-28_ENTR-06_Transcripcion.md;Las jornadas varian segun el clima;ESTACIONALIDAD_PLAGA;RF-17;VER;"Las jornadas varían según el clima";ENTREVISTADO;VER
+codificacion.csv;106;EV-06;2026-07-28_ENTR-06_Transcripcion.md;Se avisa de inmediato cuando se detecta un problema en la planta;EVIDENCIA_FOTOGRAFICA;RF-30;VER;"Se avisa de inmediato cuando se detecta un problema en la planta";ENTREVISTADO;VER
+codificacion.csv;107;EV-07;2026-07-28_ENTR-07_Transcripcion.md;Los reportes del jefe de campo llegan por mensajeria instantanea;CANAL_INFORMAL;RF-30;VER;"Los reportes del jefe de campo llegan por mensajería instantánea";ENTREVISTADO;VER
+codificacion.csv;108;EV-07;2026-07-28_ENTR-07_Transcripcion.md;Ante una planta enferma se toma evidencia fotografica para verificar el tipo;EVIDENCIA_FOTOGRAFICA;RF-30;VER;"Ante una planta enferma se toma evidencia fotográfica para verificar el tipo";ENTREVISTADO;VER
+codificacion.csv;109;EV-07;2026-07-28_ENTR-07_Transcripcion.md;Las visitas presenciales de verificacion son dos veces por semana;LATENCIA_VERIFICACION;RF-31;VER;"Las visitas presenciales de verificación son dos veces por semana";ENTREVISTADO;VER
+codificacion.csv;110;EV-07;2026-07-28_ENTR-07_Transcripcion.md;Se lleva una lista de actividades pendientes de verificar en cada visita;LISTA_PENDIENTES;RF-31;VER;"Se lleva una lista de actividades pendientes de verificar en cada visita";ENTREVISTADO;VER
+codificacion.csv;111;EV-07;2026-07-28_ENTR-07_Transcripcion.md;Seria util registrar las coordenadas del lugar donde se encontro la afectacion;GEORREFERENCIA_INCIDENCIA;RF-30;VER;"Sería útil registrar las coordenadas del lugar donde se encontró la afectación";ENTREVISTADO;VER
+codificacion.csv;112;EV-07;2026-07-28_ENTR-07_Transcripcion.md;La labor consiste en el seguimiento de los trabajos de campo;SUPERVISION_RECORRIDO;RF-15;VER;"La labor consiste en el seguimiento de los trabajos de campo";ENTREVISTADO;VER
+codificacion.csv;113;EV-07;2026-07-28_ENTR-07_Transcripcion.md;El jefe de campo lleva la libreta con el registro;REGISTRO_PAPEL;RF-04;VER;"El jefe de campo lleva la libreta con el registro";ENTREVISTADO;VER
+codificacion.csv;114;EV-07;2026-07-28_ENTR-07_Transcripcion.md;Los reportes no siempre llegan suficientemente especificados;ENTREGA_VERBAL;RF-30;VER;"Los reportes no siempre llegan suficientemente especificados";ENTREVISTADO;VER
+codificacion.csv;115;EV-07;2026-07-28_ENTR-07_Transcripcion.md;Se verifica el tipo de enfermedad para iniciar el tratamiento;SIGNO_VISIBLE_PLAGA;RF-07;VER;"Se verifica el tipo de enfermedad para iniciar el tratamiento";ENTREVISTADO;VER
+codificacion.csv;116;EV-07;2026-07-28_ENTR-07_Transcripcion.md;El internet satelital solo es estable en el campamento;CONECTIVIDAD_PARCIAL;RNF-11;VER;"El internet satelital solo es estable en el campamento";ENTREVISTADO;VER
+codificacion.csv;117;EV-07;2026-07-28_ENTR-07_Transcripcion.md;La dificultad estaria en el personal de labores manuales, no en el tecnico;USUARIO_NO_EXPERTO;RNF-08;VER;"La dificultad estaría en el personal de labores manuales, no en el técnico";ENTREVISTADO;VER
+codificacion.csv;118;EV-07;2026-07-28_ENTR-07_Transcripcion.md;Seria util ver cuanto se trabajo y cuanto se lleva ganado;TRANSPARENCIA_PAGO;RF-29;VER;"Sería útil ver cuánto se trabajó y cuánto se lleva ganado";ENTREVISTADO;VER
+codificacion.csv;119;EV-07;2026-07-28_ENTR-07_Transcripcion.md;Convendria guardar los seguimientos con evidencia fotografica;DIAGNOSTICO_POR_IMAGEN;RF-30;VER;"Convendría guardar los seguimientos con evidencia fotográfica";ENTREVISTADO;VER
+codificacion.csv;120;EV-07;2026-07-28_ENTR-07_Transcripcion.md;Los errores de conteo se corrigen en la revision;ENTREGA_VERBAL;RF-29;VER;"Los errores de conteo se corrigen en la revisión";ENTREVISTADO;VER
+codificacion.csv;121;EV-07;2026-07-28_ENTR-07_Transcripcion.md;Solo se utiliza mensajeria instantanea como herramienta;CANAL_INFORMAL;RF-30;VER;"Solo se utiliza mensajería instantánea como herramienta";ENTREVISTADO;VER
+codificacion.csv;122;EV-08;2026-07-28_ENTR-08_Transcripcion.md;Con 5 pepas desprendidas el racimo esta listo para el corte;UMBRAL_DESPRENDIMIENTO;RF-21;VER;"Con 5 pepas desprendidas el racimo está listo para el corte";ENTREVISTADO;VER
+codificacion.csv;123;EV-08;2026-07-28_ENTR-08_Transcripcion.md;No se usa el color como criterio porque el color engana;COLOR_NO_FIABLE;RD-07;VER;"No se usa el color como criterio porque el color engaña";ENTREVISTADO;VER
+codificacion.csv;124;EV-08;2026-07-28_ENTR-08_Transcripcion.md;El racimo con desprendimiento visible esta listo para la cosecha;UMBRAL_DESPRENDIMIENTO;RF-21;VER;"El racimo con desprendimiento visible está listo para la cosecha";ENTREVISTADO;VER
+codificacion.csv;125;EV-08;2026-07-28_ENTR-08_Transcripcion.md;Sin desprendimiento el racimo esta verde;UMBRAL_DESPRENDIMIENTO;RF-21;VER;"Sin desprendimiento el racimo está verde";ENTREVISTADO;VER
+codificacion.csv;126;EV-08;2026-07-28_ENTR-08_Transcripcion.md;Solo se maneja el metodo de desprendimiento para la maduracion;COLOR_NO_FIABLE;RD-07;VER;"Solo se maneja el método de desprendimiento para la maduración";ENTREVISTADO;VER
+codificacion.csv;127;EV-08;2026-07-28_ENTR-08_Transcripcion.md;Primero se revisa todo lo que llega;CRITERIO_RECEPCION;RF-23;VER;"Primero se revisa todo lo que llega";ENTREVISTADO;VER
+codificacion.csv;128;EV-08;2026-07-28_ENTR-08_Transcripcion.md;El grupo de seleccionadores revisa el fruto despues del pesaje;CRITERIO_RECEPCION;RF-23;VER;"El grupo de seleccionadores revisa el fruto después del pesaje";ENTREVISTADO;VER
+codificacion.csv;129;EV-08;2026-07-28_ENTR-08_Transcripcion.md;Si supera el 3, 4 o 5 por ciento se aplica un castigo;PROBLEMA_FRUTA_VERDE;RF-22;VER;"Si supera el 3, 4 o 5 por ciento se aplica un castigo";ENTREVISTADO;VER
+codificacion.csv;130;EV-08;2026-07-28_ENTR-08_Transcripcion.md;La acidez se mide en el laboratorio de la extractora;DEFECTO_PEDUNCULO;RF-23;VER;"La acidez se mide en el laboratorio de la extractora";ENTREVISTADO;VER
+codificacion.csv;131;EV-08;2026-07-28_ENTR-08_Transcripcion.md;El resultado de laboratorio se obtiene al terminar la semana;CONSOLIDADO_SEMANAL;RF-23;VER;"El resultado de laboratorio se obtiene al terminar la semana";ENTREVISTADO;VER
+codificacion.csv;132;EV-08;2026-07-28_ENTR-08_Transcripcion.md;Se hace visita técnica para ver si el problema es de cosecha o de cultivo;LATENCIA_INSPECCION;RF-24;VER;"Se hace visita técnica para ver si el problema es de cosecha o de cultivo";ENTREVISTADO;VER
+codificacion.csv;133;EV-08;2026-07-28_ENTR-08_Transcripcion.md;Los trabajadores cobran por avance y por tonelada;INCENTIVO_PERVERSO;RF-22;VER;"Los trabajadores cobran por avance y por tonelada";ENTREVISTADO;VER
+codificacion.csv;134;EV-08;2026-07-28_ENTR-08_Transcripcion.md;Se cosecha fruto verde cuando hay menos toneladas disponibles;INCENTIVO_PERVERSO;RF-22;VER;"Se cosecha fruto verde cuando hay menos toneladas disponibles";ENTREVISTADO;VER
+codificacion.csv;135;EV-08;2026-07-28_ENTR-08_Transcripcion.md;Un racimo verde no rinde aceite en la extracción;PROBLEMA_FRUTA_VERDE;RF-21;VER;"Un racimo verde no rinde aceite en la extracción";ENTREVISTADO;VER
+codificacion.csv;136;EV-08;2026-07-28_ENTR-08_Transcripcion.md;El problema se debe más al grupo de cosecha que al transporte;RECHAZO_LOTE;RF-24;VER;"El problema se debe más al grupo de cosecha que al transporte";ENTREVISTADO;VER
+codificacion.csv;137;EV-08;2026-07-28_ENTR-08_Transcripcion.md;Se observa la parte basal para decidir el corte;UMBRAL_DESPRENDIMIENTO;RF-21;VER;"Se observa la parte basal para decidir el corte";ENTREVISTADO;VER
+codificacion.csv;138;EV-08;2026-07-28_ENTR-08_Transcripcion.md;El cosechador toma foto o graba video del insecto encontrado;DIAGNOSTICO_POR_IMAGEN;RF-07;VER;"El cosechador toma foto o graba video del insecto encontrado";ENTREVISTADO;VER
+codificacion.csv;139;EV-08;2026-07-28_ENTR-08_Transcripcion.md;Se monitorean los insectos por la mañana;MONITOREO_VISUAL;RF-05;VER;"Se monitorean los insectos por la mañana";ENTREVISTADO;VER
