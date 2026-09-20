@@ -9,7 +9,7 @@ entre *Por modificar* y *Por culminar*.
 
 ## G1 — Datos personales
 
-**Estado operativo:** VERFICADA
+**Estado operativo:** VERIFICADA
 **Estado de rúbrica:** pendiente de mapeo
 **Peso:** 0,40 pts
 **Responsable(s):** Macías (capa automatizada) · Arboleda (capa visual)
