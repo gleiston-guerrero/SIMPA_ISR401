@@ -1,14 +1,24 @@
 # Notas de campo — Entrevistas ENTR-01 a ENTR-16
 
-Esta carpeta contiene las notas de campo manuscritas, escaneadas, levantadas
-durante las 16 entrevistas de elicitación de requisitos realizadas para el
-proyecto SIMPA (participantes ENTR-01 a ENTR-16). Cada archivo es un escaneo
-de la hoja original tomada a mano por el equipo durante la sesión, no una
-transcripción ni un análisis posterior.
+## Aviso de estado (tarea F1 del Plan de mejora de datos)
 
-## Contenido
+Los 16 archivos PDF de esta carpeta se incorporaron al repositorio el 12/09/2026 (commit `1135321`) y se renombraron el 14/09/2026 (commit `d26f879`). **No deben leerse como escaneos contemporáneos de notas tomadas durante las sesiones de entrevista.** Se rotulan como **material no contemporáneo, de origen por documentar**: su origen exacto se describe en la rectificación firmada por el equipo (tarea F1b) y, hasta que esa rectificación esté entregada, ningún documento del proyecto debe presentarlos como registro de campo original.
 
-| Archivo | Entrevista | Fecha | Rol del participante |
+Según la revisión del docente, los 16 PDF comparten el mismo bloque de imagen.
+
+## Declaración de ausencia del 11/09/2026 (restituida)
+
+El 11/09/2026 el repositorio declaró por escrito (commit `b59d4ef`) lo que sigue. El 12/09/2026 ese readme se eliminó al subir los 16 PDF. Se restituye sin cambios como constancia.
+
+> **Estado.** Esta carpeta no contiene notas manuscritas. Se verificó específicamente si existían notas de campo físicas (libretas, hojas sueltas, apuntes en papel) tomadas durante las sesiones de elicitación presenciales. **No existen.** El registro de las entrevistas, desde la primera ronda, se realizó directamente en formato digital: grabación de audio y/o video, con transcripción posterior. No hubo un soporte físico intermedio del que quede algo que escanear.
+>
+> **Por qué se deja constancia de esto.** Conforme al mismo criterio ya aplicado en `../correspondencia/readme.md` y en `../README.md` ("no se crean evidencias ficticias ni se declaran como cumplidos elementos que todavía no hayan sido verificados"), no se generan notas de campo simuladas ni se hace pasar un resumen posterior por un registro contemporáneo a la sesión. Esta nota deja constancia explícita de que la ausencia de contenido en esta carpeta es una constatación verificada, no un punto pendiente u olvidado.
+>
+> **Evidencia relacionada.** El registro real de cada sesión de campo, aunque no en papel, sí queda respaldado por los audios y videos originales de cada entrevista, inventariados en `../../02_Evidencias/00_Restringido/fichas_tecnicas.csv` y alojados en el repositorio complementario `erizzov-boop/SIMPA_ISR401_Evidencias`; las transcripciones en `../../02_Evidencias/Transcripciones/`; y `../bitacora_sesiones.csv`, con fecha, horario y participantes de cada jornada de trabajo.
+
+## Contenido (material no contemporáneo)
+
+| Archivo | Entrevista | Fecha de la entrevista | Rol del participante |
 |---|---|---|---|
 | `2026-05-23_Entrevista_ENTR-01_Notas.pdf` | ENTR-01 | 2026-05-23 | Administrador General |
 | `2026-05-23_Entrevista_ENTR-02_Notas.pdf` | ENTR-02 | 2026-05-23 | Administrador |
@@ -27,9 +37,7 @@ transcripción ni un análisis posterior.
 | `2026-09-01_Entrevista_ENTR-15_Notas.pdf` | ENTR-15 | 2026-09-01 | Estudiante de carrera afín |
 | `2026-09-01_Entrevista_ENTR-16_Notas.pdf` | ENTR-16 | 2026-09-01 | Ingeniero en sistemas |
 
-Fechas verificadas contra `02_Evidencias/00_Restringido/fichas_tecnicas.csv`
-(misma fecha que el audio de cada entrevista, ya que la nota se tomó durante
-la sesión).
+Las fechas de la tabla son las de la entrevista según `02_Evidencias/00_Restringido/fichas_tecnicas.csv`; no son la fecha de creación de los PDF, que consta en el historial de git (12/09/2026).
 
 ## Relación con otra evidencia de la misma entrevista
 
@@ -37,23 +45,8 @@ la sesión).
 - Transcripción de la entrevista: `02_Evidencias/Transcripciones/`
 - Ficha técnica del audio/video de la sesión: `02_Evidencias/00_Restringido/fichas_tecnicas.csv`
 - Registro de la sesión en la bitácora del equipo: `10_Autoria/bitacora_sesiones.csv`
-- Versión transcrita y analizada de estas mismas notas (para lectura, no
-  sustituye al escaneo original): `Notas_de_Campo_SIMPA_16_Entrevistas.md`
+- `Notas_de_Campo_SIMPA_16_Entrevistas.md`, presentado como versión transcrita de estos mismos PDF, queda sujeto al mismo aviso de estado.
 
-## Por qué la bitácora tiene 30 filas y aquí solo hay 16 notas
+## Sobre la bitácora
 
-`10_Autoria/bitacora_sesiones.csv` registra **todas** las sesiones de
-trabajo del equipo, no solo las de campo: incluye 26 sesiones virtuales de
-desarrollo, documentación y análisis (`SES-01` a `SES-26`), y 4 sesiones
-presenciales de elicitación (`SES-27` a `SES-30`), una por cada jornada de
-entrevistas (2026-05-23, 2026-07-28, 2026-08-31 y 2026-09-01).
-
-Solo las sesiones de elicitación (`SES-27` a `SES-30`) pueden producir una
-nota de campo — una sesión de desarrollo en la que el equipo edita el ERS o
-corre un script no genera ninguna nota manuscrita, porque no hay nada que
-observar en el terreno. Por eso la columna `evidencia_nota_campo` de la
-bitácora marca `NO_APLICA` en las 26 filas de desarrollo, y solo declara
-los 16 archivos de nota real en las 4 filas de campo — una por cada
-entrevista realizada esa jornada. No falta ninguna nota: las 16 entrevistas
-tienen su nota, y las 26 sesiones restantes correctamente no tienen
-ninguna, porque nunca correspondió que la tuvieran.
+`10_Autoria/bitacora_sesiones.csv` registra todas las sesiones de trabajo del equipo: 26 virtuales (`SES-01` a `SES-26`, con `NO_APLICA` en `evidencia_nota_campo`) y 4 presenciales de elicitación (`SES-27` a `SES-30`). La columna `evidencia_nota_campo` de esas 4 filas declara estos 16 archivos; esa declaración debe leerse con el aviso de estado de este readme.
