@@ -88,3 +88,11 @@ aplicación presencial.
 La separación entre capturas del instrumento, respuestas originales y sesión
 complementaria se mantiene explícita para preservar la trazabilidad y evitar
 interpretaciones retrospectivas incorrectas.
+
+## Aclaración de commits y nombres (H2)
+
+Los commits `34ce578` y `0792213` (12/09/2026) llevan mensajes que hablan de "fotografías reales de aplicación del cuestionario", pero contienen únicamente las 15 capturas del instrumento (`cuestionario_p01_*.png` a `cuestionario_p15_*.png`). No incluyen ninguna fotografía de trabajadores. Por la regla de no reescribir el historial, esos mensajes no se modifican y esta nota los corrige.
+
+Las cinco fotografías reales (`2026-09-15_ConsentimientoComplementario_Foto-01.jpg` a `Foto-05.jpg`) son de la sesión complementaria de consentimiento del 15/09/2026, no de la aplicación original del cuestionario. El nombre de la carpeta `Fotos_Aplicacion` se conserva para no romper enlaces; su contenido es el descrito en este readme.
+
+La `Foto-01` fue editada el 19/09/2026 (commit `e837e32`) para cubrir un rasgo identificable de una persona. Su contenido y su SHA-256 ya no coinciden con los registrados en `checksums.sha256` y en `10_Autoria/exif_inventario.csv`, que corresponden a la versión original. Conserva la fecha y el modelo EXIF (2026-09-15 10:08:42, BRP-NX3), pero no todos los campos EXIF originales.
