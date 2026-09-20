@@ -18,7 +18,9 @@ entre *Por modificar* y *Por culminar*.
 ### Problema detectado
 El repositorio público expone datos personales reales de terceros: nombre
 real de la organización, capturas de WhatsApp sin enmascarar, y cédulas/RUC
-en los documentos éticos A01, A05, A06, A07, A09, A12, C1 y C2.
+en los documentos éticos A01, A05, A06, A07, A09, A12, C1 y C2 y, tras un
+barrido de todo el repositorio, también en A02, A04, A10, A11, C3 y C4
+(cédula del líder y, en C3, la del gestor de evidencias).
 
 ### Acción aplicada
 Capa automatizada (Macías): extracción de texto de los 8 documentos
@@ -27,10 +29,7 @@ y RUC (13 dígitos) mediante script versionado. Se detectaron 61
 ocurrencias reales. Adicionalmente ya se había enmascarado el nombre de
 la organización en CHANGELOG.md y en A03, y 2 capturas de WhatsApp.
 
-Capa visual (Arboleda): pendiente — revisión página por página de cada
-PDF afectado y de las capturas/fotos, incluyendo verificación del
-tatuaje identificable en la Foto 01 del consentimiento complementario y
-en Fotos_Aplicacion/.
+Capa visual (Arboleda): revisión página por página y enmascarado de los 14 PDF de 09_Etica/ que contenían cédula o RUC (A01, A02, A04, A05, A06, A07, A09, A10, A11, A12, C1, C2, C3 y C4): los números se cubrieron con cajas negras y el texto original se eliminó del archivo, sin escribir texto nuevo. Además se enmascaró el nombre de la organización en A03, en CHANGELOG.md y en las 2 capturas de WhatsApp, y el tatuaje en la Foto 01 del consentimiento complementario. Pendiente: G1b (historial).
 
 Avance capa visual (Arboleda): A01 (commit 2bae024), A05 (commit 9fd0fd6), A06 (commit 0351872), A07 (commit 4e9c742), A09 (commit 787d7d5), A12 (commit ae5b00c), C1 (commit 651d21c), C2 (commit 2b692a5), Foto 01 (commit e837e32), A02 (commit 89da033), A04 (commit d4c1fea), A10 (commit 17bb6ae), A11 (commit ba3e491), C3 (commit 8817784) y C4 (commit 3cde34c) enmascarados y reemplazados. Pendiente: G1b (historial).
 
@@ -67,7 +66,7 @@ Avance capa visual (Arboleda): A01 (commit 2bae024), A05 (commit 9fd0fd6), A06 (
 
 ### Criterio de aceptación
 - [x] Capa automatizada ejecutada y commiteada con salida real
-- [ ] Capa visual ejecutada, checklist por archivo commiteada
+- [x] Capa visual ejecutada, checklist por archivo commiteada
 - [ ] Los 61 identificadores detectados quedan enmascarados en los 8 PDF
 - [x] Tatuaje revisado
 - [ ] G1b (historial) — bloqueada, requiere autorización escrita del docente
@@ -104,13 +103,7 @@ Resultado:
 - `3cde34c` — cédula enmascarada en C4 (versión pública)
 
 ### Limitaciones
-Los 8 PDF no tienen fuente LaTeX en el repositorio, así que la redacción
-real (retirar el texto, no solo cubrirlo visualmente) requiere el
-documento fuente original o una herramienta de redacción de PDF —
-pendiente de confirmar con Allan/Denisses si existe el .docx/.tex
-original. La capa visual (tatuaje, capturas) sigue pendiente de
-Arboleda. G1b (historial) permanece bloqueada sin autorización escrita
-del docente.
+Los PDF no tienen fuente LaTeX en el repositorio, así que se enmascararon sobre la versión publicada: los números se cubrieron con cajas negras y el texto original se eliminó del archivo (la extracción de texto ya no los devuelve). Los originales firmados se conservan sin cambios fuera del repositorio público. G1b (historial): las cédulas, el RUC y el nombre real siguen en versiones anteriores del historial de git y solo pueden retirarse con autorización escrita del docente; hasta entonces permanecen accesibles.
 
 ### Evidencia entregada fuera del repositorio
 No aplica todavía.
