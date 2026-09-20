@@ -68,6 +68,16 @@ v2 (20/09/2026) - correcciones sobre la primera version:
       (54bd614) y los 22 restantes el 31/08 (14b9e6b).
       Ademas, para las evidencias con rango de fechas ("03--07/08/2026") la
       fecha se toma por el INICIO del rango (antes tomaba el final).
+
+  [6] Correspondencia con la propuesta del 05/05.  La version anterior la
+      calculaba por coincidencia de terminos sobre la salida de pdftotext:
+      el resultado cambiaba segun la version de poppler del entorno (6
+      coincidencias en un equipo, 4 en otro) e incluia dos falsos positivos:
+      RF-32 (la propuesta tiene la prediccion de cosecha, no su comparticion
+      con la extractora, que sale de EV-04 el 28/07) y RF-40 ("personal").
+      Se sustituye por CORRESPONDENCIA_PROPUESTA, tabla explicita verificada
+      contra el PDF: RF-03, RF-07, RF-08 y RF-18 (los cuatro que senala el
+      informe del docente).
 ---------------------------------------------------------------------------
 """
 import csv, re, subprocess, os, sys, collections
@@ -83,6 +93,19 @@ FECHA_PROPUESTA = "2026-05-05"
 # Requisitos que el Plan de mejora de datos (19/09/2026) senala expresamente
 # como ya presentes en la propuesta del 05/05, antes de la primera entrevista.
 SENALADOS_DOCENTE = {"RF-03", "RF-07", "RF-08", "RF-18"}
+
+# Correspondencia entre requisitos y modulos de la propuesta del 05/05,
+# VERIFICADA leyendo 2026-05-05_Propuesta_Inicial_1A.pdf (20/09/2026, Arboleda
+# con asistencia de IA). Es una tabla explicita, no una coincidencia de
+# terminos: la coincidencia automatica dependia de la version de pdftotext
+# (daba resultados distintos segun el entorno) y producia falsos positivos
+# (RF-32 y RF-40).
+CORRESPONDENCIA_PROPUESTA = {
+    "RF-03": "2.5 Gestion de empleados (registro de empleados, asignacion de tareas)",
+    "RF-07": "2.2 Analisis de palma con IA (deteccion de plagas o enfermedades)",
+    "RF-08": "2.2 Analisis de palma con IA (estado de salud: deficiencia nutricional)",
+    "RF-18": "2.3 Prediccion de cosecha (cantidad aproximada de produccion)",
+}
 
 
 def leer(p):
@@ -407,9 +430,7 @@ for r in reqs:
     else:
         clas, motivo = "propuesta_equipo", "no declara origen alguno en el ERS"
 
-    modulo = en_propuesta(r["nombre"])
-    if r["id"] in SENALADOS_DOCENTE and not modulo:
-        modulo = "senalado en el plan de mejora (correspondencia a verificar)"
+    modulo = CORRESPONDENCIA_PROPUESTA.get(r["id"], "")
 
     alerta = []
     if modulo and f_ev and FECHA_PROPUESTA < f_ev:
