@@ -119,9 +119,19 @@ Allan y Josthyn.
 | Método de verificación | Revisión cruzada de cada dato citado en el guion contra el archivo fuente correspondiente |
 
 ---
+## 10. Transcripción de entrevistas (procesamiento)
+
+| Campo | Detalle |
+|---|---|
+| ¿Se usó IA? | **Sí** |
+| Herramienta | TurboScribe (turboscribe.ai) — transcripción automática (voz a texto) del audio original. ChatGPT (versión gratuita) — reestructuración del texto resultante |
+| Finalidad | (1) Transcripción automática del audio original con TurboScribe. (2) Uso del texto plano resultante en ChatGPT para separar el contenido en párrafos por hablante e identificar quién dijo cada intervención. Esta segunda fase no se limita a una conversión literal: reorganiza el texto entregado por la primera herramienta. El contenido de fondo (lo dicho por los entrevistados) es evidencia primaria real, no generada por IA |
+| Responsable | No se registró una persona individual para este paso; ejecutado como parte del procesamiento conjunto de las transcripciones por el equipo |
+| Quién verificó | Rizzo Vélez Edson Nagib |
+| Método de verificación | Cotejo de la transcripción final contra el audio original |
 
 ## Áreas donde NO se usó IA generativa (declaración explícita)
 
 - **Fotografías, videos, grabaciones de audio de entrevistas y consentimientos**: son evidencia primaria real, no generada ni asistida por IA.
-- **Transcripciones de entrevistas**: no fueron 100 % manuales — se usó **TurboScribe** (turboscribe.ai) como herramienta de transcripción automática (voz a texto) del audio original. Se aclara que esta herramienta transcribe el contenido ya existente y no genera texto nuevo, por lo que se distingue de un uso de IA generativa, pero se declara igualmente por transparencia. Verificado por Rizzo Vélez Edson Nagib mediante cotejo de la transcripción contra el audio original.
+- **Contenido dicho por los entrevistados**: es evidencia primaria real, no generada por IA. Su procesamiento posterior (transcripción y formato) sí usó herramientas de IA — ver sección 10.
 - **Codificación temática y doble codificación**: los códigos y categorías asignados a cada fragmento fueron decisión de criterio humano de Allan y Josthyn — la IA solo generó el script de *cálculo* del coeficiente de acuerdo, no los códigos en sí.
