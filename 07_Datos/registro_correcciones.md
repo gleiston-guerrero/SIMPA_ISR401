@@ -784,7 +784,7 @@ primera herramienta.
 - Consentimiento: no aplica (declaración de metodología, no dato de participante)
 
 ### Archivos modificados
-- `10_Autoria/declaracion_uso_ia.md` (commit `<SHA>`)
+- `10_Autoria/declaracion_uso_ia.md` (commits `1ca7a13` y `6ab6818`)
 
 ### Criterio de aceptación
 - [x] Declaración coherente con el procedimiento real
@@ -794,18 +794,13 @@ Comando:
 
     grep -n "TurboScribe\|ChatGPT" 10_Autoria/declaracion_uso_ia.md
 
-Resultado:
-
-    [pegar aquí la salida real después de commitear]
+Resultado: 3 coincidencias: la línea 93 (otra sección del documento) y las líneas 127 y 128 (sección 10, con TurboScribe y ChatGPT).
 
 ### Commits
-- `<SHA>` — `docs(B2): corregir declaracion de uso de ia sobre transcripcion`
-
+- `1ca7a13` — `docs(B2): corregir declaracion de uso de ia sobre transcripcion`
+- `6ab6818` — `docs(B2): declarar responsable y verificador de la transcripción según el responsable`
 ### Limitaciones
-No se registró una persona individual como responsable de ejecutar la
-transcripción y el paso de reestructuración; se declara como ejecutado por
-el equipo en conjunto. Si se identifica a la persona exacta, esta entrada se
-actualiza con un commit nuevo.
+La responsabilidad de Arboleda Yanza Francisco Javier sobre la transcripción y la verificación por Rizzo Vélez Edson Nagib se declaran según el propio responsable; no existe registro escrito del cotejo ni de qué entrevistas abarcó. La transcripción final reorganiza el texto, por lo que no es literal: la retranscripción literal de ENTR-01 a 08 con marcas de tiempo corresponde a la tarea B1, pendiente.
 
 ### Evidencia entregada fuera del repositorio
 No aplica.
