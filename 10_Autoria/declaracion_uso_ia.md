@@ -126,9 +126,9 @@ Allan y Josthyn.
 | ¿Se usó IA? | **Sí** |
 | Herramienta | TurboScribe (turboscribe.ai) — transcripción automática (voz a texto) del audio original. ChatGPT (versión gratuita) — reestructuración del texto resultante |
 | Finalidad | (1) Transcripción automática del audio original con TurboScribe. (2) Uso del texto plano resultante en ChatGPT para separar el contenido en párrafos por hablante e identificar quién dijo cada intervención. Esta segunda fase no se limita a una conversión literal: reorganiza el texto entregado por la primera herramienta. El contenido de fondo (lo dicho por los entrevistados) es evidencia primaria real, no generada por IA |
-| Responsable | No se registró una persona individual para este paso; ejecutado como parte del procesamiento conjunto de las transcripciones por el equipo |
-| Quién verificó | Rizzo Vélez Edson Nagib |
-| Método de verificación | Cotejo de la transcripción final contra el audio original |
+| Responsable | Arboleda Yanza Francisco Javier |
+| Quién verificó | Rizzo Vélez Edson Nagib — según declaración del responsable de la transcripción; no existe registro escrito de la verificación |
+| Método de verificación | Cotejo de la transcripción final contra el audio original, según declaración del responsable. El alcance no está documentado: no se registró qué entrevistas se cotejaron ni si el cotejo fue literal. La transcripción final reorganiza el texto y la retranscripción literal de ENTR-01 a 08 con marcas de tiempo (tarea B1) está pendiente |
 
 ## Áreas donde NO se usó IA generativa (declaración explícita)
 
