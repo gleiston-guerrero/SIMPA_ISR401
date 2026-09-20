@@ -640,7 +640,7 @@ el commit `037f995`, conforme a la regla de no reescribir historial.
 - Hash SHA-256 del material fuente verificado contra `06_Experimento/material_fuente/ENTR-04_fuente_congelada.md` (EXP-02): coincide exactamente
 
 ### Archivos modificados
-- `06_Experimento/prompts_llm/2026-09-11_1300_claude-sonnet-5.md` (commit `<SHA>`)
+- `06_Experimento/prompts_llm/2026-09-11_1300_claude-sonnet-5.md` (commit `dbc5d1e`)
 
 ### Criterio de aceptación
 - [x] Conversación archivada — prompt literal y respuesta íntegra conservados en el archivo de registro
@@ -652,10 +652,10 @@ Comando:
 
     git show 037f995 -- 06_Experimento/prompts_llm/2026-09-11_1300_claude-sonnet-5.md
 
-Resultado: confirma que la línea eliminada contenía la nota del desfase horario, restituida en el commit `<SHA>`.
+Resultado: confirma que la línea eliminada contenía la nota del desfase horario, restituida en el commit `dbc5d1e`.
 
 ### Commits
-- `<SHA>` — `docs(A4): restituir nota de desfase horario borrada en 037f995`
+- `dbc5d1e` — `docs(A4): restituir nota de desfase horario borrada en 037f995`
 
 ### Limitaciones
 El desfase entre la hora de la consulta (13:00) y la hora de subida al
