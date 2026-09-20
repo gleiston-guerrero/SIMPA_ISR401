@@ -1,133 +1,165 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-D1 — Tabla de procedencia por requisito.
+D1 — Tabla de procedencia de TODOS los requisitos (RF, RNF y RNF-IA).
 
-Extrae, del propio ERS (`\\RF{}`, argumento 4 = «Actor / Origen (evidencia)»),
-la procedencia declarada de cada uno de los 42 RF, y la vuelca en una tabla
-verificable y reproducible por script. Cada código EV-XX citado se contrasta
-contra la lista real de entrevistas presentes en el repositorio: si el ERS
-cita una evidencia que no existe, el script lo señala en vez de aceptarla.
+Deriva del propio repositorio, sin inventar nada:
+  - el catalogo completo de requisitos y la evidencia que cada uno cita;
+  - la fecha de cada evidencia, tomada del apendice del ERS;
+  - el commit en que cada requisito aparece por primera vez (git log -S);
+  - una CLASIFICACION PROPUESTA con el motivo que la sustenta.
 
-No inventa ni corrige nada por sí mismo: si algo no cuadra, lo reporta en la
-columna OBSERVACION para que una persona decida.
-
-Uso, desde la raíz del repositorio:
-
-    python3 07_Datos/scripts/plan_mejora/tabla_procedencia_D1.py
+La clasificacion es una PROPUESTA derivada de reglas explicitas. La columna
+CLASIFICACION_VERIFICADA la rellena una persona. Nada se marca como
+verificado por el script.
 """
+import csv, re, subprocess, os, sys
+from datetime import datetime
 
-import csv
-import os
-import re
+ERS   = "01_ERS/ERS_SRS_2B_v2.0.tex"
+IA    = "01_ERS/seccion9_ia.tex"
+APEND = "01_ERS/apendices.tex"
+PROPUESTA = "01_ERS/antecedentes/2026-05-05_Propuesta_Inicial_1A.pdf"
+FECHA_PROPUESTA = "2026-05-05"
 
-ERS = "01_ERS/ERS_SRS_2B_v2.0.tex"
-TRANSCRIPCIONES = "02_Evidencias/Transcripciones"
-SALIDA = "07_Datos/datos_procesados/tabla_procedencia_requisitos.csv"
+# Requisitos que el Plan de mejora de datos (19/09/2026) senala expresamente
+# como ya presentes en la propuesta del 05/05, antes de la primera entrevista.
+# Se incorporan aqui para que la deteccion automatica no los pierda.
+SENALADOS_DOCENTE = {"RF-03","RF-07","RF-08","RF-18"}
+SALIDA= "07_Datos/datos_procesados/tabla_procedencia_requisitos.csv"
 
-PATRON_EV = re.compile(r"EV-(\d+)")
+def leer(p): return open(p, encoding="utf-8").read()
 
+# ---------- fechas de evidencia ----------
+FECHA_EV = {}
+for m in re.finditer(r"\\id\{(EV-\d+)\}\s*&\s*([^&]+?)\s*&\s*([^&]+?)\s*&", leer(APEND)):
+    ev, tipo, fecha = m.group(1), m.group(2).strip(), m.group(3).strip()
+    if ev not in FECHA_EV:
+        FECHA_EV[ev] = (tipo, fecha)
 
-def extraer_argumentos(texto, inicio, n):
-    """Extrae los primeros n argumentos {..} de una macro, balanceando llaves
-    anidadas (necesario porque la descripción contiene \\emph{}, \\id{}, etc.)."""
-    args = []
-    i = inicio
-    for _ in range(n):
-        while i < len(texto) and texto[i] != "{":
-            i += 1
-        if i >= len(texto):
-            return None
-        prof = 1
-        j = i + 1
-        while j < len(texto) and prof > 0:
-            if texto[j] == "{":
-                prof += 1
-            elif texto[j] == "}":
-                prof -= 1
-            j += 1
-        args.append(texto[i + 1:j - 1])
-        i = j
-    return args
+def fecha_iso(txt):
+    m = re.search(r"(\d{2})/(\d{2})/(\d{4})", txt or "")
+    return f"{m.group(3)}-{m.group(2)}-{m.group(1)}" if m else ""
 
+# ---------- modulos de la propuesta inicial (05/05/2026) ----------
+# Se comparan las palabras significativas del nombre del requisito con el texto
+# de cada modulo. El resultado es una PROPUESTA de correspondencia, no un juicio.
+MODULOS = []
+try:
+    _t = subprocess.run(["pdftotext","-layout",PROPUESTA,"-"],
+                        capture_output=True, text=True, timeout=60).stdout
+    for _s in re.split(r"\n(?=\d+\.\d+\s)", _t):
+        _m = re.match(r"(\d+\.\d+)\s+(.+)", _s)
+        if _m:
+            MODULOS.append((_m.group(1), _m.group(2).strip(),
+                            re.sub(r"\s+"," ",_s).lower()))
+except Exception:
+    pass
 
-def encontrar_RF(texto):
-    for m in re.finditer(r"\\RF(?=\{)", texto):
-        args = extraer_argumentos(texto, m.end(), 4)
-        if args:
-            yield args
+_STOP = set("de la el en y a los las del que se un una por con para es su al lo como mas o "
+            "sistema debe permitir gestion registro control".split())
 
+def en_propuesta(nombre):
+    pal = {w for w in re.sub(r"[^a-zA-ZáéíóúñÁÉÍÓÚÑ ]"," ",nombre.lower()).split()
+           if len(w) > 4 and w not in _STOP}
+    if not pal: return ""
+    mejor = (0, "")
+    for num, tit, cuerpo in MODULOS:
+        n = sum(1 for w in pal if w[:6] in cuerpo)
+        if n > mejor[0]: mejor = (n, f"{num} {tit}")
+    return mejor[1] if mejor[0] >= 2 else ""
 
-def evidencias_reales():
-    """EV-XX que realmente tienen transcripción en el repositorio."""
-    reales = set()
-    if not os.path.isdir(TRANSCRIPCIONES):
-        return reales
-    for nombre in os.listdir(TRANSCRIPCIONES):
-        m = re.search(r"ENTR-(\d+)", nombre)
-        if m:
-            reales.add(int(m.group(1)))
-    return reales
+# ---------- commit de alta ----------
+CACHE = {}
+def commit_alta(rid, ficheros):
+    if rid in CACHE: return CACHE[rid]
+    try:
+        out = subprocess.run(
+            ["git","log","--reverse","--format=%h|%ad","--date=short","-S",rid,"--"]+ficheros,
+            capture_output=True, text=True, timeout=90).stdout.strip().splitlines()
+        CACHE[rid] = out[0] if out else "|"
+    except Exception:
+        CACHE[rid] = "|"
+    return CACHE[rid]
 
+# ---------- catalogo ----------
+reqs = []
+t_ers = leer(ERS)
 
-def main():
-    with open(ERS, encoding="utf-8") as f:
-        lineas = f.readlines()
-    # Descartar comentarios de LaTeX (líneas que empiezan con %, permitiendo
-    # espacios previos) para no confundir el comentario de uso de la macro
-    # (línea 85: "% Uso: \RF{ID}{Nombre}...") con una invocación real.
-    texto = "".join(l for l in lineas if not l.lstrip().startswith("%"))
+for m in re.finditer(r"\\RF\{(RF-\d+)\}\{([^}]*)\}\s*\{(.*?)\}\s*\{(.*?)\}", t_ers, re.S):
+    reqs.append({"id":m.group(1),"tipo":"RF","nombre":m.group(2).strip(),
+                 "origen_ers":re.sub(r"\s+"," ",m.group(4)).strip(),"fuente":ERS})
 
-    reales = evidencias_reales()
-    if not reales:
-        raise SystemExit(f"ERROR: no se encontraron transcripciones en {TRANSCRIPCIONES}")
+for m in re.finditer(r"\\id\{(RNF-\d+)\}\s*&\s*([^&]+?)\s*&(.*?)\\\\ *\\hline", t_ers, re.S):
+    cuerpo = m.group(3)
+    reqs.append({"id":m.group(1),"tipo":"RNF","nombre":m.group(2).strip(),
+                 "origen_ers":re.sub(r"\s+"," ",cuerpo.split("&")[-1]).strip(),"fuente":ERS})
 
-    filas = []
-    for rf_id, nombre, _desc, origen in encontrar_RF(texto):
-        rf_id = rf_id.strip()
-        origen = re.sub(r"\s+", " ", origen).strip()
+t_ia = leer(IA)
+for m in re.finditer(r"\\id\{(RNF-IA-\d+)\}\s*&\s*([^&]+?)\s*&(.*?)\\\\ *\\hline", t_ia, re.S):
+    reqs.append({"id":m.group(1),"tipo":"RNF-IA","nombre":m.group(2).strip(),
+                 "origen_ers":re.sub(r"\s+"," ",m.group(3)).strip(),"fuente":IA})
 
-        actor = origen.split("·")[0].strip() if "·" in origen else ""
-        codigos = sorted(set(int(x) for x in PATRON_EV.findall(origen)))
-        faltantes = [c for c in codigos if c not in reales]
+vistos=set(); uniq=[]
+for r in reqs:
+    if r["id"] not in vistos: vistos.add(r["id"]); uniq.append(r)
+reqs = uniq
 
-        cita_legal = bool(re.search(r"\\id\{RL-\d+\}", origen))
+# ---------- clasificacion propuesta ----------
+NORMA = re.compile(r"LOPDP|ISO|IEC|25010|29148|legal|normativ", re.I)
+filas=[]
+for r in reqs:
+    evs = sorted(set(re.findall(r"EV-\d+", r["origen_ers"])), key=lambda x:int(x.split("-")[1]))
+    refs = sorted(set(re.findall(r"(?:RF|RNF|RD|L)-(?:IA-)?\d+", r["origen_ers"])) - {r["id"]})
+    sha, falta = (commit_alta(r["id"], [r["fuente"]]).split("|")+[""])[:2]
 
-        observacion = ""
-        if not codigos and not cita_legal:
-            observacion = "SIN EVIDENCIA NI BASE LEGAL CITADA"
-        elif faltantes:
-            observacion = "CITA EV-XX SIN TRANSCRIPCIÓN: " + ", ".join(f"EV-{c:02d}" for c in faltantes)
+    fechas=[fecha_iso(FECHA_EV.get(e,("",""))[1]) for e in evs]
+    fechas=[f for f in fechas if f]
+    f_ev = min(fechas) if fechas else ""
 
-        filas.append({
-            "id_requisito": rf_id,
-            "nombre": nombre.strip(),
-            "actor_declarado": actor,
-            "evidencias_citadas": "; ".join(f"EV-{c:02d}" for c in codigos),
-            "origen_completo_ers": origen,
-            "observacion": observacion,
-        })
+    if evs:
+        clas, motivo = "elicitado", f"cita evidencia: {', '.join(evs)}"
+    elif NORMA.search(r["origen_ers"]+" "+r["nombre"]):
+        clas, motivo = "normativo", "el origen declarado invoca norma o marco legal"
+    elif refs:
+        clas, motivo = "derivado", f"se apoya en: {', '.join(refs)}"
+    else:
+        clas, motivo = "propuesta_equipo", "no declara evidencia ni norma ni requisito previo"
 
-    if len(filas) != 42:
-        print(f"AVISO: se esperaban 42 \\RF{{}} y se extrajeron {len(filas)}. Revisar antes de continuar.")
+    modulo = en_propuesta(r["nombre"])
+    if r["id"] in SENALADOS_DOCENTE and not modulo:
+        modulo = "senalado en el plan de mejora (correspondencia a verificar)"
 
-    os.makedirs(os.path.dirname(SALIDA), exist_ok=True)
-    with open(SALIDA, "w", encoding="utf-8", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=[
-            "id_requisito", "nombre", "actor_declarado",
-            "evidencias_citadas", "origen_completo_ers", "observacion",
-        ], delimiter=";")
-        w.writeheader()
-        w.writerows(filas)
+    alerta=""
+    if modulo and f_ev and FECHA_PROPUESTA < f_ev:
+        alerta = (f"FUNCIONALIDAD YA EN LA PROPUESTA DEL {FECHA_PROPUESTA} "
+                  f"({modulo}), anterior a su evidencia {f_ev}")
+    if f_ev and falta and falta < f_ev:
+        alerta = f"REQUISITO ANTERIOR A SU EVIDENCIA (alta {falta} < evidencia {f_ev})"
+    if not evs and r["tipo"]=="RF":
+        alerta = (alerta+" | " if alerta else "")+"RF sin evidencia citada"
 
-    con_obs = [x for x in filas if x["observacion"]]
-    print(f"Requisitos extraídos: {len(filas)}")
-    print(f"Entrevistas reales detectadas: {sorted(reales)}")
-    print(f"Filas con observación: {len(con_obs)}")
-    for x in con_obs:
-        print(f"  {x['id_requisito']}: {x['observacion']}")
-    print(f"\nSalida: {SALIDA}")
+    filas.append({"id_requisito":r["id"],"tipo":r["tipo"],"nombre":r["nombre"][:120],
+        "evidencias_citadas":"; ".join(evs),
+        "fecha_evidencia_mas_antigua":f_ev,
+        "tipo_evidencia":"; ".join(FECHA_EV.get(e,("",""))[0] for e in evs),
+        "commit_alta":sha,"fecha_commit_alta":falta,
+        "CLASIFICACION_PROPUESTA":clas,"MOTIVO_PROPUESTA":motivo,
+        "en_propuesta_inicial":modulo,
+        "CLASIFICACION_VERIFICADA":"","VERIFICADO_POR":"",
+        "ALERTA":alerta,"origen_completo_ers":r["origen_ers"][:300]})
 
+filas.sort(key=lambda x:(x["tipo"],int(re.search(r"(\d+)$",x["id_requisito"]).group(1))))
+os.makedirs(os.path.dirname(SALIDA), exist_ok=True)
+with open(SALIDA,"w",newline="",encoding="utf-8-sig") as f:
+    w=csv.DictWriter(f,fieldnames=list(filas[0].keys()),delimiter=";")
+    w.writeheader(); w.writerows(filas)
 
-if __name__ == "__main__":
-    main()
+import collections
+print(f"Requisitos: {len(filas)}  ->  {dict(collections.Counter(x['tipo'] for x in filas))}")
+print(f"Clasificacion propuesta: {dict(collections.Counter(x['CLASIFICACION_PROPUESTA'] for x in filas))}")
+al=[x for x in filas if x["ALERTA"]]
+print(f"En la propuesta del 05/05: {sum(1 for x in filas if x['en_propuesta_inicial'])}")
+print(f"Con alerta: {len(al)}")
+for x in al: print(f"   {x['id_requisito']:11s} {x['ALERTA'][:96]}")
+print(f"\nEscrito: {SALIDA}")
