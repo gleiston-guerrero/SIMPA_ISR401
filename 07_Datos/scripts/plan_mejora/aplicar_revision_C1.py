@@ -41,10 +41,30 @@ def leer_revision(ruta):
     return list(csv.DictReader(crudo.splitlines(), delimiter=delim))
 
 
+def turnos_de_entrevistado(texto):
+    """
+    Devuelve [(numero_de_linea, linea, offset)] de todo lo que dice el ENTREVISTADO.
+    Un turno puede tener varios párrafos: una línea sin etiqueta continúa al último
+    hablante. `offset` es el largo de la etiqueta (0 en los párrafos de continuación).
+    """
+    salida, hablante = [], None
+    for n, linea in enumerate(texto.splitlines(), start=1):
+        if linea.startswith("**Entrevistado:**"):
+            hablante = "E"
+            salida.append((n, linea, len("**Entrevistado:**")))
+        elif linea.startswith("**Entrevistador:**"):
+            hablante = "R"
+        elif linea.startswith("#") or linea.startswith("**Rol:**"):
+            hablante = None
+        elif linea.strip() and hablante == "E":
+            salida.append((n, linea, 0))
+    return salida
+
+
 def lineas_entrevistado(nombre, cache):
     if nombre not in cache:
         texto = (TRANSCRIPCIONES / nombre).read_text(encoding="utf-8", errors="ignore")
-        cache[nombre] = [(n, l) for n, l in enumerate(texto.splitlines(), start=1) if l.startswith(ETIQUETA)]
+        cache[nombre] = turnos_de_entrevistado(texto)
     return cache[nombre]
 
 
@@ -54,11 +74,11 @@ def localizar(cita, nombre, linea_indicada, cache):
         return None
     turnos = lineas_entrevistado(nombre, cache)
     if str(linea_indicada).strip().isdigit():
-        for n, l in turnos:
-            if n == int(linea_indicada) and cita in l[len(ETIQUETA):]:
+        for n, l, off in turnos:
+            if n == int(linea_indicada) and cita in l[off:]:
                 return n
-    for n, l in turnos:
-        if cita in l[len(ETIQUETA):]:
+    for n, l, off in turnos:
+        if cita in l[off:]:
             return n
     return None
 

@@ -65,14 +65,28 @@ def puntuar(parafrasis, candidato, raices_p):
     return round(0.6 * cobertura + 0.4 * parecido, 3)
 
 
-def turnos_entrevistado(ruta):
-    """[(numero_de_linea, texto_completo_de_la_linea, offset_del_texto)]"""
-    salida = []
-    texto = ruta.read_text(encoding="utf-8", errors="ignore")
+def turnos_de_entrevistado(texto):
+    """
+    Devuelve [(numero_de_linea, linea, offset)] de todo lo que dice el ENTREVISTADO.
+    Un turno puede tener varios párrafos: una línea sin etiqueta continúa al último
+    hablante. `offset` es el largo de la etiqueta (0 en los párrafos de continuación).
+    """
+    salida, hablante = [], None
     for n, linea in enumerate(texto.splitlines(), start=1):
-        if linea.startswith(ETIQUETA):
-            salida.append((n, linea, len(ETIQUETA)))
+        if linea.startswith("**Entrevistado:**"):
+            hablante = "E"
+            salida.append((n, linea, len("**Entrevistado:**")))
+        elif linea.startswith("**Entrevistador:**"):
+            hablante = "R"
+        elif linea.startswith("#") or linea.startswith("**Rol:**"):
+            hablante = None
+        elif linea.strip() and hablante == "E":
+            salida.append((n, linea, 0))
     return salida
+
+
+def turnos_entrevistado(ruta):
+    return turnos_de_entrevistado(ruta.read_text(encoding="utf-8", errors="ignore"))
 
 
 def oraciones(linea, desde):

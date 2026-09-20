@@ -33,6 +33,26 @@ REPORTE = RAIZ / "07_Datos" / "resultados" / "c1_verificacion_citas.txt"
 ETIQUETA = "**Entrevistado:**"
 
 
+def turnos_de_entrevistado(texto):
+    """
+    Devuelve [(numero_de_linea, linea, offset)] de todo lo que dice el ENTREVISTADO.
+    Un turno puede tener varios párrafos: una línea sin etiqueta continúa al último
+    hablante. `offset` es el largo de la etiqueta (0 en los párrafos de continuación).
+    """
+    salida, hablante = [], None
+    for n, linea in enumerate(texto.splitlines(), start=1):
+        if linea.startswith("**Entrevistado:**"):
+            hablante = "E"
+            salida.append((n, linea, len("**Entrevistado:**")))
+        elif linea.startswith("**Entrevistador:**"):
+            hablante = "R"
+        elif linea.startswith("#") or linea.startswith("**Rol:**"):
+            hablante = None
+        elif linea.strip() and hablante == "E":
+            salida.append((n, linea, 0))
+    return salida
+
+
 def definiciones_del_libro():
     """{codigo: (definicion, criterio)} leído de las filas '| n | CODIGO | definición | criterio |'."""
     defs = {}
@@ -62,14 +82,15 @@ def main():
                 n = fila["LINEA_TRANSCRIPCION"].strip()
                 if nombre not in lineas:
                     texto = (TRANSCRIPCIONES / nombre).read_text(encoding="utf-8", errors="ignore")
-                    lineas[nombre] = texto.splitlines()
-                if not cita or not n.isdigit() or not (1 <= int(n) <= len(lineas[nombre])):
+                    lineas[nombre] = {k: (l, off) for k, l, off in turnos_de_entrevistado(texto)}
+                if not cita or not n.isdigit():
                     errores.append(f"{ruta.name} fila {fila['linea_csv']}: falta la cita o el número de línea es inválido")
                     continue
-                linea = lineas[nombre][int(n) - 1]
-                if not linea.startswith(ETIQUETA):
+                if int(n) not in lineas[nombre]:
                     errores.append(f"{ruta.name} fila {fila['linea_csv']}: la línea {n} no es del entrevistado")
-                elif cita not in linea[len(ETIQUETA):]:
+                    continue
+                linea, off = lineas[nombre][int(n)]
+                if cita not in linea[off:]:
                     errores.append(f"{ruta.name} fila {fila['linea_csv']}: la cita NO aparece literal en la línea {n} de {nombre}")
 
     defs = definiciones_del_libro()
