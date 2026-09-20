@@ -1117,7 +1117,7 @@ El commit y el CSV son públicos y verificables directamente en el historial
 del repositorio (`git show cbcdab5`, o la vista de commit en GitHub).
 
 ### Commits
-- `<SHA>` — `docs(C5): identificar analista y declarar revision cruzada pendiente`
+- `0836c50` — `docs(C5): identificar analista y declarar revision cruzada pendiente`
 
 ### Limitaciones
 No existe artefacto de revisión cruzada de la ronda 3. El propio equipo ya
