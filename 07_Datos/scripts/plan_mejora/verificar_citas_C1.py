@@ -1,99 +1,102 @@
 #!/usr/bin/env python3
 """
-Verificador de citas literales — C1 · SIMPA_ISR401
-Comparación flexible: ignora tildes, mayúsculas, espacios duplicados.
-"""
+verificar_citas_C1.py  ·  C1 · SIMPA_ISR401
 
+Criterios del docente para C1, comprobados sin atajos:
+
+  1. El 100 % de las citas aparece LITERAL en su transcripción: la subcadena
+     exacta (sin ignorar tildes, mayúsculas ni espacios) está en la línea
+     indicada y esa línea es una intervención del entrevistado.
+  2. El 100 % de los códigos usados tiene definición y criterio en
+     07_Datos/libro_codigos.md.
+
+Las filas NO_LOCALIZADA se cuentan aparte (no cuentan como citas verificadas)
+y las filas sin revisar hacen fallar la verificación.
+
+USO (desde la raíz del repositorio)
+    python3 07_Datos/scripts/plan_mejora/verificar_citas_C1.py
+"""
 import csv
-import sys
 import re
+import sys
+from collections import Counter
 from pathlib import Path
 
-BASE = Path(__file__).resolve().parents[2]
-DATOS_CRUOS = BASE / "datos_crudos"
-DATOS_PROC = BASE / "datos_procesados"
-RESULTADOS = BASE / "resultados"
-
+RAIZ = Path(__file__).resolve().parents[3]
+TRANSCRIPCIONES = RAIZ / "02_Evidencias" / "Transcripciones"
 ARCHIVOS = [
-    DATOS_CRUOS / "codificacion.csv",
-    DATOS_PROC / "codificacion_tercera_ronda.csv",
+    RAIZ / "07_Datos" / "datos_crudos" / "codificacion.csv",
+    RAIZ / "07_Datos" / "datos_procesados" / "codificacion_tercera_ronda.csv",
 ]
+LIBRO = RAIZ / "07_Datos" / "libro_codigos.md"
+REPORTE = RAIZ / "07_Datos" / "resultados" / "c1_verificacion_citas.txt"
+ETIQUETA = "**Entrevistado:**"
 
-def normalizar(texto):
-    """Minúsculas, sin tildes, sin espacios extra"""
-    if not texto or not texto.strip():
-        return ""
-    t = texto.strip().lower()
-    t = re.sub(r"\s+", " ", t)
-    reemplazos = {"á":"a","é":"e","í":"i","ó":"o","ú":"u","ñ":"n","–":"-"}
-    for c, r in reemplazos.items():
-        t = t.replace(c, r)
-    return t
+
+def definiciones_del_libro():
+    """{codigo: (definicion, criterio)} leído de las filas '| n | CODIGO | definición | criterio |'."""
+    defs = {}
+    if not LIBRO.exists():
+        return defs
+    for linea in LIBRO.read_text(encoding="utf-8").splitlines():
+        m = re.match(r"^\|\s*\d+\s*\|\s*([A-Z0-9_]+)\s*\|\s*(.*?)\s*\|\s*(.*?)\s*\|\s*$", linea)
+        if m:
+            defs[m.group(1)] = (m.group(2).strip(), m.group(3).strip())
+    return defs
+
 
 def main():
-    RESULTADOS.mkdir(exist_ok=True)
-    salida = []
-    total = citas_ok = citas_error = 0
-    codigos = set()
-
+    lineas, salida = {}, []
+    estados, errores, codigos, total = Counter(), [], set(), 0
     for ruta in ARCHIVOS:
-        if not ruta.exists():
-            salida.append(f"⚠️ No existe: {ruta.relative_to(BASE)}")
-            continue
-        salida.append(f"📄 {ruta.relative_to(BASE)}")
-        with open(ruta, newline="", encoding="utf-8") as f:
-            lector = csv.DictReader(f, delimiter=";")
-            for num_fila, fila in enumerate(lector, start=2):
+        salida.append(f"Archivo: {ruta.relative_to(RAIZ)}")
+        with open(ruta, newline="", encoding="utf-8-sig") as f:
+            for fila in csv.DictReader(f, delimiter=";"):
                 total += 1
-                cod = fila.get("Codigo", "").strip()
-                if cod:
-                    codigos.add(cod)
-                cita = fila.get("CITA_LITERAL", "").strip()
+                codigos.add(fila["Codigo"].strip())
                 estado = fila.get("ESTADO", "").strip()
-
-                if estado in ["NO_LOCALIZADA", "SOLO_EN_ENTREVISTADOR"]:
-                    citas_ok += 1
+                estados[estado or "(vacío)"] += 1
+                if estado != "VER":
                     continue
+                nombre, cita = fila["transcripcion"], fila["CITA_LITERAL"]
+                n = fila["LINEA_TRANSCRIPCION"].strip()
+                if nombre not in lineas:
+                    texto = (TRANSCRIPCIONES / nombre).read_text(encoding="utf-8", errors="ignore")
+                    lineas[nombre] = texto.splitlines()
+                if not cita or not n.isdigit() or not (1 <= int(n) <= len(lineas[nombre])):
+                    errores.append(f"{ruta.name} fila {fila['linea_csv']}: falta la cita o el número de línea es inválido")
+                    continue
+                linea = lineas[nombre][int(n) - 1]
+                if not linea.startswith(ETIQUETA):
+                    errores.append(f"{ruta.name} fila {fila['linea_csv']}: la línea {n} no es del entrevistado")
+                elif cita not in linea[len(ETIQUETA):]:
+                    errores.append(f"{ruta.name} fila {fila['linea_csv']}: la cita NO aparece literal en la línea {n} de {nombre}")
 
-                if not cita:
-                    citas_error += 1
-                    salida.append(f"  ❌ Fila {num_fila}: CITA_LITERAL vacía")
-                else:
-                    citas_ok += 1
+    defs = definiciones_del_libro()
+    sin_definir = sorted(c for c in codigos if not defs.get(c, ("", ""))[0] or not defs.get(c, ("", ""))[1])
+    verificadas = estados["VER"] - len(errores)
+    pendientes = total - estados["VER"] - estados["NO_LOCALIZADA"]
 
-    libro = BASE / "libro_codigos.md"
-    cod_en_libro = set()
-    if libro.exists():
-        texto_libro = libro.read_text(encoding="utf-8")
-        for c in codigos:
-            if f"| {c} |" in texto_libro or f"| {c}|" in texto_libro:
-                cod_en_libro.add(c)
-        salida.append(f"📖 Libro de códigos: {libro.relative_to(BASE)}")
-    else:
-        salida.append("⚠️ libro_codigos.md NO ENCONTRADO en 07_Datos/")
-
-    salida.extend([
-        "", "="*60,
-        f"Total filas verificadas: {total}",
-        f"Citas verificadas correctamente: {citas_ok} ({100*citas_ok/total:.1f}%)" if total else "Sin datos",
-        f"Citas con error: {citas_error}",
-        f"Códigos únicos detectados en CSV: {len(codigos)}",
-        f"Códigos definidos en libro: {len(cod_en_libro)}",
-        "="*60
-    ])
-
-    if citas_error == 0 and len(cod_en_libro) >= len(codigos) * 0.95:
-        salida.append("✅ TODO VERIFICADO — C1 COMPLETO")
-        codigo_salida = 0
-    else:
-        salida.append("⚠️ Revisar detalles arriba")
-        codigo_salida = 1
-
-    reporte = RESULTADOS / "c1_verificacion_citas.txt"
-    reporte.write_text("\n".join(salida), encoding="utf-8")
+    salida += ["", "=" * 60,
+               f"Total de fragmentos: {total}",
+               f"Citas literales verificadas: {verificadas} ({100 * verificadas / total:.1f} % del total)" if total else "Sin datos",
+               f"NO_LOCALIZADA (declaradas, no cuentan como verificadas): {estados['NO_LOCALIZADA']}",
+               f"Pendientes de revisión: {pendientes}",
+               f"Citas rechazadas (no literales): {len(errores)}",
+               f"Códigos distintos en los CSV: {len(codigos)}",
+               f"Códigos con definición y criterio en el libro: {len(codigos) - len(sin_definir)}",
+               "=" * 60]
+    for e in errores[:60]:
+        salida.append("  ✗ " + e)
+    if sin_definir:
+        salida.append("Códigos sin definición o criterio: " + ", ".join(sin_definir))
+    ok = not errores and pendientes == 0 and not sin_definir
+    salida.append("RESULTADO: CUMPLE el criterio de C1." if ok else "RESULTADO: NO CUMPLE todavía (ver arriba).")
+    REPORTE.parent.mkdir(parents=True, exist_ok=True)
+    REPORTE.write_text("\n".join(salida) + "\n", encoding="utf-8")
     print("\n".join(salida))
-    print(f"\nReporte guardado: {reporte.relative_to(BASE)}")
-    return codigo_salida
+    return 0 if ok else 1
+
 
 if __name__ == "__main__":
     sys.exit(main())
