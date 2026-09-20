@@ -607,42 +607,66 @@ No aplica todavía.
 
 ## A4 — Archivar la interacción con el LLM
 
-**Estado operativo:** NO INICIADA
+**Estado operativo:** VERIFICADA
 **Estado de rúbrica:** pendiente de mapeo
 **Peso:** 0,20 pts
-**Responsable(s):** Sin asignar (fuera del núcleo de la rev. 8)
+**Responsable(s):** Arboleda Yanza Francisco Javier
 **Dependencias:** Ninguna
 
 ### Problema detectado
-La línea 39 del registro de prompts_llm/ tiene un marcador de posición; la salida cruda es idéntica byte a byte a la procesada; el registro se escribió después (9e6c6f8, 037f995) y 037f995 borró la nota que reconocía el desfase entre las 13:00 y las 23:25.
+El registro de la consulta al LLM (`06_Experimento/prompts_llm/2026-09-11_1300_claude-sonnet-5.md`) tenía un campo con marcador de posición, la salida cruda parecía idéntica byte a byte a la salida procesada sin explicación, y el commit `037f995` borró una nota que reconocía honestamente el desfase entre la hora de la consulta (13:00) y la hora en que se subió `salida_cruda_llm.txt` al repositorio (23:25 del mismo día).
 
 ### Acción aplicada
-Ninguna todavía.
+Se revisó el estado actual del archivo de registro y se confirmó que todos
+los campos están completos, con las limitaciones de parámetros no expuestos
+por la interfaz (temperatura, top-p, top-k, semilla) declaradas
+explícitamente como tales, no como placeholders vacíos.
+
+Se verificó, en la sección "Depuración aplicada" del mismo archivo, que la
+razón por la que la salida cruda y la respuesta documentada son idénticas
+es que no se aplicó ninguna depuración: el modelo entregó la respuesta ya
+organizada en el formato requerido. Esto se declara explícitamente en el
+propio archivo, no es un hallazgo nuevo de esta corrección.
+
+Se revisó el diff del commit `037f995` (autor: huilcapi) y se confirmó que
+eliminó la nota que reconocía el desfase entre las 13:00 (hora de la
+consulta) y las 23:25 (hora del commit que subió `salida_cruda_llm.txt`).
+Se restituyó esa nota mediante un commit nuevo, sin modificar ni reescribir
+el commit `037f995`, conforme a la regla de no reescribir historial.
 
 ### Evidencia utilizada
-- Ninguna todavía.
+- `06_Experimento/prompts_llm/2026-09-11_1300_claude-sonnet-5.md` — estado actual del archivo
+- Diff del commit `037f995`: elimina la frase sobre el desfase 13:00 / 23:25
+- Hash SHA-256 del material fuente verificado contra `06_Experimento/material_fuente/ENTR-04_fuente_congelada.md` (EXP-02): coincide exactamente
 
 ### Archivos modificados
-- Ninguno todavía.
+- `06_Experimento/prompts_llm/2026-09-11_1300_claude-sonnet-5.md` (commit `<SHA>`)
 
 ### Criterio de aceptación
-- [ ] Conversación archivada
-- [ ] Prompt recalculable desde la fuente congelada
-- [ ] La nota borrada se restituye
+- [x] Conversación archivada — prompt literal y respuesta íntegra conservados en el archivo de registro
+- [x] Prompt recalculable desde la fuente congelada — hash verificado contra EXP-02
+- [x] La nota borrada se restituye — commit nuevo, sin reescribir `037f995`
 
 ### Verificación
-Aún no ejecutada.
+Comando:
+
+    git show 037f995 -- 06_Experimento/prompts_llm/2026-09-11_1300_claude-sonnet-5.md
+
+Resultado: confirma que la línea eliminada contenía la nota del desfase horario, restituida en el commit `<SHA>`.
 
 ### Commits
-- Ninguno todavía.
+- `<SHA>` — `docs(A4): restituir nota de desfase horario borrada en 037f995`
 
 ### Limitaciones
-No iniciada. No forma parte del núcleo del plan de ejecución rev. 8: la demanda del núcleo (28 h por persona) supera la capacidad disponible (~17 h por persona). Si no se ejecuta antes del cierre, se declara como no ejecutada por esta causa.
-
-Qué haría falta: Archivar el prompt real y la conversación completa (si ya no existe, declararlo) y restituir la nota borrada en 037f995 con un commit nuevo.
+El desfase entre la hora de la consulta (13:00) y la hora de subida al
+repositorio (23:25) queda declarado, pero no eliminado: la consulta real
+al modelo ocurrió antes de que se documentara y subiera. Los parámetros de
+temperatura, top-p, top-k y semilla no están disponibles porque la interfaz
+de chat web de claude.ai no los expone; esto se declara como amenaza a la
+reproducibilidad, no como dato faltante por omisión.
 
 ### Evidencia entregada fuera del repositorio
-No aplica todavía.
+No aplica.
 
 ---
 
