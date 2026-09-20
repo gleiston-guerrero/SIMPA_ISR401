@@ -1380,40 +1380,46 @@ No aplica todavía.
 
 ## F1 — Notas de campo: retirar o rotular los 16 PDF y rectificar
 
-**Estado operativo:** NO INICIADA
+**Estado operativo:** EN PROCESO (F1a hecha; falta la rectificación firmada, F1b)
 **Estado de rúbrica:** pendiente de mapeo
 **Peso:** 0,40 pts
 **Responsable(s):** Arboleda Yanza Francisco Javier
-**Dependencias:** Firma de la rectificación
+**Dependencias:** Firma de la rectificación por el equipo
 
 ### Problema detectado
-El 11/09 se declaró por escrito que no existían notas físicas (b59d4ef) y el 12/09 se subieron 16 PDF (1135321) que comparten el mismo bloque de imagen. verificacion_seccion15.md (línea 18) también requiere corrección.
+El 11/09 se declaró por escrito que no existían notas físicas (`b59d4ef`) y el 12/09 se subieron 16 PDF (`1135321`) que comparten el mismo bloque de imagen. `verificacion_seccion15.md` (línea 18) decía "sin fabricación detectada".
 
 ### Acción aplicada
-Ninguna todavía.
+F1a: se reescribió `10_Autoria/notas_campo/readme.md`: se rotulan los 16 PDF como material no contemporáneo, de origen por documentar; se restituye la declaración de ausencia del 11/09 y se declara que los PDF se incorporaron el 12/09 (`1135321`). Se corrigió la fila de notas de campo de `verificacion_seccion15.md`, que pasa a "NO VERIFICADO". No se retiran los PDF: se rotulan, y su origen se documenta en F1b.
 
 ### Evidencia utilizada
-- Ninguna todavía.
+- Commits `b59d4ef` (declaración de ausencia, 11/09), `1135321` (subida de los 16 PDF, 12/09) y `d26f879` (renombrado, 14/09)
+- Informe del docente (los 16 PDF comparten el mismo bloque de imagen)
 
 ### Archivos modificados
-- Ninguno todavía.
+- `10_Autoria/notas_campo/readme.md` (commit `d96fc5c`)
+- `10_Autoria/verificacion_seccion15.md` (commit `61ec1f3`)
 
 ### Criterio de aceptación
-- [ ] Ningún PDF presentado como escaneo contemporáneo
-- [ ] Rectificación firmada por el equipo
+- [x] Ningún PDF presentado como escaneo contemporáneo (en el readme de la carpeta)
+- [ ] Rectificación firmada por el equipo (F1b, pendiente)
 
 ### Verificación
-Aún no ejecutada.
+Comando:
+
+    grep -n "no contemporáneo" 10_Autoria/notas_campo/readme.md
+
+Resultado: presente en el aviso de estado y en el título de la tabla.
 
 ### Commits
-- Ninguno todavía.
+- `d96fc5c` — rotulado de las notas de campo y restitución de la declaración de ausencia
+- `61ec1f3` — fila de notas de campo de verificacion_seccion15 corregida
 
 ### Limitaciones
-En ejecución según el plan de ejecución rev. 8. Esta sección se completa con lo que realmente ocurra al cerrar la tarea; no se marca Hecho sin criterio cumplido.
+Sigue pendiente F1b (rectificación firmada). Además, la columna `evidencia_nota_campo` de la bitácora y `Notas_de_Campo_SIMPA_16_Entrevistas.md` siguen presentando esos PDF como notas de campo; se revisan en I1.
 
 ### Evidencia entregada fuera del repositorio
-No aplica todavía.
-
+Pendiente: rectificación firmada por el equipo (por correo institucional).
 ---
 
 ## F2 — Member checking: trazabilidad, evidencia y actas
