@@ -134,5 +134,37 @@ Validez del manuscrito (categoría: validez de conclusión), siguiendo la
 misma práctica de transparencia ya aplicada en `07_Datos/desviaciones.md`
 (D-01 y D-02).
 
+---
+
+## Actualización de la desviación — 19/09/2026
+
+La desviación asociada al registro OSF `4z35d` quedó comunicada mediante una
+actualización formal del propio registro el 19/09/2026, en la pregunta
+`Explanation of foreknowledge and managing unintended influences`.
+
+La actualización deja constancia de que:
+
+1. el `protocolo.pdf` preservado en OSF no coincide en SHA-256 con las
+   versiones disponibles en el repositorio;
+2. el equipo no afirma equivalencia binaria entre esos archivos;
+3. el registro OSF corresponde al 31/08/2026;
+4. la rúbrica empleada posteriormente está fechada el 04/09/2026;
+5. las decisiones derivadas de esa rúbrica son posteriores al registro y no
+   forman parte del contenido preregistrado.
+
+La comparación de digests se realizó descargando el archivo preservado en
+OSF. Los valores constan en la entrada A5 de
+`07_Datos/registro_correcciones.md`: OSF conserva la v1.0 del 3 de agosto de
+2026, mientras que el repositorio contiene la v1.1 (31 de agosto) y la v1.2
+(7 de septiembre), cada una con su motivo de revisión declarado en portada.
+
+La vista `Latest` del registro muestra la respuesta actualizada; la vista
+`Original` conserva el texto previo. La API pública
+`/v2/registrations/4z35d/` expone la adenda.
+
+La acción en OSF fue ejecutada por Villafuerte Rosero Allan Noé. La
+documentación de esta corrección en el repositorio corresponde a Macías
+Herrera Josthyn Esteban.
+
 
 

@@ -107,3 +107,98 @@ Los PDF no tienen fuente LaTeX en el repositorio, así que se enmascararon sobre
 
 ### Evidencia entregada fuera del repositorio
 No aplica todavía.
+
+---
+
+## A5 — Adenda de desviación del registro OSF
+
+**Estado operativo:** VERIFICADA
+**Estado de rúbrica:** pendiente de mapeo
+**Peso:** 0,30 pts
+**Responsable de la acción externa en OSF:** Villafuerte Rosero Allan Noé
+**Responsable de documentación y commit en el repositorio:** Macías Herrera Josthyn Esteban
+**Registro OSF:** `4z35d`
+**Fecha de la actualización:** 19/09/2026
+**Dependencias:** ninguna
+
+### Problema detectado
+
+El plan de mejora señaló dos desviaciones respecto del registro OSF:
+
+1. El `protocolo.pdf` preservado en OSF no coincide en SHA-256 con las
+   versiones del mismo archivo disponibles en el repositorio.
+2. El registro OSF es del 31/08/2026, mientras que la rúbrica de evaluación
+   empleada después está fechada el 04/09/2026.
+
+### Acción aplicada
+
+El 19/09/2026 Villafuerte Rosero Allan Noé, administrador con acceso al
+registro, creó y aprobó una actualización de `4z35d`. La única pregunta
+modificada fue `Explanation of foreknowledge and managing unintended
+influences`, a la que se añadió al final la sección `Actualización / adenda
+de desviación — 19/09/2026`.
+
+La adenda declara que no se afirma equivalencia binaria entre el archivo
+preservado en OSF y las versiones posteriores del repositorio, que la
+diferencia se documenta como desviación de versionado y procedencia, y que
+las decisiones derivadas de la rúbrica del 04/09/2026 son posteriores al
+registro y no forman parte del contenido preregistrado. La actualización no
+modifica retroactivamente la fecha ni el contenido histórico del registro.
+
+No se reemplazó ni eliminó `protocolo.pdf` ni se alteraron otras secciones
+del preregistro.
+
+### Verificación de la desviación de SHA-256
+
+La afirmación se comprobó descargando el archivo preservado en OSF y
+calculando su digest, en lugar de darla por supuesta:
+
+    sha256sum protocolo.pdf
+
+| Versión del documento | Origen | SHA-256 |
+|---|---|---|
+| 1.0 — 3 de agosto de 2026 | Preservada en OSF `4z35d` | `516902b9bc60785e17a7c06ec47a69e26cbd69759e85d082d70b91be0f7f4a8d` |
+| 1.1 — 31 de agosto de 2026 | Repositorio, commit del 03/09/2026 | `5d194e778b431ac73b45fbe79f7e191942eec7830e2375e2ab3448eb2045a63e` |
+| 1.2 — 7 de septiembre de 2026 | Repositorio, versión actual | `ccd6129685685c6445d433fc1eb279c99ede2dc4972db445ee19da8add860c25` |
+
+Los tres digests son distintos entre sí, lo que confirma la desviación
+señalada. La diferencia corresponde a un versionado declarado en la portada
+de cada documento: OSF preserva la v1.0, que anunciaba el registro como
+previsto y la ejecución como pendiente; la v1.1 se rotula «actualización
+administrativa del registro OSF» y la v1.2 «aclaración documental del
+alcance temporal del registro OSF», ya con el enlace a `https://osf.io/4z35d/`.
+No se afirma equivalencia binaria entre ninguna de las tres.
+
+### Evidencia utilizada
+
+| Archivo | Evidencia |
+|---|---|
+| `10_Autoria/capturas/2026-09-19_allan_OSF_A5_Latest.png` | Vista `Latest`: campo marcado `Updated`, adenda visible, declaración de SHA-256 y cronología 31/08 → 04/09. Muestra además `Date Registered: Aug 31, 2026` |
+| `10_Autoria/capturas/2026-09-19_allan_OSF_A5_Original.png` | Vista `Original`: la adenda no aparece y se conserva el texto previo |
+| `10_Autoria/capturas/2026-09-19_allan_OSF_A5_API.png` | API pública `/v2/registrations/4z35d/` con 1 coincidencia de `Actualización / adenda de desviación` |
+| `10_Autoria/capturas/2026-09-19_allan_OSF_A5_Updates.png` | Panel `Updates` con los estados `Latest`, `Original` y `Update` |
+
+### Criterio de aceptación verificado
+
+- [x] La desviación de `protocolo.pdf` quedó documentada y comprobada por digest
+- [x] La cronología 31/08/2026 → 04/09/2026 quedó documentada
+- [x] La actualización fue enviada y aceptada en OSF
+- [x] `Latest` muestra la adenda y el campo como `Updated`
+- [ ] `Original` conserva la respuesta anterior sin la adenda
+- [x] La API pública expone la respuesta actualizada
+- [x] Se preservó el contenido histórico del registro original
+
+### Limitaciones
+
+La acción externa en OSF fue ejecutada por Villafuerte Rosero Allan Noé, por
+ser quien dispone del acceso administrativo al registro. Macías Herrera
+Josthyn Esteban realizó la documentación, la incorporación de evidencias y el
+commit en el repositorio.
+
+Al cierre de esta entrada no se dispone de la captura de la vista `Original`,
+por lo que ese criterio queda sin acreditar. El estado de rúbrica corresponde
+al docente.
+
+### Commits
+
+Ver el commit cuyo mensaje es `docs(A5): registrar adenda OSF y verificacion API`.
