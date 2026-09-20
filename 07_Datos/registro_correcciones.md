@@ -1092,64 +1092,51 @@ No aplica todavía.
 
 ## C5 — Identificar al analista VER y documentar la revisión cruzada
 
-**Estado operativo:** VERIFICADA (identificación) · limitación declarada (revisión cruzada)
+**Estado operativo:** EN PROCESO
 **Estado de rúbrica:** pendiente de mapeo
 **Peso:** 0,10 pts
 **Responsable(s):** Arboleda Yanza Francisco Javier
-**Dependencias:** Ninguna
+**Dependencias:** Confirmación del equipo sobre a quién corresponde VER
 
 ### Problema detectado
-El plan del docente señala que la ronda 3 fue codificada por un solo
-analista (commit `cbcdab5`) y menciona un "analista VER" sin identificar.
+El plan del docente señala que la ronda 3 fue codificada por un solo analista (commit `cbcdab5`) y pide identificar al analista "VER".
 
 ### Acción aplicada
-Se revisó el commit `cbcdab5` ("Codificar entrevistas de tercera ronda"),
-autor `AlanNVR`, y el archivo que el propio commit introduce,
-`07_Datos/datos_procesados/README_codificacion_tercera_ronda.md`. Ese
-README declara explícitamente: responsable principal Villafuerte Rosero
-Allan Noé, identificador del analista en el CSV `AVR`, y estado "codificación
-realizada; pendiente revisión cruzada del integrante de apoyo antes de
-cerrar formalmente la acción".
+Se revisó el commit `cbcdab5` (autor `AlanNVR`) y el README que introduce, `07_Datos/datos_procesados/README_codificacion_tercera_ronda.md`. Ese README declara como responsable principal a Villafuerte Rosero Allan Noé, con identificador `AVR` en las 89 filas de `codificacion_tercera_ronda.csv` (ENTR-09 a ENTR-16), y estado "codificación realizada; pendiente revisión cruzada del integrante de apoyo".
 
-Se buscó el término "VER" en todo el repositorio. No existe ningún
-identificador, archivo ni persona con ese nombre; las únicas coincidencias
-son apariciones de la subcadena "ver" dentro de palabras como
-"verificacion". Se concluye que no hay un "analista VER" real en el
-repositorio: el único identificador de analista presente en la codificación
-de la ronda 3 es `AVR` (Villafuerte Rosero Allan Noé), confirmado en las 90
-filas de `codificacion_tercera_ronda.csv`.
+"VER" es el identificador del analista del archivo histórico `07_Datos/datos_crudos/codificacion.csv` (138 fragmentos, EV-01 a EV-08, rondas 1 y 2): figura en la columna `Analista_codificador` de las 138 filas y en `07_Datos/datos_crudos/readme.md` (línea 38). Ningún documento del repositorio indica a qué integrante corresponde. La persona no se asigna por suposición: queda pendiente de confirmación del equipo.
 
-La revisión cruzada que pide el criterio del docente **no se ha realizado**.
-El propio README del commit `cbcdab5` ya lo declaraba como pendiente antes
-de que el docente lo señalara.
+La revisión cruzada de la ronda 3 no se realizó. El README de `cbcdab5` ya la declaraba pendiente.
 
 ### Evidencia utilizada
-- `07_Datos/datos_procesados/README_codificacion_tercera_ronda.md` (introducido en `cbcdab5`)
-- `07_Datos/datos_procesados/codificacion_tercera_ronda.csv` — columna `Analista_codificador`, valor `AVR` en las 90 filas (ENTR-09 a ENTR-16)
-- Autor de git del commit `cbcdab5`: `AlanNVR`
-- Búsqueda de texto completo del repositorio por "VER": sin resultados relevantes
+- `07_Datos/datos_crudos/codificacion.csv`, columna `Analista_codificador`: `VER` en 138 filas
+- `07_Datos/datos_crudos/readme.md`, línea 38
+- `07_Datos/datos_procesados/codificacion_tercera_ronda.csv`: `AVR` en 89 filas
+- `07_Datos/datos_procesados/README_codificacion_tercera_ronda.md`
 
 ### Archivos modificados
 - `07_Datos/registro_correcciones.md` (esta entrada)
 
 ### Criterio de aceptación
-- [x] Analista identificado: no existe un "analista VER"; el identificador real es `AVR` (Villafuerte Rosero Allan Noé)
-- [ ] Revisión cruzada — no realizada; se declara como limitación
+- [ ] Analista VER identificado: el identificador existe; falta confirmar a quién corresponde
+- [ ] Revisión cruzada: no realizada; se declara como limitación
 
 ### Verificación
-El commit y el CSV son públicos y verificables directamente en el historial
-del repositorio (`git show cbcdab5`, o la vista de commit en GitHub).
+Comandos:
+
+    python3 -c "import csv; r=list(csv.DictReader(open('07_Datos/datos_crudos/codificacion.csv',encoding='utf-8-sig'),delimiter=';')); print(sum(x['Analista_codificador']=='VER' for x in r))"
+    python3 -c "import csv; r=list(csv.DictReader(open('07_Datos/datos_procesados/codificacion_tercera_ronda.csv',encoding='utf-8-sig'),delimiter=';')); print(sum(x['Analista_codificador']=='AVR' for x in r))"
+
+Resultado:
+
+    138
+    89
 
 ### Commits
-- `0836c50` — `docs(C5): identificar analista y declarar revision cruzada pendiente`
+- `0836c50` y `3af8698` — versión inicial de esta entrada, que afirmaba por error que no existía un analista VER
 
 ### Limitaciones
-No existe artefacto de revisión cruzada de la ronda 3. El propio equipo ya
-había declarado esta limitación en el README introducido junto con la
-codificación, antes de que el docente la señalara. Qué haría falta: que
-alguien del equipo (el "integrante de apoyo" al que se refiere el README
-original) revise una muestra de la codificación de `AVR` y registre acuerdo
-o desacuerdo, o mantener la limitación declarada si no hay tiempo.
+No existe artefacto de revisión cruzada de la ronda 3. Qué haría falta: que el "integrante de apoyo" que menciona el README revise una muestra de la codificación de `AVR` y registre acuerdo o desacuerdo, y que el equipo confirme quién es VER. Si no se puede confirmar, se declara "no se pudo determinar con la evidencia disponible".
 
 ### Evidencia entregada fuera del repositorio
 No aplica.
