@@ -32,7 +32,7 @@ PDF afectado y de las capturas/fotos, incluyendo verificación del
 tatuaje identificable en la Foto 01 del consentimiento complementario y
 en Fotos_Aplicacion/.
 
-Avance capa visual (Arboleda): A01 (commit 2bae024), A05 (commit 9fd0fd6), A06 (commit 0351872), A07 (commit 4e9c742), A09 (commit 787d7d5), A12 (commit ae5b00c), C1 (commit 651d21c), C2 (commit 2b692a5), Foto 01 (commit e837e32), A02 (commit 89da033), A04 (commit d4c1fea) y A10 (commit 17bb6ae) enmascarados y reemplazados. Pendiente: A11, C3 y C4 (contienen la cédula del líder) y G1b (historial).
+Avance capa visual (Arboleda): A01 (commit 2bae024), A05 (commit 9fd0fd6), A06 (commit 0351872), A07 (commit 4e9c742), A09 (commit 787d7d5), A12 (commit ae5b00c), C1 (commit 651d21c), C2 (commit 2b692a5), Foto 01 (commit e837e32), A02 (commit 89da033), A04 (commit d4c1fea), A10 (commit 17bb6ae) y A11 (commit ba3e491) enmascarados y reemplazados. Pendiente: C3 y C4 (contienen la cédula del líder) y G1b (historial).
 
 ### Evidencia utilizada
 - Archivo: los 8 PDF de 09_Etica/ listados arriba
@@ -61,6 +61,7 @@ Avance capa visual (Arboleda): A01 (commit 2bae024), A05 (commit 9fd0fd6), A06 (
 - `09_Etica/A02_Instrumentos_Recoleccion.pdf` (commit 89da033)
 - `09_Etica/A04_Plan_Gestion_Datos.pdf` (commit d4c1fea)
 - `09_Etica/A10_Cronograma_Gantt.pdf` (commit 17bb6ae)
+- `09_Etica/A11_Analisis_Riesgos.pdf` (commit ba3e491)
 
 ### Criterio de aceptación
 - [x] Capa automatizada ejecutada y commiteada con salida real
@@ -96,6 +97,7 @@ Resultado:
 - `89da033` — cédula enmascarada en A02 (versión pública)
 - `d4c1fea` — cédula enmascarada en A04 (versión pública)
 - `17bb6ae` — cédula enmascarada en A10 (versión pública)
+- `ba3e491` — cédula enmascarada en A11 (versión pública)
 
 ### Limitaciones
 Los 8 PDF no tienen fuente LaTeX en el repositorio, así que la redacción
