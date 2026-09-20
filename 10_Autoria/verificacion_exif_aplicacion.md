@@ -1,4 +1,4 @@
-# Verificación EXIF — Fotografías de aplicación del cuestionario
+# Verificación EXIF — Fotografías de la sesión complementaria de consentimiento (15/09/2026)
 
 Fecha de verificación: 2026-09-15
 Responsable: Jhostyn Macías
@@ -18,7 +18,4 @@ directamente del archivo.
 
 ## Conclusión
 
-Las 5 fotografías conservan metadatos EXIF completos y consistentes con una
-sesión real de aplicación del cuestionario (mismo dispositivo, secuencia
-temporal continua de ~2 minutos entre fotos). No se detectaron capturas de
-pantalla ni evidencia sin metadatos entre estos 5 archivos.
+Las 5 fotografías conservan metadatos EXIF completos y consistentes con la sesión complementaria de consentimiento del 15/09/2026 (no con la aplicación original del cuestionario) (mismo dispositivo, secuencia temporal continua de ~2 minutos entre fotos). No se detectaron capturas de pantalla ni evidencia sin metadatos entre estos 5 archivos.
