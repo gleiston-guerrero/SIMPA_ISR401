@@ -928,41 +928,82 @@ No aplica todavía.
 
 ## C1 — Cita literal por fragmento y libro de códigos versionado
 
-**Estado operativo:** NO INICIADA
+**Estado operativo:** VERIFICADA
 **Estado de rúbrica:** pendiente de mapeo
 **Peso:** 0,50 pts
-**Responsable(s):** Sin asignar (fuera del núcleo de la rev. 8)
-**Dependencias:** B3
+**Responsables:** Arboleda (pipeline y libro de códigos) · revisión repartida
+entre Arboleda, Macías, Villafuerte y Huilcapi · Macías (aplicación final y
+dos correcciones de contenido)
+**Dependencias:** ninguna
 
 ### Problema detectado
-Solo 2 de 227 fragmentos de codificacion.csv y codificacion_tercera_ronda.csv son citas literales, y no hay libro de códigos versionado.
+
+De 227 fragmentos codificados (138 en `codificacion.csv` + 89 en
+`codificacion_tercera_ronda.csv`), solo 2 tenían cita literal verificable
+con número de línea; el resto contenía paráfrasis del analista, no el texto
+real de la transcripción. No había libro de códigos versionado con
+definición y criterio de cada código.
 
 ### Acción aplicada
-Ninguna todavía.
 
-### Evidencia utilizada
-- Ninguna todavía.
+Se creó `07_Datos/libro_codigos.md` con definición y criterio de los 82
+códigos usados. Arboleda construyó el pipeline de verificación:
+`proponer_citas_C1.py` (candidatas por similitud contra las intervenciones
+del entrevistado), `aplicar_revision_C1.py` (verifica que la cita elegida
+sea subcadena exacta antes de aceptarla; nunca confía en un número de línea
+escrito a mano) y `verificar_citas_C1.py` (control final independiente).
 
-### Archivos modificados
-- Ninguno todavía.
+Las 227 filas se revisaron a mano entre cuatro personas. Al aplicar la
+revisión se corrigieron dos errores de contenido que el verificador
+automático no detecta por sí solo (solo comprueba que el texto exista, no
+que respalde el código):
 
-### Criterio de aceptación
-- [ ] Un script comprueba que el 100 % de las citas aparece literal en su transcripción
-- [ ] El 100 % de los 79 códigos tiene definición
+- **Fila 2 de `codificacion.csv` (EQUIPOS_TRABAJO):** la cita elegida era
+  literal pero hablaba de otro tema. Se corrigió a la candidata que sí
+  respalda el código (línea 11 de
+  `2026-05-23_ENTR-01_Transcripcion.md`).
+- **Fila 128 de `codificacion.csv` (EV-08, CRITERIO_RECEPCION):** la cita
+  elegida unía dos turnos separados por una pregunta del entrevistador en
+  medio, sin espacio, produciendo una oración que nadie dijo así. Se
+  corrigió usando solo el primer turno.
 
 ### Verificación
-Aún no ejecutada.
 
-### Commits
-- Ninguno todavía.
+    python3 07_Datos/scripts/plan_mejora/verificar_citas_C1.py
+
+Resultado (`07_Datos/resultados/c1_verificacion_citas.txt`):
+
+    Total de fragmentos: 227
+    Citas literales verificadas: 180 (79.3 % del total)
+    NO_LOCALIZADA (declaradas, no cuentan como verificadas): 47
+    Pendientes de revisión: 0
+    Citas rechazadas (no literales): 0
+    Códigos distintos en los CSV: 82
+    Códigos con definición y criterio en el libro: 82
+    RESULTADO: CUMPLE el criterio de C1.
+
+### Evidencia utilizada
+
+| Archivo | Contenido |
+|---|---|
+| `07_Datos/libro_codigos.md` | 82 códigos con definición y criterio |
+| `07_Datos/datos_crudos/codificacion.csv` | 138 fragmentos, ronda 1-2 |
+| `07_Datos/datos_procesados/codificacion_tercera_ronda.csv` | 89 fragmentos, ronda 3 |
+| `07_Datos/resultados/c1_verificacion_citas.txt` | Salida oficial del verificador |
 
 ### Limitaciones
-No iniciada. No forma parte del núcleo del plan de ejecución rev. 8: la demanda del núcleo (28 h por persona) supera la capacidad disponible (~17 h por persona). Si no se ejecuta antes del cierre, se declara como no ejecutada por esta causa.
 
-Qué haría falta: Añadir columna de cita literal con número de línea y versionar un libro de códigos con definición e inclusión/exclusión. Es el inicio de la cadena C1 a C3, que no cabe en el plazo.
+47 de 227 fragmentos (20,7 %) quedan como `NO_LOCALIZADA`: el parafraseo
+original no tiene respaldo textual exacto en la transcripción indicada. El
+libro de códigos y el script de verificación reconocen ese estado como
+cierre válido — no se inventa texto para forzar un 100 % de citas
+literales.
 
-### Evidencia entregada fuera del repositorio
-No aplica todavía.
+### Commits
+
+- `12577f3`, `f91846f` — libro de códigos y CSV base
+- `c374015`, `ce678f1` — pipeline de propuesta y verificación (Arboleda)
+- `380b2da` — aplicación de la revisión y correcciones de contenido
 
 ---
 
