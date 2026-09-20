@@ -1,4 +1,10 @@
-# NOTAS DE CAMPO — PROYECTO SIMPA
+# SÍNTESIS ANALÍTICA DE 16 ENTREVISTAS — PROYECTO SIMPA
+> **Nota de origen:** este documento es una síntesis analítica elaborada por
+> Macías Herrera Josthyn Esteban, con apoyo de ChatGPT, a partir de las
+> transcripciones reales de las 16 entrevistas
+> (`02_Evidencias/Transcripciones/`). **No es una nota tomada durante la
+> sesión de campo**, sino un análisis posterior. Uso de IA declarado en
+> `10_Autoria/declaracion_uso_ia.md`, sección 11.
 **Proyecto:** Sistema Inteligente de Mantenimiento de Palma Africana (SIMPA)  
 **Técnica:** Entrevistas semiestructuradas  
 **Número de notas:** 16  
@@ -447,7 +453,7 @@ A partir del conjunto de entrevistas se repiten varios patrones relevantes para 
 
 ## Criterio de uso en el proyecto
 
-Estas notas pueden utilizarse como evidencia complementaria de elicitación y análisis cualitativo. Para mantener integridad metodológica:
+"Esta síntesis puede utilizarse como evidencia complementaria de análisis cualitativo, siempre presentándola como lo que es: un análisis posterior elaborado a partir de las transcripciones, no un registro tomado en el momento de la entrevista."
 
 - conservar la correspondencia `NC-XX ↔ ENTR-XX`;
 - no añadir observaciones no registradas como si hubieran ocurrido en campo;
