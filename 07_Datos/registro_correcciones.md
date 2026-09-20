@@ -1541,7 +1541,7 @@ Comparación manual de fechas entre las tres fuentes listadas arriba,
 reproducible abriendo cada archivo referenciado.
 
 ### Commits
-- `<SHA>` — `docs(F4): documentar discrepancia de fechas entre fotos, constancia y bitacora`
+- `8cd23f0` — `docs(F4): documentar discrepancia de fechas entre fotos, constancia y bitacora`
 
 ### Limitaciones
 No existe una bitácora de visitas de campo separada de `bitacora_sesiones.csv`
