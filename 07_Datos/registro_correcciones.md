@@ -640,7 +640,7 @@ el commit `037f995`, conforme a la regla de no reescribir historial.
 - Hash SHA-256 del material fuente verificado contra `06_Experimento/material_fuente/ENTR-04_fuente_congelada.md` (EXP-02): coincide exactamente
 
 ### Archivos modificados
-- `06_Experimento/prompts_llm/2026-09-11_1300_claude-sonnet-5.md` (commit `dbc5d1e`)
+- `06_Experimento/prompts_llm/2026-09-11_1300_claude-sonnet-5.md` (commit `1aa89c0`)
 
 ### Criterio de aceptación
 - [x] Conversación archivada — prompt literal y respuesta íntegra conservados en el archivo de registro
@@ -652,12 +652,13 @@ Comando:
 
     git show 037f995 -- 06_Experimento/prompts_llm/2026-09-11_1300_claude-sonnet-5.md
 
-Resultado: confirma que la línea eliminada contenía la nota del desfase horario, restituida en el commit `dbc5d1e`.
+Resultado: confirma que la línea eliminada contenía la nota del desfase horario, restituida en el commit `1aa89c0`.
 
 ### Commits
-- `dbc5d1e` — `docs(A4): restituir nota de desfase horario borrada en 037f995`
+- `1aa89c0` — `docs(A4): restituir nota de desfase horario borrada en 037f995`
 
 ### Limitaciones
+El bloque "Consigna literal" del archivo de registro conserva entre corchetes la indicación [a continuación, el contenido íntegro de la transcripción anonimizada] en lugar del texto de la transcripción. El prompt completo se reconstruye concatenando la consigna con el contenido de `ENTR-04_fuente_experimento.md` (SHA-256 `5e9cf9dca6af94061ae937c47a6644dde924061c8382325515e258c377c63313`, que coincide con el de `02_Evidencias/Transcripciones/2026-07-28_ENTR-04_Transcripcion.md`).
 El desfase entre la hora de la consulta (13:00) y la hora de subida al
 repositorio (23:25) queda declarado, pero no eliminado: la consulta real
 al modelo ocurrió antes de que se documentara y subiera. Los parámetros de
