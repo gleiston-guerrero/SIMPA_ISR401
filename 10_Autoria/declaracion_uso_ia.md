@@ -130,6 +130,17 @@ Allan y Josthyn.
 | Quién verificó | Rizzo Vélez Edson Nagib — según declaración del responsable de la transcripción; no existe registro escrito de la verificación |
 | Método de verificación | Cotejo de la transcripción final contra el audio original, según declaración del responsable. El alcance no está documentado: no se registró qué entrevistas se cotejaron ni si el cotejo fue literal. La transcripción final reorganiza el texto y la retranscripción literal de ENTR-01 a 08 con marcas de tiempo (tarea B1) está pendiente |
 
+## 11. Síntesis analítica de las 16 entrevistas (Notas_de_Campo_SIMPA_16_Entrevistas.md)
+
+| Campo | Detalle |
+|---|---|
+| ¿Se usó IA? | **Sí** |
+| Herramienta | ChatGPT |
+| Finalidad | Elaboración de una síntesis analítica de las 16 entrevistas (ENTR-01 a ENTR-16) a partir de sus transcripciones reales: observaciones registradas, necesidades identificadas, interpretación para SIMPA y temas de trazabilidad por entrevista, más una síntesis transversal final |
+| Responsable | Macías Herrera Josthyn Esteban |
+| Quién verificó | [pendiente — ver Limitaciones] |
+| Método de verificación | [pendiente — ver Limitaciones] |
+
 ## Áreas donde NO se usó IA generativa (declaración explícita)
 
 - **Fotografías, videos, grabaciones de audio de entrevistas y consentimientos**: son evidencia primaria real, no generada ni asistida por IA.
