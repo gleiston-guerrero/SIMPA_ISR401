@@ -15,7 +15,7 @@ Responsable: Jhostyn Macías
 | Capturas Francisco | OK (3) |
 | Capturas Alcívar | OK (3) — correcciones del 17–18/09/2026, ver actualizaciones abajo |
 | 30 sesiones de bitácora | OK — 26 NO_APLICA + 4 con nota real |
-| Notas de campo | OK — sin fabricación detectada, fechas consistentes con bitácora |
+| Notas de campo | NO VERIFICADO — los 16 PDF se rotulan como material no contemporáneo; ver `10_Autoria/notas_campo/readme.md` y la tarea F1 |
 
 ## Conclusión
 
