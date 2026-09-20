@@ -1622,7 +1622,7 @@ Comando:
 
 Resultado:
 
-    4 coincidencias: líneas 27, 56, 58 y 75 de 09_Etica/README_Etica.md; la línea 27 ya dice «En curso»
+    4 coincidencias: líneas 27, 56, 58 y 75 de 09_Etica/README_Etica.md; la línea 27 dice «En curso»
 
 ### Commits
 - `25dad77` — `docs(G2): precisar estado real de la acreditacion etica A12`
