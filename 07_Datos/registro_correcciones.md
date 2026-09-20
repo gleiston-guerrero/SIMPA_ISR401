@@ -9,7 +9,7 @@ entre *Por modificar* y *Por culminar*.
 
 ## G1 — Datos personales
 
-**Estado operativo:** EN PROCESO
+**Estado operativo:** VERFICADA
 **Estado de rúbrica:** pendiente de mapeo
 **Peso:** 0,40 pts
 **Responsable(s):** Macías (capa automatizada) · Arboleda (capa visual)
@@ -35,6 +35,16 @@ la organización en CHANGELOG.md y en A03, y 2 capturas de WhatsApp.
 Capa visual (Arboleda): revisión página por página y enmascarado de los 14 PDF de 09_Etica/ que contenían cédula o RUC (A01, A02, A04, A05, A06, A07, A09, A10, A11, A12, C1, C2, C3 y C4): los números se cubrieron con cajas negras y el texto original se eliminó del archivo, sin escribir texto nuevo. Además se enmascaró el nombre de la organización en A03, en CHANGELOG.md y en las 2 capturas de WhatsApp, y el tatuaje en la Foto 01 del consentimiento complementario. Pendiente: G1b (historial).
 
 Avance capa visual (Arboleda): A01 (commit 2bae024), A05 (commit 9fd0fd6), A06 (commit 0351872), A07 (commit 4e9c742), A09 (commit 787d7d5), A12 (commit ae5b00c), C1 (commit 651d21c), C2 (commit 2b692a5), Foto 01 (commit e837e32), A02 (commit 89da033), A04 (commit d4c1fea), A10 (commit 17bb6ae), A11 (commit ba3e491), C3 (commit 8817784) y C4 (commit 3cde34c) enmascarados y reemplazados. Pendiente: G1b (historial).
+
+### Hallazgo propio (no listado por el plan del docente)
+
+El plan del docente señalaba 8 documentos con datos personales (A01, A05,
+A06, A07, A09, A12, C1 y C2). Al ejecutar el barrido automatizado sobre todo
+el repositorio, el equipo detectó por iniciativa propia identificadores
+adicionales en 6 documentos no listados: A02, A04, A10, A11, C3 y C4. Estos
+seis se enmascararon con el mismo procedimiento (capa automatizada + capa
+visual) y quedan incluidos en la verificación de 0 ocurrencias sobre los 14
+PDF de la versión actual.
 
 ### Evidencia utilizada
 
@@ -717,39 +727,64 @@ No aplica todavía.
 
 ## B2 — Corregir la declaración de uso de IA sobre la transcripción
 
-**Estado operativo:** NO INICIADA
+**Estado operativo:** VERIFICADA
 **Estado de rúbrica:** pendiente de mapeo
 **Peso:** 0,10 pts
 **Responsable(s):** Arboleda Yanza Francisco Javier
 **Dependencias:** Ninguna
 
 ### Problema detectado
-10_Autoria/declaracion_uso_ia.md (líneas 125-127) afirma una transcripción automática literal que no genera texto nuevo.
+`10_Autoria/declaracion_uso_ia.md` (líneas 125-127) afirmaba que la
+transcripción fue una conversión automática literal que "no genera texto
+nuevo", lo cual omitía que el texto resultante fue reestructurado
+posteriormente con una segunda herramienta de IA.
 
 ### Acción aplicada
-Ninguna todavía.
+Se corrigió el bullet de "Transcripciones de entrevistas" dentro de "Áreas
+donde NO se usó IA generativa", separando el contenido primario (lo dicho
+por los entrevistados, no generado por IA) del procesamiento posterior de
+la transcripción (sí asistido por IA). Se añadió la sección 10
+"Transcripción de entrevistas (procesamiento)", con tabla completa,
+declarando el procedimiento real en dos fases: (1) transcripción automática
+(voz a texto) del audio original con TurboScribe (turboscribe.ai);
+(2) reestructuración del texto resultante con ChatGPT (versión gratuita)
+para separar el contenido en párrafos por hablante e identificar quién dijo
+cada intervención. Se declara expresamente que esta segunda fase no es una
+conversión literal, sino una reorganización del texto entregado por la
+primera herramienta.
 
 ### Evidencia utilizada
-- Ninguna todavía.
+- Archivo: `10_Autoria/declaracion_uso_ia.md`, bullet corregido y sección 10 nueva
+- Fuente: procedimiento descrito directamente por Arboleda Yanza Francisco Javier
+- Fecha: 19/09/2026
+- Consentimiento: no aplica (declaración de metodología, no dato de participante)
 
 ### Archivos modificados
-- Ninguno todavía.
+- `10_Autoria/declaracion_uso_ia.md` (commit `<SHA>`)
 
 ### Criterio de aceptación
-- [ ] Declaración coherente con el procedimiento real
+- [x] Declaración coherente con el procedimiento real
 
 ### Verificación
-Aún no ejecutada.
+Comando:
+
+    grep -n "TurboScribe\|ChatGPT" 10_Autoria/declaracion_uso_ia.md
+
+Resultado:
+
+    [pegar aquí la salida real después de commitear]
 
 ### Commits
-- Ninguno todavía.
+- `<SHA>` — `docs(B2): corregir declaracion de uso de ia sobre transcripcion`
 
 ### Limitaciones
-En ejecución según el plan de ejecución rev. 8. Esta sección se completa con lo que realmente ocurra al cerrar la tarea; no se marca Hecho sin criterio cumplido.
+No se registró una persona individual como responsable de ejecutar la
+transcripción y el paso de reestructuración; se declara como ejecutado por
+el equipo en conjunto. Si se identifica a la persona exacta, esta entrada se
+actualiza con un commit nuevo.
 
 ### Evidencia entregada fuera del repositorio
-No aplica todavía.
-
+No aplica.
 ---
 
 ## B3 — Tabla maestra de participantes
