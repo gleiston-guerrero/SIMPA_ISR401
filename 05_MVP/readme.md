@@ -37,11 +37,18 @@ git submodule update --init --recursive
 
 ## Prototipo en vivo
 
-### V2 — versión evaluada
+### Versión vigente
 
-https://prototipov2-correcion.netlify.app/
+https://simpa-v3-prototipo.netlify.app/
 
-> Se publica una sola URL para que no haya ambigüedad sobre cuál es la versión evaluada.
+> Esta es la única URL que debe usarse para evaluar el prototipo. Es la que
+> incorpora los flujos de derechos LOPDP (RF-40, RF-41 y RF-42) descritos más
+> abajo.
+>
+> Existieron despliegues anteriores en `prototipo-simpa.netlify.app` y
+> `prototipov2-correcion.netlify.app`, correspondientes a versiones previas sin
+> esos flujos. Si siguen accesibles, no deben tomarse como la versión
+> entregada.
 
 ### Cuentas de demostración
 
