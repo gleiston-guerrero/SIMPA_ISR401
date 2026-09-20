@@ -32,7 +32,7 @@ PDF afectado y de las capturas/fotos, incluyendo verificación del
 tatuaje identificable en la Foto 01 del consentimiento complementario y
 en Fotos_Aplicacion/.
 
-Avance capa visual (Arboleda): A01 (commit 2bae024), A05 (commit 9fd0fd6), A06 (commit 0351872), A07 (commit 4e9c742), A09 (commit 787d7d5), A12 (commit ae5b00c), C1 (commit 651d21c), C2 (commit 2b692a5) y Foto 01 (commit HASH_FOTO) enmascarados y reemplazados. Pendiente: comprobación con el script y G1b (historial).
+Avance capa visual (Arboleda): A01 (commit 2bae024), A05 (commit 9fd0fd6), A06 (commit 0351872), A07 (commit 4e9c742), A09 (commit 787d7d5), A12 (commit ae5b00c), C1 (commit 651d21c), C2 (commit 2b692a5) y Foto 01 (commit e837e32) enmascarados y reemplazados. Pendiente: A02, A04, A10, A11, C3 y C4 (contienen la cédula del líder) y G1b (historial).
 
 ### Evidencia utilizada
 - Archivo: los 8 PDF de 09_Etica/ listados arriba
@@ -56,7 +56,8 @@ Avance capa visual (Arboleda): A01 (commit 2bae024), A05 (commit 9fd0fd6), A06 (
 - `09_Etica/A12_Certificado_Etica.pdf` (commit ae5b00c)
 - `09_Etica/Categoria_C/C1_Aval_Unidad_Productiva.pdf` (commit 651d21c)
 - `09_Etica/Categoria_C/C2_Compromiso_Confidencialidad_Estrategica.pdf` (commit 2b692a5)
-- `09_Etica/Categoria_C/C2_Compromiso_Confidencialidad_Estrategica.pdf02_Evidencias/Cuestionario/Fotos_Aplicacion/2026-09-15_ConsentimientoComplementario_Foto-01.jpg` (commit e837e32)
+- `09_Etica/Categoria_C/C2_Compromiso_Confidencialidad_Estrategica.pdf` (commit 2b692a5)
+- `02_Evidencias/Cuestionario/Fotos_Aplicacion/2026-09-15_ConsentimientoComplementario_Foto-01.jpg` (commit e837e32)
 
 ### Criterio de aceptación
 - [x] Capa automatizada ejecutada y commiteada con salida real
