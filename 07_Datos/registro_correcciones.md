@@ -23,10 +23,13 @@ barrido de todo el repositorio, también en A02, A04, A10, A11, C3 y C4
 (cédula del líder y, en C3, la del gestor de evidencias).
 
 ### Acción aplicada
-Capa automatizada (Macías): extracción de texto de los 8 documentos
-éticos señalados por el plan, búsqueda de patrones de cédula (10 dígitos)
-y RUC (13 dígitos) mediante script versionado. Se detectaron 61
-ocurrencias reales. Adicionalmente ya se había enmascarado el nombre de
+Capa automatizada (Macías): extracción de texto de los documentos éticos
+mediante script versionado, con búsqueda de patrones de cédula (10 dígitos)
+y RUC (13 dígitos). La primera ejecución, sobre los 8 documentos señalados
+por el plan, detectó 61 ocurrencias reales. Tras el enmascaramiento de la
+capa visual, el script se amplió a los 14 PDF afectados y se corrigió para
+no emitir los valores detectados; la ejecución sobre la versión actual
+devuelve 0 ocurrencias. Adicionalmente ya se había enmascarado el nombre de
 la organización en CHANGELOG.md y en A03, y 2 capturas de WhatsApp.
 
 Capa visual (Arboleda): revisión página por página y enmascarado de los 14 PDF de 09_Etica/ que contenían cédula o RUC (A01, A02, A04, A05, A06, A07, A09, A10, A11, A12, C1, C2, C3 y C4): los números se cubrieron con cajas negras y el texto original se eliminó del archivo, sin escribir texto nuevo. Además se enmascaró el nombre de la organización en A03, en CHANGELOG.md y en las 2 capturas de WhatsApp, y el tatuaje en la Foto 01 del consentimiento complementario. Pendiente: G1b (historial).
@@ -34,8 +37,13 @@ Capa visual (Arboleda): revisión página por página y enmascarado de los 14 PD
 Avance capa visual (Arboleda): A01 (commit 2bae024), A05 (commit 9fd0fd6), A06 (commit 0351872), A07 (commit 4e9c742), A09 (commit 787d7d5), A12 (commit ae5b00c), C1 (commit 651d21c), C2 (commit 2b692a5), Foto 01 (commit e837e32), A02 (commit 89da033), A04 (commit d4c1fea), A10 (commit 17bb6ae), A11 (commit ba3e491), C3 (commit 8817784) y C4 (commit 3cde34c) enmascarados y reemplazados. Pendiente: G1b (historial).
 
 ### Evidencia utilizada
-- Archivo: los 8 PDF de 09_Etica/ listados arriba
-- Fuente: texto extraído con pdftotext -layout
+
+| Archivo | Contenido |
+|---|---|
+| `07_Datos/scripts/plan_mejora/buscar_cedulas_ruc.py` | Script de detección. Recorre los 14 PDF éticos y busca patrones de 10 dígitos (cédula) y 13 dígitos (RUC). Emite número de línea, tipo y máscara de longitud; no emite el valor ni el contexto |
+| `07_Datos/resultados/g1a_verificacion_cedulas_ruc.txt` | Salida de la ejecución sobre la versión actual: 0 ocurrencias en los 14 archivos |
+
+- Fuente: texto extraído con `pdftotext -layout`
 - Persona: Macías (ejecución del script)
 - Fecha: 2026-09-19
 - Consentimiento: no aplica (detección, no publicación de dato)
@@ -45,8 +53,9 @@ Avance capa visual (Arboleda): A01 (commit 2bae024), A05 (commit 9fd0fd6), A06 (
 - `09_Etica/A03...` punto 4 (commit 778ab60)
 - `10_Autoria/correspondencia/2026-07-27_WhatsApp_...png` (commit d355638)
 - `02_Evidencias/Documentos_Organizacion/2026-07-27_WhatsApp_...png` (commit d6a9434)
-- `07_Datos/scripts/plan_mejora/buscar_cedulas_ruc.py` (nuevo)
-- `07_Datos/resultados/g1a_deteccion_cedulas_ruc.txt` (nuevo)
+- `07_Datos/scripts/plan_mejora/buscar_cedulas_ruc.py` (nuevo; corregido para no emitir valores)
+- `07_Datos/resultados/g1a_verificacion_cedulas_ruc.txt` (nuevo)
+- `07_Datos/resultados/g1a_deteccion_cedulas_ruc.txt` (retirado del árbol)
 - `09_Etica/A01_Protocolo_Investigacion.pdf` (commit 2bae024)
 - `09_Etica/A05_Aval_Institucional.pdf` (commit 9fd0fd6)
 - `09_Etica/A06_Declaracion_Conflicto_Intereses.pdf` (commit 0351872)
@@ -54,7 +63,6 @@ Avance capa visual (Arboleda): A01 (commit 2bae024), A05 (commit 9fd0fd6), A06 (
 - `09_Etica/A09_Nomina_Equipo.pdf` (commit 787d7d5)
 - `09_Etica/A12_Certificado_Etica.pdf` (commit ae5b00c)
 - `09_Etica/Categoria_C/C1_Aval_Unidad_Productiva.pdf` (commit 651d21c)
-- `09_Etica/Categoria_C/C2_Compromiso_Confidencialidad_Estrategica.pdf` (commit 2b692a5)
 - `09_Etica/Categoria_C/C2_Compromiso_Confidencialidad_Estrategica.pdf` (commit 2b692a5)
 - `02_Evidencias/Cuestionario/Fotos_Aplicacion/2026-09-15_ConsentimientoComplementario_Foto-01.jpg` (commit e837e32)
 - `09_Etica/A02_Instrumentos_Recoleccion.pdf` (commit 89da033)
@@ -67,25 +75,30 @@ Avance capa visual (Arboleda): A01 (commit 2bae024), A05 (commit 9fd0fd6), A06 (
 ### Criterio de aceptación
 - [x] Capa automatizada ejecutada y commiteada con salida real
 - [x] Capa visual ejecutada, checklist por archivo commiteada
-- [ ] Los 61 identificadores detectados quedan enmascarados en los 8 PDF
+- [x] Los identificadores de cédula y RUC detectados quedan enmascarados en los 14 PDF de la versión actual
 - [x] Tatuaje revisado
 - [ ] G1b (historial) — bloqueada, requiere autorización escrita del docente
 
 ### Verificación
-Comando:
 
-    python3 07_Datos/scripts/plan_mejora/buscar_cedulas_ruc.py
+Comando, desde la raíz del repositorio:
 
-Resultado:
+    PYTHONIOENCODING=utf-8 python 07_Datos/scripts/plan_mejora/buscar_cedulas_ruc.py
 
-    TOTAL de ocurrencias detectadas: 61
-    (ver 07_Datos/resultados/g1a_deteccion_cedulas_ruc.txt para el detalle completo)
+Resultado sobre los 14 PDF de la versión actual:
+
+    TOTAL de ocurrencias detectadas: 0
+
+Comprobación de que la propia salida no expone identificadores:
+
+    grep -cE "[0-9]{10,13}" 07_Datos/resultados/g1a_verificacion_cedulas_ruc.txt
+    0
 
 ### Commits
 - `baee71b` — nombre de organización retirado de CHANGELOG.md
 - `778ab60` — nombre de organización enmascarado en A03
 - `d355638`, `d6a9434` — capturas de WhatsApp enmascaradas
-- `<pendiente>` — docs(G1): agregar script y salida de deteccion de cedulas/RUC
+- `0b1fec9` — salida inicial de detección de cédulas/RUC (retirada posteriormente)
 - `2bae024` — datos personales enmascarados en A01 (versión pública)
 - `9fd0fd6` — datos personales enmascarados en A05 (versión pública)
 - `0351872` — datos personales enmascarados en A06 (versión pública)
@@ -101,9 +114,29 @@ Resultado:
 - `ba3e491` — cédula enmascarada en A11 (versión pública)
 - `8817784` — cédula enmascarada en C3 (versión pública)
 - `3cde34c` — cédula enmascarada en C4 (versión pública)
+- Ver el commit cuyo mensaje es `fix(G1): retirar salida con identificadores y verificar 14 PDF con 0 ocurrencias`
 
 ### Limitaciones
-Los PDF no tienen fuente LaTeX en el repositorio, así que se enmascararon sobre la versión publicada: los números se cubrieron con cajas negras y el texto original se eliminó del archivo (la extracción de texto ya no los devuelve). Los originales firmados se conservan sin cambios fuera del repositorio público. G1b (historial): las cédulas, el RUC y el nombre real siguen en versiones anteriores del historial de git y solo pueden retirarse con autorización escrita del docente; hasta entonces permanecen accesibles.
+Los PDF no tienen fuente LaTeX en el repositorio, así que se enmascararon sobre la versión publicada: los números se cubrieron con cajas negras y el texto original se eliminó del archivo (la extracción de texto ya no los devuelve). Los originales firmados se conservan sin cambios fuera del repositorio público.
+
+La primera ejecución de la capa automatizada produjo el archivo
+`07_Datos/resultados/g1a_deteccion_cedulas_ruc.txt`, que emitía cada
+identificador detectado junto con la línea de contexto completa del documento
+de origen. Ese archivo se incorporó al repositorio en el commit `0b1fec9` y
+exponía en texto plano las 61 ocurrencias halladas. Se ha retirado del árbol
+de trabajo y el script se corrigió para emitir únicamente el número de línea,
+el tipo de identificador y una máscara de la longitud, sin el valor ni el
+contexto.
+
+Retirarlo del árbol no lo elimina del historial de Git: el contenido sigue
+siendo recuperable desde el commit `0b1fec9`. Su eliminación efectiva exigiría
+reescribir el historial publicado, operación excluida de esta ronda de
+correcciones. La limitación se declara aquí de forma expresa y queda pendiente
+de decisión del equipo junto con el docente.
+
+G1b (historial): las cédulas, el RUC y el nombre real siguen en versiones
+anteriores del historial de git y solo pueden retirarse con autorización
+escrita del docente; hasta entonces permanecen accesibles.
 
 ### Evidencia entregada fuera del repositorio
 No aplica todavía.
@@ -184,7 +217,7 @@ No se afirma equivalencia binaria entre ninguna de las tres.
 - [x] La cronología 31/08/2026 → 04/09/2026 quedó documentada
 - [x] La actualización fue enviada y aceptada en OSF
 - [x] `Latest` muestra la adenda y el campo como `Updated`
-- [ ] `Original` conserva la respuesta anterior sin la adenda
+- [x] `Original` conserva la respuesta anterior sin la adenda
 - [x] La API pública expone la respuesta actualizada
 - [x] Se preservó el contenido histórico del registro original
 
@@ -195,9 +228,7 @@ ser quien dispone del acceso administrativo al registro. Macías Herrera
 Josthyn Esteban realizó la documentación, la incorporación de evidencias y el
 commit en el repositorio.
 
-Al cierre de esta entrada no se dispone de la captura de la vista `Original`,
-por lo que ese criterio queda sin acreditar. El estado de rúbrica corresponde
-al docente.
+El estado de rúbrica corresponde al docente.
 
 ### Commits
 

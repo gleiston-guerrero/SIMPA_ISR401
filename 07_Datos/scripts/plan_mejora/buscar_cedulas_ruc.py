@@ -28,6 +28,12 @@ ARCHIVOS = [
     "09_Etica/A12_Certificado_Etica.pdf",
     "09_Etica/Categoria_C/C1_Aval_Unidad_Productiva.pdf",
     "09_Etica/Categoria_C/C2_Compromiso_Confidencialidad_Estrategica.pdf",
+    "09_Etica/A02_Instrumentos_Recoleccion.pdf",
+    "09_Etica/A04_Plan_Gestion_Datos.pdf",
+    "09_Etica/A10_Cronograma_Gantt.pdf",
+    "09_Etica/A11_Analisis_Riesgos.pdf",
+    "09_Etica/Categoria_C/C3_Protocolo_Anonimizacion.pdf",
+    "09_Etica/Categoria_C/C4_Normativa_Sectorial.pdf",
 ]
 
 PATRON = re.compile(r"\b[0-9]{10}\b|\b[0-9]{13}\b")
@@ -59,7 +65,7 @@ def main():
             print("  Sin coincidencias de 10 o 13 dígitos.")
         for num_linea, valor, contexto in encontrados:
             tipo = "RUC" if len(valor) == 13 else "cédula"
-            print(f"  línea {num_linea} [{tipo}] {valor}  |  {contexto}")
+            print(f"  línea {num_linea} [{tipo}] {'#' * len(valor)}")
             total_ocurrencias += 1
         print()
 

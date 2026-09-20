@@ -1,0 +1,45 @@
+=== 09_Etica/A01_Protocolo_Investigacion.pdf ===
+  Sin coincidencias de 10 o 13 dígitos.
+
+=== 09_Etica/A05_Aval_Institucional.pdf ===
+  Sin coincidencias de 10 o 13 dígitos.
+
+=== 09_Etica/A06_Declaracion_Conflicto_Intereses.pdf ===
+  Sin coincidencias de 10 o 13 dígitos.
+
+=== 09_Etica/A07_Compromiso_Confidencialidad.pdf ===
+  Sin coincidencias de 10 o 13 dígitos.
+
+=== 09_Etica/A09_Nomina_Equipo.pdf ===
+  Sin coincidencias de 10 o 13 dígitos.
+
+=== 09_Etica/A12_Certificado_Etica.pdf ===
+  Sin coincidencias de 10 o 13 dígitos.
+
+=== 09_Etica/Categoria_C/C1_Aval_Unidad_Productiva.pdf ===
+  Sin coincidencias de 10 o 13 dígitos.
+
+=== 09_Etica/Categoria_C/C2_Compromiso_Confidencialidad_Estrategica.pdf ===
+  Sin coincidencias de 10 o 13 dígitos.
+
+=== 09_Etica/A02_Instrumentos_Recoleccion.pdf ===
+  Sin coincidencias de 10 o 13 dígitos.
+
+=== 09_Etica/A04_Plan_Gestion_Datos.pdf ===
+  Sin coincidencias de 10 o 13 dígitos.
+
+=== 09_Etica/A10_Cronograma_Gantt.pdf ===
+  Sin coincidencias de 10 o 13 dígitos.
+
+=== 09_Etica/A11_Analisis_Riesgos.pdf ===
+  Sin coincidencias de 10 o 13 dígitos.
+
+=== 09_Etica/Categoria_C/C3_Protocolo_Anonimizacion.pdf ===
+  Sin coincidencias de 10 o 13 dígitos.
+
+=== 09_Etica/Categoria_C/C4_Normativa_Sectorial.pdf ===
+  Sin coincidencias de 10 o 13 dígitos.
+
+TOTAL de ocurrencias detectadas: 0
+Este script solo detecta. La redacción real del PDF es un paso aparte,
+y su verificación visual (Capa 2) es responsabilidad de Arboleda.
