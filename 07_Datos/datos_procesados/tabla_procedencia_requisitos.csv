@@ -1,43 +1,74 @@
-id_requisito;nombre;actor_declarado;evidencias_citadas;origen_completo_ers;observacion
-RF-01;Autenticación y control de acceso por rol;Administrador general;"EV-01; EV-07; EV-09";Administrador general · \id{EV-01}, \id{EV-07}, \id{EV-09};
-RF-02;Gestión de plantaciones y lotes;Administrador general;"EV-01; EV-02; EV-11";Administrador general · \id{EV-01}, \id{EV-02}, \id{EV-11};
-RF-03;Gestión de personal y equipos de trabajo;Administrador general;"EV-01; EV-11";Administrador general · \id{EV-01}, \id{EV-11};
-RF-10;Gestión de variedades de palma;Administrador / Asesor técnico;"EV-01; EV-02; EV-04";Administrador / Asesor técnico · \id{EV-01}, \id{EV-02}, \id{EV-04};
-RF-26;Planificación semanal de labores con presupuesto;Administrador general;EV-11;Administrador general · \id{EV-11};
-RF-27;Arrastre de labor incompleta a la semana siguiente;Administrador general;EV-11;Administrador general · \id{EV-11};
-RF-34;Registro de solicitud de insumos asociada al plan;Administrador general;EV-11;Administrador general · \id{EV-11};
-RF-36;Catálogo codificado de labores con tarifa por unidad;Administrador general;EV-13;Administrador general · \id{EV-13};
-RF-37;Liquidación semanal de presupuesto contra ejecución;Administrador general;"EV-11; EV-13";Administrador general · \id{EV-13}, \id{EV-11};
-RF-38;Registro de labor no presupuestada;Administrador general;EV-13;Administrador general · \id{EV-13};
-RF-39;Aprobación de la liquidación semanal;Administrador general;EV-13;Administrador general · \id{EV-13};
-RF-35;Registro delegado para personal sin dispositivo propio;Jefe de campo / Asistente de administración;"EV-05; EV-12";Jefe de campo / Asistente de administración · \id{EV-12}, \id{EV-05};
-RF-04;Registro de labores agrícolas;Trabajador agrícola / Jefe de campo;"EV-01; EV-02; EV-05; EV-06; EV-11";Trabajador agrícola / Jefe de campo · \id{EV-01}, \id{EV-02}, \id{EV-05}, \id{EV-06}, \id{EV-11};
-RF-28;Registro de avance por unidad de labor;Trabajador agrícola;"EV-05; EV-06; EV-11";Trabajador agrícola · \id{EV-05}, \id{EV-06}, \id{EV-11};
-RF-29;Consulta de avance acumulado y estimación de remuneración;Trabajador agrícola;"EV-06; EV-07";Trabajador agrícola · \id{EV-06}, \id{EV-07};
-RF-05;Registro de monitoreo fitosanitario;Técnico fitosanitario;"EV-01; EV-02; EV-09";Técnico fitosanitario · \id{EV-01}, \id{EV-02}, \id{EV-09};
-RF-30;Reporte de incidencia desde campo con evidencia fotográfica y georreferencia;Asistente de administración;EV-07;Asistente de administración · \id{EV-07};
-RF-31;Lista de verificación de pendientes por visita;Asistente de administración;EV-07;Asistente de administración · \id{EV-07};
-RF-06;Seguimiento de etapas del cultivo;Administrador general;EV-01;Administrador general · \id{EV-01};
-RF-40;Exportación de los datos personales de la persona titular;Trabajador agrícola;;Trabajador agrícola · \id{RL-04} (Art. 12 LOPDP);
-RF-41;Rectificación de datos con conservación en bitácora;Administrador general / Trabajador agrícola;;Administrador general / Trabajador agrícola · \id{RL-05} (Art. 13 LOPDP);
-RF-42;Supresión de datos personales con disociación del histórico productivo;Administrador general;;Administrador general · \id{RL-06} (Art. 14 LOPDP);
-RF-11;Registro de análisis de suelo y foliar;Administrador / Asesor técnico;"EV-02; EV-04";Administrador / Asesor técnico · \id{EV-02}, \id{EV-04};
-RF-17;Registro y consulta de datos climáticos;Administrador general / Asesor técnico;"EV-01; EV-02; EV-03";Administrador general / Asesor técnico · \id{EV-01}, \id{EV-02}, \id{EV-03};
-RF-13;Registro del proceso de polinización;Jefe de polinización / Polinizador;EV-03;Jefe de polinización / Polinizador · \id{EV-03};
-RF-14;Conteo georreferenciado de flores polinizadas;Polinizador;EV-03;Polinizador · \id{EV-03};
-RF-15;Registro y visualización de recorridos del personal;Administrador general;"EV-01; EV-02; EV-03";Administrador general · \id{EV-01}, \id{EV-02}, \id{EV-03};
-RF-16;Evaluación de desempeño del personal;Administrador general;"EV-01; EV-02; EV-03";Administrador general · \id{EV-01}, \id{EV-02}, \id{EV-03};
-RF-07;Detección de plagas y enfermedades por análisis de imagen;Técnico fitosanitario / Trabajador agrícola;"EV-01; EV-02; EV-08";Técnico fitosanitario / Trabajador agrícola · \id{EV-01}, \id{EV-02}, \id{EV-08};
-RF-08;Diagnóstico de deficiencias nutricionales por análisis de imagen;Administrador / Asesor técnico;"EV-02; EV-04";Administrador / Asesor técnico · \id{EV-02}, \id{EV-04};
-RF-09;Ficha técnica de plaga con recomendación de control;Técnico fitosanitario;"EV-01; EV-02";Técnico fitosanitario · \id{EV-01}, \id{EV-02};
-RF-21;Clasificación de madurez del racimo por desprendimiento;Técnico de la extractora / Cosechador;"EV-04; EV-08";Técnico de la extractora / Cosechador · \id{EV-04}, \id{EV-08};
-RF-12;Generación de alertas tempranas;Técnico / Administrador general;"EV-01; EV-02";Técnico / Administrador general · \id{EV-01}, \id{EV-02};
-RF-22;Estimación y alerta preventiva de porcentaje de fruta verde;Administrador general / Técnico de la extractora;"EV-04; EV-08";Administrador general / Técnico de la extractora · \id{EV-04}, \id{EV-08};
-RF-23;Registro de la calificación de calidad emitida por la extractora;Administrador general;EV-04;Administrador general · \id{EV-04};
-RF-24;Trazabilidad de la calificación hasta la cuadrilla responsable;Técnico de la extractora / Administrador general;"EV-04; EV-08";Técnico de la extractora / Administrador general · \id{EV-04}, \id{EV-08};
-RF-25;Control de la ventana entre corte y entrega;Técnico de la extractora;EV-04;Técnico de la extractora · \id{EV-04};
-RF-33;Registro de la guía de remisión del despacho;Técnico de la extractora;EV-04;Técnico de la extractora · \id{EV-04};
-RF-18;Estimación de producción y rendimiento;Administrador general / Asesor técnico;"EV-01; EV-02";Administrador general / Asesor técnico · \id{EV-01}, \id{EV-02};
-RF-32;Compartición de la estimación de cosecha con la planta extractora;Técnico de la extractora;EV-04;Técnico de la extractora · \id{EV-04};
-RF-19;Generación de reportes;Administrador general;"EV-01; EV-02; EV-11";Administrador general · \id{EV-01}, \id{EV-02}, \id{EV-11};
-RF-20;Historial de actividades, diagnósticos y eventos;Administrador general / Técnico;EV-01;Administrador general / Técnico · \id{EV-01};
+﻿id_requisito;tipo;nombre;evidencias_citadas;fecha_evidencia_mas_antigua;tipo_evidencia;commit_alta;fecha_commit_alta;CLASIFICACION_PROPUESTA;MOTIVO_PROPUESTA;en_propuesta_inicial;CLASIFICACION_VERIFICADA;VERIFICADO_POR;ALERTA;origen_completo_ers
+RF-01;RF;Autenticación y control de acceso por rol;EV-01;2026-05-23;Entrevista (audio);2624c0f;2026-09-03;elicitado;cita evidencia: EV-01;;;;;Administrador general · \id{EV-01
+RF-02;RF;Gestión de plantaciones y lotes;EV-01;2026-05-23;Entrevista (audio);2624c0f;2026-09-03;elicitado;cita evidencia: EV-01;;;;;Administrador general · \id{EV-01
+RF-03;RF;Gestión de personal y equipos de trabajo;EV-01;2026-05-23;Entrevista (audio);2624c0f;2026-09-03;elicitado;cita evidencia: EV-01;senalado en el plan de mejora (correspondencia a verificar);;;FUNCIONALIDAD YA EN LA PROPUESTA DEL 2026-05-05 (senalado en el plan de mejora (correspondencia a verificar)), anterior a su evidencia 2026-05-23;Administrador general · \id{EV-01
+RF-04;RF;Registro de labores agrícolas;EV-01;2026-05-23;Entrevista (audio);2624c0f;2026-09-03;elicitado;cita evidencia: EV-01;;;;;Trabajador agrícola / Jefe de campo · \id{EV-01
+RF-05;RF;Registro de monitoreo fitosanitario;EV-01;2026-05-23;Entrevista (audio);2624c0f;2026-09-03;elicitado;cita evidencia: EV-01;;;;;Técnico fitosanitario · \id{EV-01
+RF-06;RF;Seguimiento de etapas del cultivo;EV-01;2026-05-23;Entrevista (audio);2624c0f;2026-09-03;elicitado;cita evidencia: EV-01;;;;;Administrador general · \id{EV-01
+RF-07;RF;Detección de plagas y enfermedades por análisis de imagen;EV-01;2026-05-23;Entrevista (audio);2624c0f;2026-09-03;elicitado;cita evidencia: EV-01;2.2 Análisis de palma con IA (IMAGEN);;;FUNCIONALIDAD YA EN LA PROPUESTA DEL 2026-05-05 (2.2 Análisis de palma con IA (IMAGEN)), anterior a su evidencia 2026-05-23;Técnico fitosanitario / Trabajador agrícola · \id{EV-01
+RF-08;RF;Diagnóstico de deficiencias nutricionales por análisis de imagen;EV-02;2026-05-23;Entrevista (video);2624c0f;2026-09-03;elicitado;cita evidencia: EV-02;2.2 Análisis de palma con IA (IMAGEN);;;FUNCIONALIDAD YA EN LA PROPUESTA DEL 2026-05-05 (2.2 Análisis de palma con IA (IMAGEN)), anterior a su evidencia 2026-05-23;Administrador / Asesor técnico · \id{EV-02
+RF-09;RF;Ficha técnica de plaga con recomendación de control;EV-01;2026-05-23;Entrevista (audio);2624c0f;2026-09-03;elicitado;cita evidencia: EV-01;;;;;Técnico fitosanitario · \id{EV-01
+RF-10;RF;Gestión de variedades de palma;EV-01;2026-05-23;Entrevista (audio);2624c0f;2026-09-03;elicitado;cita evidencia: EV-01;;;;;Administrador / Asesor técnico · \id{EV-01
+RF-11;RF;Registro de análisis de suelo y foliar;EV-02;2026-05-23;Entrevista (video);2624c0f;2026-09-03;elicitado;cita evidencia: EV-02;;;;;Administrador / Asesor técnico · \id{EV-02
+RF-12;RF;Generación de alertas tempranas;EV-01;2026-05-23;Entrevista (audio);2624c0f;2026-09-03;elicitado;cita evidencia: EV-01;;;;;Técnico / Administrador general · \id{EV-01
+RF-13;RF;Registro del proceso de polinización;EV-03;2026-05-23;Entrevista (video);2624c0f;2026-09-03;elicitado;cita evidencia: EV-03;;;;;Jefe de polinización / Polinizador · \id{EV-03
+RF-14;RF;Conteo georreferenciado de flores polinizadas;EV-03;2026-05-23;Entrevista (video);2624c0f;2026-09-03;elicitado;cita evidencia: EV-03;;;;;Polinizador · \id{EV-03
+RF-15;RF;Registro y visualización de recorridos del personal;EV-01;2026-05-23;Entrevista (audio);2624c0f;2026-09-03;elicitado;cita evidencia: EV-01;;;;;Administrador general · \id{EV-01
+RF-16;RF;Evaluación de desempeño del personal;EV-01;2026-05-23;Entrevista (audio);2624c0f;2026-09-03;elicitado;cita evidencia: EV-01;;;;;Administrador general · \id{EV-01
+RF-17;RF;Registro y consulta de datos climáticos;EV-01;2026-05-23;Entrevista (audio);2624c0f;2026-09-03;elicitado;cita evidencia: EV-01;;;;;Administrador general / Asesor técnico · \id{EV-01
+RF-18;RF;Estimación de producción y rendimiento;EV-01;2026-05-23;Entrevista (audio);2624c0f;2026-09-03;elicitado;cita evidencia: EV-01;2.3 Predicción de cosecha (IA);;;FUNCIONALIDAD YA EN LA PROPUESTA DEL 2026-05-05 (2.3 Predicción de cosecha (IA)), anterior a su evidencia 2026-05-23;Administrador general / Asesor técnico · \id{EV-01
+RF-19;RF;Generación de reportes;EV-01;2026-05-23;Entrevista (audio);2624c0f;2026-09-03;elicitado;cita evidencia: EV-01;;;;;Administrador general · \id{EV-01
+RF-20;RF;Historial de actividades, diagnósticos y eventos;EV-01;2026-05-23;Entrevista (audio);2624c0f;2026-09-03;elicitado;cita evidencia: EV-01;;;;;Administrador general / Técnico · \id{EV-01
+RF-21;RF;Clasificación de madurez del racimo por desprendimiento;EV-04;2026-07-28;Entrevista (video);2624c0f;2026-09-03;elicitado;cita evidencia: EV-04;;;;;Técnico de la extractora / Cosechador · \id{EV-04
+RF-22;RF;Estimación y alerta preventiva de porcentaje de fruta verde;EV-04;2026-07-28;Entrevista (video);2624c0f;2026-09-03;elicitado;cita evidencia: EV-04;;;;;Administrador general / Técnico de la extractora · \id{EV-04
+RF-23;RF;Registro de la calificación de calidad emitida por la extractora;EV-04;2026-07-28;Entrevista (video);2624c0f;2026-09-03;elicitado;cita evidencia: EV-04;;;;;Administrador general · \id{EV-04
+RF-24;RF;Trazabilidad de la calificación hasta la cuadrilla responsable;EV-04;2026-07-28;Entrevista (video);2624c0f;2026-09-03;elicitado;cita evidencia: EV-04;;;;;Técnico de la extractora / Administrador general · \id{EV-04
+RF-25;RF;Control de la ventana entre corte y entrega;EV-04;2026-07-28;Entrevista (video);2624c0f;2026-09-03;elicitado;cita evidencia: EV-04;;;;;Técnico de la extractora · \id{EV-04
+RF-26;RF;Planificación semanal de labores con presupuesto;EV-11;2026-07-24;Documentos de la organización;2624c0f;2026-09-03;elicitado;cita evidencia: EV-11;;;;;Administrador general · \id{EV-11
+RF-27;RF;Arrastre de labor incompleta a la semana siguiente;EV-11;2026-07-24;Documentos de la organización;2624c0f;2026-09-03;elicitado;cita evidencia: EV-11;;;;;Administrador general · \id{EV-11
+RF-28;RF;Registro de avance por unidad de labor;EV-05;2026-07-28;Entrevista (video);2624c0f;2026-09-03;elicitado;cita evidencia: EV-05;;;;;Trabajador agrícola · \id{EV-05
+RF-29;RF;Consulta de avance acumulado y estimación de remuneración;EV-06;2026-07-28;Entrevista (video);2624c0f;2026-09-03;elicitado;cita evidencia: EV-06;;;;;Trabajador agrícola · \id{EV-06
+RF-30;RF;Reporte de incidencia desde campo con evidencia fotográfica y georreferencia;EV-07;2026-08-02;Entrevista (video);2624c0f;2026-09-03;elicitado;cita evidencia: EV-07;;;;;Asistente de administración · \id{EV-07
+RF-31;RF;Lista de verificación de pendientes por visita;EV-07;2026-08-02;Entrevista (video);2624c0f;2026-09-03;elicitado;cita evidencia: EV-07;;;;;Asistente de administración · \id{EV-07
+RF-32;RF;Compartición de la estimación de cosecha con la planta extractora;EV-04;2026-07-28;Entrevista (video);2624c0f;2026-09-03;elicitado;cita evidencia: EV-04;2.3 Predicción de cosecha (IA);;;FUNCIONALIDAD YA EN LA PROPUESTA DEL 2026-05-05 (2.3 Predicción de cosecha (IA)), anterior a su evidencia 2026-07-28;Técnico de la extractora · \id{EV-04
+RF-33;RF;Registro de la guía de remisión del despacho;EV-04;2026-07-28;Entrevista (video);2624c0f;2026-09-03;elicitado;cita evidencia: EV-04;;;;;Técnico de la extractora · \id{EV-04
+RF-34;RF;Registro de solicitud de insumos asociada al plan;EV-11;2026-07-24;Documentos de la organización;2624c0f;2026-09-03;elicitado;cita evidencia: EV-11;;;;;Administrador general · \id{EV-11
+RF-35;RF;Registro delegado para personal sin dispositivo propio;EV-12;2026-06-30;Cuestionario ampliado;2624c0f;2026-09-03;elicitado;cita evidencia: EV-12;;;;;Jefe de campo / Asistente de administración · \id{EV-12
+RF-36;RF;Catálogo codificado de labores con tarifa por unidad;EV-13;2026-08-07;Hoja de liquidación semanal;2624c0f;2026-09-03;elicitado;cita evidencia: EV-13;;;;;Administrador general · \id{EV-13
+RF-37;RF;Liquidación semanal de presupuesto contra ejecución;EV-13;2026-08-07;Hoja de liquidación semanal;2624c0f;2026-09-03;elicitado;cita evidencia: EV-13;;;;;Administrador general · \id{EV-13
+RF-38;RF;Registro de labor no presupuestada;EV-13;2026-08-07;Hoja de liquidación semanal;2624c0f;2026-09-03;elicitado;cita evidencia: EV-13;;;;;Administrador general · \id{EV-13
+RF-39;RF;Aprobación de la liquidación semanal;EV-13;2026-08-07;Hoja de liquidación semanal;2624c0f;2026-09-03;elicitado;cita evidencia: EV-13;;;;;Administrador general · \id{EV-13
+RF-40;RF;Exportación de los datos personales de la persona titular;;;;2624c0f;2026-09-03;derivado;se apoya en: L-04;2.5 Gestión de empleados;;;RF sin evidencia citada;Trabajador agrícola · \id{RL-04
+RF-41;RF;Rectificación de datos con conservación en bitácora;;;;2624c0f;2026-09-03;derivado;se apoya en: L-05;;;;RF sin evidencia citada;Administrador general / Trabajador agrícola · \id{RL-05
+RF-42;RF;Supresión de datos personales con disociación del histórico productivo;;;;2624c0f;2026-09-03;normativo;el origen declarado invoca norma o marco legal;;;;RF sin evidencia citada;Administrador general · \id{RL-06
+RNF-01;RNF;Adecuación funcional;EV-04;2026-07-28;Entrevista (video);2624c0f;2026-09-03;elicitado;cita evidencia: EV-04;;;;;\footnotesize \id{EV-04}
+RNF-02;RNF;Adecuación funcional;"EV-01; EV-02";2026-05-23;"Entrevista (audio); Entrevista (video)";2624c0f;2026-09-03;elicitado;cita evidencia: EV-01, EV-02;;;;;\footnotesize \id{EV-01}, \id{EV-02}
+RNF-03;RNF;Eficiencia de desempeño;EV-12;2026-06-30;Cuestionario ampliado;2624c0f;2026-09-03;elicitado;cita evidencia: EV-12;;;;;\footnotesize \id{EV-12}
+RNF-04;RNF;Eficiencia de desempeño;"EV-01; EV-02";2026-05-23;"Entrevista (audio); Entrevista (video)";2624c0f;2026-09-03;elicitado;cita evidencia: EV-01, EV-02;;;;;\footnotesize \id{EV-01}, \id{EV-02}
+RNF-05;RNF;Eficiencia de desempeño;EV-03;2026-05-23;Entrevista (video);2624c0f;2026-09-03;elicitado;cita evidencia: EV-03;;;;;\footnotesize \id{EV-03}
+RNF-06;RNF;Compatibilidad;EV-04;2026-07-28;Entrevista (video);2624c0f;2026-09-03;elicitado;cita evidencia: EV-04;;;;;\footnotesize \id{EV-04}
+RNF-07;RNF;Compatibilidad;;;;2624c0f;2026-09-03;propuesta_equipo;no declara evidencia ni norma ni requisito previo;;;;;\footnotesize Derivado
+RNF-08;RNF;Interacción de usuario;"EV-05; EV-06; EV-07";2026-07-28;"Entrevista (video); Entrevista (video); Entrevista (video)";2624c0f;2026-09-03;elicitado;cita evidencia: EV-05, EV-06, EV-07;;;;;\id{EV-05}, \id{EV-06}, \id{EV-07}
+RNF-09;RNF;Interacción de usuario;"EV-01; EV-07";2026-05-23;"Entrevista (audio); Entrevista (video)";2624c0f;2026-09-03;elicitado;cita evidencia: EV-01, EV-07;;;;;\id{EV-01}, \id{EV-07}
+RNF-10;RNF;Fiabilidad;;;;2624c0f;2026-09-03;propuesta_equipo;no declara evidencia ni norma ni requisito previo;;;;;\footnotesize Derivado
+RNF-11;RNF;Fiabilidad;"EV-07; EV-10";2026-06-30;"Entrevista (video); Cuestionario piloto";2624c0f;2026-09-03;elicitado;cita evidencia: EV-07, EV-10;;;;;\id{EV-07}, \id{EV-10}
+RNF-12;RNF;Fiabilidad;EV-03;2026-05-23;Entrevista (video);2624c0f;2026-09-03;elicitado;cita evidencia: EV-03;;;;;\footnotesize \id{EV-03}
+RNF-13;RNF;Seguridad;;;;2624c0f;2026-09-03;propuesta_equipo;no declara evidencia ni norma ni requisito previo;;;;;\footnotesize Derivado
+RNF-14;RNF;Seguridad;;;;2624c0f;2026-09-03;normativo;el origen declarado invoca norma o marco legal;;;;;\footnotesize \cite{lopdp} Art. 37
+RNF-15;RNF;Mantenibilidad;;;;2624c0f;2026-09-03;propuesta_equipo;no declara evidencia ni norma ni requisito previo;;;;;\footnotesize Derivado
+RNF-16;RNF;Interacción de usuario;"EV-01; EV-02; EV-07";2026-05-23;"Entrevista (audio); Entrevista (video); Entrevista (video)";2624c0f;2026-09-03;elicitado;cita evidencia: EV-01, EV-02, EV-07;;;;;\footnotesize \id{EV-01}, \id{EV-02}, \id{EV-07}
+RNF-17;RNF;Flexibilidad \newline \footnotesize(reemplazabilidad);;;;2624c0f;2026-09-03;propuesta_equipo;no declara evidencia ni norma ni requisito previo;;;;;\footnotesize Derivado
+RNF-18;RNF;Flexibilidad \newline \footnotesize(adaptabilidad);EV-04;2026-07-28;Entrevista (video);2624c0f;2026-09-03;elicitado;cita evidencia: EV-04;;;;;\footnotesize \id{EV-04}
+RNF-19;RNF;Seguridad física \newline \footnotesize(\emph{safety});EV-02;2026-05-23;Entrevista (video);2624c0f;2026-09-03;elicitado;cita evidencia: EV-02;;;;;\footnotesize \id{EV-02}
+RNF-IA-01;RNF-IA;Rendimiento;;;;2624c0f;2026-09-03;propuesta_equipo;no declara evidencia ni norma ni requisito previo;;;;;El macro-F1 del clasificador sobre las cinco afectaciones más frecuentes del cultivo no será inferior a \textbf{0,80}, medido sobre el conjunto de evaluación del Anexo de datos antes de cada despliegue. Se emplea macro-F1 y no exactitud porque las clases están desbalanceadas y la exactitud premiaría
+RNF-IA-02;RNF-IA;Rendimiento;;;;2624c0f;2026-09-03;propuesta_equipo;no declara evidencia ni norma ni requisito previo;;;;;La exhaustividad (\emph{recall}) de la clase \emph{con afectación} frente a \emph{sin afectación} no será inferior a \textbf{0,85}. El umbral es más exigente que el de precisión de forma deliberada: en este dominio un falso negativo cuesta dos semanas de avance de la plaga, mientras que un falso pos
+RNF-IA-03;RNF-IA;Rendimiento;;;;2624c0f;2026-09-03;derivado;se apoya en: RD-05;;;;;La latencia de inferencia será menor o igual a \textbf{10~s} en el percentil 95, medida en un dispositivo de gama media con Android 9.0 y sin conectividad, conforme a \id{RD-05}.
+RNF-IA-04;RNF-IA;Equidad;;;;2624c0f;2026-09-03;derivado;se apoya en: RF-IA-03;;;;;La diferencia de macro-F1 entre las dos variedades sembradas (\emph{guineensis} e híbrido) no superará \textbf{5 puntos porcentuales}, medida trimestralmente sobre el registro de decisiones de \id{RF-IA-03}. Un modelo entrenado sobre la variedad mayoritaria diagnosticaría peor los lotes de la otra s
+RNF-IA-05;RNF-IA;Equidad;;;;2624c0f;2026-09-03;derivado;se apoya en: RD-01;;;;;"La diferencia de macro-F1 entre capturas realizadas con dispositivos de gama baja y de gama media o superior no superará \textbf{7 puntos porcentuales}, medida trimestralmente. La restricción \id{RD-01} establece que el personal emplea su propio teléfono; un modelo que rinda peor con cámaras de meno"
+RNF-IA-06;RNF-IA;Explicabilidad;;;;2624c0f;2026-09-03;derivado;se apoya en: RNF-19;;;;;Toda clasificación emitida se presentará acompañada, sin que la persona usuaria deba solicitarlo y sin posibilidad de omitirla, del rasgo visual determinante en lenguaje natural y del nivel de confianza expresado en términos cualitativos. Cuando la salida incluya recomendación de control fitosanitar
+RNF-IA-07;RNF-IA;Rendimiento;;;;2624c0f;2026-09-03;propuesta_equipo;no declara evidencia ni norma ni requisito previo;;;;;El error absoluto medio (MAE) de la estimación del porcentaje de fruta verde no superará \textbf{2 puntos porcentuales} frente a la calificación emitida por la planta extractora, medido sobre el conjunto de evaluación antes de cada despliegue. El umbral se fija en 2 puntos porque el de penalización 
+RNF-IA-08;RNF-IA;Rendimiento;;;;2624c0f;2026-09-03;propuesta_equipo;no declara evidencia ni norma ni requisito previo;;;;;La exactitud de la clasificación del grado de madurez no será inferior a \textbf{0,85}, medida sobre el conjunto de evaluación.
+RNF-IA-09;RNF-IA;Rendimiento;;;;2624c0f;2026-09-03;propuesta_equipo;no declara evidencia ni norma ni requisito previo;;;;;La estimación de una carga completa se entregará en un tiempo menor o igual a \textbf{15~s} en el percentil 95, en el dispositivo de referencia y sin conectividad.
+RNF-IA-10;RNF-IA;Equidad;;;;2624c0f;2026-09-03;derivado;se apoya en: RF-24;;;;;La diferencia de MAE entre las cuadrillas de trabajo no superará \textbf{1,5 puntos porcentuales}, medida trimestralmente sobre el registro de decisiones. Es el requisito de equidad de mayor consecuencia del sistema: \id{RF-24} traza la penalización hasta la cuadrilla, de modo que un modelo que esti
+RNF-IA-11;RNF-IA;Equidad;;;;2624c0f;2026-09-03;propuesta_equipo;no declara evidencia ni norma ni requisito previo;;;;;La diferencia de MAE entre las dos variedades sembradas no superará \textbf{1,5 puntos porcentuales}, medida trimestralmente. La coloración del racimo maduro difiere entre \emph{guineensis} e híbrido, de modo que un modelo entrenado sobre la variedad mayoritaria trasladaría su umbral cromático a la 
+RNF-IA-12;RNF-IA;Explicabilidad;;;;2624c0f;2026-09-03;propuesta_equipo;no declara evidencia ni norma ni requisito previo;;;;;Toda estimación presentada incorporará, de forma no omisible, el intervalo de confianza, la región de la imagen que más pesó en el resultado y la comparación con la calificación media histórica de ese lote. Cuando la estimación se sitúe a menos de medio punto porcentual del umbral de penalización, l
