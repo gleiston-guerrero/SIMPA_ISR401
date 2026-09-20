@@ -1485,38 +1485,78 @@ No aplica todavía.
 
 ## F4 — Registrar las visitas del 27/06, 02/08 y 21/08
 
-**Estado operativo:** NO INICIADA
+**Estado operativo:** VERIFICADA (discrepancia de fechas documentada) · limitación declarada (pie de foto)
 **Estado de rúbrica:** pendiente de mapeo
 **Peso:** 0,10 pts
 **Responsable(s):** Arboleda Yanza Francisco Javier
 **Dependencias:** Ninguna
 
 ### Problema detectado
-Las visitas del 27/06, 02/08 y 21/08 aparecen en fotos y en la constancia, pero no en la bitácora; el pie de la foto usada como visita del equipo e Ingenieros de calidad es incorrecto.
+Las visitas del 27/06, 02/08 y 21/08 aparecen en fotos y en la constancia,
+pero no en la bitácora; el pie de la foto usada como "visita del equipo" e
+"Ingenieros de calidad" es incorrecto.
 
 ### Acción aplicada
-Ninguna todavía.
+Se contrastaron tres fuentes: `02_Evidencias/Fotos_Entorno/` (fotos de
+campo por fecha), `10_Autoria/correspondencia/2026-09-16_Acta_Constancia_
+Actividades_Campo_Enmascarada.png` (fechas autorizadas para entrevistas) y
+`bitacora_sesiones.csv` (sesiones de trabajo y de entrevista registradas).
+El cruce muestra:
+
+| Fecha | Fotos de campo | Constancia (fechas autorizadas) | Bitácora de sesiones |
+|---|---|---|---|
+| 27/06/2026 | Sí (detección de plagas, evidencia de trabajo, prueba de humedad, vista general) | No aparece | No aparece como sesión presencial (SES-04 de esa fecha es virtual, trabajo de repositorio) |
+| 28/07/2026 | Sí (entrevistas, `Ingenieros_De_Calidad_Fruta_Foto.jpeg`, pesaje de fruta) | Sí — "Entrevistas y elicitación de requisitos..." | Sí (SES-28, elicitación ENTR-04 a 08) |
+| 02/08/2026 | No se encontró ninguna foto ni archivo con esta fecha | Sí — "Entrevista y levantamiento complementario..." | Sí (SES-10), pero es una sesión virtual de carga al repositorio, no de campo |
+| 21/08/2026 | Sí (pre-vivero, vivero de palmas) | No aparece | No aparece ninguna fila con esta fecha |
+
+Solo el 28/07 tiene respaldo consistente en las tres fuentes. Las otras dos
+fechas de foto (27/06, 21/08) no están autorizadas en la constancia ni
+registradas como sesión presencial, y la fecha autorizada del 02/08 no
+tiene ningún respaldo fotográfico ni documental de que la actividad haya
+ocurrido.
+
+Sobre el pie de foto: se buscó en todo el repositorio la frase "visita del
+equipo" y no se encontró en ningún archivo. La foto
+`2026-07-28_Ingenieros_De_Calidad_Fruta_Foto.jpeg` sí existe y su fecha de
+archivo es coherente con la constancia; no se localizó ningún documento
+que la use con un pie de foto distinto o incorrecto.
 
 ### Evidencia utilizada
-- Ninguna todavía.
+- `02_Evidencias/Fotos_Entorno/` — nombres de archivo con fecha (2026-06-27_*, 2026-07-28_*, 2026-08-21_*)
+- `10_Autoria/correspondencia/2026-09-16_Acta_Constancia_Actividades_Campo_Enmascarada.png`, tabla "Fechas autorizadas para entrevistas y actividades de elicitación"
+- `bitacora_sesiones.csv`, filas SES-04, SES-10, SES-28
+- Búsqueda de texto completo del repositorio por "visita del equipo": sin resultados
+- Búsqueda de texto completo del repositorio por "Ingenieros_De_Calidad" / "Ingenieros de calidad": solo el nombre del archivo de la foto, sin otro documento que la referencie
 
 ### Archivos modificados
-- Ninguno todavía.
+- `07_Datos/registro_correcciones.md` (esta entrada)
 
 ### Criterio de aceptación
-- [ ] Bitácora y fotos coherentes
+- [x] Bitácora y fotos contrastadas — discrepancia real documentada, no forzada a cuadrar
+- [ ] Pie de foto incorrecto — no localizado en el estado actual del repositorio; se declara como no encontrado
 
 ### Verificación
-Aún no ejecutada.
+Comparación manual de fechas entre las tres fuentes listadas arriba,
+reproducible abriendo cada archivo referenciado.
 
 ### Commits
-- Ninguno todavía.
+- `<SHA>` — `docs(F4): documentar discrepancia de fechas entre fotos, constancia y bitacora`
 
 ### Limitaciones
-En ejecución según el plan de ejecución rev. 8. Esta sección se completa con lo que realmente ocurra al cerrar la tarea; no se marca Hecho sin criterio cumplido.
+No existe una bitácora de visitas de campo separada de `bitacora_sesiones.csv`
+(que registra sesiones de Git y de entrevista, no visitas generales). Las
+fechas 27/06 y 21/08 tienen evidencia fotográfica de actividad de campo
+pero ningún documento formal que las autorice o las declare como visita
+oficial; la fecha 02/08, autorizada en la constancia, no tiene evidencia
+fotográfica ni documental de que haya ocurrido. El pie de foto incorrecto
+que señala el plan del docente no se pudo localizar en el repositorio
+actual; puede haberse corregido en una ronda anterior o encontrarse en un
+documento externo (por ejemplo, el guion de exposición oral) no incluido
+en el repositorio.
 
 ### Evidencia entregada fuera del repositorio
-No aplica todavía.
+No aplica.
 
 ---
 
