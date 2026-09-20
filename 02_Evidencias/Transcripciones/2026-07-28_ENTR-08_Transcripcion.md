@@ -2,96 +2,100 @@
 
 **Rol:** Técnico de extractora
 
-**Entrevistador:** El día de hoy realizaremos una entrevista a un técnico agrícola de la extractora. ¿Cómo está?
+[00:00] **Entrevistador:** ...el ingeniero, el día de hoy estamos aquí en la extractora, con el señor...
 
-**Entrevistado:** Soy técnico agrícola de la extractora.
+[00:09] **Entrevistado:** Hola, ¿cómo está? Mi nombre es .....
 
-**Entrevistador:** Bien, comenzamos con la primera pregunta: descríbame usted cómo sería un racimo ideal. ¿Qué se ve y qué se siente al tocarlo?
+[00:11] **Entrevistador:** Bien, comenzamos con la primera pregunta y es: Descríbame usted cómo sería un racimo ideal, ¿qué se ve y qué se siente al tocarlo?
 
-**Entrevistado:** Verá, ahorita estamos en una plantación de cultivo híbrido. Aquí hay un ejemplo de un racimo donde identificamos que ya está bien aplicado el polinizante, donde sí vemos desprendimiento. Nosotros, en la extractora, donde yo trabajo como técnico agrícola, cogemos el racimo y revisamos el desprendimiento: si vemos 5 desprendimientos grandes, ese racimo ya está maduro; pero si no hay desprendimiento, el racimo está verde.
+[00:19] **Entrevistado:** Verá, ahorita estamos aquí en una plantación de cultivo híbrido, ¿ya? Eh, sí, aquí hay un ejemplo de un racimo donde identificamos que este racimo eh ya está bien aplicado el polinizante, ¿ya? Donde sí vemos desprendimiento. Entonces, sí, vemos algunos desprendimientos. Es decir, nosotros en la extractora donde yo trabajo como técnico agrícola, nosotros cogemos el racimo con desprendimiento de cinco. Vemos desprendimiento de cinco frutos grandes, ese racimo ya está maduro. Pero si vemos que no hay desprendimiento, el racimo está verde.
 
-**Entrevistador:** ¿En qué estados clasifican ustedes un racimo según su maduración, y cómo se reconoce cada uno a simple vista?
+[00:54] **Entrevistador:** Ya, listo. ¿En qué estado se clasifi- ¿en qué estados clasifican ustedes un racimo que según su maduración y cómo se reconoce cada uno a simple vista?
 
-**Entrevistado:** A simple vista, por ejemplo, se lo muestro aquí: vemos la parte basal, vemos que hay desprendimiento de grano, y eso ya está listo para la cosecha. Mientras no haya desprendimiento, no está listo, es decir, que está verde.
+[01:04] **Entrevistado:** Bueno, en sí, a simple vista, por ejemplo, te lo pongamos aquí de ejemplo, ya. Vemos en la parte basal vemos que hay desprendimiento de grano, eso ahí ya está listo para la cosecha. Mientras tanto no hay desprendimiento, no está listo para la cosecha. Es decir que está verde.
 
-**Entrevistador:** ¿Cuántos frutos desprendidos o sueltos indican que el racimo está en su punto de corte?
+[01:21] **Entrevistador:** Ajá. ¿Cuántos frutos desprendidos o sueltos indican que el racimo está en su punto de corte?
 
-**Entrevistado:** Con 5 pepas desprendidas ya está listo para el corte.
+[01:26] **Entrevistado:** En sí con cinco, con cinco pepas desprendidas ya está listo para el corte.
 
-**Entrevistador:** Además de la maduración, ¿qué otros defectos se revisan?
+[01:31] **Entrevistador:** Ajá. Además de la maduración, ¿qué otros defectos se revisan?
 
-**Entrevistado:** En sí, solo manejamos el método de desprendimiento para la maduración, porque si cortamos guiándonos por el color, ese color engaña.
+[01:35] **Entrevistado:** Eh... maduración, eh... Bueno, en sí maduración solo nosotros manejamos con el método de desprendimiento. Porque si nosotros cortamos, a veces el color engaña.
 
-**Entrevistador:** Cuando llega un camión, ¿revisan todos los racimos o solo una muestra? ¿Cuántos racimos revisan y cómo los eligen?
+[01:46] **Entrevistador:** Muy bien. Cuando llega un camión, ¿revisan todos los racimos o solo una muestra? ¿Cuántos racimos revisan y cómo los eligen?
 
-**Entrevistado:** Primero revisamos todo lo que está llegando. Pero si vemos que el proveedor tiene buen manejo de la fruta, entonces se elige cierta cantidad como muestra.
+[01:53] **Entrevistado:** En sí, en sí, primero eh revisamos todo lo lo la lo que está llegando, ¿ya? Pero si vemos que el proveedor eh eh sí sí tiene buen buen almacenamiento de fruta, entonces se elige cierta cantidad.
 
-**Entrevistador:** ¿Y quién hace esa revisión y cuánto se tarda?
+[02:11] **Entrevistador:** Listo. ¿Y quién es el que hace esa revisión y cuánto cuánto se tarda?
 
-**Entrevistado:** Tenemos un grupo de personal encargado de revisar el fruto; les llamamos el grupo de seleccionadores o calificadores.
+[02:15] **Entrevistado:** En sí tenemos un grupo de personal donde se encarga de de revisar el fruto. Eh... nosotros le llamamos este eh... son los grupos de seleccionadores de de calificaciones.
 
-**Entrevistador:** ¿Y eso es antes del pesaje o después?
+[02:29] **Entrevistador:** ¿Y eso es antes del pesaje o después?
 
-**Entrevistado:** Eso es después del pesaje.
+[02:30] **Entrevistado:** Eso es después del pesaje.
 
-**Entrevistador:** ¿Qué porcentaje de racimos verdes o sobremaduros aceptan como máximo en un lote antes de castigarlo?
+[02:34] **Entrevistador:** ¿Qué porcentaje de racimos verdes o sobremaduros aceptan como máximo en un lote antes de castigarlo?
 
-**Entrevistado:** Eso lo vemos por cantidad de toneladas; ahí sacamos el porcentaje. Si ya pasa el 3 %, 4 % o 5 %, ya sería un castigo.
+[02:40] **Entrevistado:** Eh... máximo máximo nosotros lo vemos por cantidad de toneladas. Entonces a eso vemos el porcentaje, es decir si ya vemos que pasa el 3, 4%, eh... ya 5% ya sería un castigo.
 
-**Entrevistador:** ¿Miden acidez o porcentaje de aceite del lote?
+[02:54] **Entrevistador:** Ah... ¿Qué porcentaje de racimos verdes o sobremaduros aceptan como máximo en un lote...? Ah no, esa ya leí. *(Risas de fondo)* ¿Miden acidez o porcentaje de aceite del lote?
 
-**Entrevistado:** Sí, tenemos un laboratorio en la extractora donde se mide la acidez. Si hay mayor sobremaduración, eso también causa acidez.
+[03:07] **Entrevistado:** En sí nosotros tenemos un laboratorio en la extractora donde mide la acidez. Entonces vemos si tiene mayor este sobremaduración, entonces eso también causa acidez.
 
-**Entrevistador:** ¿Y cuándo se enteran de ese resultado?
+[03:20] **Entrevistador:** ¿Y cuándo se enteran de ese resultado?
 
-**Entrevistado:** Sacan el resultado semanal, al terminar la semana.
+[03:22] **Entrevistado:** Eh... ellos cada sacan los resultados semanal, terminando la semana.
 
-**Entrevistador:** Cuando un lote no cumple, ¿qué descuento se aplica y cómo se calcula?
+[03:29] **Entrevistador:** Cuando un lote no cumple, ¿qué descuento se aplica y cómo se calcula?
 
-**Entrevistado:** Para evitar el castigo del lote, primero los técnicos tenemos que estar pendientes de eso. Hacemos una visita técnica para ver cuál es el problema, si es del grupo de cosecha o del cultivo. Si vemos que no hacen nada para mejorar, ahí sí se aplica el castigo.
+[03:34] **Entrevistado:** En sí, para evitar el castigo del lote, primero nosotros los técnicos tenemos que estar pendientes de eso. Entonces nosotros recurrimos a la visita técnica para ver cuál es el problema, si es el grupo de cosecha o el cultivo. Si vemos que no hacen nada para mejorar, entonces ahí se le pasa el castigo.
 
-**Entrevistador:** ¿Y cuáles serían los defectos que más dinero les cuestan a los productores?
+[03:52] **Entrevistador:** ¿Y cuál serían los defectos que más dinero les cuesta a los productores?
 
-**Entrevistado:** Ahorita, con la baja productividad, los trabajadores cobran por avance y también por toneladas. Si ven que hay menos toneladas, ven que la única opción es cosechar aunque el fruto esté verde.
+[03:56] **Entrevistado:** En sí, eh... ahorita como se viene la baja productividad, entonces ahorita los trabajadores este están así como que en el método... ellos trabajan por por avance y también por tonelada. Entonces si ellos ven que hay menos cantidad de toneladas, entonces ellos ven como que... chuta, la única opción es de coger y sacar la cosecha aunque esté verde el fruto.
 
-**Entrevistador:** ¿Y por qué motivo usted rechazaría un lote completo?
+[04:22] **Entrevistador:** ¿Y por qué motivo usted rechazaría un lote completo?
 
-**Entrevistado:** Si es racimo verde. Para nosotros, en la extractora, es como coger el jugo de una naranja o un limón verde: no se saca nada de líquido. Esa es la explicación que damos como ejemplo de un racimo verde: si el fruto está verde, no se saca nada de aceite.
+[04:25] **Entrevistado:** Eh... como yo le digo, o sea, por motivo, si es racimo verde, entonces eso a nosotros en la extractora este... no no... es como ¿cómo le explico? A ver. Un jugo ya, ponemos un cogemos un un jugo de... perdón, un fruto de de de un fruto naranja o un limón. Le extraemos un jugo a un a un fruto de naranja verde, no sacamos nada de líquido. Entonces esa es la mejor explicación de ejemplo que nosotros le damos, como ejemplo así de un racimo verde. Si traemos un fruto verde, no saca nada de de extracción de aceite.
 
-**Entrevistador:** De los problemas de calidad que usted ha visto, ¿cuáles vienen de una mala cosecha, cuáles del transporte y cuáles del manejo del cultivo?
+[05:00] **Entrevistador:** De los problemas de calidad que usted ha visto, ¿cuáles vienen de una mala cosecha, cuáles del transporte y cuáles del manejo del cultivo?
 
-**Entrevistado:** No, no entendí la pregunta.
+[05:08] **Entrevistado:** No le entendí la pregunta.
 
-**Entrevistador:** O sea, cuando usted ve la cosecha pueden surgir varios problemas, ¿no? El problema, ¿se debe más al transporte o a cómo se maneja la cosecha?
+[05:09] **Entrevistador:** O sea, por ejemplo, tiene una eh... cuando usted ve la cosecha, ya, cuando tiene varios problemas pueden surgir, ¿no? ¿El producto se debe al transporte o a cómo se maneja la cosecha del producto?
 
-**Entrevistado:** Sí, eso se debe más a la cosecha, o sea, al grupo de cosecha. Como le expliqué antes, ahorita es temporada baja y trabajamos por tonelada; entonces solo se puede cortar lo que hay. Nosotros nos acercamos, revisamos, calificamos, y si el fruto que viene está verde, lo rechazamos. Por eso le aconsejamos al grupo que no coseche fruto verde, porque se viene la baja de cosecha.
+[05:22] **Entrevistado:** Ah bueno, en sí en sí eso se debe más a la cosecha, o sea al grupo de cosecha. Como te dije denantes, te expliqué, eh... ahorita como se viene temporada baja, entonces ellos están por ahorita trabajan por tonelada. Entonces ellos hacen solo por cortar, por cortar. Entonces nosotros nos acercamos, vemos así el tambo y nosotros comenzamos a revisar, a calificar, a demostrar que lo que el fruto viene este si está verde, lo rechazamos. Entonces como ahorita le aconsejamos al grupo que trate de no cosechar fruto verde porque se viene la la baja cantidad de de cosecha.
 
-**Entrevistador:** ¿Y cuál es el error más frecuente que cometen los cosechadores, el más básico?
+[05:54] **Entrevistador:** ¿Y cuál es el error más frecuente que cometen los los cosechadores, los más básicos?
 
-**Entrevistado:** Lo más básico siempre va a ser la mala selección de frutos: siempre van a cosechar frutos verdes. Ese es el único error que cometen.
+[05:58] **Entrevistado:** Lo más básico siempre va a ser la mala selección de frutos: siempre van a cosechar frutos verdes. Ese es el único error que cometen.
 
-**Entrevistador:** Cuando la fruta se demora entre el corte y la entrega, ¿cómo se nota eso en el racimo y en el aceite?
+[06:09] **Entrevistador:** Eh... ¿Cuando la fruta se demora entre el corte y la entrega, cómo se nota eso en el racimo y en el aceite?
 
-**Entrevistado:** Nosotros vemos que si no hay desprendimiento, nos damos cuenta de que el fruto está verde.
+[06:15] **Entrevistado:** En sí nosotros vemos si no hay desprendimiento, eso lo nosotros nos damos cuenta de que el fruto está verde.
 
-**Entrevistador:** Si usted tuviera que enseñarle a un cosechador nuevo a decidir qué racimo cortar, ¿qué le diría en 3 frases?
+[06:23] **Entrevistador:** Si usted tuviera que enseñarle a un cosechador nuevo a decidir qué racimo cortar, ¿qué le diría en sus... en tres frases?
 
-**Entrevistado:** Primero, observar bien la parte basal de la planta para ver si hay desprendimiento. Si no hay desprendimiento, para nosotros está verde. Entonces, tratar de no cosechar eso.
+[06:31] **Entrevistado:** En tres frases... Te puedo decir como que primero observar bien la la parte basal de la planta para ver si hay desprendimiento. Si no hay desprendimiento, para nosotros está verde. Entonces es tratar de cosechar eso.
 
-**Entrevistador:** ¿Qué datos se deberían registrar de cada lote cosechado para poder rastrear después un problema de calidad?
+[06:48] **Entrevistador:** ¿Qué datos se deberían registrar de cada lote cosechado para poder rastrear después un problema de de calidad?
 
-**Entrevistado:** *[Solicita que se repita la pregunta.]* Sí, para poder rastrear después un posible problema futuro de calidad de la plantación. Ahorita estamos concentrados en el tema de la calidad de los frutos; estoy más pendiente de cómo están aplicando el polinizante, porque esa es la base principal para la cosecha: si no hay buena aplicación del polinizante, no hay buena cosecha.
+[06:55] **Entrevistado:** ¿Cómo? Repita la pregunta.
 
-**Entrevistador:** Si usted, como cosechador, pudiera tomarle una foto a un racimo dudoso, con síntomas de alguna plaga, ¿cómo le gustaría visualizar esos datos?
+[06:58] **Entrevistador:** O sea, ¿qué datos quedan registrados cuando cuando usted hace un lote, está a cargo de algo, lleva lleva el registro de datos, no? Ya, entonces para poder rastrear después un posible problema a futuro de calidad de o de la plantación, algo...
 
-**Entrevistado:** Sí, se ha presentado ese caso. Uno, como cosechador, también tiene sus propias dudas; cortan el racimo, o si no, toman una foto de la plantación o graban un video. Si encuentran algún insecto, mandan el video o el insecto para ver qué es y si se puede tratar.
+[07:11] **Entrevistado:** Ya. Ahorita bueno, como te digo, estamos concentrados ahorita sobre el tema de la calidad de del fruto. Ahorita estoy más concentrado observando cómo están aplicando el polinizante. Entonces el polinizante eso es como que en sí la base más principal para la la cosecha. Si no hay buena aplicación de polinizante, no hay buena cosecha.
 
-**Entrevistador:** Y si usted utilizara una aplicación mediante una foto, para que la aplicación le diera los resultados, ¿cómo le gustaría ver eso? ¿Le serviría? ¿Cómo lo manejaría usted?
+[07:28] **Entrevistador:** Si usted como cosechador pudiera tomarle una foto a un racimo que esté dudoso con síntomas de alguna plaga o algo, eh... ¿qué qué cómo queri- cómo usted quisiera visualizar esos esos datos?
 
-**Entrevistado:** Sí nos serviría, porque podemos ver el video y recomendar y manejar la aplicación según la dosis que se debería aplicar durante el cultivo.
+[07:42] **Entrevistado:** Bueno, en sí eh... en sí se ha presentado esos casos. Eh... bueno, uno uno como cosechador también no también tiene su propia duda así. Entonces ellos cogen, cortan el racimo o si no toma la foto de la plantación, le toma una foto y graba un video. Si encuentra un insecto, eh... entonces ellos mandan el video o el insecto para ver qué mismo es, para ver si se puede tratar o qué mismo.
 
-**Entrevistador:** ¿Y qué es lo más importante, lo que usted no puede dejar pasar, que le mostraría esa aplicación? Algo que no puede faltar en ese reporte al tomarle la foto a la planta.
+[08:08] **Entrevistador:** Y si usted utilizara una aplicación mediante una foto y y para es que mediante esa foto la aplicación le diera los resultados, ¿cómo cómo le gustaría ver eso? ¿Le serviría o o qué cómo cómo lo manejaría usted?
 
-**Entrevistado:** Recomendamos revisar bien, por ejemplo, en la mañana, para ver cuánto insecto hay y hacer también el monitoreo de insectos.
+[08:21] **Entrevistado:** En sí sí nos serviría porque en sí bueno nosotros podemos ver el video y nosotros recomendamos y manejamos las aplicaciones la dosis que se debería aplicar durante el cultivo.
 
-**Entrevistador:** Muchas gracias, eso ha sido todo por hoy.
+[08:33] **Entrevistador:** ¿Y qué es lo más importante, lo que usted no puede dejar pasar que le mostraría esa aplicación? ¿Algo que no puede faltar en ese reporte al tomarle la foto a la planta?
+
+[08:41] **Entrevistado:** En sí nosotros recomendamos ver este... eh sí que mande bien, por ejemplo en la mañana para ver si la insect- qué tanto insecto hay y para ver también, hacemos monitoreo de insectos.
+
+[08:58] **Entrevistador:** Listo. Muchas gracias, eso ha sido todo por hoy.
