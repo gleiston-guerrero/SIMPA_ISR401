@@ -233,3 +233,240 @@ El estado de rúbrica corresponde al docente.
 ### Commits
 
 Ver el commit cuyo mensaje es `docs(A5): registrar adenda OSF y verificacion API`.
+
+---
+
+## E3 — README del prototipo fiel al código
+
+**Estado operativo:** VERIFICADA
+**Estado de rúbrica:** pendiente de mapeo
+**Responsable:** Macías Herrera Josthyn Esteban
+**Dependencias:** ninguna
+
+### Problema detectado
+
+`05_MVP/readme.md` describía funcionalidades del prototipo sin respaldo en el
+código y omitía limitaciones comprobables. Además atribuía la condición de
+árbol evaluado a la aplicación React, cuando el despliegue sirve una
+aplicación autónoma distinta, y afirmaba que el árbol V2 no incluía una
+versión HTML independiente.
+
+### Acción aplicada
+
+Revisión del código fuente del archivo realmente entregado y corrección del
+README para que cada afirmación corresponda a lo verificable en él:
+resultado fijo del análisis de imagen, credenciales en claro, alcance real
+del control de acceso por rol, y equivalencia binaria entre las dos copias
+del archivo autónomo. Se retiraron las afirmaciones referidas al árbol React
+y las instrucciones de ejecución que no correspondían.
+
+### Verificación
+
+Comparación de las dos copias del archivo entregado:
+
+    sha256sum prototipo_v2/Prottotipo_Simpa-main/Prototipo/index.html Prototipo/index.html
+
+Resultado: ambas devuelven
+`2859dbb9185e2b5ed02601f9348cffdfa44651e3bc1140f1647b789b43af94d0`.
+
+### Commits
+
+- `4cde2a9` — primera versión, referida al árbol React
+- `39a261c` — corrección al archivo realmente entregado
+- `fb82f18` — versión final con rutas, commit del submódulo y URL vigente
+
+### Limitaciones
+
+La primera versión de esta corrección (`4cde2a9`) describía `src/app/App.tsx`
+con números de línea concretos. Esa descripción era exacta respecto de ese
+archivo, pero `App.tsx` no es lo que se publica. El error se detectó al
+preparar la prueba E2E y se corrigió en los commits posteriores, sin
+reescribir el historial.
+
+---
+
+## E4 — Declaración del uso de Figma Make
+
+**Estado operativo:** VERIFICADA
+**Estado de rúbrica:** pendiente de mapeo
+**Responsable:** Macías Herrera Josthyn Esteban
+**Dependencias:** ninguna
+
+### Problema detectado
+
+`10_Autoria/declaracion_uso_ia.md` declaraba que Figma Make se había usado
+para generar «las interfaces del prototipo (mockups funcionales)». La
+evidencia del propio árbol muestra que lo generado fue el código fuente, no
+únicamente los mockups.
+
+### Acción aplicada
+
+Se corrigió la finalidad declarada y el método de verificación para indicar
+que el árbol evaluado es un proyecto de Figma Make, editado posteriormente
+por el equipo.
+
+### Verificación
+
+Sobre el árbol canónico `prototipo_v2/Prottotipo_Simpa-main/Prototipo/`:
+
+| Evidencia | Contenido |
+|---|---|
+| `package-lock.json` | declara el paquete `@figma/my-make-file` |
+| `ATTRIBUTIONS.md` | se identifica a sí mismo como «Figma Make file» |
+| `vite.config.ts` | incluye un resolver propio para imports `figma:asset/` |
+
+### Commits
+
+- `ed811f5` — declarar generación de código v2 con Figma Make
+
+---
+
+## B6 — Parentesco declarado como amenaza a la validez
+
+**Estado operativo:** VERIFICADA
+**Estado de rúbrica:** pendiente de mapeo
+**Responsable:** Macías Herrera Josthyn Esteban
+**Dependencias:** ninguna
+
+### Problema detectado
+
+El parentesco del analista líder con dos participantes estaba declarado como
+conflicto de interés en el Apéndice A del ERS y en `09_Etica/A06`, pero no
+figuraba en la sección de amenazas a la validez del manuscrito, pese a
+afectar al muestreo del estudio de campo.
+
+### Acción aplicada
+
+Se añadió a `08_Publicacion/manuscrito_final.tex`, en las amenazas del
+componente cualitativo, un párrafo que declara el vínculo (`ENTR-02` en
+primer grado, `ENTR-07` en segundo), que ambas entrevistas fueron conducidas
+por el propio analista líder, y el efecto sobre la selección: la muestra no
+es independiente del equipo investigador. Se remite a las medidas de
+mitigación ya documentadas y se declara que ningún hallazgo descansa
+únicamente sobre esas dos fuentes.
+
+### Verificación
+
+    grep -n -A4 "textbf{Selecci" 08_Publicacion/manuscrito_final.tex
+
+Devuelve el párrafo a partir de la línea 561, inmediatamente después del
+párrafo de credibilidad.
+
+### Commits
+
+- `e4c3045` — declarar parentesco como amenaza a la validez
+
+### Limitaciones
+
+No se compiló el manuscrito en la máquina de ejecución: no hay distribución
+LaTeX instalada (`pdflatex` devuelve 127). El bloque insertado usa solo
+`\textbf` y `\texttt`, con llaves balanceadas y el guion bajo escapado, sin
+depender de macros del preámbulo. El PDF publicado en el repositorio no
+incorpora todavía este párrafo; su recompilación queda pendiente.
+
+---
+
+## D6 — Alcance real de Jira y composición del CCB
+
+**Estado operativo:** VERIFICADA
+**Estado de rúbrica:** pendiente de mapeo
+**Responsable:** Macías Herrera Josthyn Esteban
+**Dependencias:** ninguna
+
+### Problema detectado
+
+`04_Trazabilidad/readme.md` presentaba el backlog de Jira como evidencia de
+gestión sin declarar que ninguna incidencia fue asignada ni iniciada, que
+una parte sustancial fue creada por una persona ajena al equipo, ni cómo
+estaba compuesto realmente el CCB.
+
+### Acción aplicada
+
+Se añadieron dos secciones al readme de trazabilidad: el alcance real de la
+gestión en Jira, con las cifras derivadas por script, y la composición del
+CCB según el acta, declarando que ninguna persona de la organización cliente
+participó en él.
+
+### Verificación
+
+    python3 07_Datos/scripts/plan_mejora/resumen_backlog.py
+
+Resultado, reproducible desde `04_Trazabilidad/backlog_export.csv`:
+
+| Hecho | Valor |
+|---|---|
+| Incidencias en el export | 175 |
+| En estado «Tareas por hacer» | 175 (100 %) |
+| Sin persona asignada | 175 (100 %) |
+| Creadas por persona ajena a AHMRV | 84 |
+
+Salida completa en `07_Datos/resultados/d6_resumen_backlog.txt`.
+
+### Commits
+
+- `0c33319` — derivar por script el resumen del backlog de Jira
+- `12f5857` — declarar alcance real de Jira y CCB
+
+### Limitaciones
+
+El plan de mejora indicaba que el «representante del cliente» del CCB era el
+líder del equipo. El acta `01_ERS/anexos/Acta_CCB.pdf` muestra que ese
+asiento lo ocupó Mora Duarte Alex José, estudiante ajeno tanto a AHMRV como a
+la organización. Se declaró lo que sostiene la evidencia: el CCB no contó con
+representación real del cliente. Si el docente se refería a otra cosa, la
+redacción debe revisarse.
+
+---
+
+## E1 — Prototipo y prueba de extremo a extremo
+
+**Estado operativo:** EN PROCESO
+**Estado de rúbrica:** pendiente de mapeo
+**Responsable:** Macías Herrera Josthyn Esteban
+**Dependencias:** ninguna
+
+### Problema detectado
+
+El repositorio no contenía el prototipo que se estaba entregando: el archivo
+desplegado no correspondía a ninguna versión versionada. Además, RF-40, RF-41
+y RF-42 figuraban en el README como flujos incorporados, pero no existían en
+el archivo entregado, y el control de acceso por rol solo restringía una
+pantalla.
+
+### Acción aplicada
+
+Se implementaron los tres flujos de derechos LOPDP sobre la bitácora
+existente, conforme a los criterios de aceptación del ERS, y se subieron al
+repositorio del prototipo en sus dos rutas. Se actualizó el puntero del
+submódulo y se declaró en el README el alcance real del control de acceso por
+rol.
+
+### Verificación
+
+Ejecución de los tres flujos sobre el estado del prototipo:
+
+| Criterio del ERS | Resultado |
+|---|---|
+| RF-40 exporta los datos del titular autenticado | Ficha vinculada correctamente |
+| RF-41 registra valor anterior, fecha, autor y motivo | Los cuatro campos quedan asentados |
+| RF-41 no permite borrar entradas de bitácora | La interfaz no ofrece esa función |
+| RF-42 exige relación laboral terminada | Rechaza el intento sobre ficha activa |
+| RF-42 sustituye por identificador disociado | `Trabajador 1` → `ANON-0001`, contacto vaciado |
+| RF-42 conserva los totales de avance | Idénticos antes y después |
+| RF-42 no deja el nombre recuperable | Cero apariciones tras la supresión |
+
+### Commits
+
+- `035470c` (repositorio del prototipo) — implementar RF-40, RF-41 y RF-42
+- `147d9d1` — actualizar el puntero del submódulo
+- `fb82f18` — README final del MVP
+
+### Limitaciones
+
+La verificación de los criterios se realizó ejecutando la lógica de la
+aplicación fuera del navegador, lo que valida el comportamiento pero no la
+interfaz. La prueba de extremo a extremo por rol, con evidencia gráfica en
+`05_MVP/evidencia_e2e/`, está pendiente.
+
+El despliegue de Netlify se publica manualmente y no está enlazado al
+repositorio, por lo que ambos pueden volver a divergir.
