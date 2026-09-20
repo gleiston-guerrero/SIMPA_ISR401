@@ -1189,48 +1189,57 @@ Consulta por mensaje al líder del equipo (20/09/2026): no supo indicar a quién
 **Estado operativo:** VERIFICADA
 **Estado de rúbrica:** pendiente de mapeo
 **Peso:** 0,40 pts
-**Responsable:** Macías Herrera Josthyn Esteban
+**Responsable(s):** Macías Herrera Josthyn Esteban (primera versión del script) · NOMBRE (paquete con el catálogo de 79 requisitos) · Arboleda Yanza Francisco Javier (versión final, revisión y firma)
 **Dependencias:** ninguna
 
 ### Problema detectado
-
-La procedencia de cada requisito funcional estaba declarada dentro de la
-ficha individual de cada RF en el ERS (macro `\RF{}`, argumento «Actor /
-Origen»), dispersa en 42 fichas distintas. No existía como tabla
-consolidada y verificable por script, que es lo que D3, D4, D5 y E2
-necesitan como base.
+El ERS no declaraba la procedencia de cada requisito. RF-03, 07, 08 y 18 ya figuraban en la propuesta del 05/05/2026, antes de la primera entrevista (23/05); RF-36 y EV-13 aparecen el 02/08 con evidencia del 03 al 07/08; RF-40 a 42 y los requisitos de IA aparecen el 31/08 sin entrevista.
 
 ### Acción aplicada
+La primera versión del script cubría solo los 42 RF y daba las citas por verificadas. Se rehízo para los 79 requisitos (42 RF, 6 RF-IA, 19 RNF y 12 RNF-IA) con seis correcciones documentadas en la cabecera del script: origen sin truncar, RL-XX como normativo, los 6 RF-IA que faltaban, origen de los de IA desde la tabla de trazabilidad, commit de alta desde el historial completo del ERS (53 requisitos el 02/08 en `35fff3c`, RF-36 a RF-39 el 02/08 en `54bd614` y 22 el 31/08 en `14b9e6b`) y una tabla verificada de correspondencia con la propuesta del 05/05.
 
-Script que extrae los 42 `\RF{}` del ERS, separa el actor declarado y los
-códigos `EV-XX` citados, y contrasta cada código contra las transcripciones
-realmente presentes en `02_Evidencias/Transcripciones/`. Los tres RF cuyo
-origen es una base legal (LOPDP) en vez de una entrevista se reconocen por
-la cita `\id{RL-XX}` y no se marcan como defecto.
+Clasificación firmada: 45 elicitado, 7 propuesta_equipo, 4 normativo y 23 derivado.
+
+Anteriores a su evidencia, declarados: RF-03, 07, 08 y 18 (ya en la propuesta del 05/05) y RF-36, 38 y 39 (alta el 02/08, EV-13 del 03 al 07/08). RF-37 es parcial: EV-11 es anterior y EV-13 posterior.
+
+### Hallazgos propios
+- 24 requisitos citan una evidencia que la tabla del apéndice del ERS no les asigna, y en 7 casos el apéndice lista un requisito que no cita esa evidencia: incoherencia interna del ERS, declarada y no corregida.
+- RNF-07, 10, 13, 15 y 17 declaran "Derivado" sin decir de qué; su origen no está identificado.
+- RF-32 y RF-40 fueron falsos positivos del emparejamiento automático con la propuesta.
+
+### Evidencia utilizada
+- `01_ERS/` (versiones .tex, `apendices.tex`) y su historial de git
+- `01_ERS/antecedentes/2026-05-05_Propuesta_Inicial_1A.pdf`
+
+### Archivos modificados
+- `07_Datos/scripts/plan_mejora/tabla_procedencia_D1.py`
+- `07_Datos/datos_procesados/tabla_procedencia_requisitos.csv`
+
+### Criterio de aceptación
+- [x] 100 % de RF, RNF y requisitos de IA clasificados (79 de 79)
+- [x] Fecha de la fuente y commit de alta por requisito
+- [x] Ningún requisito anterior a su evidencia sin declararlo (7)
 
 ### Verificación
+Comando:
 
     python3 07_Datos/scripts/plan_mejora/tabla_procedencia_D1.py
 
 Resultado:
 
-    Requisitos extraídos: 42
-    Entrevistas reales detectadas: [1..16]
-    Filas con observación: 0
-
-Las 42 citas de procedencia del ERS son verificables: corresponden a una
-transcripción real o a una base legal explícita.
-
-### Evidencia utilizada
-
-| Archivo | Contenido |
-|---|---|
-| `07_Datos/scripts/plan_mejora/tabla_procedencia_D1.py` | Script de extracción y verificación |
-| `07_Datos/datos_procesados/tabla_procedencia_requisitos.csv` | Los 42 RF con actor, evidencias citadas y observación |
+    Requisitos: 79 -> {'RF': 42, 'RF-IA': 6, 'RNF': 19, 'RNF-IA': 12}
+    En la propuesta del 05/05: 4
+    Verificadas por persona: 79 de 79
+    Con alerta: 33
 
 ### Commits
+- `f918b01`, `ce988a5`, `eeeec71`, `a34288d`
 
-- Ver el commit `feat(D1): extraer y verificar tabla de procedencia de los 42 RF`
+### Limitaciones
+La clasificación se propuso con reglas del script y un análisis asistido por IA que comprobó las evidencias citadas, sus fechas, el historial de git y el apéndice. Arboleda revisó las notas de cada fila y firmó su conformidad en las 79; no leyó a mano cada requisito en el ERS.
+
+### Evidencia entregada fuera del repositorio
+No aplica.
 
 ---
 
