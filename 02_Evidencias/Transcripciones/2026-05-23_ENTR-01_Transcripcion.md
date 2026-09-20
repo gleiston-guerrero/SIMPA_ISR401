@@ -2,96 +2,89 @@
 
 **Rol:** Administrador General
 
-**Entrevistador:** Estamos recopilando información sobre la gestión de la palma africana. ¿Cuánto tiempo lleva trabajando en este cultivo?
+[00:00] **Entrevistador:** YA, buen dia ingeniero...... estamos aqui con el ingeniero ENTREVISTADO para poder recopilar informacion sobre lo que es la gestion de la palma africana. Ingeniero eh ¿Que tiempo lleva usted en lo que seria la palma africana trabajando?
 
-**Entrevistado:** Tengo 27 años de experiencia en el cultivo de palma africana.
+[00:17] **Entrevistado:** Bueno como experiencia llevo 27 años en el cultivo de palma africana.
 
-**Entrevistador:** Tiene bastante experiencia. ¿Con qué frecuencia revisa el estado general de las palmas y qué aspectos suele observar durante esas revisiones?
+[00:26] **Entrevistador:** 27 años, tiene mucha experiencia. Nos podria responder esta pregunta ¿Con qué frecuencia revisa el estado general de las palmas y usted qué aspectos suele observar durante esas revisiones?
 
-**Entrevistado:** En los cultivos y plantaciones de palma africana siempre se cuenta con varios equipos: administración, polinización, controles fitosanitarios, riego y labores generales. La función del administrador es recorrer las áreas de trabajo y verificar que cada equipo esté cumpliendo con su función.
+[00:38] **Entrevistado:** Bueno en los cultivos y plantaciones de palma africana siempre se tiene un equipo: el administrador, se tiene un.. cuando es polinización por ejemplo este cultivo es de polinizacion, entonces se tiene un equipo de polinizacion, se tiene un equipo de controles fitosanitarios, se tiene un equipo de riego y un equipo de labores. Entonces la función del administrador es recorrer todos los trabajos y hace la revision de que todos los equipos esten cumpliendo con su funcion.
 
-**Entrevistador:** ¿Cuáles son las etapas que se siguen para el cuidado de la palma africana, como el riego y la polinización?
+[01:23] **Entrevistador:** ¿Y que etapas son las que sigue usted para el cuidado de la palma africana, como el riego y la polinización, como son las etapas que lleva usted?
 
-**Entrevistado:** En el año cero, cuando se realiza la siembra, se inicia con el mantenimiento del cultivo y el sistema de riego. Luego, alrededor del tercer año, comienza la etapa de polinización, para la cual se necesita otro equipo. Después viene la cosecha, que también requiere personal especializado. En esta plantación todavía estamos en la etapa de polinización y, aproximadamente en 15 días, se comenzará con la primera cosecha.
+[01:32] **Entrevistado:** Ya, en el, en el año cero, cuando usted siembra, eh inicia con mantenimiento, siembra el cultivo. Luego viene el año tres, con la polinización ese es otro equipo, desde el año cero empieza con el sistema de riego, de ahi este viene la otra etapa que es la cosecha, que también  se va a necesitar otro equipo que aqui todavia no lo tenemos porque el cuestivo esta todavia en la etapa de polinización y, luego de unos 15 días, se comienza con la primera cosecha.
 
-**Entrevistador:** ¿Cuáles son los problemas más comunes que se presentan en estos cultivos y cómo afectan la producción?
+[02:26] **Entrevistador:** ¿Y cuáles son los problemas más comunes que se presentan en estos cultivos y cómo afecta eso en lo que es la producción?
 
-**Entrevistado:** Los problemas más comunes son fitosanitarios y están relacionados con el control de plagas. Para eso se cuenta con un equipo que realiza un monitoreo diario del cultivo y que, durante la semana, debe recorrer toda la plantación. Este equipo verifica que las plantas se encuentren en buen estado y genera alertas cuando aparece alguna enfermedad o plaga, para tomar medidas correctivas a tiempo.
+[02:35] **Entrevistado:** Bueno en lo que es los problemas serian fitosanitarios como tambien el otro el control de plagas, control de plagas por eso se tiene el equipo fitosanitario el cual hace un monitoreo diario que es del cultivo en el cual a la semana tiene que ya dar la vuelta a toda la plantación y el va monitoriando y revisando que las plantas se encuentren en buen estado o a su vez dando las alertas si el cultivo presenta alguna enfermedad o presenta problema de plagas, para tomar las correcciones a tiempo.
 
-**Entrevistador:** ¿Cómo identifica cuando una palma tiene problemas de plagas, desarrollo o nutrición?
+[03:25] **Entrevistador:** ¿Y de acuerdo a lo que usted me está diciendo sobre los males así, cómo usted identifica cuándo una palma tiene ese problema o algún problema de desarrollo o nutrición?
 
-**Entrevistado:** En el caso de las plagas, los daños suelen ser visibles. Dependiendo de la plaga, se pueden observar lesiones causadas por el ataque. Cuando se trata de hongos, puede presentarse pudrición de flecha. Existen diferentes señales que permiten identificar el problema, y el equipo está preparado para reconocerlas y dar el primer aviso. A partir de eso se aplican las correcciones correspondientes, según el tipo y la gravedad del daño.
+[03:36] **Entrevistado:** Ya en, en el tema de, de plagas pues este, es evidente, ¿no? En la, la misma planta eh eh dependiendo la plaga pues se ven las, las las laceraciones del del ataque. O cuando son este problemas eh de hongos pues eh hay pudriciones de flecha. Eh son diferentes diferentes maneras de de poder visualizar y el equipo está preparado para para notar todas esas diferencias y él es el que da el primer aviso y de acuerdo a eso se toma las las correcciones del caso dependiendo el daño, ¿no?
 
-**Entrevistador:** ¿Cómo actúan cuando se presentan esas situaciones?
+[04:28] **Entrevistador:** ¿Y cómo actúan cuando pasan esas situaciones?
 
-**Entrevistado:** Se pueden aplicar controles químicos, como insecticidas y fungicidas. Cuando los problemas recién comienzan, también se pueden colocar trampas para capturar insectos en estado adulto, como las mariposas que posteriormente generan larvas defoliadoras.
+[04:32] **Entrevistado:** Eh los controles eh pueden ser con controles químicos eh como insecticidas, fungicidas. Eh cuando recién comienzan los los problemas también tú puedes eh hacer trampas para para atrapar para atrapar este en estado adulto como mariposas, que son la mayoría de de defoliadores, que son larvas, ¿no?
 
-**Entrevistador:** ¿Con qué frecuencia se presentan estas enfermedades? ¿En qué época aparecen con mayor frecuencia?
+[05:02] **Entrevistador:** Este, ¿y con qué frecuencia considera que se presentan las enfermedades? Por ejemplo, ¿en qué etapa es en la que más se presentan lo que son las enfermedades?
 
-**Entrevistado:** Se presentan principalmente durante el invierno. En la época invernal existe un mayor riesgo de plagas y enfermedades.
+[05:11] **Entrevistado:** De más en épocas en épocas de invierno. En la época invernal es donde usted tiene mayor eh problema en lo que son plagas y enfermedades.
 
-**Entrevistador:** ¿Qué dificultades ha encontrado al intentar solucionar problemas de plagas, desarrollo o nutrición?
+[05:23] **Entrevistador:** ¿Y usted qué dificultades ha encontrado al momento de querer este solucionar algún problema de plagas, desarrollo o nutrición? ¿Qué dificultades ha encontrado en eso?
 
-**Entrevistado:** Las dificultades cambian según la etapa del cultivo. Cuando las palmas son adultas pueden alcanzar entre 9 y 12 metros de altura, por lo que resulta difícil llegar a los cogollos o a la parte alta de las hojas con una bomba manual o de motor. En esos casos se deben utilizar termonebulizadoras, drones o avionetas para realizar las aplicaciones.
+[05:35] **Entrevistado:** Bueno, eh en cada etapa del cultivo es diferente, ¿no? Cuando este eh tienes cultivo adulto pues ya son plantas que van parten de los 12 metros, 9 metros, entonces se dificulta con una bomba eh manual o bomba de motor alcanzar este los cogollos o la parte alta de de las hojas, ¿no? Entonces ahí ya tienes que utilizar o termonebulizadoras o hacer aplicaciones con dron o avionetas.
 
-**Entrevistador:** Desde su experiencia, ¿cuál considera que es el problema más crítico en el manejo del cultivo de palma africana?
+[06:10] **Entrevistador:** Y desde su experiencia, ¿cuál considera que es el problema más crítico en el manejo del cultivo de la palma africana?
 
-**Entrevistado:** En las provincias de Los Ríos y Guayas, lo indispensable para ser productivo es contar con un buen sistema de riego. La producción depende principalmente de un riego adecuado y de una buena nutrición o fertilización.
+[06:19] **Entrevistado:** Bueno, eh... podría podría decir como con experiencia en en todo lo que es la zona o provincia de de Los Ríos, eh Guayas, eh lo lo indispensable es este tener un buen sistema de riego para ser productivo, ¿no? Eh el tema de producción eso se basa en en un buen riego y una buena nutrición o fertilización. Eso serían lo lo lo lo principal para poder ser este productivo.
 
-**Entrevistador:** ¿Qué importancia tienen las estimaciones de producción y cosecha en la planificación del cultivo?
+[06:57] **Entrevistador:**¿Y qué importancia tiene para usted la estimación de la producción y cosecha en la planificación del cultivo?
 
-**Entrevistado:** La estimación se puede realizar mediante un censo de flores. Normalmente se hace un censo cada seis meses para conocer cuáles podrían ser las producciones futuras. Con esa información se puede planificar, prever resultados y tomar decisiones para corregir o mejorar la producción.
+[07:03] **Entrevistado:** Bueno, la la estimación eh tú puedes hacer un censo eh por medio de flores. Se hace siempre un censo cada 6 meses para este ver cuáles van a ser tus producciones o predicciones a a futuro, ¿no? Entonces, eh cuando haces un un censo, después puedes planificar y y y ver los los resultados que vas a tener este a futuro y de acuerdo a eso tomar decisiones eh para corregir o mejorar este tu producción.
 
-**Entrevistador:** ¿Qué dificultades se presentan al momento de predecir el rendimiento de la cosecha?
+[07:41] **Entrevistador:** ¿Y cuáles son las dificultades que se presentan al momento de predecir el rendimiento de la cosecha?
 
-**Entrevistado:** La dificultad aparece cuando la palma está alta y ya no se puede visualizar bien la flor. Para hacer la estimación se cuenta el número de flores por planta, pero cuando no se pueden observar claramente, el cálculo deja de ser tan exacto.
+[07:47] **Entrevistado:** La dificultad es cuando la la la palma está un poco alta o o ya este no puedes este ver eh o visualizar bien este la flor, ¿no? Porque de acuerdo tú cuentas el el número de flores por planta para para tener un un porcentaje eh de la estimación, ¿no? Entonces, ahí sí lo veo un poco complicado porque ya no es exacto.
 
-**Entrevistador:** Eso también depende de la variedad de palma africana, ¿verdad?
+[08:18] **Entrevistador:** ¿Eso también depende de la variedad de la palma africana o no?
 
-**Entrevistado:** Sí. El rendimiento depende de la variedad. A partir del rendimiento esperado de cada variedad se puede realizar una proyección, porque cada cultivo tiene un límite aproximado de producción.
+[08:21] **Entrevistado:** Este sí, eh hay variedades, ¿no? Y de acuerdo a las variedades este son sus rendimientos. Y de acuerdo a los rendimientos de a la variedad tú puedes sacar una proyección, porque no puedes eh salirte de de las proyecciones de de lo que ese cultivo te va a dar, ¿no? O a rendir.
 
-**Entrevistador:** ¿De qué manera influye el clima en la producción? ¿Cuál es la época más adecuada para sembrar y obtener una buena cosecha?
+[08:45] **Entrevistador:** ¿Y de qué manera influye el clima para lo que es la producción? ¿En qué época es lo más óptimo para poder ir a sembrar y que haya una buena cosecha?
 
-**Entrevistado:** La época más adecuada para sembrar es al inicio del invierno, porque permite que la planta se desarrolle con normalidad y enraíce durante la temporada lluviosa. Después de eso, es indispensable mantener un sistema de riego para que el cultivo continúe desarrollándose de la mejor manera.
+[08:54] **Entrevistado:** Bueno, lo óptimo para siembra siempre es en la etapa invernal, en el comienzo del de invierno, eso es lo óptimo para sembrar. Para que la planta este se desarrolle con con total normalidad y enraíce en la época de de invierno, ¿no? Eh de ahí como le dije pues lo indispensable es mantener riego eh para que el cultivo se desarrolle de de la mejor manera.
 
-**Entrevistador:** ¿Cómo obtiene actualmente la información relacionada con el clima o los cambios climáticos?
+[09:22] **Entrevistador:** ¿Y usted cómo obtiene actualmente la información relacionada con el clima o cambios climáticos?
 
-**Entrevistado:** En la hacienda se mide la lluvia mediante un pluviómetro, lo cual permite conocer cuánta precipitación se ha registrado durante el año. Además, se pueden consultar estaciones meteorológicas para tener una visión general de las condiciones climáticas.
+[09:28] **Entrevistado:** Bueno, en en en la en la hacienda pues eh siempre medimos el tema de lluvias, ya, mediante un pluviómetro. Eso nos nos nos da una idea de de cuánto hemos tenido de lluvia durante el año. Eh adicional pues por medio de las estaciones meteorológicas eh tú puedes darte una una idea de cómo está eh a nivel general.
 
-**Entrevistador:** ¿Qué tan útil sería un sistema capaz de analizar imágenes de las palmas para detectar problemas automáticamente mediante inteligencia artificial?
+[10:01] **Entrevistador:** ¿Y usted qué cree que sea útil o qué tan útil sería considerar que sería un sistema capaz de analizar las imágenes de las palmas para poder detectar problemas o enfermedades? Es decir, ¿un sistema con con IA, Inteligencia Artificial?
 
-**Entrevistado:** Sería muy útil para identificar plagas y enfermedades. Existen plagas que no siempre pueden reconocerse fácilmente a simple vista, especialmente por personas con poca experiencia. Al tomar una fotografía, el sistema podría indicar la especie o familia de la plaga, su proceso de desarrollo, su evolución y la forma de controlarla. Esto sería especialmente importante para los insectos defoliadores, porque se debe conocer en qué etapa de su ciclo causan daño y cómo deben tratarse.
+[10:17] **Entrevistado:** Sí, en el tema de de de plagas y enfermedades sería súper interesante porque, por ejemplo, hay diferentes plagas que a veces no se las puede identificar eh visualmente o o no tienes este o las personas que no tienen tanto conocimiento en el tema de plagas ya este tomándole una foto pues sabes eh la especie, la familia de la plaga, sabes su su proceso, su evolución y cómo poderla controlar, porque al menos en el cultivo de palma lo que más ataca son defoliadores, y los defoliadores pues sabemos que son prácticamente las larvas. Entonces tienes que ver en qué momento de la etapa o del ciclo del del insecto te causa daño en la palma y cómo poder controlarlo.
 
-**Entrevistador:** ¿Qué tipo de información le gustaría obtener mediante el análisis de imágenes, especialmente para las personas que no tienen suficiente conocimiento?
+[10:13] **Entrevistador:** ¿Y qué tipo de información le gustaría obtener mediante el análisis de imágenes con la IA? Por ejemplo, para las personas que no tienen suficiente conocimiento.
 
-**Entrevistado:** Principalmente, información para reconocer la plaga. Según el tipo de plaga se puede determinar qué producto utilizar. También sería importante conocer la etapa en la que se encuentra: cuando está en estado adulto se pueden colocar trampas, mientras que en estado larvario puede ser necesaria una aplicación con insecticida. Además, se debe conocer la variedad de palma, porque algunas tienen polinizadores naturales y un insecticida podría eliminarlos. Otras variedades utilizan polinización asistida. Por eso, el sistema debería considerar el tipo de cultivo y la variedad presente en la propiedad.
+[11:22] **Entrevistado:** Eh el tema uno de plagas, cómo reconocer la plaga, porque de acuerdo cómo este de acuerdo a la plaga pues tú tienes este prácticamente eh el producto para poderla controlar, eh también este las etapas de de la plaga para para poder cuando está en estado adulto tú haces trampas, cuando está en estado de larva pues tú tienes que ya hacer una aplicación ya con insecticidas, tienes que saber el insecticida que vas a aplicar, eh de acuerdo a a tu variedad, ¿no? Porque hay variedades que que tienen polinizadores naturales y y y al aplicar un insecticida puedes este matar tus tus polinizadores naturales, pero hay variedades que no no necesitan este de polinizadores naturales porque se hace o se realiza una polinización asistida. Entonces son bastantes criterios, para eso necesitas saber el tipo de cultivo o variedad que está este eh tienes en en en su propiedad y como le digo, para identificar plagas sería súper súper importante, ¿no? Este sistema.
 
-**Entrevistador:** ¿Cuál cree que sería la principal dificultad para usar este sistema, especialmente para una persona que no tiene conocimientos tecnológicos?
+[12:38] **Entrevistador:** Y de acuerdo a lo que sería utilizar un un sistema, eh ¿cuál cree que sería la dificultad al usarlo? Digamos para una persona que no tiene conocimiento de la tecnología, ¿usted cree que es óptimo tener un sistema o no?
 
-**Entrevistado:** Actualmente casi todas las personas tienen un teléfono. Se podría utilizar una aplicación que permita tomar una fotografía e identificar el problema. En el cultivo de palma también se utiliza una aplicación llamada Avensa Maps, que registra el recorrido del personal y no necesita conexión a internet.
+[12:54] **Entrevistado:** No, ya ahora este prácticamente todas las personas tenemos un teléfono, entonces eh sería prácticamente utilizar un medio donde el teléfono tome una foto y pueda identificar el el el problema, ¿no? Aquí por ejemplo en el cultivo de palma se utiliza una aplicación que se llama Agensa Maps para eh este este bueno es un programa en el cual te te registra el recorrido de de del personal que está a tu cargo eh en el cual no necesita internet. Ya, entonces con eso tú puedes monitorear si el personal ha llegado a los puntos que tú has establecido en el trayecto de la semana. Eh entonces sí, es importante cada día este se va uno actualizando y va este aplicando eh todo este tipo de de herramientas que sirven para para el trabajo diario, ¿no? En cultivos.
 
-**Entrevistador:** Entiendo.
+[14:04] **Entrevistador:** ¿Y qué criterios utiliza usted para poder este evaluar el desempeño de sus trabajadores? Aparte de saber lo que son que llegaron a los puntos de recorrido.
 
-**Entrevistado:** Con esa aplicación se puede comprobar si el personal llegó a los puntos establecidos durante el recorrido de la semana. Este tipo de herramientas es importante porque cada día debemos actualizarnos e incorporar tecnologías que faciliten el trabajo diario en los cultivos.
+[14:13] **Entrevistado:** Eh por rendimiento y producción, o sea este en el tema de los polinizadores pues ellos cuentan las flores que han polinizado en el día, asimismo pues se hace un un análisis de cuando se cosecha la fruta y sabes el el operador que ha estado polinizando en ese sector si los racimos este que están en en óptimos resultados o no. Entonces ahí tú evalúas al trabajador. Si si tienes una fruta eh en buena en buena calidad es porque te ha dado ha hecho eh el operador ha hecho un buen trabajo y si no pues eh efectivamente se da cuenta uno de que el operador no está cumpliendo con su trabajo. Asimismo en el sistema de riego pues eh hay eh operadores que cada uno tiene unos lotes eh y tú al al recorrer o al supervisar te das cuenta si tiene un buen riego pues en el cultivo de palma este tú ves que tiene una flecha eh no más y y la la flecha y la hoja que está saliendo. Cuando tienes acumulaciones de flecha es porque esa esa palma no está recibiendo agua, entonces ahí tú te das cuenta si el operador está cumpliendo con su función bien o no. Entonces son diferentes factores que tú evalúas en el momento de de calificar a tu a tu personal, ¿no?
 
-**Entrevistador:** Además de verificar que lleguen a los puntos establecidos, ¿qué criterios utiliza para evaluar el desempeño de los trabajadores?
+[15:54] **Entrevistador:**Ya. ¿Y qué tipo de reportes o información considera necesarios que sea para mejorar la gestión del cultivo? O sea, si se pudiera generar reportes de acuerdo al sistema, ¿qué información le gustaría que aparezca en ese reporte?
 
-**Entrevistado:** Se evalúa el rendimiento y la producción. En el caso de los polinizadores, se cuenta el número de flores que polinizan durante el día. Cuando se cosecha la fruta, también se puede identificar qué operador trabajó en determinado sector y comprobar si los racimos presentan buenos resultados. Una fruta de buena calidad indica que el operador realizó correctamente su trabajo.
+[16:05] **Entrevistado:** En el en el reporte este eh por ejemplo se hacen se hacen este reportes por semana, ¿no? Aquí en el cultivo de de palma se trabaja por semana. Entonces tú los reportes se hacen reportes diarios pero este a la final tú haces un consolidado y lo vas haciendo por semana y al al terminar el año pues tú puedes sacar tus tus resultados, tus estadísticas por medio de semana, ¿no?
 
-En el sistema de riego, cada operador tiene lotes asignados. Durante la supervisión se puede verificar si el riego fue adecuado. Cuando una palma presenta acumulación de flechas, puede indicar que no está recibiendo suficiente agua. Esos factores permiten evaluar si el trabajador está cumpliendo correctamente con sus funciones.
+[16:42] **Entrevistador:** ¿Y usted como administrador cuál ha sido el principal problema que ha presentado en su trabajo y en el manejo del cultivo?
 
-**Entrevistador:** ¿Qué tipo de reportes o información considera necesarios para mejorar la gestión del cultivo?
+[16:50] **Entrevistado:** En en el tema de de a nivel general el problema es la mano de obra. Sí, la mano de obra cada día es más escasa, es más difícil este con conseguir un personal que que sea estable, ¿no? Entonces porque en el momento en que el personal no es estable tú tienes que estar enseñando eh a la persona que que llega, entonces es desgaste. Pero si tienes un personal fijo eh es más fácil tu trabajo y tus labores a nivel general. Entonces yo creo que lo más difícil es la mano de obra en y lo todo en me imagino que en todos los cultivos, pero en el cultivo de palma la mano de obra es lo lo más complicado y una mano de obra que sea este eficiente, y para que sea eficiente pues tiene que tener experiencia y al momento de de no tener personas que eh sean fijas o o que permanezcan en su labor eh se complica.
 
-**Entrevistado:** Se elaboran reportes diarios y, al final, se consolidan semanalmente, porque el trabajo en el cultivo de palma se organiza por semanas. Al terminar el año, estos reportes permiten obtener resultados y estadísticas basados en la información semanal.
+[17:55] **Entrevistador:** Entonces el principal problema sería el conseguir personal que tenga el conocimiento y que sea responsable de su trabajo para poder controlar bien el tema de...
 
-**Entrevistador:** Como administrador, ¿cuál ha sido el principal problema que ha enfrentado en su trabajo y en el manejo del cultivo?
+[18:00] **Entrevistado:** Correcto, sí.
 
-**Entrevistado:** El principal problema es la mano de obra. Cada vez es más escasa y resulta difícil encontrar personal estable. Cuando los trabajadores cambian constantemente, hay que enseñar nuevamente las labores a cada persona que llega, lo cual resulta desgastante. Tener personal fijo facilita el trabajo y la organización general. En el cultivo de palma se necesita mano de obra eficiente y con experiencia, por lo que la falta de estabilidad complica las actividades.
+[18:05] **Entrevistador:** Muchas gracias. Esta ha sido nuestra entrevista con el ingeniero ..... .
 
-**Entrevistador:** Entonces, el principal problema sería encontrar personal con conocimientos, experiencia y responsabilidad para realizar y controlar correctamente el trabajo.
-
-**Entrevistado:** Correcto.
-
-**Entrevistador:** Muchas gracias. Esta ha sido nuestra entrevista.
-
-**Entrevistado:** Gracias.
