@@ -9,9 +9,9 @@ Prototipo funcional de interfaz desarrollado para el proyecto grupal de Ingenier
 - Repositorio grupal y documentación: https://github.com/gleiston-guerrero/SIMPA_ISR401
 - Repositorio del código del prototipo: https://github.com/jmaciasherr4/Prottotipo_Simpa
 - Commit evaluado del prototipo (V2): `ba33002dcf680f8b39d42df04553733bd5389f6d` (2026-08-31)
-- Commit al que apunta hoy el submódulo `05_MVP/prototipo/`: `deefe3d9da405ba8961a5d0d52936a85c7c5f428` (2026-09-04)
+- Commit al que apunta hoy el submódulo `05_MVP/prototipo/`: `035470cb1dfd7be9557f1c5e2db24473cbcb8c02` (2026-09-19)
 
-> El submódulo apunta a un commit posterior al evaluado. La diferencia entre ambos es verificable y no toca el árbol canónico: `git diff ba33002 deefe3d -- prototipo_v2/` no devuelve ninguna diferencia. Los únicos cambios entre los dos commits están en la raíz del repositorio del prototipo (`.mailmap`, `LICENSE` y una línea del `README.md`). Se mantiene el puntero actual y se declaran ambos commits para que la equivalencia sea comprobable.
+> El submódulo apunta a un commit posterior al evaluado el 31/08/2026. La diferencia es real y está declarada: el árbol incorpora los flujos de derechos LOPDP (RF-40, RF-41 y RF-42) descritos más abajo, ausentes en el commit evaluado. Ambos commits se declaran para que el avance sea verificable con `git diff ba33002 035470c -- prototipo_v2/`.
 
 ## Qué código se entrega realmente
 
@@ -20,10 +20,12 @@ El submódulo contiene **dos aplicaciones distintas**, y conviene no confundirla
 | Ruta dentro del submódulo | Qué es | ¿Se entrega? |
 |---|---|---|
 | `prototipo_v2/Prottotipo_Simpa-main/Prototipo/index.html` | Aplicación autónoma en un solo archivo (HTML + CSS + JavaScript) | ✅ **Sí — es lo que se publica y se evalúa** |
-| `prototipo_v2/Prottotipo_Simpa-main/Prototipo/src/app/App.tsx` | Aplicación escrita en React sobre Vite | ❌ No — permanece en el árbol pero no es lo desplegado |
-| `Prototipo/SIMPA_COMPLETO.html` | Copia del mismo archivo autónomo | Equivalente al anterior |
+| `Prototipo/index.html` | El mismo archivo autónomo, en el árbol anterior | Equivalente al anterior |
+| `src/app/App.tsx` (en ambos árboles) | Aplicación escrita en React sobre Vite | ❌ No — permanece en el repositorio pero no es lo desplegado |
 
-`index.html` y `Prototipo/SIMPA_COMPLETO.html` son **binariamente idénticos**: un mismo archivo presente en dos rutas. Como Vite toma `index.html` como punto de entrada, el despliegue sirve esa aplicación autónoma y no el árbol React. Las dos difieren en estructura de menú y en funcionalidades, de modo que **toda declaración de este documento se refiere al archivo autónomo**, salvo que se indique expresamente lo contrario.
+Los dos `index.html` son **binariamente idénticos** (SHA-256 `2859dbb9185e2b5ed02601f9348cffdfa44651e3bc1140f1647b789b43af94d0`): un mismo archivo presente en dos rutas. Como Vite toma `index.html` como punto de entrada, el despliegue sirve esa aplicación autónoma y no el árbol React.
+
+Ambas aplicaciones difieren en estructura de menú y en funcionalidades, de modo que **toda declaración de este documento se refiere al archivo autónomo**, salvo que se indique expresamente lo contrario. El árbol React se conserva por trazabilidad histórica —es el que existía en el commit evaluado del 31/08/2026— pero no recibe mantenimiento ni incorpora los flujos LOPDP.
 
 ## Ubicación del prototipo dentro de este repositorio
 
@@ -123,7 +125,7 @@ El árbol React que permanece en el submódulo, no desplegado, utiliza React · 
 
 ## Ejecución local
 
-Abrir `prototipo_v2/Prottotipo_Simpa-main/Prototipo/index.html` directamente en un navegador moderno. No requiere instalar nada.
+Abrir `prototipo_v2/Prottotipo_Simpa-main/Prototipo/index.html` directamente en un navegador moderno. No requiere instalar nada ni ejecutar ningún comando.
 
 Para ejecutar el árbol React, no desplegado:
 
