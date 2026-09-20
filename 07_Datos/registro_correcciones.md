@@ -1497,7 +1497,7 @@ No aplica todavía.
 
 ## F4 — Registrar las visitas del 27/06, 02/08 y 21/08
 
-**Estado operativo:** VERIFICADA (discrepancia de fechas documentada) · limitación declarada (pie de foto)
+**Estado operativo:** EN PROCESO (discrepancia de fechas documentada; falta el pie de foto y la bitácora)
 **Estado de rúbrica:** pendiente de mapeo
 **Peso:** 0,10 pts
 **Responsable(s):** Arboleda Yanza Francisco Javier
@@ -1566,6 +1566,7 @@ que señala el plan del docente no se pudo localizar en el repositorio
 actual; puede haberse corregido en una ronda anterior o encontrarse en un
 documento externo (por ejemplo, el guion de exposición oral) no incluido
 en el repositorio.
+La foto `10_Autoria/fotos_equipo/2026-07-28_equipo_visita_palmicultora.png` (commit `83fe193`) es la que su nombre presenta como "visita del equipo". Su fecha (28/07) está declarada pero no verificada: el archivo no conserva metadatos (ver `10_Autoria/fotos_equipo/readme.md`). No se localizó un pie de foto escrito en otro documento; queda pendiente que el equipo confirme si corresponde al 28/07 o a otra de las visitas señaladas.
 
 ### Evidencia entregada fuera del repositorio
 No aplica.
@@ -1621,10 +1622,10 @@ Comando:
 
 Resultado:
 
-    [pegar la salida real]
+    4 coincidencias: líneas 27, 56, 58 y 75 de 09_Etica/README_Etica.md; la línea 27 ya dice «En curso»
 
 ### Commits
-- `<SHA>` — `docs(G2): precisar estado real de la acreditacion etica A12`
+- `25dad77` — `docs(G2): precisar estado real de la acreditacion etica A12`
 
 ### Limitaciones
 El criterio pide dictamen con número y fecha o declaración explícita. A la
