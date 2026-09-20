@@ -1650,7 +1650,7 @@ No aplica todavía.
 
 ## H2 — Aclarar las fotos del cuestionario
 
-**Estado operativo:** NO INICIADA
+**Estado operativo:** EN PROCESO
 **Estado de rúbrica:** pendiente de mapeo
 **Peso:** 0,10 pts
 **Responsable(s):** Arboleda Yanza Francisco Javier
@@ -1660,29 +1660,40 @@ No aplica todavía.
 Las fotos rotuladas como aplicación del cuestionario son del 15/09 (consentimiento complementario) y los commits titulados fotografías reales de aplicación solo contienen capturas.
 
 ### Acción aplicada
-Ninguna todavía.
+Se añadió al readme de `Fotos_Aplicacion/` una sección que declara que los commits `34ce578` y `0792213` solo contienen las 15 capturas del instrumento, que las cinco fotografías son de la sesión complementaria de consentimiento del 15/09/2026 y que la Foto-01 fue editada por privacidad. Se corrigió el rótulo de la verificación EXIF. Los mensajes de commit no se modifican por la regla de no reescribir el historial.
 
 ### Evidencia utilizada
-- Ninguna todavía.
+- Commits `34ce578` y `0792213`: 15 capturas `cuestionario_p01` a `p15`, sin fotografías de trabajadores.
+- Metadatos EXIF de las cinco fotografías (2026-09-15, 10:08 a 10:10).
 
 ### Archivos modificados
-- Ninguno todavía.
+- `02_Evidencias/Cuestionario/Fotos_Aplicacion/readme.md` (commit 4699e99)
+- `10_Autoria/verificacion_exif_aplicacion.md` (commit f13e632)
 
 ### Criterio de aceptación
-- [ ] Nombres y mensajes coherentes con el contenido
+- [x] Aclarado que las fotos son del 15/09 (consentimiento complementario)
+- [x] Aclarado que los commits de "fotografías reales de aplicación" solo contienen capturas
+- [ ] Nombres y mensajes coherentes con el contenido (la carpeta conserva el nombre `Fotos_Aplicacion` y la línea 357 del ERS aún dice "aplicación real del cuestionario"; se corrige en I1)
 
 ### Verificación
-Aún no ejecutada.
+Comando:
+
+    for h in 34ce578 0792213; do git show --name-status --format= $h | awk '{print $1}' | sort | uniq -c; done
+
+Resultado:
+
+    34ce578: 15 A y 1 D (el D es el readme de la carpeta)
+    0792213: 15 A
 
 ### Commits
-- Ninguno todavía.
+- `4699e99` — aclaración de commits y fotos en el readme de Fotos_Aplicacion
+- `f13e632` — rótulo corregido en la verificación EXIF
 
 ### Limitaciones
-En ejecución según el plan de ejecución rev. 8. Esta sección se completa con lo que realmente ocurra al cerrar la tarea; no se marca Hecho sin criterio cumplido.
+El nombre de la carpeta `Fotos_Aplicacion` y la línea 357 de `ERS_SRS_2B_v2.0.tex` siguen hablando de aplicación; el ERS se corrige en I1. Los mensajes de los commits `34ce578` y `0792213` no pueden modificarse.
 
 ### Evidencia entregada fuera del repositorio
-No aplica todavía.
-
+No aplica.
 ---
 
 ## I1 — Coherencia documental
