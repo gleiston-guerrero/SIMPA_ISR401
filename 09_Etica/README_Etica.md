@@ -24,7 +24,7 @@ estado quedó cada punto.
 | A.09 | Nómina del equipo | Vigente, seis integrantes |
 | A.10 | Cronograma Gantt | Vigente |
 | A.11 | Análisis de riesgos | Vigente |
-| A.12 | Certificado de ética | Vigente |
+| A.12 | Acreditación de formación ética | **En curso** — sin certificados adjuntos; su propia sección 5 indica que debe presentarse con ese estado mientras no haya certificado emitido. Ver sección de estado de la acreditación y la aprobación ética |
 | A.13 | Participantes externos | Vigente, incorporado en Entrega 3 junto con la organización externa |
 | — | Adenda ética, segunda ronda (`Adenda_Segunda_Ronda.pdf`) | Declara la desviación de procedimiento de la segunda ronda de campo — ver sección 2 |
 | A.14 | Adenda tercera ronda (`A14_Adenda_Tercera_Ronda.pdf` y `.tex`) | Documento de trazabilidad y subsanación de la desviación anterior; no constituye una nueva solicitud de permiso. **Es el único anexo con fuente LaTeX versionada** |
@@ -46,6 +46,58 @@ condicionan el análisis y que se registran aquí para su seguimiento:
   de modo que mezclarlos produciría una inflexión artificial.
 - **Mitigación R-14.4.** Ningún integrante entrevista a estudiantes sobre los
   que tenga función de evaluación.
+
+### Estado de la acreditación de formación ética y de la aprobación del proyecto
+
+Conforme a la tarea G2 del Plan de mejora de datos, se precisa el estado real
+de dos cuestiones que hasta ahora se presentaban de forma conjunta y que son
+distintas entre sí.
+
+**1. Acreditación de formación ética (anexo A.12).**
+
+A.12 es la *Acreditación de Formación Ética en Investigación*: documenta que
+el docente responsable y al menos un integrante del equipo han completado un
+curso de formación en ética de la investigación. Es una credencial de
+formación de personas, no un pronunciamiento sobre el proyecto.
+
+Su estado real a la fecha es el siguiente:
+
+- En el registro de acreditaciones (sección 3) las casillas de estado están
+  sin marcar para ambas personas.
+- Las fichas de detalle por certificado (sección 4) están vacías y no hay
+  ningún certificado adjunto al anexo.
+- La propia sección 5 del documento advierte que «la formación ética del
+  integrante designado del equipo se encuentra en curso y no cuenta aún con
+  certificado emitido», y que «mientras el certificado no esté emitido, este
+  documento debe presentarse indicando el estado real "en curso" y no como
+  acreditación cumplida».
+
+Este documento corrige en consecuencia la fila A.12 de la tabla anterior, que
+hasta la revisión del Plan de mejora de datos figuraba como «Vigente».
+
+**2. Aprobación ética del proyecto.**
+
+En el repositorio no consta ningún dictamen de comité de ética sobre el
+proyecto, con número y fecha. Las únicas menciones a un «comité» en el
+repositorio corresponden al Comité de Control de Cambios (CCB), que es un
+órgano de gestión de requisitos y no de revisión ética.
+
+El equipo ha solicitado al docente responsable la precisión de este punto,
+dado que fue él quien gestionó el trámite de ética del proyecto: si existe un
+dictamen de comité con número y fecha, se adjuntará a este anexo y esta
+sección se actualizará en consecuencia; si lo que consta es su acreditación de
+formación ética y la aprobación del proyecto en el marco de la asignatura, se
+declarará en esos términos y no como dictamen de comité.
+
+Hasta obtener esa precisión, **este documento no afirma que el proyecto cuente
+con dictamen de comité de ética**, ni afirma lo contrario.
+
+**3. Condiciones en que se realizó el trabajo de campo.**
+
+En todos los casos, el trabajo de campo se realizó con consentimiento
+informado de las personas participantes. Las limitaciones de los
+consentimientos se detallan en la tarea G3 y el estado de los avales
+institucionales en la G4.
 
 ---
 

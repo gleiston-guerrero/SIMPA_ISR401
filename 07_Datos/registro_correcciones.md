@@ -1457,40 +1457,71 @@ No aplica todavía.
 
 ---
 
-## G2 — Comité de ética: declarar SIN APROBACION DE COMITE
+## G2 — Estado real de la acreditación y la aprobación ética
 
-**Estado operativo:** NO INICIADA
+**Estado operativo:** EN PROCESO
 **Estado de rúbrica:** pendiente de mapeo
 **Peso:** 0,20 pts
 **Responsable(s):** Arboleda Yanza Francisco Javier
-**Dependencias:** Ninguna
+**Dependencias:** respuesta del docente sobre la existencia de dictamen
 
 ### Problema detectado
-A12 es una solicitud con el certificado en curso y README_Etica.md (línea 27) lo da por vigente; las adendas hablan de un protocolo aprobado sin acta.
+A.12 figura como «Vigente» en `README_Etica.md` (tabla de la sección 1)
+mientras que el propio documento, en su sección 5, indica que debe presentarse
+como «en curso» y no como acreditación cumplida. Además, las adendas se
+refieren a un «protocolo aprobado» sin que conste acta de aprobación.
 
 ### Acción aplicada
-Ninguna todavía.
+Se precisó el estado real de A.12 y se separaron dos cuestiones que el
+repositorio presentaba de forma conjunta: la acreditación de formación ética
+de las personas (A.12) y la aprobación ética del proyecto. Se verificó que
+A.12 no tiene certificados adjuntos, que sus casillas de estado están sin
+marcar y que sus fichas de detalle están vacías. Se verificó asimismo que en
+el repositorio no consta ningún dictamen de comité de ética: las únicas
+menciones a «comité» corresponden al Comité de Control de Cambios.
+
+Se consultó al docente responsable, que gestionó el trámite de ética del
+proyecto, para precisar si existe un dictamen de comité con número y fecha o
+si lo que consta es su acreditación de formación y la aprobación del proyecto
+en el marco de la asignatura.
 
 ### Evidencia utilizada
-- Ninguna todavía.
+- Archivo: `09_Etica/A12_Certificado_Etica.pdf`, secciones 3, 4 y 5
+- Fuente: texto extraído del propio anexo
+- Comprobación: `git grep -i "comité"` sobre el repositorio completo
+- Fecha: 19/09/2026
 
 ### Archivos modificados
-- Ninguno todavía.
+- `09_Etica/README_Etica.md`
 
 ### Criterio de aceptación
-- [ ] Dictamen con número y fecha, o declaración explícita de sin aprobación
+- [x] Estado real de A.12 declarado y corregido en la tabla
+- [ ] Dictamen con número y fecha, o declaración explícita de ausencia
+      — pendiente de la respuesta del docente
 
 ### Verificación
-Aún no ejecutada.
+Comando:
+
+    grep -n "A.12" 09_Etica/README_Etica.md
+
+Resultado:
+
+    [pegar la salida real]
 
 ### Commits
-- Ninguno todavía.
+- `<SHA>` — `docs(G2): precisar estado real de la acreditacion etica A12`
 
 ### Limitaciones
-En ejecución según el plan de ejecución rev. 8. Esta sección se completa con lo que realmente ocurra al cerrar la tarea; no se marca Hecho sin criterio cumplido.
+El criterio pide dictamen con número y fecha o declaración explícita. A la
+fecha de este registro la declaración es parcial: se precisa el estado de la
+acreditación de formación, pero la existencia o no de dictamen de comité queda
+sujeta a la respuesta del docente, solicitada el 19/09/2026.
+
+Las líneas 49 y 96 de `A14_Adenda_Tercera_Ronda.tex`, que se refieren al
+«protocolo aprobado», no se han modificado a la espera de esa misma respuesta.
 
 ### Evidencia entregada fuera del repositorio
-No aplica todavía.
+Consulta al docente por correo institucional — 19/09/2026.
 
 ---
 
