@@ -1102,7 +1102,8 @@ No aplica todavía.
 El plan del docente señala que la ronda 3 fue codificada por un solo analista (commit `cbcdab5`) y pide identificar al analista "VER".
 
 ### Acción aplicada
-Se revisó el commit `cbcdab5` (autor `AlanNVR`) y el README que introduce, `07_Datos/datos_procesados/README_codificacion_tercera_ronda.md`. Ese README declara como responsable principal a Villafuerte Rosero Allan Noé, con identificador `AVR` en las 89 filas de `codificacion_tercera_ronda.csv` (ENTR-09 a ENTR-16), y estado "codificación realizada; pendiente revisión cruzada del integrante de apoyo".
+Se revisó el commit `cbcdab5` (autor `AlanNVR`) y el README que introduce, `07_Datos/datos_procesados/README_codificacion_tercera_ronda.md`. Ese README declara como responsable principal a Villafuerte Rosero Allan Noé, con
+identificador `AVR` en las 89 filas de `codificacion_tercera_ronda.csv` (ENTR-09 a ENTR-16), y estado "codificación realizada; pendiente revisión cruzada del integrante de apoyo".
 
 "VER" es el identificador del analista del archivo histórico `07_Datos/datos_crudos/codificacion.csv` (138 fragmentos, EV-01 a EV-08, rondas 1 y 2): figura en la columna `Analista_codificador` de las 138 filas y en `07_Datos/datos_crudos/readme.md` (línea 38). Ningún documento del repositorio indica a qué integrante corresponde. La persona no se asigna por suposición: queda pendiente de confirmación del equipo.
 
@@ -1134,7 +1135,7 @@ Resultado:
 
 ### Commits
 - `0836c50` y `3af8698` — versión inicial de esta entrada, que afirmaba por error que no existía un analista VER
-
+- `ec491d6` — corrección de esta entrada: VER existe en codificacion.csv y la ronda 3 tiene 89 filas
 ### Limitaciones
 No existe artefacto de revisión cruzada de la ronda 3. Qué haría falta: que el "integrante de apoyo" que menciona el README revise una muestra de la codificación de `AVR` y registre acuerdo o desacuerdo, y que el equipo confirme quién es VER. Si no se puede confirmar, se declara "no se pudo determinar con la evidencia disponible".
 
