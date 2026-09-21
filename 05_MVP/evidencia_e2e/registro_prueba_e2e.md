@@ -207,12 +207,7 @@ sin variación», y la entrada anterior de RF-40 pasó a decir «Titular ANON-00
 sesión «Ejecución registrada» valía $0 (no había avances registrados) y la
 Liquidación semanal sale del plan, no de los avances; por eso esta comprobación
 no demuestra por sí sola que la disociación conserve los totales.
-Repetición del 21/09/2026: tras suprimir, la consulta
-`localStorage.getItem('simpa_v4').includes('Trabajador 1')` devolvió `true`, es
-decir, el nombre suprimido permanece en el almacenamiento local. Por lectura del
-código, la causa es el campo interno `registeredBy` de los avances registrados
-sin delegación (`saveLabor()`, línea 63), que `suprimirFicha()` no reasigna. El
-nombre no aparece en la pantalla Personal ni en la bitácora (ver discrepancia 4).
+  Repetición del 21/09/2026: no fue posible ejecutar las consultas en la consola del navegador (error: Warning: Don’t paste code into the DevTools Console that you don’t understand or haven’t reviewed yourself. This could allow attackers to steal your identity or take control of your computer. Please type ‘allow pasting’ below and hit Enter to allow pasting.). La permanencia del nombre en el almacenamiento local se deduce de la lectura del código (`saveLabor()`, línea 63, y `suprimirFicha()`, línea 121) y no se verificó en el despliegue.
 
 ---
 
@@ -252,7 +247,7 @@ anota aquí, aunque no estuviera prevista. No se omite ninguna.
 | 1 | «Control de acceso por rol: parcialmente implementado»: `navItems()` restringe una sola entrada, `Personal` (README, líneas 112 y 142) | `Personal` es solo para Administrador y `Reportes` solo para Supervisor y Administrador; el Operario no ve ni accede a Reportes, el Supervisor no accede a Personal | `2026-09-19_operario_menu.png`, `2026-09-19_operario_reportes.png`; `navItems()` línea 38 |
 | 2 | RF-42: los totales por lote y período no cambian tras la supresión | Los totales no cambiaron, pero con «Ejecución registrada $0» la prueba no es concluyente | `2026-09-19_admin_rf42_totales.png` |
 | 3 | RF-40: exportación de todos los datos que el sistema conserva | Correcta, pero el CSV se abre con tildes dañadas en Excel (falta la marca UTF-8) | `2026-09-19_operario_rf40_export.png` |
-| 4 | RF-42 (README, línea 102): «sustituye el nombre por un identificador disociado (`ANON-000X`), vacía el contacto y reasigna los registros de avance a ese identificador» | El nombre suprimido permanece en `localStorage` (`includes('Trabajador 1')` = `true`); por lectura del código, en el campo interno `registeredBy` de los avances; no se muestra en pantallas ni en la bitácora | `2026-09-21_consola_rf42.png` |
+| 4 | RF-42 (README, línea 102): «sustituye el nombre por un identificador disociado (`ANON-000X`), vacía el contacto y reasigna los registros de avance a ese identificador» | Por lectura del código, el nombre suprimido permanece en `localStorage`, en el campo interno `registeredBy` de los avances, porque `suprimirFicha()` solo reasigna `worker`. No se pudo verificar en el despliegue. No se muestra en pantallas ni en la bitácora según las capturas del 19/09 | Lectura del código: `saveLabor()` línea 63 y `suprimirFicha()` líneas 115 a 129 |
 | 5 | RF-22 (README, línea 83): «Pendiente de verificación en prueba E2E» | La alerta se genera con un umbral global (3 %), pero con nivel «Advertencia» por un defecto de `addAlert()`; no hay umbral por variedad; la tarjeta «Fruta verde estimada» usa 2,4 % fijo sin lecturas | `2026-09-21_admin_rf22_alertas.png` |
 
 ---
@@ -261,11 +256,11 @@ anota aquí, aunque no estuviera prevista. No se omite ninguna.
 
 - [x] Ningún RF marcado como funcional resultó simulado (RF-22 se reclasifica como funcional parcial en el README)
 - [x] El control de acceso por rol coincide con lo declarado (tras corregir el README en este mismo commit)
-- [ ] Los tres flujos LOPDP cumplen sus criterios de aceptación (RF-40 y RF-41 cumplen; RF-42 es parcial: ver discrepancia 4)
+- [ ] Los tres flujos LOPDP cumplen sus criterios de aceptación (RF-40 y RF-41 cumplen; RF-42 tiene una posible limitación por verificar: ver discrepancia 4)
 - [x] Todas las discrepancias encontradas quedaron documentadas
 
 **Conclusión:**
-RF-40 y RF-41 se comportan como declara el README. RF-42 rechaza la supresión con relación activa, sustituye el nombre por `ANON-000X` en pantalla y bitácora y conserva los totales; sin embargo, el nombre suprimido permanece en el almacenamiento local, por lo que la supresión es parcial. RF-22 es funcional parcial: compara con un umbral global de 3 % y genera la alerta con nivel Advertencia por un defecto de `addAlert()`. El control de acceso por rol es más amplio que lo que declaraba el README (Personal y Reportes), que se corrige en este commit. La prueba se ejecutó sobre el despliegue y no se pudo verificar su correspondencia con el commit declarado.
+RF-40 y RF-41 se comportan como declara el README. RF-42 rechaza la supresión con relación activa, sustituye el nombre por `ANON-000X` en pantalla y bitácora y conserva los totales; sin embargo, por lectura del código, el nombre suprimido permanece en el almacenamiento local (campo interno `registeredBy`), lo que no se pudo verificar en el despliegue; de confirmarse, la supresión sería parcial. RF-22 es funcional parcial: compara con un umbral global de 3 % y genera la alerta con nivel Advertencia por un defecto de `addAlert()`. El control de acceso por rol es más amplio que lo que declaraba el README (Personal y Reportes), que se corrige en este commit. La prueba se ejecutó sobre el despliegue y no se pudo verificar su correspondencia con el commit declarado.
 
 ---
 
@@ -281,5 +276,4 @@ RF-40 y RF-41 se comportan como declara el README. RF-42 rechaza la supresión c
 | `2026-09-19_admin_rf42_bloqueo.png` | Rechazo de supresión sobre ficha activa |
 | `2026-09-19_admin_rf42_disociada.png` | Ficha como `ANON-0001` |
 | `2026-09-19_admin_rf42_totales.png` | Totales de Reportes (Ejecución registrada $0) |
-| `2026-09-21_consola_rf42.png` | Resultado de la consulta en consola tras la supresión (`true`) |
 | `2026-09-21_admin_rf22_alertas.png` | Pantalla Alertas tras el ticket con 10 % de fruta verde (nivel Advertencia) |
