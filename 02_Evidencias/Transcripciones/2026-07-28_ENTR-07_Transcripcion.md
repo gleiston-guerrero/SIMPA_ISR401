@@ -2,78 +2,74 @@
 
 **Rol:** Asistente de administración
 
-**Entrevistador:** Estamos realizando una entrevista a un asistente de administración de la hacienda. ¿Cuál es su labor?
+**[00:00] Entrevistador:** Buenas tardes, [Anonimizado], soy [Anonimizado] y estamos aquí para realizar una entrevista en la hacienda [Anonimizado], ¿con el señor?
 
-**Entrevistado:** Mi labor consiste en realizar el seguimiento de los trabajos de campo.
+**[00:10] Entrevistado:** [Nombre Anonimizado].
 
-**Entrevistador:** ¿Cuánto tiempo lleva realizando esta labor?
+**[00:12] Entrevistador:** Ok, [Nombre Anonimizado], ¿cuál es su labor aquí en la hacienda [Anonimizado]?
 
-**Entrevistado:** Aproximadamente un año.
+**[00:18] Entrevistado:** Bueno, mi labor es realizar los seguimientos de los trabajos de campo.
 
-**Entrevistador:** Cuénteme, ¿cómo es un día normal de trabajo para usted?
+**[00:24] Entrevistador:** Ok, ¿y hace cuánto tiempo lo realiza?
 
-**Entrevistado:** Llego a la finca, me reúno con el jefe de campo y, junto con él, revisamos las diferentes labores que se realizan en la finca.
+**[00:27] Entrevistado:** Aproximadamente un año.
 
-**Entrevistador:** Cuando termina el día, ¿cómo anota lo que hizo?
+**[00:29] Entrevistador:** Ok, cuénteme, ¿cómo es un día normal de trabajo para usted?
 
-**Entrevistado:** Lo anotamos en una libreta.
+**[00:34] Entrevistado:** Bueno, llego a la finca, localizo al jefe de campo y con él nos vamos a revisar las diferentes labores que se realizan en la finca.
 
-**Entrevistador:** ¿A quién le entrega esa libreta y en qué momento del día?
+**[00:44] Entrevistador:** Ok, cuando termina el día, ¿usted cómo anota lo que hizo?
 
-**Entrevistado:** La libreta realmente la lleva el jefe de campo. Los reportes nos los envían por medio de WhatsApp a quienes somos administradores.
+**[00:49] Entrevistado:** Bueno, lo anotamos en una libreta.
 
-**Entrevistador:** ¿Alguna vez se ha perdido esa libreta o se han equivocado en el conteo?
+**[00:52] Entrevistador:** ¿Y a quién le entrega esa libreta y en qué momento del día?
 
-**Entrevistado:** Sí, pero rara vez.
+**[00:56] Entrevistado:** Bueno, la libreta realmente la lleva al jefe de campo y los reportes nos los envían por medio de whatsapp a los que somos los administradores.
 
-**Entrevistador:** ¿Cómo sabe usted, al final de la semana, cuánto se trabajó y cuánto se debe pagar? ¿Ha tenido dudas o desacuerdos con ese cálculo?
+**[01:08] Entrevistador:** ¿Alguna vez se le ha perdido esa libreta o se ha equivocado en el conteo?
 
-**Entrevistado:** Por lo general, no suele suceder. Sí puede haber errores, pero todo eso se corrige al momento de realizar la revisión.
+**[01:14] Entrevistado:** Sí, pero rara vez.
 
-**Entrevistador:** En su día de trabajo, ¿qué es lo más difícil o lo que más lo retrasa?
+**[01:15] Entrevistador:** ¿Cómo sabe usted al final de la semana cuánto trabajó y cuánto le van a pagar? ¿Ha tenido dudas o desacuerdos con ese cálculo?
 
-**Entrevistado:** Por lo general, nada. Sin embargo, diría que una dificultad es que los reportes del seguimiento no siempre llegan lo suficientemente especificados por parte del jefe de campo.
+**[01:25] Entrevistado:** Por lo general no suele suceder, pero sí suele haber errores, pero todo eso se corrige al momento de revisar.
 
-**Entrevistador:** Cuando usted observa una planta enferma, con alguna plaga o daño, ¿qué hace? ¿A quién le avisa y cómo lo hace?
+**[01:34] Entrevistador:** Ok, ¿en su día de trabajo qué es lo más difícil o lo que más lo retrasa?
 
-**Entrevistado:** Cuando observo una planta enferma, como soy el encargado de realizar esas revisiones, tomo una evidencia fotográfica y verifico qué tipo de enfermedad tiene para comenzar con el tratamiento correspondiente.
+**[01:40] Entrevistado:** Por lo general nada, pero diría que los seguimientos, que no suelen llegar los reportes lo suficientemente especificados por parte del jefe de campo.
 
-No tengo que avisarle a otra persona, porque soy yo quien realiza esa labor. De hecho, a mí me tienen que avisar cuando se presenta uno de estos casos para que pueda ir a verificarlo.
+**[01:52] Entrevistador:** Cuando usted ve a una planta enferma con plaga o con algún daño, ¿qué hace? ¿A quién le avisa o cómo le avisa?
 
-**Entrevistador:** Desde que le avisan hasta que se toma alguna acción sobre la planta, ¿cuánto tiempo aproximadamente transcurre?
+**[02:01] Entrevistado:** Bueno, cuando veo a una planta enferma, como soy el que está encargado de hacer todas esas revisiones, lo que se hace es tomar una evidencia fotográfica y verificar qué tipo de enfermedad tiene para empezar con el debido tratamiento. No le avisa a nadie más porque soy yo el que hace esa labor. De hecho a mí me tienen que avisar cuando haya eso para ir a verificar.
 
-**Entrevistado:** Como realizo las visitas dos veces por semana, depende del día en el que pueda llegar para verificarla. Normalmente me avisan inmediatamente por WhatsApp, pero las verificaciones presenciales las realizo dos veces por semana.
+**[02:31] Entrevistador:** Ah ya, entre que le avisan a usted en ese caso, hasta que se toma acción en esa planta, ¿cuánto tiempo más o menos transcurre?
 
-**Entrevistador:** ¿Cómo recuerda en qué lote y en qué planta se encontró el problema para posteriormente ir a verificarlo?
+**[02:41] Entrevistado:** Bueno, como las visitas yo las hago dos veces por semana, depende cuando yo llegue allá para poder verificar. Me suelen avisar inmediatamente por whatsapp, pero para yo ir a verificarla lo suelo hacer solo dos veces por semana.
 
-**Entrevistado:** Lo recuerdo porque anoto las actividades que debo realizar en cada visita. Cuando me informan sobre algún problema, lo registro en la lista de verificación de las actividades pendientes.
+**[02:59] Entrevistador:** Ok, ¿y usted cómo se acuerda en qué lote y qué planta se vio el problema para ir a verificar?
 
-La información del lote también me la proporciona el jefe de campo, quien me acompaña durante la revisión.
+**[03:07] Entrevistado:** Bueno, acordarme porque yo anoto lo que tengo que revisar en cada visita. Entonces, si es que ya me avisaron, yo ya debería tenerlo escrito en los checklists de lo que voy a hacer. Y para saber qué lote es, eso también me lo proporciona el jefe de campo y también voy con él mismo para revisar.
 
-**Entrevistador:** En este caso, ¿la aplicación que utiliza para el trabajo en la hacienda es WhatsApp o emplea alguna aplicación adicional?
+**[03:30] Entrevistador:** Ok, ¿en este caso la aplicación que usted utiliza para el trabajo en la hacienda es whatsapp o tiene alguna aplicación extra?
 
-**Entrevistado:** Solamente utilizamos WhatsApp.
+**[03:40] Entrevistado:** Nosotros solo usamos whatsapp.
 
-**Entrevistador:** ¿Existe señal de internet en toda la hacienda o hay lugares donde no está disponible?
+**[03:43] Entrevistador:** Ok, ¿hay señales de internet en toda la hacienda o hay partes donde no?
 
-**Entrevistado:** En ciertas partes se puede captar el internet satelital, pero realmente el lugar donde hay una conexión estable es el campamento.
+**[03:49] Entrevistado:** Hay ciertas partes donde te coge el internet satelital, pero realmente donde hay internet es en el campamento.
 
-**Entrevistador:** Si le pidieran utilizar una aplicación de celular para registrar su trabajo o tomar fotografías de plantas enfermas, ¿cree que le resultaría difícil o sería más fácil que los métodos tradicionales?
+**[03:57] Entrevistador:** Ok, si le pidieran usar una aplicación de celular para anotar su trabajo o para tomar una foto de una planta enferma, ¿cree que le costaría usarla o que se le haría más fácil de usar que métodos, digámosle, normales?
 
-**Entrevistado:** No se me haría difícil porque estoy familiarizado con ese tipo de tecnología.
+**[04:15] Entrevistado:** No, a mí yo estoy familiarizado con eso, así que no se me haría difícil. El tema es que en este tipo de fincas que son bastante pequeñas, no suelen implementar ese tipo de tecnología. Y en lo que respecta al equipo técnico que somos los administradores, no creo que se nos complique. Más sería el equipo de campo que hace las labores manuales como fertilización, polinización y poda.
 
-El problema es que, en fincas pequeñas como esta, normalmente no se implementa esa clase de herramientas. En lo que respecta al equipo técnico y a los administradores, no creo que existan complicaciones. La dificultad podría presentarse principalmente con el personal de campo que realiza labores manuales, como la fertilización, la polinización y la poda.
+**[04:46] Entrevistador:** Ok, si al final del día el celular le mostrara cuánto trabajó y cuánto lleva ganado esa semana, ¿le serviría?
 
-**Entrevistador:** Si al final del día el celular le mostrara cuánto se trabajó y cuánto se lleva ganado durante la semana, ¿le resultaría útil?
+**[04:55] Entrevistado:** Claro que serviría.
 
-**Entrevistado:** Claro que sería útil.
+**[04:56] Entrevistador:** Ok, ¿qué le gustaría que hiciera en tal caso esta aplicación para facilitarle a usted el trabajo?
 
-**Entrevistador:** ¿Qué le gustaría que hiciera esta aplicación para facilitar su trabajo?
+**[05:04] Entrevistado:** Sería interesante que se pudiese guardar los seguimientos con evidencia fotográfica como plantas enfermas, sectores polinizados. E incluso guardar las coordenadas del lugar donde se encontraron las afectaciones o donde se realizaron los trabajos.
 
-**Entrevistado:** Sería interesante que permitiera guardar los seguimientos con evidencias fotográficas, como fotografías de plantas enfermas o de sectores polinizados.
+**[05:24] Entrevistador:** Muchas gracias, eso ha sido todo por esta entrevista, le agradezco mucho al [Nombre Anonimizado].
 
-También sería útil que permitiera registrar las coordenadas del lugar donde se encontraron las afectaciones o donde se realizaron los diferentes trabajos.
-
-**Entrevistador:** Muchas gracias. Esto ha sido todo por esta entrevista.
-
-**Entrevistado:** Gracias.
+**[05:32] Entrevistado:** Gracias.
