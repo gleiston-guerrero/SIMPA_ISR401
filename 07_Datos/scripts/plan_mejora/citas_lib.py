@@ -30,7 +30,7 @@ TRANSCRIPCIONES = RAIZ / "02_Evidencias" / "Transcripciones"
 
 _TS = r"\[\d{1,2}:\d{2}(?::\d{2})?\]"
 RE_TURNO = re.compile(
-    rf"^(?:{_TS}\s*)?\*\*(?:{_TS}\s*)?(Entrevistado|Entrevistador):\*\*"
+    rf"^(?:{_TS}\s*)?\*\*(?:{_TS}\s*)?(Entrevistad(?:o|a|or|ora)):\*\*"
 )
 RE_ACOTACION = re.compile(r"^\s*\*?\(.*\)\*?\s*$")  # *(Sonidos de ...)*: no es habla
 
@@ -41,7 +41,7 @@ def turnos_de_entrevistado(texto):
     for n, linea in enumerate(texto.splitlines(), start=1):
         m = RE_TURNO.match(linea)
         if m:
-            hablante = "E" if m.group(1) == "Entrevistado" else "R"
+            hablante = "E" if m.group(1) in ("Entrevistado", "Entrevistada") else "R"   # ENTR-14 usa "Entrevistadora"
             if hablante == "E":
                 salida.append((n, linea, m.end()))
         elif linea.startswith("#") or linea.startswith("**Rol:**"):
