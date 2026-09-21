@@ -28,7 +28,7 @@ firmó, no que esté conforme.
 | Integrante | Firma (nombre completo) | Fecha | Cuenta que publica |
 |---|---|---|---|
 | Arboleda Yanza Francisco Javier | Arboleda Yanza Francisco Javier | 21/09/2026 | `farboleday-wq` |
-| Macías Herrera Josthyn Esteban | | | `jmaciasherr4` |
+| Macías Herrera Josthyn Esteban | Macías Herrera Josthyn Esteban | 21/09/2026 | `jmaciasherr4` |
 
 Lo firmado es la comprobación del estado del repositorio descrita en las
 secciones 1 y 2, no una valoración sobre las personas u organizaciones
