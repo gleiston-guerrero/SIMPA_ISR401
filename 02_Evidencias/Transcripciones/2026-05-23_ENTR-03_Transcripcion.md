@@ -51,3 +51,5 @@
 **[04:03] Entrevistador:** Ya. Bueno, esto ha sido el tema sobre la polinización y lo que sería la inclusión del trabajo y trabajadores con el administrador aquí sobre este tema. Muchas gracias.
 
 **[04:15] Entrevistado:** Gracias.
+
+**[04:15–05:13]** *(Nota del equipo: no hay habla en este tramo. Se escucha ruido ambiental de campo hasta el cierre del archivo de audio, que dura 5:13,9. Verificado por escucha directa el 21/09/2026.)*
