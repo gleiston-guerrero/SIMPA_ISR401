@@ -23,9 +23,9 @@ como diccionario específico del bloque de codificación de tercera ronda.
 
 - 8 entrevistas;
 - 89 fragmentos;
-- 31 códigos distintos;
-- 20 códigos compartidos con la codificación histórica;
-- 11 códigos nuevos frente al estrato de dominio;
+- 36 códigos distintos (31 en la versión del 07/09/2026; se normalizaron al libro de códigos v1.0 el 20/09/2026);
+- 21 códigos compartidos con la codificación histórica;
+- 15 códigos nuevos frente al estrato de dominio;
 - analista `AVR`.
 
 Su fuente documental son las transcripciones anonimizadas versionadas en
