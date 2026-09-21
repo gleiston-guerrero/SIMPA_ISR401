@@ -63,8 +63,8 @@ captura primaria sin transformación.
 Esta fuente contiene:
 
 - 8 entrevistas de dominio;
-- 138 fragmentos codificados;
-- 68 códigos únicos.
+- 124 fragmentos codificados (138 hasta el 21/09/2026; ver tarea C2);
+- 67 códigos únicos (68 hasta esa fecha).
 
 Para el análisis actual, los identificadores históricos `EV-01` a `EV-08` se
 mapean únicamente en la salida analítica a `ENTR-01` a `ENTR-08`. El archivo
@@ -83,9 +83,9 @@ Esta fuente contiene:
 
 - 8 entrevistas de contraste;
 - 89 fragmentos codificados;
-- 31 códigos temáticos distintos;
-- 20 códigos compartidos con el estrato de dominio;
-- 11 códigos que aparecen por primera vez en el estrato de contraste.
+- 36 códigos temáticos distintos (31 en la versión del 07/09/2026; el 20/09/2026 la codificación se normalizó al libro de códigos v1.0);
+- 21 códigos compartidos con el estrato de dominio;
+- 15 códigos que aparecen por primera vez en el estrato de contraste.
 
 El identificador del analista de este bloque es `AVR`.
 
@@ -168,16 +168,16 @@ Se regeneran mediante:
 
 ### 6.1 Resultado global verificado
 
-La ejecución del 2026-09-07 produjo:
+La ejecución del 2026-09-21 (tras las tareas C1 y C2) produjo:
 
-- 138 fragmentos en el estrato de dominio;
+- 124 fragmentos en el estrato de dominio;
 - 89 fragmentos en el estrato de contraste;
-- 227 fragmentos en total;
-- 68 códigos únicos en dominio;
-- 31 códigos únicos en contraste;
-- 20 códigos compartidos entre ambos estratos;
-- 11 códigos nuevos exclusivos del contraste frente al dominio;
-- 79 códigos únicos en la vista agregada.
+- 213 fragmentos en total;
+- 67 códigos únicos en dominio;
+- 36 códigos únicos en contraste;
+- 21 códigos compartidos entre ambos estratos;
+- 15 códigos nuevos exclusivos del contraste frente al dominio;
+- 82 códigos únicos en la vista agregada.
 
 ### 6.2 Interpretación por estratos
 

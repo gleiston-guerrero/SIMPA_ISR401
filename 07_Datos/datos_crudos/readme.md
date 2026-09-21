@@ -33,8 +33,8 @@ heredada y combina sus resultados con:
 El archivo histórico conserva:
 
 - identificadores `EV-01` a `EV-08`;
-- 138 fragmentos;
-- 68 códigos únicos;
+- 124 fragmentos (138 hasta el 21/09/2026; ver tarea C2);
+- 67 códigos únicos (68 hasta esa fecha);
 - analista `VER`.
 
 El mapeo hacia `ENTR-01` a `ENTR-08` ocurre únicamente dentro del script de

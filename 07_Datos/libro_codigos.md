@@ -1,7 +1,7 @@
 # Libro de Códigos — C1 · SIMPA_ISR401
 **Versión:** 1.0
 **Fecha:** 2026-09-20
-**Fuente:** 227 fragmentos codificados — ENTR-01 a ENTR-16
+**Fuente:** 213 fragmentos codificados vigentes (227 antes de la tarea C2) — ENTR-01 a ENTR-16
 
 ---
 
