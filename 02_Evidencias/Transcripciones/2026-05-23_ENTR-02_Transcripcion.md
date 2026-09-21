@@ -106,13 +106,9 @@
 
 [17:36] **Entrevistado:** La polinización en el híbrido es obligatoria y se debe hacer en ciclos de 7 a 8 días. El personal pasa revisando flor por flor que esté en estado de antesis, es decir, abierta y lista para recibir el polen. Se le aplica la mezcla de polen con talco con un insuflador. Si no se hace esta labor con puntualidad, la flor se pasa y el racimo no cuaja o sale un racimo vano, sin fruto formado.
 
-[18:09] **Entrevistador:** ¿Y el polen que utilizan ustedes lo compran o lo procesan aquí mismo dentro de la finca?
+[18:16] **Entrevistador:** Con respecto al tema del agua y el riego, ¿qué sistema de riego tienen instalado en este lote?
 
-[18:16] **Entrevistado:** Con respecto al tema del agua y el riego, ¿qué sistema de riego tienen instalado en este lote?
-
-[18:38] **Entrevistador:** Bueno, creo que eso sería todo para la entrevista. Muchas gracias por su tiempo.
-
-[18:45] **Entrevistado:** Aquí utilizamos riego por goteo y en otros sectores microaspersión. El goteo nos permite optimizar el recurso agua, colocándolo directamente en el plato o corona de la planta, donde están las raíces efectivas absorbiendo. De esa manera no desperdiciamos agua evaporándola en callejones o donde hay maleza.
+[18:45] **Entrevistado:** Aquí utilizamos riego por goteo
 
 [19:10] **Entrevistador:** ¿Cuántos litros de agua requiere aproximadamente una palma adulta en época de verano intenso?
 
