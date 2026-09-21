@@ -136,7 +136,7 @@ línea en blanco significa que esa persona no firmó.
 | Persona | Firma (nombre completo) | Fecha | Cuenta |
 |---|---|---|---|
 | Arboleda Yanza Francisco Javier | Arboleda Yanza Francisco Javier | 21/09/2026 | `farboleday-wq` |
-| Macías Herrera Josthyn Esteban | | | `jmaciasherr4` |
+| Macías Herrera Josthyn Esteban | Macías Herrera Josthyn Esteban | 21/09/2026 | `jmaciasherr4` |
 
 Esta firma no sustituye la de los participantes, que consta en cada
 consentimiento.
