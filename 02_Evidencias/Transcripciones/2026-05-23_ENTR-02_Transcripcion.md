@@ -1,6 +1,6 @@
 ## Entrevista-02: ENTREVISTADO-02
 
-**Rol:** Administrador
+**Rol:** Asesor técnico.
 
 [00:00] **Entrevistador:** No. Buenas tardes, ingeniero. Estoy aquí con el ingeniero entrevistado para recopilar información sobre la palma africana para nuestro proyecto. Bien. Ingeniero, ¿cuántos años usted tiene en experiencia de palma?
 
