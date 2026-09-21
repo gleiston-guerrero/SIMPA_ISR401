@@ -1,75 +1,71 @@
 ## Entrevista-06: ENTREVISTADO-06
 
-**Rol:** Trabajador
+**Rol:** Trabajador agrícola
 
-**Entrevistador:** El día de hoy vamos a realizar una entrevista a un trabajador de la hacienda. Como primera pregunta: ¿qué labor hace usted aquí en la hacienda y desde hace cuánto tiempo?
+> **Nota de calidad:** el audio original tiene turnos poco claros en varios tramos. Las líneas marcadas `[atribución incierta]` no se pudieron asignar con confianza a un hablante; se recomienda verificación auditiva antes de dar B1 por cerrado en este archivo.
 
-**Entrevistado:** Hace 5 años trabajo yo aquí. Hago labor de chapia, de cosecha —ahorita que estamos cosechando—, chapia, cosecha, polinización; eso se hace aquí.
+**[00:00] Entrevistador:** Buenas tardes, [Anonimizado]. Estamos aquí en una entrevista en Hacienda [Anonimizado]. Estamos aquí con el señor... Ya.
 
-**Entrevistador:** Ok, cuénteme cómo es un día normal de trabajo suyo, desde que usted llega hasta que se va.
+**[00:08] Entrevistador:** La primera pregunta que le voy a hacer es, ¿qué labor hace usted aquí en la hacienda y desde cuánto tiempo?
 
-**Entrevistado:** Tenemos días bajos y altos, porque a veces trabajamos hasta las 2, 3 de la tarde, 5 de la tarde, según cómo esté el clima. Cuando se inició aquí, la palma estaba pequeña y el sol fatigaba mucho; estábamos hasta las 2 y ahí íbamos a descansar, veníamos a las 5 hasta las 6. Así trabajábamos.
+**[00:16] Entrevistado:** Yo tengo tres meses haciendo labor en lo que es chapea y [así transcrito por la app; posible error de reconocimiento, verificar contra el audio: "fútbol"].
 
-**Entrevistador:** ¿Quién le dice cada día en qué lote o en qué parte le toca trabajar?
+**[00:26] Entrevistador:** Ya. Cuénteme, ¿cómo es un día normal de trabajo suyo?
 
-**Entrevistado:** El administrador.
+**[00:30] [atribución incierta]:** 18 años. [respuesta suelta, no corresponde a la pregunta anterior; verificar contra el audio si es del entrevistado, cruce con otra pregunta, o ruido de fondo]
 
-**Entrevistador:** ¿Quién es el administrador?
+**[00:41] Entrevistador:** Y usted, desde que entra hasta que se va, ¿qué acciones realiza?
 
-**Entrevistado:** El jefe de campo.
+**[00:46] Entrevistado:** No, no entiendo. O sea, por ejemplo...
 
-**Entrevistador:** Cuando termina el día su labor de trabajo, ¿cómo anota lo que hizo? Por ejemplo, ¿cuántas flores polinizó, cuántos racimos cortó, cuántas plantas revisó?
+**[00:49] Entrevistador:** ¿Cómo se organiza para hacer eso?
 
-**Entrevistado:** Ahí también se lleva un conteo. Las flores son aparte, el racimo cuando se corta también es aparte, y cuando se chapea se cuenta por mata. Se le da el conteo al encargado, que es el jefe de campo.
+**[00:51] [atribución incierta]:** Ahorita va a cosecharme el cosecho, sí. Bien, está todo organizado, está todo bien. Ya está aquí, ya está aquí en la segunda hora y vamos todo bien. [tramo confuso en el original; no queda claro si es una sola intervención o el cruce de dos]
 
-**Entrevistador:** ¿A quién le entrega usted ese conteo y en qué momento del día?
+**[01:08] Entrevistador:** ¿A usted qué le dice qué lote debe trabajar?
 
-**Entrevistado:** Ese conteo se lo entrego en la tarde, a las 4 o 5, a la hora que uno sale del borde de trabajo, al encargado.
+**[01:11] Entrevistado:** Lote uno y lote dos.
 
-**Entrevistador:** ¿Alguna vez se le ha perdido esa hoja o se ha equivocado en el conteo? ¿Qué pasó después?
+**[01:13] Entrevistador:** ¿Y qué persona le dice eso?
 
-**Entrevistado:** No, no se puede perder, porque todos los días llevamos la labor que estamos haciendo. Si estamos chapeando, vemos cuántas matas hacemos; eso lo anotamos.
+**[01:14] Entrevistado:** El jefe.
 
-**Entrevistador:** ¿Cómo sabe usted al final de la semana cuánto trabajó y cuánto le van a pagar?
+**[01:15] Entrevistador:** El jefe.
 
-**Entrevistado:** Lo anota el encargado y lo anotamos nosotros también, y vemos cuánto sacamos en la quincena.
+**[01:16] Entrevistado:** El señor [Nombre Anonimizado].
 
-**Entrevistador:** ¿Y ha tenido alguna duda o desacuerdo con el cálculo?
+**[01:18] Entrevistador:** Cuando usted termina el día, ¿cómo anota el trabajo que usted hizo?
 
-**Entrevistado:** No, porque sale ahí; lo que nosotros anotamos coincide con lo que sale.
+**[01:22] Entrevistado:** Yo lo que hago es anotar el diario.
 
-**Entrevistador:** ¿Qué es lo más difícil de su trabajo, o lo que más le atrasa?
+**[01:25] Entrevistador:** El diario. Ya. Ahí anota la planta que hizo.
 
-**Entrevistado:** Ahorita, por el modo de la cosecha, está muy difícil, porque es la primera cosecha que se está haciendo. Con el tiempo va cambiando, ya es más suave el corte de la palma.
+**[01:28] Entrevistado:** Sí, la plantación que hizo. Lo hace de un cuadernito.
 
-**Entrevistador:** Cuando usted ve una planta enferma, con plagas o algún daño, ¿a quién le avisa y cómo le avisa?
+**[01:32] Entrevistador:** Sí, un cuadernito. Ya. Diariamente. ¿Alguna vez ha perdido el conteo o ha perdido la voz? [así transcrito por la app; probablemente "se ha equivocado", verificar contra el audio]
 
-**Entrevistado:** Le avisamos al encargado. Cuando la vemos, inmediatamente le decimos, y él se arregla con los ingenieros.
+**[01:44] Entrevistado:** No.
 
-**Entrevistador:** Desde que usted avisa hasta que alguien viene a revisar esa planta, ¿cuánto tiempo transcurre?
+**[01:45] Entrevistador:** ¿Tiene usted celular? ¿Cuenta con WhatsApp, YouTube?
 
-**Entrevistado:** No se demora mucho, porque aquí hay productos; enseguida se va a curar esa planta.
+**[01:48] Entrevistado:** Sí, todo, todo.
 
-**Entrevistador:** ¿Y cómo se acuerda en qué lote o en qué planta vio el problema, para volver después?
+**[01:49] Entrevistador:** ¿Conexión a internet?
 
-**Entrevistado:** Porque ya conocemos el lote: uno, dos, tres, cuatro, cinco, hasta el seis. Ya sabemos en qué lado y en qué parte, porque conocemos el terreno.
+**[01:51] Entrevistado:** Sí.
 
-**Entrevistador:** ¿Tiene usted celular, dispone de WhatsApp, redes sociales, YouTube, etc.? ¿Hay alguna señal de internet aquí en la hacienda?
+**[01:51] Entrevistador:** ¿En toda la hacienda hay conexión a internet o solamente por aquí?
 
-**Entrevistado:** Sí, aquí en la hacienda, aquí en la casa. Llegamos a casa e informamos.
+**[01:56] Entrevistado:** En esta parte nomás, la parte principal. No.
 
-**Entrevistador:** Si pudiera usar una aplicación de celular para anotar su trabajo, lo que hace normalmente aquí en la hacienda, o para tomar una foto de la planta enferma, ¿qué cree que se le haría más fácil de utilizar?
+**[01:59] Entrevistador:** Si al final del día un celular le mostrara cuánto ha trabajado, cuántas plantas ha cosechado, ¿cómo le parecería? En su celular, si se mostrara cuánto trabajo usted ha hecho a lo largo del día, ¿cómo recibiría esta información?
 
-**Entrevistado:** El WhatsApp, porque ese es más rápido. Aparte, uno tiene internet y llega el WhatsApp enseguida.
+**[02:15] Entrevistado:** Bien. Bien, perfectamente.
 
-**Entrevistador:** Si al final del día el celular le mostrara cuánto trabajó y cuánto lleva ganando esa semana, ¿le serviría de algo?
+**[02:17] Entrevistador:** Y, por ejemplo, si usted tuviera una aplicación que es para su trabajo, ¿qué funciones le gustaría para que le facilite el trabajo?
 
-**Entrevistado:** Claro, porque ya sé lo que estoy ganando y cuánto me van a pagar en la quincena.
+**[02:26] Entrevistado:** Por ejemplo, que le cuente las plantas. Contar las plantas, todo eso.
 
-**Entrevistador:** Si usted tuviera una aplicación que le facilitara el trabajo aquí, que no fuera WhatsApp, ¿qué le gustaría que hiciera?
+**[02:31] Entrevistador:** Ya. Muchas gracias por su tiempo.
 
-**Entrevistado:** *[Solicita que se repita la pregunta.]* Sería una aplicación que a uno le vaya dictando y le vaya guardando los días de labores que ha hecho.
-
-**Entrevistador:** Ya, eso es todo, muchas gracias.
-
-**Entrevistado:** Gracias.
+**[02:33] Entrevistado:** Gracias.
