@@ -80,8 +80,7 @@ https://simpa-v3-prototipo.netlify.app/
 | RF-18 | Estimación de producción | ✅ Cálculo demostrativo |
 | RF-19 | Generación de reportes | ✅ Funcional / exportación CSV |
 | RF-21 | Clasificación de madurez del racimo | ⚠️ Flujo demostrativo |
-| RF-22 | Alerta preventiva de fruta verde | ⚠️ Pendiente de verificación en prueba E2E |
-| RF-26 | Planificación semanal con presupuesto | ✅ Funcional |
+| RF-22 | Alerta preventiva de fruta verde | ⚠️ Funcional parcial: compara con un umbral global de 3 %; la alerta se genera con nivel Advertencia (no Crítica) || RF-26 | Planificación semanal con presupuesto | ✅ Funcional |
 | RF-28 | Registro de avance por unidad de labor | ✅ Funcional |
 | RF-30 | Reporte de incidencia desde campo | ✅ Funcional |
 | RF-35 | Registro delegado del avance | ✅ Funcional |
@@ -109,7 +108,7 @@ Los tres flujos están implementados sobre la bitácora `db.audit`, que ya exist
 
 **Credenciales en el código.** Las tres cuentas de demostración están escritas en claro en el objeto `defaults.accounts`, con la contraseña en texto plano, y se persisten en `localStorage` bajo la clave `simpa_v4`. No hay hash ni backend de autenticación. RF-01 se cumple en cuanto a autenticación, no en cuanto a gestión segura de credenciales.
 
-**Control de acceso por rol: parcialmente implementado.** `navItems()` restringe una sola entrada de navegación, `Personal`, reservada a Administrador mediante `isAdmin()`. Las demás pantallas no declaran restricción, por lo que la cuenta Operario accede a Reportes, Calidad / Extractora, Clima y el resto del menú. Dentro de `Personal`, las acciones de rectificación (RF-41), supresión (RF-42) y cambio de estado de la relación laboral sí comprueban el rol antes de ejecutarse. RF-01 debe leerse con esa limitación: hay autenticación, pero la autorización diferenciada es parcial.
+  **Control de acceso por rol: parcialmente implementado.** `navItems()` restringe dos entradas de navegación: `Personal`, reservada a Administrador mediante `isAdmin()`, y `Reportes`, reservada a Supervisor y Administrador mediante `isSup()`. La cuenta Operario no ve ni accede a Reportes, pero sí a Calidad / Extractora, Clima y el resto del menú. Dentro de `Personal`, las acciones de rectificación (RF-41), supresión (RF-42) y cambio de estado de la relación laboral comprueban el rol antes de ejecutarse. RF-01 debe leerse con esa limitación: hay autenticación, pero la autorización diferenciada es parcial. Verificado en la prueba E2E del 21/09/2026 (`05_MVP/evidencia_e2e/registro_prueba_e2e.md`).
 
 **GPS.** RF-14 usa información demostrativa. La versión entregada no consulta necesariamente el receptor GPS real del dispositivo.
 
@@ -139,7 +138,7 @@ npm run dev
 
 - Integrar backend y base de datos.
 - Implementar autenticación segura y manejo de sesiones.
-- Extender la comprobación de rol al resto de pantallas, no solo a `Personal`.
+- Extender la comprobación de rol al resto de pantallas (hoy solo `Personal` y `Reportes` están restringidas).
 - Trasladar la bitácora a un registro de auditoría centralizado e inmutable.
 - Añadir servicio real de respaldo.
 - Entrenar y validar modelos de IA con datos del cultivo.
