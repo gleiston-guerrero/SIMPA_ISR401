@@ -49,7 +49,7 @@ queda sin firmar.
 | Integrante | Firma (nombre completo) | Fecha | Cuenta que publica |
 |---|---|---|---|
 | Arboleda Yanza Francisco Javier | Arboleda Yanza Francisco Javier | 21/09/2026 | `farboleday-wq` |
-| Macías Herrera Josthyn Esteban | | | `jmaciasherr4` |
+| Macías Herrera Josthyn Esteban | Macías Herrera Josthyn Esteban | 21/09/2026 | `jmaciasherr4` |
 
 Este documento declara discrepancias entre anexos ya firmados y el estado
 real; no modifica la A.14 ni sustituye el consentimiento de ningún
