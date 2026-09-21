@@ -148,8 +148,8 @@ Allan y Josthyn.
 | ¿Se usó IA? | **Sí** |
 | Herramienta | Claude (Anthropic), vía claude.ai — del 2026-09-20 al 2026-09-21 |
 | Finalidad | (1) C1/C2: scripts y hoja de revisión para reubicar las citas literales en las transcripciones retranscritas, y decisión fila por fila de qué frase respalda cada fragmento; reasignación de 7 fragmentos a su entrevista correcta y retiro de 14 (5 duplicados y 9 sin respaldo), registrados en `fragmentos_retirados_C2.csv` y `c2_reasignaciones.csv`. (2) C4: script de sensibilidad al orden de la saturación. (3) B4: asignación de las 13 preguntas de la guía A.2.1 a las respuestas de las 16 entrevistas. (4) B3: tabla maestra de perfiles y su verificador. (5) A2: script de medición de identificabilidad por estilo. Las decisiones de contenido (qué frase respalda qué fragmento o pregunta) fueron propuestas por Claude. |
-| Responsable | [nombre de quien subió los archivos] |
-| Quién verificó | [tu nombre] revisó 10 casillas de la matriz B4 el [fecha] y todas respondían a su pregunta. Las filas de C1/C2 no fueron revisadas una por una por una persona. |
+| Responsable | Arboleda Yanza Francisco Javier revisó |
+| Quién verificó | Arboleda Yanza Francisco Javier revisó 10 casillas de la matriz B4 el 21/09/2026 y todas respondían a su pregunta. Las filas de C1/C2 no fueron revisadas una por una por una persona. |
 | Método de verificación | `verificar_citas_C1.py` comprueba que las 213 citas son subcadenas exactas de lo dicho por el entrevistado; `verificar_C2_cruces.py` busca fragmentos con mejor respaldo en otra entrevista; `matriz_cobertura_B4.py` comprueba que las citas de la matriz son literales; `verificar_B3_perfiles.py` compara el perfil en todas las fuentes. Ninguno mide si la frase respalda el código: esa decisión fue de Claude. |
 
 
