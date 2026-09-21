@@ -226,7 +226,7 @@ estimada» usa un valor fijo de 2,4 % cuando no hay lecturas de madurez
 
 Resultado observado:
 Al guardar un ticket con 10 % de fruta verde, la pantalla Alertas mostró una
-alerta de nivel «Advertencia» y estado «Abierta», y ninguna de nivel «Crítica».
+alerta de nivel «Advertencia» y estado «Abierta», y ninguna de nivel «Crítica» asociada al ticket (la única alerta «Crítica» visible es otra, «Pudrición del cogollo detectada»).
 Por lectura del código, la causa es un defecto: `saveTicket()` (línea 135)
 solicita el nivel «Crítica», pero `addAlert()` (línea 58) solo convierte a
 «Crítica» el valor «Alta»; cualquier otro valor queda como «Advertencia». La
