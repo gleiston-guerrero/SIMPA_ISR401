@@ -66,23 +66,23 @@ CONTRASTE = [f"ENTR-{i:02d}" for i in range(9, 17)]
 
 MAPEO_DOMINIO = dict(zip(DOMINIO_FUENTE, DOMINIO_ENTREVISTA))
 
-PERFILES = {
-    "ENTR-01": "Administrador general",
+PERFILES = {   # categorías públicas de tabla_maestra_participantes.csv (B3); no editar aquí sin cambiar la tabla
+    "ENTR-01": "Administrador General",
     "ENTR-02": "Asesor técnico",
     "ENTR-03": "Jefe de polinización",
-    "ENTR-04": "Extractora (supervisor)",
-    "ENTR-05": "Trabajador agrícola I",
-    "ENTR-06": "Trabajador agrícola II",
+    "ENTR-04": "Supervisor de técnicos agrícolas (planta extractora)",
+    "ENTR-05": "Trabajador agrícola",
+    "ENTR-06": "Trabajador agrícola",
     "ENTR-07": "Asistente de administración",
-    "ENTR-08": "Extractora (técnico)",
-    "ENTR-09": "Profesional agrónomo",
-    "ENTR-10": "Estudiante de agronomía",
-    "ENTR-11": "Estudiante de agronomía",
-    "ENTR-12": "Profesional en biotecnología",
-    "ENTR-13": "Profesional agrónomo",
-    "ENTR-14": "Ingeniería agropecuaria",
-    "ENTR-15": "Estudiante de agroecología",
-    "ENTR-16": "Ingeniería de sistemas",
+    "ENTR-08": "Técnico de extractora",
+    "ENTR-09": "Profesional del área agrícola",
+    "ENTR-10": "Estudiante de carrera afín",
+    "ENTR-11": "Estudiante de carrera afín",
+    "ENTR-12": "Profesional del área agrícola",
+    "ENTR-13": "Profesional del área agrícola",
+    "ENTR-14": "Profesional del área agrícola",
+    "ENTR-15": "Estudiante de carrera afín",
+    "ENTR-16": "Profesional del área tecnológica",
 }
 
 CABECERA_REQUERIDA = {
