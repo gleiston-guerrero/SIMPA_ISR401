@@ -527,40 +527,70 @@ No aplica todavía.
 
 ## A2 — Normalizar el estilo de los dos conjuntos antes de cegar
 
-**Estado operativo:** NO INICIADA
-**Estado de rúbrica:** pendiente de mapeo
+**Estado operativo:** VERIFICADA
+**Estado de rúbrica:** criterio técnico ejecutado; pendiente de valoración docente
 **Peso:** 0,40 pts
-**Responsable(s):** Sin asignar (fuera del núcleo de la rev. 8)
-**Dependencias:** A3
+**Responsable(s):** Francisco Javier Arboleda Yanza — ejecución y verificación de A2
+**Dependencias:** A3 — satisfecha mediante el conjunto humano reconstruido de 22 requisitos
 
 ### Problema detectado
-Si el criterio de verificación empieza por El, Cada, Todo, La, Ningún o Se, el requisito es del LLM en 48 de 50 casos, y la longitud media es de 619 caracteres en los del equipo frente a 464 en los del LLM.
+Antes de la normalización, el origen de los requisitos era altamente identificable mediante rasgos superficiales de redacción. Sobre los 47 requisitos disponibles después de A3 (22 humanos y 25 LLM), el clasificador versionado basado en primera palabra y longitud total obtuvo 43/47 aciertos (91,49 %).
+
+La referencia histórica del plan indicaba medias de 619 caracteres para el conjunto del equipo y 464 para el LLM, pero la fórmula exacta utilizada para obtener esos valores no quedó versionada. Por ello no se afirma haber reconstruido exactamente esa medición histórica.
 
 ### Acción aplicada
-Ninguna todavía.
+Se creó una capa derivada de normalización previa al cegado conservando intactos los artefactos fuente.
+
+La normalización:
+- unificó el esquema visible de ambos conjuntos;
+- añadió prefijos comunes en descripción, criterio y pre/postcondiciones;
+- retiró del campo visible de actor las marcas de evidencia/procedencia;
+- compactó la redacción del conjunto humano sin eliminar reglas, umbrales ni condiciones técnicas;
+- mantuvo identificadores de origen únicamente en los artefactos internos de verificación de A2;
+- dejó el cegado definitivo para una etapa posterior, donde esos identificadores deberán eliminarse.
 
 ### Evidencia utilizada
-- Ninguna todavía.
+- `06_Experimento/conjuntos/requisitos_humano_ENTR-04.csv` — 22 requisitos humanos reconstruidos en A3.
+- `06_Experimento/salidas_llm/requisitos_LLM_ENTR-04.md` — 25 requisitos LLM.
+- `07_Datos/resultados/a2_identificabilidad_antes_despues.md` — medición reproducible antes/después.
+- `07_Datos/resultados/a2_normalizacion_manifest.json` — manifiesto de entradas, salidas y hashes.
+- `07_Datos/scripts/plan_mejora/normalizar_estilo_A2.py` — normalización reproducible.
+- `07_Datos/scripts/plan_mejora/clasificador_origen_A2.py` — clasificador simple con validación dejando uno fuera.
 
 ### Archivos modificados
-- Ninguno todavía.
+- `06_Experimento/normalizado_A2/requisitos_humano_A2.csv`
+- `06_Experimento/normalizado_A2/requisitos_LLM_A2.csv`
+- `07_Datos/resultados/a2_identificabilidad_antes_despues.md`
+- `07_Datos/resultados/a2_normalizacion_manifest.json`
+- `07_Datos/scripts/plan_mejora/normalizar_estilo_A2.py`
+- `07_Datos/scripts/plan_mejora/clasificador_origen_A2.py`
 
 ### Criterio de aceptación
-- [ ] Un clasificador simple (primera palabra y longitud, validación dejando uno fuera) no supera el 65 % de acierto sobre el origen
+- [x] Un clasificador simple (primera palabra y longitud, validación dejando uno fuera) no supera el 65 % de acierto sobre el origen.
 
 ### Verificación
-Aún no ejecutada.
+Clasificador combinado de primera palabra y longitud total de los siete campos visibles, con validación leave-one-out, 47 casos, probabilidades previas iguales por clase y sin utilizar identificadores ni metadatos de procedencia:
+
+- Antes de normalizar: 43/47 aciertos = 91,49 %.
+- Después de normalizar: 27/47 aciertos = 57,45 %.
+- Umbral exigido: ≤ 65 %.
+- Resultado técnico: CUMPLE.
+
+La longitud visible media después de normalizar fue de aproximadamente 558,5 caracteres para los requisitos humanos y 540,2 para los requisitos LLM.
 
 ### Commits
-- Ninguno todavía.
+- `5e87be8b0ce379335d75095e945509cf243f0720` — `A2: normalizar estilo y verificar identificabilidad`
 
 ### Limitaciones
-No iniciada. No forma parte del núcleo del plan de ejecución rev. 8: la demanda del núcleo (28 h por persona) supera la capacidad disponible (~17 h por persona). Si no se ejecuta antes del cierre, se declara como no ejecutada por esta causa.
+El 57,45 % demuestra únicamente el cumplimiento del criterio técnico definido para este clasificador simple y versionado; no demuestra indistinguibilidad frente a cualquier clasificador posible.
 
-Qué haría falta: Normalizar el estilo de ambos conjuntos, volver a cegar y medir el clasificador con un script versionado.
+Los archivos normalizados de A2 son artefactos internos etiquetados para poder verificar la medición y aún conservan `id_origen`. No constituyen el archivo cegado definitivo. El cegado posterior deberá eliminar todo identificador de procedencia antes de A1.
+
+La valoración académica final corresponde al docente.
 
 ### Evidencia entregada fuera del repositorio
-No aplica todavía.
+No aplica.
+
 
 ---
 
