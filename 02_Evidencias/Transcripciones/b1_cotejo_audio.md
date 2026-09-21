@@ -5,7 +5,7 @@
 
 ## 1. Cobertura de cada transcripción frente a la duración del audio
 
-Siete de las ocho transcripciones cubren el audio dentro de ±10 %. **ENTR-03 no** (81–82 %, unos 57 segundos finales sin transcribir tras la despedida; verificado: es ruido ambiental de campo, no habla perdido). Tabla y método completos en `02_Evidencias/Transcripciones/readme.md`.
+Las ocho transcripciones cubren el audio dentro de ±10 %. **ENTR-03** quedaba en 82 % hasta el 21/09/2026: se escuchó el tramo final (04:15 a 05:13) y se confirmó que es ruido ambiental de campo, sin habla; se agregó una nota con marca de tiempo que lo declara así, sin inventar diálogo. La última marca pasa a `[05:13]`, coincidente con la duración real del audio (5:13,9), quedando en 100 %. Tabla y método completos en `02_Evidencias/Transcripciones/readme.md`.
 
 ## 2. Cotejo de oído en muestras de 3 minutos (criterio: menos de 5 % de discrepancia)
 
@@ -30,7 +30,7 @@ Todas las diferencias encontradas son menores (muletillas, conectores, una palab
 
 ## 3. Conclusión
 
-El criterio de B1 «menos de 5 % de discrepancia en muestras de 3 minutos» **CUMPLE** en los 10 tramos evaluados (0,34 % a 1,72 %). No se modificó ninguna transcripción a partir de este cotejo.
+El criterio de B1 «menos de 5 % de discrepancia en muestras de 3 minutos» **CUMPLE** en los 10 tramos evaluados (0,34 % a 1,72 %). La cobertura ±10 % **CUMPLE** en las ocho entrevistas. No se modificó ninguna transcripción a partir de este cotejo, salvo la nota de ruido ambiental de ENTR-03.
 
 ## 4. Limitación declarada
 
@@ -38,5 +38,6 @@ Este cotejo cubre 10 muestras de 3 minutos (unos 26 de los 100 minutos totales d
 
 ## 5. Historial
 
-- 21/09/2026, primer intento: 3 de los 27 ejemplos citados para ENTR-01 correspondían en realidad a frases de ENTR-02, no a esa entrevista. **No aceptado.**
-- 21/09/2026, segundo intento: se repitió la escucha del tramo de ENTR-01 y se verificaron 3 frases nuevas contra la transcripción real, con resultado exacto (mismo minuto, mismas muletillas). Resultado final: 26/26 filas verificadas, los 10 tramos cumplen.
+- 21/09/2026, primer intento del cotejo de oído: 3 de los 27 ejemplos citados para ENTR-01 correspondían en realidad a frases de ENTR-02, no a esa entrevista. **No aceptado.**
+- 21/09/2026, segundo intento: se repitió la escucha del tramo de ENTR-01 y se verificaron 3 frases nuevas contra la transcripción real, con resultado exacto (mismo minuto, mismas muletillas). Resultado: 26/26 filas verificadas, los 10 tramos cumplen.
+- 21/09/2026, cobertura de ENTR-03: se escuchó el tramo 04:15–05:13, se confirmó que es ruido ambiental sin habla y se cerró el criterio de ±10 % en las ocho entrevistas.
