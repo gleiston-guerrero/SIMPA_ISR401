@@ -40,9 +40,10 @@ Total de observaciones:
 
 ## Cegado y aleatorización
 
-El cegado se realizó mediante:
+### Cegado histórico utilizado en la evaluación ejecutada
 
-`06_Experimento/scripts_analisis/cegar_aleatorizar.py`
+La evaluación original utilizó 50 requisitos cegados (`25 humanos + 25 LLM`),
+identificados como `R-001` a `R-050`.
 
 Semilla utilizada:
 
@@ -52,9 +53,33 @@ Archivo entregado a los evaluadores:
 
 `06_Experimento/cegado/requisitos_cegados.csv`
 
-La correspondencia entre el identificador cegado, su origen y el identificador original se mantuvo fuera del repositorio público.
+Este archivo histórico fue incorporado en el commit `41618dd`
+(`EXP-05: requisitos cegados listos para evaluación`) y se conserva sin
+modificaciones para mantener la trazabilidad de la evaluación ya ejecutada.
 
-La reproducción posterior del proceso con la misma semilla generó exactamente el mismo archivo cegado utilizado durante la evaluación.
+La correspondencia entre el identificador cegado, su origen y el identificador
+original se mantuvo fuera del repositorio público.
+
+### Cegado correctivo posterior a A2
+
+Después de A3 y A2, el conjunto disponible quedó formado por 22 requisitos
+humanos reconstruidos desde ENTR-04 y 25 requisitos LLM, para un total de 47.
+
+El script versionado:
+
+`06_Experimento/scripts_analisis/cegar_aleatorizar.py`
+
+toma ahora los dos artefactos normalizados de A2 y genera, con la misma semilla
+`20260912`, un artefacto nuevo e independiente:
+
+`06_Experimento/cegado/requisitos_cegados_A2.csv`
+
+con identificadores `R-001` a `R-047`.
+
+El mapa correspondiente se genera fuera del repositorio como
+`mapa_origen_A2.csv`. Este cegado post-A2 no sustituye ni altera el archivo
+histórico de 50 requisitos y queda preparado para una eventual repetición de
+la evaluación conforme a A1.
 
 ## Evaluaciones
 

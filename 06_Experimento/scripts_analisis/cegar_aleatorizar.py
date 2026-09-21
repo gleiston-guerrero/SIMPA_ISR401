@@ -1,36 +1,35 @@
 #!/usr/bin/env python3
 """
-cegar_aleatorizar.py — TAREA EXP-05
+cegar_aleatorizar.py — cegado posterior a A2
 
-Toma los 25 requisitos humanos (06_Experimento/conjuntos/requisitos_humano_ENTR-04.csv)
-y los 25 requisitos del LLM (06_Experimento/salidas_llm/requisitos_LLM_ENTR-04.md),
-y produce:
+Toma los artefactos normalizados y etiquetados internamente de A2:
 
-  1) 06_Experimento/cegado/requisitos_cegados.csv
-     — Los 50 requisitos normalizados al MISMO formato, SIN ninguna pista de
-       procedencia, con IDs nuevos R-001..R-050, en orden ALEATORIO.
-       Este es el archivo que reciben los evaluadores.
+  - 06_Experimento/normalizado_A2/requisitos_humano_A2.csv
+    22 requisitos humanos reconstruidos en A3 y normalizados en A2.
 
-  2) ../mapa_confidencial_NO_SUBIR/mapa_origen.csv  (FUERA del repo)
-     — R-ID ↔ origen (Humano/LLM) ↔ ID original ↔ semilla usada.
-       Este archivo NO se entrega a los evaluadores y NO debe quedar dentro
-       del repo, para que no se pueda subir por accidente. Custodio: Edson
-       Rizzo, según el reparto de EXP-05.
+  - 06_Experimento/normalizado_A2/requisitos_LLM_A2.csv
+    25 requisitos LLM normalizados en A2.
 
-Qué se retira para cegar:
-  - id_origen, evidencia_fuente, procedencia, nota_metodologica (CSV humano)
-  - códigos de evidencia embebidos en actor_origen (ej. "· EV-02, EV-04")
-  - el prefijo H-/LLM- de los identificadores originales
+Produce:
 
-Qué se normaliza para que ambos conjuntos luzcan iguales:
-  - "Pre:/Post:" (humano) y "Precondición:/Postcondición:" (LLM) -> un único
-    formato: "Precondición: ... | Postcondición: ..."
-  - encabezados de campo idénticos y en el mismo orden para los dos orígenes
+  1) 06_Experimento/cegado/requisitos_cegados_A2.csv
+     — 47 requisitos con el mismo esquema visible, sin id_origen ni otra
+       etiqueta explícita de procedencia, renumerados R-001..R-047 y
+       aleatorizados de forma reproducible.
+
+  2) ../mapa_confidencial_NO_SUBIR/mapa_origen_A2.csv
+     — correspondencia R-ID ↔ origen ↔ id_origen ↔ semilla.
+       Se escribe FUERA del repositorio y no debe entregarse a evaluadores.
+
+Este script no vuelve a redactar ni normalizar contenido: el estilo ya fue
+normalizado en A2. Su función es exclusivamente retirar la etiqueta de origen,
+aleatorizar y producir el artefacto para evaluación cegada.
 
 Uso:
-    python3 cegar_aleatorizar.py [--seed 20260912]
+    python 06_Experimento/scripts_analisis/cegar_aleatorizar.py
+    python 06_Experimento/scripts_analisis/cegar_aleatorizar.py --seed 20260912
 
-Requiere ejecutarse desde la RAÍZ del repositorio.
+Debe ejecutarse desde la raíz del repositorio.
 """
 
 import argparse
@@ -40,15 +39,22 @@ import re
 import sys
 from pathlib import Path
 
-RUTA_HUMANO = Path("06_Experimento/conjuntos/requisitos_humano_ENTR-04.csv")
-RUTA_LLM = Path("06_Experimento/salidas_llm/requisitos_LLM_ENTR-04.md")
-DIR_SALIDA = Path("06_Experimento/cegado")          # dentro del repo — solo el archivo cegado
-DIR_SALIDA_CONFIDENCIAL = Path("../mapa_confidencial_NO_SUBIR")  # FUERA del repo
-RUTA_CEGADOS = DIR_SALIDA / "requisitos_cegados.csv"
-RUTA_MAPA = DIR_SALIDA_CONFIDENCIAL / "mapa_origen.csv"
 
-CAMPOS_SALIDA = [
-    "id_cegado",
+RUTA_HUMANO = Path(
+    "06_Experimento/normalizado_A2/requisitos_humano_A2.csv"
+)
+RUTA_LLM = Path(
+    "06_Experimento/normalizado_A2/requisitos_LLM_A2.csv"
+)
+
+DIR_SALIDA = Path("06_Experimento/cegado")
+RUTA_CEGADOS = DIR_SALIDA / "requisitos_cegados_A2.csv"
+
+# Deliberadamente fuera del repositorio.
+DIR_CONFIDENCIAL = Path("../mapa_confidencial_NO_SUBIR")
+RUTA_MAPA = DIR_CONFIDENCIAL / "mapa_origen_A2.csv"
+
+CAMPOS_VISIBLES = [
     "nombre",
     "descripcion",
     "actor",
@@ -58,133 +64,255 @@ CAMPOS_SALIDA = [
     "criterio_verificacion",
 ]
 
+CAMPOS_ENTRADA = ["id_origen", *CAMPOS_VISIBLES]
+CAMPOS_SALIDA = ["id_cegado", *CAMPOS_VISIBLES]
 
-def normalizar_pre_post(texto: str) -> str:
-    """Unifica 'Pre:/Post:' y 'Precondición:/Postcondición:' a un solo formato."""
-    t = texto.strip()
-    t = re.sub(r"\bPre:\s*", "Precondición: ", t)
-    t = re.sub(r"\bPost:\s*", "Postcondición: ", t)
-    # separador uniforme entre precondición y postcondición
-    t = re.sub(r"\s*Postcondición:", " | Postcondición:", t)
-    t = re.sub(r"\s*\|\s*\|\s*", " | ", t)
-    return t.strip()
+IDS_HUMANOS_ESPERADOS = {
+    f"H-{i:03d}"
+    for i in range(1, 26)
+    if i not in {1, 4, 6}
+}
+IDS_LLM_ESPERADOS = {
+    f"LLM-{i:03d}"
+    for i in range(1, 26)
+}
+
+PATRON_ID_ORIGEN = re.compile(r"\b(?:H|LLM)-\d{3}\b")
 
 
-def limpiar_actor(texto: str) -> str:
-    """Quita códigos de evidencia embebidos, ej. 'Administrador · EV-02, EV-04' -> 'Administrador'."""
-    return re.split(r"\s*·\s*", texto.strip())[0].strip()
+def leer_normalizados(
+    ruta: Path,
+    origen: str,
+    ids_esperados: set[str],
+) -> list[dict[str, str]]:
+    if not ruta.exists():
+        raise SystemExit(f"ERROR: no existe la entrada requerida: {ruta}")
 
-
-def leer_humanos(ruta: Path):
-    items = []
-    with ruta.open(encoding="utf-8-sig", newline="") as f:
+    with ruta.open("r", encoding="utf-8-sig", newline="") as f:
         reader = csv.DictReader(f, delimiter=";")
-        for fila in reader:
-            items.append({
-                "origen": "Humano",
-                "id_original": fila["id_conjunto"].strip(),
-                "nombre": fila["nombre"].strip(),
-                "descripcion": fila["descripcion"].strip(),
-                "actor": limpiar_actor(fila["actor_origen"]),
-                "entradas_salidas": fila["entradas_salidas"].strip(),
-                "precondicion_postcondicion": normalizar_pre_post(fila["pre_postcondiciones"]),
-                "prioridad_moscow": fila["prioridad"].strip(),
-                "criterio_verificacion": fila["criterio_verificacion"].strip(),
-            })
-    return items
+
+        if reader.fieldnames != CAMPOS_ENTRADA:
+            raise SystemExit(
+                "ERROR: esquema inesperado en "
+                f"{ruta}\n"
+                f"Esperado: {CAMPOS_ENTRADA}\n"
+                f"Encontrado: {reader.fieldnames}"
+            )
+
+        filas = list(reader)
+
+    ids = [fila["id_origen"].strip() for fila in filas]
+
+    if len(ids) != len(set(ids)):
+        raise SystemExit(f"ERROR: IDs duplicados en {ruta}")
+
+    if set(ids) != ids_esperados:
+        faltan = sorted(ids_esperados - set(ids))
+        sobran = sorted(set(ids) - ids_esperados)
+        raise SystemExit(
+            f"ERROR: IDs inesperados en {ruta}. "
+            f"Faltan={faltan}; sobran={sobran}"
+        )
+
+    salida = []
+
+    for numero, fila in enumerate(filas, start=1):
+        id_origen = fila["id_origen"].strip()
+
+        visibles = {
+            campo: fila[campo].strip()
+            for campo in CAMPOS_VISIBLES
+        }
+
+        vacios = [
+            campo
+            for campo, valor in visibles.items()
+            if not valor
+        ]
+        if vacios:
+            raise SystemExit(
+                f"ERROR: {ruta}, fila {numero}: "
+                f"campos visibles vacíos: {vacios}"
+            )
+
+        texto_visible = " ".join(visibles.values())
+        if PATRON_ID_ORIGEN.search(texto_visible):
+            raise SystemExit(
+                f"ERROR: {id_origen} contiene un identificador "
+                "H-/LLM- dentro de un campo visible."
+            )
+
+        salida.append(
+            {
+                "origen": origen,
+                "id_original": id_origen,
+                **visibles,
+            }
+        )
+
+    return salida
 
 
-PATRON_BLOQUE_LLM = re.compile(
-    r"###\s*(LLM-\d+)\s*\n"
-    r"1\.\s*\*\*Identificador:\*\*\s*.*?\n"
-    r"2\.\s*\*\*Nombre:\*\*\s*(.*?)\n"
-    r"3\.\s*\*\*Descripción:\*\*\s*(.*?)\n"
-    r"4\.\s*\*\*Actor/origen:\*\*\s*(.*?)\n"
-    r"5\.\s*\*\*Entradas/salidas:\*\*\s*(.*?)\n"
-    r"6\.\s*\*\*Precondiciones/postcondiciones:\*\*\s*(.*?)\n"
-    r"7\.\s*\*\*Prioridad MoSCoW:\*\*\s*(.*?)\n"
-    r"8\.\s*\*\*Criterio de verificación:\*\*\s*(.*?)(?:\n\n|\Z)",
-    re.DOTALL,
-)
+def escribir_cegado(
+    filas: list[dict[str, str]],
+    seed: int,
+) -> None:
+    rng = random.Random(seed)
+    aleatorias = list(filas)
+    rng.shuffle(aleatorias)
+
+    DIR_SALIDA.mkdir(parents=True, exist_ok=True)
+    DIR_CONFIDENCIAL.mkdir(parents=True, exist_ok=True)
+
+    with (
+        RUTA_CEGADOS.open(
+            "w",
+            encoding="utf-8",
+            newline="",
+        ) as f_cegado,
+        RUTA_MAPA.open(
+            "w",
+            encoding="utf-8",
+            newline="",
+        ) as f_mapa,
+    ):
+        w_cegado = csv.DictWriter(
+            f_cegado,
+            fieldnames=CAMPOS_SALIDA,
+            delimiter=";",
+            lineterminator="\n",
+        )
+        w_cegado.writeheader()
+
+        w_mapa = csv.writer(
+            f_mapa,
+            delimiter=";",
+            lineterminator="\n",
+        )
+        w_mapa.writerow(
+            [
+                "id_cegado",
+                "origen",
+                "id_original",
+                "semilla_usada",
+            ]
+        )
+
+        for i, item in enumerate(aleatorias, start=1):
+            id_cegado = f"R-{i:03d}"
+
+            w_cegado.writerow(
+                {
+                    "id_cegado": id_cegado,
+                    **{
+                        campo: item[campo]
+                        for campo in CAMPOS_VISIBLES
+                    },
+                }
+            )
+
+            w_mapa.writerow(
+                [
+                    id_cegado,
+                    item["origen"],
+                    item["id_original"],
+                    seed,
+                ]
+            )
 
 
-def leer_llm(ruta: Path):
-    texto = ruta.read_text(encoding="utf-8")
-    items = []
-    for m in PATRON_BLOQUE_LLM.finditer(texto):
-        (id_original, nombre, descripcion, actor, entradas_salidas,
-         pre_post, prioridad, criterio) = m.groups()
-        items.append({
-            "origen": "LLM",
-            "id_original": id_original.strip(),
-            "nombre": nombre.strip(),
-            "descripcion": descripcion.strip(),
-            "actor": limpiar_actor(actor),
-            "entradas_salidas": entradas_salidas.strip(),
-            "precondicion_postcondicion": normalizar_pre_post(pre_post),
-            "prioridad_moscow": prioridad.strip(),
-            "criterio_verificacion": criterio.strip(),
-        })
-    return items
+def validar_salida() -> None:
+    with RUTA_CEGADOS.open(
+        "r",
+        encoding="utf-8-sig",
+        newline="",
+    ) as f:
+        reader = csv.DictReader(f, delimiter=";")
+
+        if reader.fieldnames != CAMPOS_SALIDA:
+            raise SystemExit(
+                "ERROR: el archivo cegado no tiene el esquema esperado."
+            )
+
+        filas = list(reader)
+
+    if len(filas) != 47:
+        raise SystemExit(
+            f"ERROR: se esperaban 47 filas cegadas; hay {len(filas)}."
+        )
+
+    ids = [fila["id_cegado"] for fila in filas]
+    esperados = [
+        f"R-{i:03d}"
+        for i in range(1, 48)
+    ]
+
+    if ids != esperados:
+        raise SystemExit(
+            "ERROR: los IDs cegados no son exactamente R-001..R-047."
+        )
+
+    for numero, fila in enumerate(filas, start=1):
+        texto_visible = " ".join(
+            fila[campo]
+            for campo in CAMPOS_VISIBLES
+        )
+
+        if PATRON_ID_ORIGEN.search(texto_visible):
+            raise SystemExit(
+                f"ERROR: la fila cegada {numero} conserva "
+                "un identificador explícito de origen."
+            )
 
 
-def main():
+def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--seed", type=int, default=20260912,
-                     help="Semilla de aleatorización (documentar el valor usado en el mapa)")
+    ap.add_argument(
+        "--seed",
+        type=int,
+        default=20260912,
+        help="Semilla reproducible usada únicamente para aleatorizar.",
+    )
     args = ap.parse_args()
 
-    if not RUTA_HUMANO.exists() or not RUTA_LLM.exists():
-        print("ERROR: corre este script desde la raíz del repositorio "
-              "(no encuentro los archivos de entrada).", file=sys.stderr)
-        sys.exit(1)
+    humanos = leer_normalizados(
+        RUTA_HUMANO,
+        "Humano",
+        IDS_HUMANOS_ESPERADOS,
+    )
+    llm = leer_normalizados(
+        RUTA_LLM,
+        "LLM",
+        IDS_LLM_ESPERADOS,
+    )
 
-    humanos = leer_humanos(RUTA_HUMANO)
-    llm = leer_llm(RUTA_LLM)
+    if len(humanos) != 22:
+        raise SystemExit(
+            f"ERROR: se esperaban 22 requisitos humanos; hay {len(humanos)}."
+        )
 
-    print(f"Requisitos humanos leídos: {len(humanos)}")
-    print(f"Requisitos LLM leídos:     {len(llm)}")
-
-    if len(humanos) != 25 or len(llm) != 25:
-        print("⚠️  ADVERTENCIA: se esperaban 25 y 25. Revisar antes de continuar.",
-              file=sys.stderr)
+    if len(llm) != 25:
+        raise SystemExit(
+            f"ERROR: se esperaban 25 requisitos LLM; hay {len(llm)}."
+        )
 
     todos = humanos + llm
 
-    rng = random.Random(args.seed)
-    rng.shuffle(todos)
+    if len(todos) != 47:
+        raise SystemExit(
+            f"ERROR: se esperaban 47 requisitos en total; hay {len(todos)}."
+        )
 
-    DIR_SALIDA.mkdir(parents=True, exist_ok=True)
-    DIR_SALIDA_CONFIDENCIAL.mkdir(parents=True, exist_ok=True)
+    escribir_cegado(todos, args.seed)
+    validar_salida()
 
-    with RUTA_CEGADOS.open("w", encoding="utf-8", newline="") as f_cegado, \
-         RUTA_MAPA.open("w", encoding="utf-8", newline="") as f_mapa:
-
-        w_cegado = csv.DictWriter(f_cegado, fieldnames=CAMPOS_SALIDA, delimiter=";")
-        w_cegado.writeheader()
-
-        w_mapa = csv.writer(f_mapa, delimiter=";")
-        w_mapa.writerow(["id_cegado", "origen", "id_original", "semilla_usada"])
-
-        for i, item in enumerate(todos, start=1):
-            id_cegado = f"R-{i:03d}"
-
-            w_cegado.writerow({
-                "id_cegado": id_cegado,
-                "nombre": item["nombre"],
-                "descripcion": item["descripcion"],
-                "actor": item["actor"],
-                "entradas_salidas": item["entradas_salidas"],
-                "precondicion_postcondicion": item["precondicion_postcondicion"],
-                "prioridad_moscow": item["prioridad_moscow"],
-                "criterio_verificacion": item["criterio_verificacion"],
-            })
-
-            w_mapa.writerow([id_cegado, item["origen"], item["id_original"], args.seed])
-
-    print(f"\n✅ Escrito: {RUTA_CEGADOS}  ({len(todos)} filas, para evaluadores)")
-    print(f"✅ Escrito: {RUTA_MAPA}  (CONFIDENCIAL — custodio: Edson Rizzo, no compartir)")
-    print(f"   Semilla usada: {args.seed}")
+    print("CEGADO GENERADO CORRECTAMENTE")
+    print(f"Humanos : {len(humanos)}")
+    print(f"LLM     : {len(llm)}")
+    print(f"Total   : {len(todos)}")
+    print(f"Semilla : {args.seed}")
+    print(f"Cegado  : {RUTA_CEGADOS}")
+    print(f"Mapa    : {RUTA_MAPA} (FUERA DEL REPOSITORIO)")
 
 
 if __name__ == "__main__":
