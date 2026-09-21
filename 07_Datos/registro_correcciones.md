@@ -1608,43 +1608,97 @@ No aplica todavía.
 
 ## E2 — Recalcular la cobertura de RF Must
 
-**Estado operativo:** NO INICIADA
+**Estado operativo:** VERIFICADA
 **Estado de rúbrica:** pendiente de mapeo
 **Peso:** 0,20 pts
-**Responsable(s):** Sin asignar (puede resolverse junto con E1)
-**Dependencias:** E1
+**Responsable(s):** Arboleda Yanza Francisco Javier
+**Dependencias:** E1 (cumplida)
 
 ### Problema detectado
-Se declara cobertura de 20/24 RF Must y el código sostiene como mucho 17/24.
+El repositorio declaraba una cobertura de **20 de 24 RF Must** sin que esa
+cifra saliera de ningún cálculo reproducible, y el código no la sostenía.
 
 ### Acción aplicada
-Ninguna todavía.
+Se escribió `07_Datos/scripts/plan_mejora/cobertura_rf_must_E2.py`, que
+deriva la cifra de dos fuentes del propio repositorio: la lista de RF con
+prioridad Must del ERS —leída de la macro `\RF`, no escrita a mano— y el
+código del prototipo declarado en el submódulo.
+
+El punto de fondo es qué cuenta como cobertura. El prototipo rotula cada
+pantalla con los requisitos que dice cubrir:
+
+    shell('Plantaciones y lotes', 'RF-02 · RF-06 · RF-10 · estructura productiva', ...)
+
+Ese rótulo es una declaración del equipo escrita dentro del código, **no una
+prueba de que el requisito funcione**. Por eso el script no emite un
+«cubierto» único, sino cuatro categorías:
+
+| Categoría | Qué sostiene |
+|---|---|
+| `EJERCITADO_EN_E1` | se ejecutó y su resultado observado quedó registrado |
+| `DECLARADO_EN_PANTALLA` | el código lo rotula; nadie comprobó que funcione |
+| `SOLO_INDICIO` | coincide el nombre del requisito, nada más |
+| `SIN_MENCION` | no aparece en el código |
+
+### Cifra corregida
+**23 de los 24 RF Must aparecen declarados** en el rótulo de alguna pantalla.
+De ellos, **solo 5 han sido ejercitados** con resultado registrado en la
+prueba de extremo a extremo de E1: RF-01, RF-22, RF-40, RF-41 y RF-42.
+
+La cifra anterior, 20 de 24, mezclaba las dos cosas. Ninguna de las dos
+cifras nuevas la reproduce, y ambas son verificables ejecutando el script.
+
+### Hallazgo propio del equipo
+**RF-05** (registro de monitoreo fitosanitario) es el único RF Must que no
+aparece rotulado en ninguna pantalla: solo hay coincidencia de nombre en la
+pantalla de análisis. Queda como `SOLO_INDICIO` y pendiente de comprobación.
+
+El submódulo contiene **dos versiones del prototipo** en paralelo
+(`Prototipo/` y `prototipo_v2/`), con los mismos rótulos de pantalla. El
+script analiza ambas; conviene declarar cuál es la entregada.
 
 ### Evidencia utilizada
-- Ninguna todavía.
+- `01_ERS/ERS_SRS_2B_v2.0.tex` — prioridad MoSCoW de cada RF
+- Submódulo del prototipo, commit `035470cb1dfd7be9557f1c5e2db24473cbcb8c02`
+- `05_MVP/evidencia_e2e/registro_prueba_e2e.md` — requisitos ejercitados en E1
+- Fecha: 21/09/2026
 
 ### Archivos modificados
-- Ninguno todavía.
+- `07_Datos/scripts/plan_mejora/cobertura_rf_must_E2.py`
+- `07_Datos/datos_procesados/cobertura_rf_must_E2.csv`
+- `07_Datos/resultados/cobertura_rf_must_E2.md`
 
 ### Criterio de aceptación
-- [ ] Cifra reproducible con la lista de RF y la línea de código
+- [x] Cifra reproducible a partir de la lista de RF y de la línea de código
 
 ### Verificación
-Aún no ejecutada.
+Comando:
 
-### Commits
-- Ninguno todavía.
+    git submodule update --init 05_MVP/prototipo
+    python3 07_Datos/scripts/plan_mejora/cobertura_rf_must_E2.py
+
+Resultado:
+
+    RF Must en el ERS: 24
+    Codigo analizado: 14095 lineas
+    Reparto: {'EJERCITADO_EN_E1': 5, 'DECLARADO_EN_PANTALLA': 18, 'SOLO_INDICIO': 1}
+    Declarados en pantalla: 23 de 24
+    Ejercitados en E1:      5 de 24
 
 ### Limitaciones
-No iniciada. No forma parte del núcleo del plan de ejecución rev. 8: la demanda del núcleo (28 h por persona) supera la capacidad disponible (~17 h por persona). Si no se ejecuta antes del cierre, se declara como no ejecutada por esta causa.
+Que un requisito esté rotulado en una pantalla no significa que esté
+implementado: significa que el equipo escribió ese rótulo. La única categoría
+que sostiene una afirmación de cobertura funcional es `EJERCITADO_EN_E1`, y
+son cinco. Elevar esa cifra exige ejecutar los casos de prueba y registrar el
+resultado, que es la tarea D4.
 
-Qué haría falta: Recalcular la cifra con un script sobre la lista de RF y el código del prototipo.
+La columna `COBERTURA_VERIFICADA` está pendiente en las 24 filas: se rellena
+abriendo la pantalla citada y comprobando el comportamiento.
 
 ### Evidencia entregada fuera del repositorio
-No aplica todavía.
+No aplica.
 
 ---
-
 ## F1 — Notas de campo: retirar o rotular los 16 PDF y rectificar
 
 **Estado operativo:** EN PROCESO (F1a hecha; falta la rectificación firmada, F1b)
@@ -1691,43 +1745,98 @@ Pendiente: rectificación firmada por el equipo (por correo institucional).
 
 ## F2 — Member checking: trazabilidad, evidencia y actas
 
-**Estado operativo:** NO INICIADA
+**Estado operativo:** EN PROCESO (trazabilidad construida; faltan modalidad, hora y firma de las actas)
 **Estado de rúbrica:** pendiente de mapeo
 **Peso:** 0,30 pts
-**Responsable(s):** Macías Herrera Josthyn Esteban (tabla) · Arboleda Yanza Francisco Javier (evidencia y actas)
-**Dependencias:** A7 (inventario) antes de la tabla
+**Responsable(s):** Arboleda Yanza Francisco Javier
+**Dependencias:** C1 (cumplida)
 
 ### Problema detectado
-Los enunciados 1, 8, 9 y 10 salen de ENTR-13, codificada el 07/09, después de la sesión del 04/09, y la síntesis se compiló después de las actas. Existen videos de la sesión según el docente.
+Los enunciados 1, 8, 9 y 10 se apoyan en ENTR-13, codificada el 07/09/2026, **después** de la sesión de miembro-verificación del 04/09/2026, y la síntesis se compiló después de las actas. Ningún enunciado estaba enlazado a los códigos y las citas que lo sostienen. Las actas no declaran modalidad ni hora.
 
 ### Acción aplicada
-Ninguna todavía.
+Se construyó la trazabilidad que faltaba con
+`07_Datos/scripts/plan_mejora/trazabilidad_F2.py`: para cada uno de los doce
+enunciados sometidos a verificación, el script propone los códigos del libro
+que le corresponden y recupera **las citas literales verificadas en C1** que
+lo sostienen, con su entrevista y su línea de transcripción.
+
+La correspondencia enunciado→código se calcula por solape de términos
+ponderado por rareza (IDF) contra el nombre, la definición y el criterio de
+aplicación de cada código, y queda escrita en `MOTIVO_PROPUESTA` fila a fila.
+Es una **propuesta**: la columna `CODIGOS_VERIFICADOS` la firma una persona.
+
+Se transcribió además, del acta consolidada, la posición de cada uno de los
+tres participantes sobre cada enunciado (confirma, matiza, rechaza, no
+abordado o sin posición registrada).
+
+### Hallazgos propios del equipo
+- **El enunciado 12** —«la mayor dificultad reside en lograr el uso
+  efectivo»— **no tiene ninguna cita literal verificada que lo sostenga**. No
+  se le asigna código porque el libro no contiene ninguno que le corresponda.
+  Se declara: es un enunciado interpretativo que no traza al corpus.
+- **El enunciado 8** —formalización del registro asociada al tamaño de la
+  finca— tampoco tiene códigos propios: el libro no recoge «tamaño de finca»
+  ni «formalización». Las citas que se le asocian son las de registro en
+  papel, que no sostienen la parte del tamaño.
+- **Cinco de los doce enunciados fueron rechazados** por al menos un
+  participante (1, 2, 7, 8 y 10). El grado de acuerdo global que declara el
+  acta es «medio». Eso ya consta y no se suaviza.
+
+### Sobre la anterioridad de ENTR-13 — lo que no tiene arreglo
+El acta es del 04/09/2026 y la codificación de ENTR-13 es del 07/09/2026.
+**Esa anterioridad no se puede corregir**: es una fecha pasada. No se
+antedata ningún documento ni se reescribe el historial. Se declara tal cual,
+y la trazabilidad permite ver, enunciado por enunciado, qué parte del
+respaldo procede de entrevistas codificadas antes de la sesión y qué parte
+de ENTR-13.
+
+La sesión se celebró: existen las grabaciones, las tres actas individuales y
+el acta consolidada, con los facilitadores nombrados.
 
 ### Evidencia utilizada
-- Ninguna todavía.
+- `02_Evidencias/Member_Checking/Actas_consolidada/` — los doce enunciados y la matriz de resultados
+- `02_Evidencias/Member_Checking/Actas/` — las tres actas individuales
+- `07_Datos/libro_codigos.md` v1.0 y los 213 fragmentos con cita literal verificada en C1
+- Fecha: 21/09/2026
 
 ### Archivos modificados
-- Ninguno todavía.
+- `07_Datos/scripts/plan_mejora/trazabilidad_F2.py`
+- `07_Datos/datos_procesados/trazabilidad_member_checking_F2.csv`
+- `07_Datos/resultados/trazabilidad_member_checking_F2.md`
 
 ### Criterio de aceptación
-- [ ] Actas posteriores al commit de codificación
-- [ ] Cada enunciado enlaza a sus códigos y citas
-- [ ] Modalidad, hora y firma en cada acta
+- [ ] Actas posteriores al commit de codificación — **no es alcanzable**: la sesión ocurrió el 04/09 y ENTR-13 se codificó el 07/09. Se declara en lugar de corregirse
+- [x] Cada enunciado enlaza a sus códigos y a sus citas literales
+- [ ] Modalidad, hora y firma en cada acta — pendiente de recuperarlas de las grabaciones de la sesión
 
 ### Verificación
-Aún no ejecutada.
+Comando:
 
-### Commits
-- Ninguno todavía.
+    python3 07_Datos/scripts/plan_mejora/trazabilidad_F2.py
+
+Resultado:
+
+    Enunciados: 12
+    Codigos del libro: 91 | fragmentos con cita: 213
+    Sin cita que lo sostenga: 1
+    Rechazados por alguien: 5
 
 ### Limitaciones
-En ejecución según el plan de ejecución rev. 8. Esta sección se completa con lo que realmente ocurra al cerrar la tarea; no se marca Hecho sin criterio cumplido.
+La correspondencia enunciado→código es automática y está pendiente de
+verificación humana en las doce filas. Donde el libro de códigos no contiene
+el concepto del enunciado —casos 8 y 12— el script no inventa una
+correspondencia: lo deja vacío y lo señala.
+
+El acta consolidada declara `Modalidad: No registrado` y no recoge hora de
+inicio ni de fin. Esos datos existen en las grabaciones de la sesión y se
+incorporarán al acta cuando se extraigan; hasta entonces el criterio queda
+sin cumplir y así se declara.
 
 ### Evidencia entregada fuera del repositorio
-No aplica todavía.
+Grabaciones de la ronda de miembro-verificación del 04/09/2026.
 
 ---
-
 ## F3 — Walkthrough: consentimientos firmados después de la sesión
 
 **Estado operativo:** NO INICIADA
