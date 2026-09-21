@@ -566,42 +566,76 @@ No aplica todavía.
 
 ## A3 — Rehacer el conjunto del equipo desde la transcripción congelada ENTR-04
 
-**Estado operativo:** NO INICIADA
-**Estado de rúbrica:** pendiente de mapeo
+**Estado operativo:** VERIFICADA
+**Estado de rúbrica:** criterio técnico ejecutado; pendiente de valoración docente
 **Peso:** 0,30 pts
-**Responsable(s):** Sin asignar (fuera del núcleo de la rev. 8)
+**Responsable(s):** Macías Herrera
 **Dependencias:** Ninguna
 
 ### Problema detectado
-9 de 25 requisitos del equipo vienen del ERS anterior, al menos 5 tratan temas que no aparecen en ENTR-04 y 16 se redactaron el 11/09 para llegar al mínimo de 25. Las columnas procedencia y nota_metodologica están intercambiadas en 6 filas (H-002, H-003, H-013 a H-015, H-020) y hay pares casi idénticos (H-013/LLM-005, H-014/LLM-006, H-015/LLM-007, H-020/LLM-015).
+El plan de mejora señaló que el conjunto humano de 25 requisitos contenía requisitos históricos sin respaldo localizado en ENTR-04, filas cuya procedencia y nota metodológica debían revisarse y cuatro pares humano/LLM que requerían tratamiento separado.
 
 ### Acción aplicada
-Ninguna todavía.
+Se aplicó la Ruta A del plan: reconstruir el conjunto humano únicamente con requisitos para los que se confirmó un fragmento literal en la transcripción congelada ENTR-04.
+
+- Se revisaron las 25 fichas H-001 a H-025.
+- Se localizaron y verificaron 22 citas literales.
+- Se retiraron H-001, H-004 y H-006 al quedar como `NO_LOCALIZADA`.
+- El conjunto reconstruido quedó con 22 requisitos reales; no se inventaron requisitos para conservar el mínimo histórico de 25.
+- Los 16 requisitos experimentales H-010 a H-025 permanecen en el conjunto.
+- Se verificó la alineación de `procedencia` y `nota_metodologica` en H-002, H-003, H-013, H-014, H-015 y H-020.
+- Los pares H-013/LLM-005, H-014/LLM-006, H-015/LLM-007 y H-020/LLM-015 quedaron marcados para análisis separado.
+- H-010 declara explícitamente que el identificador único corresponde a una formalización de diseño.
+- H-024 distingue el respaldo literal sobre proyección/capacidad/redistribución de la mecánica exacta añadida como formalización de especificación.
 
 ### Evidencia utilizada
-- Ninguna todavía.
+- Fuente congelada: `06e241b7ba0ec43d8541c8908bca31a9f7327ffb:02_Evidencias/Transcripciones/2026-07-28_ENTR-04_Transcripcion.md`.
+- SHA-256 de ENTR-04 congelada: `5e9cf9dca6af94061ae937c47a6644dde924061c8382325515e258c377c63313`.
+- CSV humano base: `2d7816c27c3f41ab20433865546c4de73b0bd736:06_Experimento/conjuntos/requisitos_humano_ENTR-04.csv`.
+- Blob del CSV base: `9f7890d54162eefcf66cd2156a363547087ff8c7`.
+- `07_Datos/resultados/a3_candidatas_confirmadas.md`.
+- `07_Datos/resultados/a3_analisis_pares_casi_identicos.md`.
 
 ### Archivos modificados
-- Ninguno todavía.
+- `06_Experimento/conjuntos/requisitos_humano_ENTR-04.csv`
+- `07_Datos/resultados/a3_candidatas_confirmadas.md`
+- `07_Datos/resultados/a3_analisis_pares_casi_identicos.md`
+- `07_Datos/scripts/plan_mejora/aplicar_revision_A3.py`
+- `07_Datos/scripts/plan_mejora/verificar_A3.py`
 
 ### Criterio de aceptación
-- [ ] Cada RF del equipo cita un fragmento literal de ENTR-04
-- [ ] Columnas alineadas
-- [ ] Pares casi idénticos excluidos o analizados aparte
+- [x] Cada RF conservado del equipo cita un fragmento literal de ENTR-04.
+- [x] Columnas `procedencia` y `nota_metodologica` verificadas y alineadas en las filas señaladas.
+- [x] Pares casi idénticos identificados y tratados para análisis aparte.
 
 ### Verificación
-Aún no ejecutada.
+Se ejecutó:
+
+`python 07_Datos/scripts/plan_mejora/verificar_A3.py`
+
+Resultado:
+
+- `RESULTADO: A3 VERIFICADA SIN ERRORES`
+- Filas finales: 22.
+- Retiradas: H-001, H-004 y H-006.
+- Citas literales verificadas: 22/22.
+- Pares señalados por el plan tratados aparte: 4/4.
+- SHA-256 del CSV reconstruido: `e5801374c719efd4206a9a41972e227b5842b3eeafcad731f9d350f8e9dfed40`.
+
+La verificación se repitió correctamente después de sincronizar `main` con las actualizaciones posteriores de transcripciones.
 
 ### Commits
-- Ninguno todavía.
+- `41556592dc85d3ee2b5b11d0ccfdfb4d74b8b1b3` — `A3: reconstruir conjunto humano desde ENTR-04 congelada`
 
 ### Limitaciones
-No iniciada. No forma parte del núcleo del plan de ejecución rev. 8: la demanda del núcleo (28 h por persona) supera la capacidad disponible (~17 h por persona). Si no se ejecuta antes del cierre, se declara como no ejecutada por esta causa.
+El conjunto final contiene 22 requisitos y no 25, porque tres requisitos históricos no pudieron vincularse a un fragmento literal de la fuente congelada y se retiraron en lugar de sustituirlos con contenido inventado.
 
-Qué haría falta: Rehacer el conjunto solo desde ENTR-04 con cita literal, o declarar la desviación; corregir las columnas intercambiadas y tratar los pares casi idénticos.
+H-010 y H-024 contienen decisiones de formalización de especificación que exceden la literalidad estricta de sus citas; estas diferencias quedaron declaradas explícitamente en `nota_soporte_a3`.
+
+La transcripción ENTR-04 de la rama principal recibió posteriormente cambios de presentación/documentación. A3 permanece deliberadamente anclada a la versión congelada del commit `06e241b7ba0ec43d8541c8908bca31a9f7327ffb` y a su SHA-256 para conservar reproducibilidad.
 
 ### Evidencia entregada fuera del repositorio
-No aplica todavía.
+No aplica.
 
 ---
 
