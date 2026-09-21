@@ -53,7 +53,7 @@ Dejar preparado, cargado y probado:
 
 | Recurso | Dónde |
 |---|---|
-| Prototipo V2 | `https://simpav2-prototipo.netlify.app/` |
+| Prototipo (V3, versión vigente) | `https://simpa-v3-prototipo.netlify.app/` |
 | Repositorio principal | `https://github.com/gleiston-guerrero/SIMPA_ISR401` |
 | ERS v2.0 en PDF | `01_ERS/ERS_SRS_2B_v2.0.pdf` |
 | Depósito Zenodo | `https://zenodo.org/records/22236500` |

@@ -11,9 +11,9 @@ qué comprende sin ayuda, dónde duda, qué etiquetas interpreta de otra manera 
 qué información busca primero. Explicar la interfaz antes de la tarea destruiría
 el dato que la sesión pretende recoger.
 
-El prototipo evaluado fue la **V2**, accesible en
+El prototipo evaluado en esa sesión fue la **V2**, que era el despliegue vigente en su fecha, en
 `https://simpav2-prototipo.netlify.app/`, con las cuentas de demostración
-documentadas en `05_MVP/readme.md`.
+documentadas en `05_MVP/readme.md`. Ese despliegue ya no es la versión entregada: la única URL vigente del prototipo es `https://simpa-v3-prototipo.netlify.app/`. Esta referencia se conserva porque describe la sesión tal como ocurrió; no se actualiza a la V3 porque eso falsearía sobre qué versión se hizo el walkthrough.
 
 ## Contenido de esta carpeta — zona pública
 

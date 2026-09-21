@@ -1,15 +1,15 @@
 # Guion de demostración del prototipo — C13
 
 **Duración objetivo: 5 minutos.** Expone Francisco.
-**URL:** `https://simpav2-prototipo.netlify.app/` (V2, versión recomendada)
+**URL:** `https://simpa-v3-prototipo.netlify.app/` (V3, única versión vigente; ver `05_MVP/readme.md`)
 
 ---
 
 ## Antes de empezar
 
-- Abrir la V2 **antes** de que empiece la defensa, con sesión cerrada.
+- Abrir la V3 **antes** de que empiece la defensa, con sesión cerrada.
 - Tener el HTML autónomo descargado en local por si falla la red.
-- **No usar la V1** (`prototipo-simpa.netlify.app`): es la versión anterior.
+- **No usar ningún despliegue anterior** (`prototipo-simpa.netlify.app`, `simpav2-prototipo.netlify.app`, `prototipov2-correcion.netlify.app`): son versiones previas, sin los flujos de derechos LOPDP (RF-40 a RF-42).
 - Navegador en pantalla completa, zoom al 100 %, sin pestañas personales
   visibles.
 

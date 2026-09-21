@@ -45,7 +45,7 @@ en Figma Make, cuya fuente editable y código exportado sí están versionados.
 
 | Elemento | Fuente editable | Exportación | Ubicación | Estado |
 |---|---|---|---|---|
-| Prototipo V2 | Repositorio de código completo: `https://github.com/jmaciasherr4/Prottotipo_Simpa`, integrado como submódulo Git en el commit `deefe3d` | Desplegado en `https://simpav2-prototipo.netlify.app/` | `05_MVP/prototipo` (submódulo) | Completo — repositorio verificado como público y accesible |
+| Prototipo V2 | Repositorio de código completo: `https://github.com/jmaciasherr4/Prottotipo_Simpa`, integrado como submódulo Git en el commit `deefe3d` | Desplegado entonces en `https://simpav2-prototipo.netlify.app/` (despliegue histórico; la URL vigente del prototipo es `https://simpa-v3-prototipo.netlify.app/`) | `05_MVP/prototipo` (submódulo) | Completo — repositorio verificado como público y accesible |
 
 ## Diagramas o gráficas sin fuente editable declarada
 

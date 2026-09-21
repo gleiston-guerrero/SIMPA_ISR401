@@ -5,6 +5,55 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/).
 
 ---
 
+## [4.4.0] - 2026-09-21 - Plan de mejora de los datos del proyecto
+
+Ronda de correcciones sobre el Plan de mejora de datos del 19/09/2026. Todas
+las tareas quedan registradas una a una, con su criterio de aceptación y su
+comando de verificación, en `07_Datos/registro_correcciones.md`.
+
+### Anadido
+
+- Tabla de procedencia de los 79 requisitos (42 RF, 6 RF-IA, 19 RNF y 12
+  RNF-IA) con clasificación verificada persona a persona, en
+  `07_Datos/datos_procesados/tabla_procedencia_requisitos.csv` (D1).
+- Columnas de cita literal y línea de transcripción en los dos archivos de
+  codificación, con verificador propio `verificar_citas_C1.py` (C1).
+- Matriz de cobertura pregunta x entrevista, 13 preguntas x 16 entrevistas,
+  con cita literal en cada celda cubierta (B4).
+- Tabla maestra de participantes y adenda de perfiles, con verificador de
+  coincidencia entre todas las fuentes (B3).
+- Análisis de saturación con sensibilidad al orden sobre 10 000 órdenes
+  aleatorios (C4).
+- Matriz de uso por consentimiento de cada participante (G3).
+- Declaración explícita de ausencia de dictamen de comité de ética y de aval
+  firmado de una de las organizaciones (G2, G4).
+- Registro de la prueba de extremo a extremo por rol, con fecha, ejecutor y
+  resultado observado (E1).
+- Muestra congelada y hoja de doble codificación independiente (C3).
+
+### Cambiado
+
+- Las ocho entrevistas de las rondas 1 y 2 se retranscribieron desde el audio
+  con marcas de tiempo; la cobertura de cada una frente a la duración real del
+  audio queda declarada en `02_Evidencias/Transcripciones/readme.md` (B1).
+- Los umbrales duplicados RNF-01 y RNF-02 se declaran precisados y sustituidos
+  por RNF-IA-08 y RNF-IA-01 (D3).
+- El anexo A.12 pasa de "Vigente" a "En curso" (G2).
+- La documentación del cuestionario declara el modo real de aplicación,
+  presencial y secuencial, y la distinción entre n = 62 y n = 58 (H1).
+- Una sola URL vigente del prototipo; los despliegues anteriores quedan
+  rotulados como históricos (E3).
+- `CITATION.cff` corrige "ocho entrevistas" por dieciséis y la cabecera del
+  ERS corrige "v3.0" por "v2.0" (I1).
+
+### Retirado
+
+- Los 16 PDF presentados como notas de campo manuscritas, cuyo cuerpo era
+  idéntico entre sí; la carpeta declara la ausencia real (F1).
+- 14 fragmentos de la codificación sin respaldo literal en ninguna
+  transcripción, con el motivo de cada uno en
+  `07_Datos/datos_procesados/fragmentos_retirados_C2.csv` (C1, C2).
+
 ## [4.3.1] - 2026-09-18 - Segunda ronda de correcciones post-evaluacion
 
 ### Cambiado

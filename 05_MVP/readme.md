@@ -47,7 +47,7 @@ https://simpa-v3-prototipo.netlify.app/
 > incorpora los flujos de derechos LOPDP (RF-40, RF-41 y RF-42) descritos más
 > abajo.
 >
-> Existieron despliegues anteriores en `prototipo-simpa.netlify.app` y
+> Existieron despliegues anteriores en `prototipo-simpa.netlify.app`, `simpav2-prototipo.netlify.app` y
 > `prototipov2-correcion.netlify.app`, correspondientes a versiones previas sin
 > esos flujos. Si siguen accesibles, no deben tomarse como la versión
 > entregada.
