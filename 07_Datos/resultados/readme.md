@@ -24,16 +24,16 @@ Estos archivos se generan mediante:
 
 `../scripts/curva_saturacion.py`
 
-La ejecución verificada el 2026-09-07 produce:
+La ejecución verificada el 2026-09-21 (tras las tareas C1 y C2) produce:
 
-- 138 fragmentos en dominio;
+- 124 fragmentos en dominio;
 - 89 fragmentos en contraste;
-- 227 fragmentos totales;
-- 68 códigos únicos en dominio;
-- 31 códigos únicos en contraste;
-- 20 códigos compartidos entre los dos estratos;
-- 11 códigos nuevos del contraste frente al dominio;
-- 79 códigos únicos en la vista agregada.
+- 213 fragmentos totales;
+- 67 códigos únicos en dominio;
+- 36 códigos únicos en contraste;
+- 21 códigos compartidos entre los dos estratos;
+- 15 códigos nuevos del contraste frente al dominio;
+- 82 códigos únicos en la vista agregada.
 
 `tabla_saturacion.csv` contiene 16 filas × 11 columnas.
 
