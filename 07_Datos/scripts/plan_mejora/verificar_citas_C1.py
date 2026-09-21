@@ -22,6 +22,9 @@ import sys
 from collections import Counter
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from citas_lib import turnos_de_entrevistado  # analizador compartido (3 formatos de hablante)
+
 RAIZ = Path(__file__).resolve().parents[3]
 TRANSCRIPCIONES = RAIZ / "02_Evidencias" / "Transcripciones"
 ARCHIVOS = [
@@ -31,26 +34,6 @@ ARCHIVOS = [
 LIBRO = RAIZ / "07_Datos" / "libro_codigos.md"
 REPORTE = RAIZ / "07_Datos" / "resultados" / "c1_verificacion_citas.txt"
 ETIQUETA = "**Entrevistado:**"
-
-
-def turnos_de_entrevistado(texto):
-    """
-    Devuelve [(numero_de_linea, linea, offset)] de todo lo que dice el ENTREVISTADO.
-    Un turno puede tener varios párrafos: una línea sin etiqueta continúa al último
-    hablante. `offset` es el largo de la etiqueta (0 en los párrafos de continuación).
-    """
-    salida, hablante = [], None
-    for n, linea in enumerate(texto.splitlines(), start=1):
-        if linea.startswith("**Entrevistado:**"):
-            hablante = "E"
-            salida.append((n, linea, len("**Entrevistado:**")))
-        elif linea.startswith("**Entrevistador:**"):
-            hablante = "R"
-        elif linea.startswith("#") or linea.startswith("**Rol:**"):
-            hablante = None
-        elif linea.strip() and hablante == "E":
-            salida.append((n, linea, 0))
-    return salida
 
 
 def definiciones_del_libro():
@@ -111,6 +94,9 @@ def main():
         salida.append("  ✗ " + e)
     if sin_definir:
         salida.append("Códigos sin definición o criterio: " + ", ".join(sin_definir))
+    if estados["NO_LOCALIZADA"]:
+        salida.append(f"AVISO: {estados['NO_LOCALIZADA']} fragmentos siguen SIN cita literal (el informe del docente "
+                      f"los cuenta como filas sin cita); intenta localizarlos o retíralos de la codificación.")
     ok = not errores and pendientes == 0 and not sin_definir
     salida.append("RESULTADO: CUMPLE el criterio de C1." if ok else "RESULTADO: NO CUMPLE todavía (ver arriba).")
     REPORTE.parent.mkdir(parents=True, exist_ok=True)
