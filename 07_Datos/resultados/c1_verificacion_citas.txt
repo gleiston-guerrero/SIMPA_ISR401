@@ -1,0 +1,14 @@
+Archivo: 07_Datos/datos_crudos/codificacion.csv
+Archivo: 07_Datos/datos_procesados/codificacion_tercera_ronda.csv
+
+============================================================
+Total de fragmentos: 227
+Citas literales verificadas: 206 (90.7 % del total)
+NO_LOCALIZADA (declaradas, no cuentan como verificadas): 21
+Pendientes de revisión: 0
+Citas rechazadas (no literales): 0
+Códigos distintos en los CSV: 82
+Códigos con definición y criterio en el libro: 82
+============================================================
+AVISO: 21 fragmentos siguen SIN cita literal (el informe del docente los cuenta como filas sin cita); intenta localizarlos o retíralos de la codificación.
+RESULTADO: CUMPLE el criterio de C1.
