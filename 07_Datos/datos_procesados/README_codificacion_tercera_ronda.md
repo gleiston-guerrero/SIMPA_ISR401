@@ -13,6 +13,11 @@ en la tercera ronda:
 - `ENTR-09` a `ENTR-12`: 31 de agosto de 2026.
 - `ENTR-13` a `ENTR-16`: 1 de septiembre de 2026.
 
+> **Nota del 21/09/2026.** Las cifras de este documento describen la codificación del
+> 07/09/2026 (31 códigos distintos). El 20/09/2026 la codificación de contraste se normalizó
+> al libro de códigos v1.0 (commit `bf0354c`) y hoy tiene **36 códigos únicos** (21 compartidos
+> con dominio y 15 nuevos frente a dominio). Los 89 fragmentos no cambiaron.
+
 Se codificaron **89 fragmentos**, correspondientes a **31 códigos temáticos
 distintos**.
 
