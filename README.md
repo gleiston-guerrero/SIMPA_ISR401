@@ -116,8 +116,7 @@ El código vive en un repositorio propio; aquí reside su documentación.
 | Código fuente | <https://github.com/jmaciasherr4/Prottotipo_Simpa> |
 | Commit evaluado | `ba33002dcf680f8b39d42df04553733bd5389f6d` (2026-08-31) |
 | Árbol canónico de la V2 | `prototipo_v2/Prottotipo_Simpa-main/Prototipo/` |
-| **Demostración en vivo (V2)** | <https://simpav2-prototipo.netlify.app/> |
-| Demostración en vivo (V1, anterior) | <https://prototipo-simpa.netlify.app/> |
+| **Demostración en vivo** | <https://simpa-v3-prototipo.netlify.app/> |
 
 ### Cuentas de demostración
 
