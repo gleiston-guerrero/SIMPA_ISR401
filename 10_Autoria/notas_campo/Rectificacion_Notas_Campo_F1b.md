@@ -87,7 +87,7 @@ se deja sin firmar: no se firma por otra persona.
 | Macías Herrera Josthyn Esteban | | | `jmaciasherr4` |
 | Villafuerte Rosero Allan Noé | | | |
 | Rizzo Vélez Edson Nagib | | | `erizzov-boop` |
-| Huilcapi León Denisses Fabiola | | | |
+| Huilcapi León Denisses Fabiola | Huilcapi Leon Denisses Fabiola | 21/09/2026 | `huilcapi`|
 | Alcívar Vélez Anderson Adonis | | | |
 
 > **Estado de la firma al cierre del plazo:** las líneas que queden en blanco
