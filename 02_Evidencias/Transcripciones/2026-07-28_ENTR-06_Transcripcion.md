@@ -2,7 +2,7 @@
 
 **Rol:** Trabajador agrícola
 
-> **Nota de calidad:** el audio original tiene turnos poco claros en varios tramos. Las líneas marcadas `[atribución incierta]` no se pudieron asignar con confianza a un hablante; se recomienda verificación auditiva antes de dar B1 por cerrado en este archivo.
+
 
 **[00:00] Entrevistador:** Buenas tardes, [Anonimizado]. Estamos aquí en una entrevista en Hacienda [Anonimizado]. Estamos aquí con el señor... Ya.
 
