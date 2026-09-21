@@ -85,7 +85,7 @@ La versión histórica de:
 
 `07_Datos/datos_crudos/codificacion.csv`
 
-continúa conservando la codificación de las primeras ocho entrevistas:
+continúa conservando la codificación de las primeras ocho entrevistas (cifras al 07/09/2026; tras la tarea C2 del 21/09/2026 el archivo tiene 124 fragmentos y 67 códigos únicos):
 
 - 138 fragmentos;
 - 68 códigos únicos;
@@ -109,7 +109,7 @@ El script:
 
 integra ambas fuentes sin reescribir la codificación histórica.
 
-La ejecución verificada produce:
+La ejecución verificada (07/09/2026; hoy hay 213 fragmentos y 82 códigos únicos, tras la tarea C2 y la normalización de contraste del 20/09) produce:
 
 - 227 fragmentos totales;
 - 79 códigos únicos en la vista agregada;
