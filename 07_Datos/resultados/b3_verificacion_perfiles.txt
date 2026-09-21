@@ -1,0 +1,15 @@
+B3 · perfiles por fuente contra 07_Datos/datos_procesados/tabla_maestra_participantes.csv
+
+[OK] Transcripción (**Rol:**): 16 participantes leídos
+[OK] curva_saturacion.py (PERFILES): 16 participantes leídos
+[OK] tabla_saturacion.csv (Perfil): 16 participantes leídos
+[OK] ERS apendices.tex: 8 participantes leídos
+[OK] Adenda de 2.ª ronda (PDF): 5 participantes leídos
+[OK] Actas de member checking (PDF): 3 participantes leídos
+[OK] Consentimiento manuscrito (ENTR-01 a 03, transcrito de la imagen)
+
+Solo informativo (no cuenta como error):
+    ENTR-02 · Etiqueta del archivo de consentimiento: 'Administrador' no coincide con el perfil (etiqueta informal)
+    A.14 (perfiles PREVISTOS): difieren de los reales en ENTR-09, 10, 11, 13, 14 y 16; se declara en 09_Etica/Adenda_Perfiles_Participantes.md
+
+RESULTADO: CUMPLE, el perfil coincide en todas las fuentes.

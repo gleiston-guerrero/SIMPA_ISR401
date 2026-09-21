@@ -1,17 +1,17 @@
 Orden_global;ID_entrevista;ID_fuente;Estrato;Perfil;Fragmentos_codificados;Codigos_unicos_entrevista;Codigos_nuevos_estrato;Codigos_acumulados_estrato;Codigos_nuevos_agregado;Codigos_acumulados_agregado
-1;ENTR-01;EV-01;dominio;Administrador general;24;24;24;24;24;24
+1;ENTR-01;EV-01;dominio;Administrador General;24;24;24;24;24;24
 2;ENTR-02;EV-02;dominio;Asesor técnico;21;21;10;34;10;34
 3;ENTR-03;EV-03;dominio;Jefe de polinización;14;12;6;40;6;40
-4;ENTR-04;EV-04;dominio;Extractora (supervisor);26;20;17;57;17;57
-5;ENTR-05;EV-05;dominio;Trabajador agrícola I;9;8;4;61;4;61
-6;ENTR-06;EV-06;dominio;Trabajador agrícola II;11;9;1;62;1;62
+4;ENTR-04;EV-04;dominio;Supervisor de técnicos agrícolas (planta extractora);26;20;17;57;17;57
+5;ENTR-05;EV-05;dominio;Trabajador agrícola;9;8;4;61;4;61
+6;ENTR-06;EV-06;dominio;Trabajador agrícola;11;9;1;62;1;62
 7;ENTR-07;EV-07;dominio;Asistente de administración;15;13;4;66;4;66
-8;ENTR-08;EV-08;dominio;Extractora (técnico);18;11;2;68;2;68
-9;ENTR-09;ENTR-09;contraste;Profesional agrónomo;11;9;9;9;2;70
-10;ENTR-10;ENTR-10;contraste;Estudiante de agronomía;10;8;5;14;3;73
-11;ENTR-11;ENTR-11;contraste;Estudiante de agronomía;12;11;5;19;2;75
-12;ENTR-12;ENTR-12;contraste;Profesional en biotecnología;8;7;3;22;1;76
-13;ENTR-13;ENTR-13;contraste;Profesional agrónomo;13;11;2;24;0;76
-14;ENTR-14;ENTR-14;contraste;Ingeniería agropecuaria;10;8;2;26;1;77
-15;ENTR-15;ENTR-15;contraste;Estudiante de agroecología;14;12;4;30;2;79
-16;ENTR-16;ENTR-16;contraste;Ingeniería de sistemas;11;9;1;31;0;79
+8;ENTR-08;EV-08;dominio;Técnico de extractora;18;11;2;68;2;68
+9;ENTR-09;ENTR-09;contraste;Profesional del área agrícola;11;9;9;9;2;70
+10;ENTR-10;ENTR-10;contraste;Estudiante de carrera afín;10;8;5;14;3;73
+11;ENTR-11;ENTR-11;contraste;Estudiante de carrera afín;12;11;5;19;2;75
+12;ENTR-12;ENTR-12;contraste;Profesional del área agrícola;8;7;3;22;1;76
+13;ENTR-13;ENTR-13;contraste;Profesional del área agrícola;13;11;2;24;0;76
+14;ENTR-14;ENTR-14;contraste;Profesional del área agrícola;10;8;2;26;1;77
+15;ENTR-15;ENTR-15;contraste;Estudiante de carrera afín;14;12;4;30;2;79
+16;ENTR-16;ENTR-16;contraste;Profesional del área tecnológica;11;9;1;31;0;79
