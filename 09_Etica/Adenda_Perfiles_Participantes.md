@@ -41,4 +41,16 @@ La transcripción rotulaba a ENTR-02 como «Administrador» y el CHANGELOG lo de
 
 ## 6. Firma
 
-Pendiente de firma del analista líder del equipo. Este documento no sustituye el consentimiento de ningún participante.
+Firma quien verificó la correspondencia de perfiles entre todas las fuentes
+declaradas, con el verificador `07_Datos/scripts/plan_mejora/verificar_B3_perfiles.py`.
+Cada persona publica su firma desde su propia cuenta; una línea en blanco
+queda sin firmar.
+
+| Integrante | Firma (nombre completo) | Fecha | Cuenta que publica |
+|---|---|---|---|
+| Arboleda Yanza Francisco Javier | Arboleda Yanza Francisco Javier | 21/09/2026 | `farboleday-wq` |
+| Macías Herrera Josthyn Esteban | | | `jmaciasherr4` |
+
+Este documento declara discrepancias entre anexos ya firmados y el estado
+real; no modifica la A.14 ni sustituye el consentimiento de ningún
+participante.

@@ -1,6 +1,6 @@
 # Declaraciones de ausencia: comité de ética (G2) y avales de las organizaciones (G4)
 
-**Proyecto:** SIMPA · ISR-401 · UTEQ · **Fecha:** 21/09/2026 · **Estado:** pendiente de firma del analista líder.
+**Proyecto:** SIMPA · ISR-401 · UTEQ · **Fecha:** 21/09/2026 · **Estado:** firmada por quienes verificaron su contenido.
 Esta declaración se limita a lo que consta en el repositorio en esa fecha; si aparece un documento que la contradiga, se adjunta y se actualiza.
 
 ## 1. Dictamen de comité de ética (G2)
@@ -19,4 +19,17 @@ Esta declaración se limita a lo que consta en el repositorio en esa fecha; si a
 4. **Por tanto:** el proyecto cuenta con una autorización firmada, de fecha posterior, de Palmicultora M, y se declara **SIN aval firmado de Extractora R**. Si esa organización firma un aval, se adjuntará con su fecha real y se actualizará el anexo A.05.
 
 ## 3. Firma
-Pendiente: analista líder del equipo. Fecha: ____ / ____ / 2026.
+
+Firman quienes verificaron el estado aquí declarado. Cada persona escribe su
+propio nombre y publica el cambio desde su propia cuenta de GitHub: no se
+firma por otra persona, y una línea en blanco significa que esa persona no
+firmó, no que esté conforme.
+
+| Integrante | Firma (nombre completo) | Fecha | Cuenta que publica |
+|---|---|---|---|
+| Arboleda Yanza Francisco Javier | Arboleda Yanza Francisco Javier | 21/09/2026 | `farboleday-wq` |
+| Macías Herrera Josthyn Esteban | | | `jmaciasherr4` |
+
+Lo firmado es la comprobación del estado del repositorio descrita en las
+secciones 1 y 2, no una valoración sobre las personas u organizaciones
+mencionadas.
