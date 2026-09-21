@@ -108,7 +108,7 @@ persona no firmó.
 
 | Persona | Papel en la ronda | Firma (nombre completo) | Fecha | Cuenta |
 |---|---|---|---|---|
-| Arboleda Yanza Francisco Javier | integrante del equipo, responsable de F2 | | | `farboleday-wq` |
+| Arboleda Yanza Francisco Javier | integrante del equipo, responsable de F2 | Arboleda Yanza Francisco Javier | 21/09/2026 | `farboleday-wq` |
 | Huilcapi León Denisses Fabiola | facilitadora de las sub-sesiones ENTR-02 y ENTR-13 | | | |
 | *(analista líder)* | facilitador de la sub-sesión ENTR-01 | | | |
 
