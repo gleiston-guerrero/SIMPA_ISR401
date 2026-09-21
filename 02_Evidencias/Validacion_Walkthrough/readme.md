@@ -19,7 +19,7 @@ documentadas en `05_MVP/readme.md`. Ese despliegue ya no es la versión entregad
 
 | Ruta | Contenido |
 |---|---|
-| `Acta/` | Seis actas de sesión con la firma enmascarada |
+| `Acta/` | Seis actas de sesión, con la identidad de los participantes enmascarada. Las actas no llevan firma: la firma de cada sesión consta en su consentimiento (ver `Declaracion_Walkthrough_F3.md`) |
 | `Consentimientos/` | Seis consentimientos informados con la firma enmascarada |
 | `hallazgos_usabilidad.md` | Consolidado de los quince hallazgos, con el requisito afectado y la severidad propuesta |
 

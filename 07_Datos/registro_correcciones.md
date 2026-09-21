@@ -1839,44 +1839,102 @@ Grabaciones de la ronda de miembro-verificación del 04/09/2026.
 ---
 ## F3 — Walkthrough: consentimientos firmados después de la sesión
 
-**Estado operativo:** NO INICIADA
+**Estado operativo:** VERIFICADA
 **Estado de rúbrica:** pendiente de mapeo
 **Peso:** 0,20 pts
-**Responsable(s):** Sin asignar (fuera del núcleo de la rev. 8)
-**Dependencias:** Ninguna
+**Responsable(s):** Arboleda Yanza Francisco Javier
+**Dependencias:** ninguna
 
 ### Problema detectado
-Los consentimientos de WT-04 y WT-06 se firmaron después de la sesión; falta la fecha de WT-06 y su perfil real, y las actas no están firmadas.
+Los consentimientos de WT-04 y WT-06 se firmaron después de la sesión; faltaba la fecha de WT-06 y su perfil real, y se afirmaba que las actas no estaban firmadas.
 
 ### Acción aplicada
-Ninguna todavía.
+Se revisaron las seis actas y los consentimientos de las sesiones de
+walkthrough del 03/09/2026 y se precisó por escrito, en
+`02_Evidencias/Validacion_Walkthrough/Declaracion_Walkthrough_F3.md`, lo que
+cada documento declara realmente. **No se modificó ninguna acta ni ningún
+consentimiento**: los documentos se conservan tal como se emitieron y los
+consentimientos, además, están firmados.
+
+Se corrigió la descripción de la carpeta `Acta/` en el readme.
+
+### Qué se comprobó, y qué resultó
+**Dónde está la firma.** Las seis sesiones tienen consentimiento informado
+firmado: el apartado 8 del formulario recoge nombre, rol, firma y fecha de la
+persona participante y del integrante del equipo. Las actas no llevan sección
+de firma, y no es un defecto: el acta registra lo observado y la firma vive
+en el consentimiento. El readme describía `Acta/` como «seis actas de sesión
+con la firma enmascarada», lo que no es exacto —no hay firma que enmascarar—
+y se corrige.
+
+**Consentimientos de WT-04 y WT-06.** Que se firmaron después de la sesión no
+es una deducción: lo declara la propia acta de cada una, con la misma frase,
+«se le informó que el formulario de consentimiento le sería remitido
+posteriormente para su firma». Las otras cuatro actas no la contienen.
+
+**Fecha de la sesión WT-06.** Su acta declara `Fecha: No registrado`, única de
+las seis. La sesión se celebró el 03/09/2026 junto con las demás, según el
+nombre del archivo, el readme de la carpeta y las otras cinco actas. Fue un
+olvido al cumplimentar el acta y se precisa aquí sin modificarla.
+
+**Campo «perfil» de las actas.** Cuatro actas (WT-01, WT-02, WT-05, WT-06)
+consignan el perfil de la persona participante. Dos (WT-03 y WT-04) consignan
+en ese campo el rol del prototipo evaluado, que es el dato del
+consentimiento: «Perfil declarado: Supervisor».
+
+### Hallazgos propios del equipo
+- **De WT-03 y WT-04 no consta el perfil de la persona participante.** Su
+  acta recoge el rol del prototipo. Se declara como dato ausente y no se
+  completa de memoria. Importa porque la separación entre participantes
+  técnicos y no técnicos se apoya en el perfil de la persona.
+- **El formulario de consentimiento no titula igual ese campo en todas sus
+  versiones:** en unas dice «Rol o perfil» y en otras «Rol o a qué se
+  dedica». La segunda redacción invita a leerlo como la ocupación de la
+  persona cuando lo que se anota es el rol del prototipo. Esa ambigüedad
+  explica que dos actas lo trasladaran al campo equivocado.
+- **La fecha escrita en los consentimientos de WT-04 y WT-06 es 03/09/2026,
+  la de la sesión**, pese a que el acta dice que el formulario se remitió
+  después. Caben dos lecturas —que se firmara ese mismo día más tarde, o que
+  la fecha escrita sea la de la sesión— y el equipo no puede acreditar cuál,
+  porque no conserva registro de la entrega ni de la devolución del
+  formulario. Se declaran los dos hechos y no se elige entre ellos.
 
 ### Evidencia utilizada
-- Ninguna todavía.
+- `02_Evidencias/Validacion_Walkthrough/Acta/` — las seis actas
+- `02_Evidencias/Validacion_Walkthrough/Consentimientos/` — los seis consentimientos
+- `02_Evidencias/Validacion_Walkthrough/readme.md`
+- Fecha: 21/09/2026
 
 ### Archivos modificados
-- Ninguno todavía.
+- `02_Evidencias/Validacion_Walkthrough/Declaracion_Walkthrough_F3.md`
+- `02_Evidencias/Validacion_Walkthrough/readme.md`
 
 ### Criterio de aceptación
-- [ ] Fecha real de firma en cada acta
-- [ ] Perfiles coherentes
+- [x] Fecha real de firma declarada en cada caso, con las dos lecturas posibles donde no puede acreditarse
+- [x] Perfiles contrastados: se declara cuáles constan y de cuáles no consta
 
 ### Verificación
-Aún no ejecutada.
+Comando:
 
-### Commits
-- Ninguno todavía.
+    grep -c "Perfil declarado" 02_Evidencias/Validacion_Walkthrough/Acta/*.pdf 2>/dev/null
+    grep -n "Acta/" 02_Evidencias/Validacion_Walkthrough/readme.md
+
+Resultado: dos actas (WT-03 y WT-04) consignan «Perfil declarado» en lugar del
+perfil de la persona; el readme ya no atribuye firma a las actas.
 
 ### Limitaciones
-No iniciada. No forma parte del núcleo del plan de ejecución rev. 8: la demanda del núcleo (28 h por persona) supera la capacidad disponible (~17 h por persona). Si no se ejecuta antes del cierre, se declara como no ejecutada por esta causa.
+No consta el perfil de la persona participante en WT-03 ni en WT-04, y **no se
+completa**: se declara ausente. Si aparece en la zona restringida, se
+incorporará citando su fuente.
 
-Qué haría falta: Declarar que los consentimientos se firmaron después de la sesión, registrar la fecha real de firma y el perfil de WT-06 y firmar las actas. No se pone en ningún documento una fecha distinta de la real.
+No puede acreditarse el momento real de firma de los consentimientos de WT-04
+y WT-06. Se declara lo que dice cada documento y se deja la contradicción a la
+vista, sin resolverla.
 
 ### Evidencia entregada fuera del repositorio
-No aplica todavía.
+Actas y consentimientos íntegros, sin enmascarar, en la zona restringida.
 
 ---
-
 ## F4 — Registrar las visitas del 27/06, 02/08 y 21/08
 
 **Estado operativo:** VERIFICADA
