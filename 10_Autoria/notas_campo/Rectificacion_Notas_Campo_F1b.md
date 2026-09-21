@@ -86,7 +86,7 @@ se deja sin firmar: no se firma por otra persona.
 | Arboleda Yanza Francisco Javier | Arboleda Yanza Francisco Javier | 21/09/2026 | `farboleday-wq` |
 | Macías Herrera Josthyn Esteban | | | `jmaciasherr4` |
 | Villafuerte Rosero Allan Noé | | | |
-| Rizzo Vélez Edson Nagib | | | `erizzov-boop` |
+| Rizzo Vélez Edson Nagib | Rizzo Velez Edson Nagib | 21/09/2026 | `erizzov-boop` |
 | Huilcapi León Denisses Fabiola | Huilcapi Leon Denisses Fabiola | 21/09/2026 | `huilcapi`|
 | Alcívar Vélez Anderson Adonis | | | |
 
