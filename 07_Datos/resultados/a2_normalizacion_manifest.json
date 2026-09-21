@@ -1,0 +1,26 @@
+{
+  "tarea": "A2",
+  "descripcion": "Normalización de estilo previa al cegado",
+  "entradas": {
+    "06_Experimento/conjuntos/requisitos_humano_ENTR-04.csv": {
+      "sha256": "e5801374c719efd4206a9a41972e227b5842b3eeafcad731f9d350f8e9dfed40",
+      "filas": 22
+    },
+    "06_Experimento/salidas_llm/requisitos_LLM_ENTR-04.md": {
+      "sha256": "0ba53af2bcc5517b36ac9a0e3b53ecad5f1939889d850dc97ebdb68d214d0128",
+      "filas": 25
+    }
+  },
+  "salidas": {
+    "06_Experimento/normalizado_A2/requisitos_humano_A2.csv": {
+      "sha256": "c90b0e6a64188173e84ea74d7ad379460da741af4223f4b5c60cd061832a69a8",
+      "filas": 22
+    },
+    "06_Experimento/normalizado_A2/requisitos_LLM_A2.csv": {
+      "sha256": "186d28784448ebb56a0e7a30d8baf3f325fee1cc541da7113170786dafe7c01e",
+      "filas": 25
+    }
+  },
+  "total_requisitos": 47,
+  "nota_metodologica": "Los originales se conservan sin cambios. La normalización produce artefactos derivados con esquema común y redacción superficial homogeneizada para la evaluación cegada posterior."
+}
