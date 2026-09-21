@@ -63,25 +63,23 @@ que consta en el propio archivo de transcripción.
 |---|---:|---:|---:|
 | ENTR-01 | 18:05 | 18,2 min | 99 % |
 | ENTR-02 | 27:38 | 29,5 min | 94 % |
-| **ENTR-03** | **04:15** | **5,2 min** | **82 %** |
+| ENTR-03 | 05:13 | 5,2 min | 100 % |
 | ENTR-04 | 13:23 | 13,4 min | 100 % |
 | ENTR-05 | 05:16 | 5,3 min | 99 % |
 | ENTR-06 | 02:33 | 2,6 min | 98 % |
 | ENTR-07 | 05:32 | 5,5 min | 101 % |
 | ENTR-08 | 08:58 | 9,3 min | 96 % |
 
-### Declaración sobre ENTR-03
+### Declaración sobre ENTR-03 (resuelta el 21/09/2026)
 
-Siete de las ocho transcripciones cubren el audio dentro de un margen del
-±10 %. **ENTR-03 no.** Su última marca es `[04:15]` frente a 5,2 minutos de
-audio: quedan aproximadamente **57 segundos del final sin transcribir**, un
-18 % de la sesión.
-
-Se declara aquí en lugar de completarse, porque completar ese tramo sin
-volver a escuchar el audio significaría escribir texto que nadie ha
-verificado, y eso es justamente lo que este plan corrige. El tramo se
-transcribirá cuando se disponga del audio; hasta entonces, cualquier
-afirmación basada en ENTR-03 se apoya únicamente en los primeros 4:15.
+Hasta el 21/09/2026, ENTR-03 era la única transcripción fuera del margen de
+±10 %: su última marca era `[04:15]` frente a 5,2 minutos de audio, dejando
+unos 57 segundos del final sin transcribir. Se escuchó ese tramo (04:15 a
+05:13) el 21/09/2026: no hay habla, solo ruido ambiental de campo hasta el
+cierre del archivo. Se agregó una nota con marca de tiempo que lo declara así
+(no se inventó ningún diálogo), y la última marca pasa a `[05:13]`, que
+coincide con la duración real del audio (5:13,9). Las ocho transcripciones
+quedan dentro del margen de ±10 %.
 
 Ninguna de las citas literales de la codificación (tarea C1) procede de ese
 tramo: las 213 citas vigentes se verifican con
