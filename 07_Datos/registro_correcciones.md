@@ -851,7 +851,7 @@ No aplica.
 ---
 ## B1 — Retranscribir literalmente las entrevistas de las rondas 1 y 2
 
-**Estado operativo:** EN PROCESO (ocho entrevistas retranscritas; ENTR-03 incompleta y declarada)
+**Estado operativo:** VERIFICADA (las ocho entrevistas cumplen los tres criterios de aceptación)
 **Estado de rúbrica:** pendiente de mapeo
 **Peso:** 0,50 pts
 **Responsable(s):** Macías Herrera Josthyn Esteban (retranscripción de ENTR-01 a 08 y script verificador) · Arboleda Yanza Francisco Javier (corrección de turnos de ENTR-02 y declaración de cobertura)
@@ -868,8 +868,7 @@ En ENTR-02 se corrigieron turnos mal atribuidos en el tramo 18:09-18:45. El frag
 La cobertura de cada transcripción frente a la duración real del audio se declara en `02_Evidencias/Transcripciones/readme.md`. Las duraciones salen de un script, no están escritas a mano.
 
 ### Hallazgo propio del equipo
-Siete de las ocho transcripciones cubren el audio dentro del ±10 %. **ENTR-03 no:** su última marca es `[04:15]` frente a 5,2 minutos de audio, de modo que quedan unos 57 segundos del final sin transcribir (18 % de la sesión). Se declara en lugar de completarse: escribir ese tramo sin volver a escuchar el audio sería generar texto no verificado.
-
+Siete de las ocho transcripciones cubrían el audio dentro del ±10 % desde el 20/09/2026. **ENTR-03 quedó resuelta el 21/09/2026:** se escuchó el tramo final (04:15 a 05:13) y se confirmó que es ruido ambiental de campo, sin habla; se agregó una nota con marca de tiempo que lo declara así, sin inventar diálogo. La última marca pasa a `[05:13]`, coincidente con la duración real del audio.
 ### Evidencia utilizada
 - Audios y vídeos originales inventariados en `02_Evidencias/00_Restringido/fichas_tecnicas.csv`
 - Salida de `07_Datos/scripts/plan_mejora/duracion_por_entrevista.py`
@@ -883,7 +882,7 @@ Siete de las ocho transcripciones cubren el audio dentro del ±10 %. **ENTR-03 n
 
 ### Criterio de aceptación
 - [x] Marcas [mm:ss] en las ocho transcripciones
-- [ ] La última marca coincide ±10 % con la duración del audio — se cumple en siete de ocho; ENTR-03 queda al 82 % y se declara
+- [x] La última marca coincide ±10 % con la duración del audio, en las ocho entrevistas
 - [x] Cobertura de cada entrevista declarada frente a la duración real del audio
 
 ### Verificación
@@ -895,7 +894,7 @@ Resultado (contrastado con la última marca de cada archivo):
 
     ENTR-01  18:05 / 18,2 min = 99 %      ENTR-05  05:16 / 5,3 min = 99 %
     ENTR-02  27:38 / 29,5 min = 94 %      ENTR-06  02:33 / 2,6 min = 98 %
-    ENTR-03  04:15 /  5,2 min = 82 %      ENTR-07  05:32 / 5,5 min = 101 %
+    ENTR-03  05:13 /  5,2 min = 100 %     ENTR-07  05:32 / 5,5 min = 101 %
     ENTR-04  13:23 / 13,4 min = 100 %     ENTR-08  08:58 / 9,3 min = 96 %
 
 ### Commits
@@ -904,7 +903,6 @@ Resultado (contrastado con la última marca de cada archivo):
 - `d9e80ca` — CONSOLIDADO_SEMANAL como pendiente de verificación
 
 ### Limitaciones
-La retranscripción de ENTR-03 está incompleta en su tramo final y así se declara. El resto de la documentación que se apoye en ENTR-03 se sostiene únicamente sobre los primeros 4:15.
 
 Esta tarea invalidó temporalmente la verificación de citas de C1: las citas literales se habían localizado sobre las transcripciones anteriores. Se rehicieron y C1 vuelve a cumplir (ver su entrada).
 
