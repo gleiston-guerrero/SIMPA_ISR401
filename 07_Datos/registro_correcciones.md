@@ -547,7 +547,7 @@ La normalización:
 - retiró del campo visible de actor las marcas de evidencia/procedencia;
 - compactó la redacción del conjunto humano sin eliminar reglas, umbrales ni condiciones técnicas;
 - mantuvo identificadores de origen únicamente en los artefactos internos de verificación de A2;
-- dejó el cegado definitivo para una etapa posterior, donde esos identificadores deberán eliminarse.
+- dejó los identificadores de origen únicamente en los artefactos internos de A2; posteriormente, el cegado correctivo post-A2 eliminó esos identificadores de los campos visibles y generó un artefacto independiente para A1.
 
 ### Evidencia utilizada
 - `06_Experimento/conjuntos/requisitos_humano_ENTR-04.csv` — 22 requisitos humanos reconstruidos en A3.
@@ -556,6 +556,8 @@ La normalización:
 - `07_Datos/resultados/a2_normalizacion_manifest.json` — manifiesto de entradas, salidas y hashes.
 - `07_Datos/scripts/plan_mejora/normalizar_estilo_A2.py` — normalización reproducible.
 - `07_Datos/scripts/plan_mejora/clasificador_origen_A2.py` — clasificador simple con validación dejando uno fuera.
+- `06_Experimento/cegado/requisitos_cegados_A2.csv` — conjunto cegado correctivo de 47 requisitos, identificado como `R-001` a `R-047`.
+- `06_Experimento/scripts_analisis/cegar_aleatorizar.py` — generación reproducible del cegado post-A2.
 
 ### Archivos modificados
 - `06_Experimento/normalizado_A2/requisitos_humano_A2.csv`
@@ -564,6 +566,9 @@ La normalización:
 - `07_Datos/resultados/a2_normalizacion_manifest.json`
 - `07_Datos/scripts/plan_mejora/normalizar_estilo_A2.py`
 - `07_Datos/scripts/plan_mejora/clasificador_origen_A2.py`
+- `06_Experimento/cegado/requisitos_cegados_A2.csv`
+- `06_Experimento/scripts_analisis/cegar_aleatorizar.py`
+- `06_Experimento/readme.md`
 
 ### Criterio de aceptación
 - [x] Un clasificador simple (primera palabra y longitud, validación dejando uno fuera) no supera el 65 % de acierto sobre el origen.
@@ -580,16 +585,17 @@ La longitud visible media después de normalizar fue de aproximadamente 558,5 ca
 
 ### Commits
 - `5e87be8b0ce379335d75095e945509cf243f0720` — `A2: normalizar estilo y verificar identificabilidad`
+- `8ae7eb3924f337c54c7cb7bf9d38e10ced8465d8` — `A2: generar cegado correctivo post-normalizacion`
 
 ### Limitaciones
 El 57,45 % demuestra únicamente el cumplimiento del criterio técnico definido para este clasificador simple y versionado; no demuestra indistinguibilidad frente a cualquier clasificador posible.
 
-Los archivos normalizados de A2 son artefactos internos etiquetados para poder verificar la medición y aún conservan `id_origen`. No constituyen el archivo cegado definitivo. El cegado posterior deberá eliminar todo identificador de procedencia antes de A1.
+Los archivos normalizados de A2 son artefactos internos etiquetados para poder verificar la medición y conservan `id_origen`; por ello no deben entregarse como material cegado. El cegado correctivo posterior fue generado en `06_Experimento/cegado/requisitos_cegados_A2.csv`, con 47 requisitos identificados como `R-001` a `R-047`, sin identificadores explícitos de procedencia en los campos visibles. Este artefacto no sustituye ni modifica el cegado histórico de 50 requisitos utilizado en la evaluación original.
 
 La valoración académica final corresponde al docente.
 
 ### Evidencia entregada fuera del repositorio
-No aplica.
+Se genera `../mapa_confidencial_NO_SUBIR/mapa_origen_A2.csv` como mapa confidencial entre `id_cegado`, origen e identificador original. Este archivo permanece fuera del repositorio y no se entrega a los evaluadores.
 
 
 ---
