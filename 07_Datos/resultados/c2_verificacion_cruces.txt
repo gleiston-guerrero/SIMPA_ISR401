@@ -1,0 +1,7 @@
+C2 · fragmentos revisados: 213 · señales sin revisar: 0 · señales revisadas y mantenidas: 5 (margen 0.15, mínimo 0.45)
+  ok (revisado) codificacion.csv fila 57: Cita corta ('Con un rastreador GPS.', respuesta a '¿mediante qué control?'); el parecido de ENTR-01 es genérico.
+  ok (revisado) codificacion.csv fila 87: Ambas entrevistas mencionan la libreta; ENTR-05 la respalda directamente ('lo van a tener en una libreta').
+  ok (revisado) codificacion.csv fila 90: Respuesta corta ('El administrador.') a '¿quién le dice en qué lote trabajar?'; ENTR-02 habla de seguimiento por GPS.
+  ok (revisado) codificacion.csv fila 91: El texto (avisar al encargado) sí es de ENTR-05; el CÓDIGO EVIDENCIA_FOTOGRAFICA encaja mejor con ENTR-07: revisar el código, no la entrevista.
+  ok (revisado) codificacion.csv fila 100: Respuesta corta ('Lote uno y lote dos.'); el parecido de ENTR-13 es genérico.
+RESULTADO: CUMPLE (ningún fragmento tiene mejor respaldo en otra entrevista).

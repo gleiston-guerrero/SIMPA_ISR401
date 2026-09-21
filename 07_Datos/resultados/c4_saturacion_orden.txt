@@ -1,0 +1,12 @@
+C4 · Saturación de códigos con sensibilidad al orden
+Entrevistas: 16 · códigos distintos: 82 · órdenes aleatorios: 10000 · semilla: 20260921
+
+Orden real: códigos nuevos por entrevista = [23, 8, 6, 18, 5, 1, 4, 2, 5, 5, 1, 1, 0, 1, 2, 0]
+Orden real: la última entrevista (ENTR-16) aporta 0 códigos nuevos.
+
+Media de códigos nuevos en la ÚLTIMA posición (órdenes al azar): 2.20
+Probabilidad de CERO códigos nuevos en la última posición: 43.9%
+Probabilidad de cero códigos nuevos en las DOS últimas posiciones: 16.7%
+
+Lectura: si esa probabilidad es baja, decir que hubo 'saturación' depende del orden en que se
+hicieron las entrevistas y no debe presentarse como un hallazgo firme.
