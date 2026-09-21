@@ -85,13 +85,11 @@ PERFILES = {   # categorías públicas de tabla_maestra_participantes.csv (B3); 
     "ENTR-16": "Profesional del área tecnológica",
 }
 
+# Solo se usan estas dos columnas; los CSV actuales (tras C1/C2) ya no traen
+# "Fragmento" ni "Categoria" (ahora Fragmento_parafraseado y sin categoría).
 CABECERA_REQUERIDA = {
-    "Fragmento",
     "Codigo",
-    "Categoria",
-    "Requisito_derivado",
     "ID_evidencia",
-    "Analista_codificador",
 }
 
 
