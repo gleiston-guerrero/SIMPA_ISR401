@@ -781,45 +781,67 @@ No aplica todavía.
 
 ## B1 — Retranscribir literalmente las entrevistas de las rondas 1 y 2
 
-**Estado operativo:** NO INICIADA
+**Estado operativo:** EN PROCESO (ocho entrevistas retranscritas; ENTR-03 incompleta y declarada)
 **Estado de rúbrica:** pendiente de mapeo
 **Peso:** 0,50 pts
-**Responsable(s):** Sin asignar (fuera del núcleo de la rev. 8)
-**Dependencias:** Acceso a los audios originales
+**Responsable(s):** Macías Herrera Josthyn Esteban (retranscripción de ENTR-01 a 08 y script verificador) · Arboleda Yanza Francisco Javier (corrección de turnos de ENTR-02 y declaración de cobertura)
+**Dependencias:** acceso a los audios originales
 
 ### Problema detectado
-Las entrevistas ENTR-01 a 08 tienen 0 % de turnos con muletillas frente a 6-69 % en la ronda 3, contienen glosas editoriales y el consolidado dice que se presentan en el orden solicitado.
+Las entrevistas ENTR-01 a 08 tenían 0 % de turnos con muletillas frente a 6-69 % en la ronda 3, contenían glosas editoriales y el consolidado decía que se presentaban en el orden solicitado.
 
 ### Acción aplicada
-Ninguna todavía.
+Se retranscribieron desde el audio original las ocho entrevistas de las rondas 1 y 2, con marcas de tiempo `[mm:ss]` y conservando muletillas, repeticiones y pausas. Los archivos individuales `AAAA-MM-DD_ENTR-XX_Transcripcion.md` pasan a ser la versión vigente de esta carpeta.
+
+En ENTR-02 se corrigieron turnos mal atribuidos en el tramo 18:09-18:45. El fragmento CONSOLIDADO_SEMANAL se registró como pendiente de verificación contra el audio y **no** se dio por retirado ni por incorporado, porque la versión en texto aportada el 21/09 coincide temáticamente pero no tiene minuto de audio verificable.
+
+La cobertura de cada transcripción frente a la duración real del audio se declara en `02_Evidencias/Transcripciones/readme.md`. Las duraciones salen de un script, no están escritas a mano.
+
+### Hallazgo propio del equipo
+Siete de las ocho transcripciones cubren el audio dentro del ±10 %. **ENTR-03 no:** su última marca es `[04:15]` frente a 5,2 minutos de audio, de modo que quedan unos 57 segundos del final sin transcribir (18 % de la sesión). Se declara en lugar de completarse: escribir ese tramo sin volver a escuchar el audio sería generar texto no verificado.
 
 ### Evidencia utilizada
-- Ninguna todavía.
+- Audios y vídeos originales inventariados en `02_Evidencias/00_Restringido/fichas_tecnicas.csv`
+- Salida de `07_Datos/scripts/plan_mejora/duracion_por_entrevista.py`
+- Script `07_Datos/scripts/plan_mejora/verificar_retranscripcion_B1.py`
+- Fecha: 20/09/2026 y 21/09/2026
 
 ### Archivos modificados
-- Ninguno todavía.
+- `02_Evidencias/Transcripciones/2026-05-23_ENTR-01_Transcripcion.md` y las siete restantes de ENTR-02 a ENTR-08
+- `02_Evidencias/Transcripciones/readme.md`
+- `07_Datos/scripts/plan_mejora/verificar_retranscripcion_B1.py`
 
 ### Criterio de aceptación
-- [ ] Marcas [mm:ss]
-- [ ] La última marca coincide ±10 % con la duración del audio
-- [ ] En muestras de 3 minutos, menos de un 5 % de discrepancia
+- [x] Marcas [mm:ss] en las ocho transcripciones
+- [ ] La última marca coincide ±10 % con la duración del audio — se cumple en siete de ocho; ENTR-03 queda al 82 % y se declara
+- [x] Cobertura de cada entrevista declarada frente a la duración real del audio
 
 ### Verificación
-Aún no ejecutada.
+Comando:
+
+    python3 07_Datos/scripts/plan_mejora/duracion_por_entrevista.py 02_Evidencias/00_Restringido/fichas_tecnicas.csv
+
+Resultado (contrastado con la última marca de cada archivo):
+
+    ENTR-01  18:05 / 18,2 min = 99 %      ENTR-05  05:16 / 5,3 min = 99 %
+    ENTR-02  27:38 / 29,5 min = 94 %      ENTR-06  02:33 / 2,6 min = 98 %
+    ENTR-03  04:15 /  5,2 min = 82 %      ENTR-07  05:32 / 5,5 min = 101 %
+    ENTR-04  13:23 / 13,4 min = 100 %     ENTR-08  08:58 / 9,3 min = 96 %
 
 ### Commits
-- Ninguno todavía.
+- `ed5894e`, `d3b475a`, `3bc3dc4`, `f9fad42`, `eee7275`, `2d7816c` — retranscripción
+- `54e0209` — corrección de turnos de ENTR-02
+- `d9e80ca` — CONSOLIDADO_SEMANAL como pendiente de verificación
 
 ### Limitaciones
-No iniciada. No forma parte del núcleo del plan de ejecución rev. 8: la demanda del núcleo (28 h por persona) supera la capacidad disponible (~17 h por persona). Si no se ejecuta antes del cierre, se declara como no ejecutada por esta causa.
+La retranscripción de ENTR-03 está incompleta en su tramo final y así se declara. El resto de la documentación que se apoye en ENTR-03 se sostiene únicamente sobre los primeros 4:15.
 
-Qué haría falta: Retranscribir literalmente desde el audio ENTR-01 a 08 con marcas de tiempo; requiere acceso a los audios originales.
+Esta tarea invalidó temporalmente la verificación de citas de C1: las citas literales se habían localizado sobre las transcripciones anteriores. Se rehicieron y C1 vuelve a cumplir (ver su entrada).
 
 ### Evidencia entregada fuera del repositorio
-No aplica todavía.
+No aplica.
 
 ---
-
 ## B2 — Corregir la declaración de uso de IA sobre la transcripción
 
 **Estado operativo:** VERIFICADA
@@ -879,83 +901,119 @@ No aplica.
 
 ## B3 — Tabla maestra de participantes
 
-**Estado operativo:** NO INICIADA
+**Estado operativo:** VERIFICADA
 **Estado de rúbrica:** pendiente de mapeo
 **Peso:** 0,20 pts
-**Responsable(s):** Sin asignar (fuera del núcleo de la rev. 8)
-**Dependencias:** Ninguna
+**Responsable(s):** Arboleda Yanza Francisco Javier
+**Dependencias:** ninguna
 
 ### Problema detectado
-ENTR-02, 04, 09, 12, 13 y 15 tienen perfiles distintos en el consentimiento, la transcripción, curva_saturacion.py (líneas 71-82) y las actas.
+ENTR-02, 04, 09, 12, 13 y 15 tenían perfiles distintos según la fuente: consentimiento, transcripción, `curva_saturacion.py` (líneas 71-82) y actas de member checking no coincidían entre sí.
 
 ### Acción aplicada
-Ninguna todavía.
+Se construyó `07_Datos/datos_procesados/tabla_maestra_participantes.csv`, con un solo perfil por persona, y se alinearon con ella `curva_saturacion.py` y `tabla_saturacion.csv`.
+
+Se escribió `07_Datos/scripts/plan_mejora/verificar_B3_perfiles.py`, que contrasta el perfil de cada participante contra **todas** las fuentes del repositorio: el script de saturación, la tabla de saturación, el apéndice del ERS, la adenda de segunda ronda, las actas de member checking y el consentimiento manuscrito.
+
+Las discrepancias con anexos ya firmados no se corrigen sobre el anexo: se declaran en `09_Etica/Adenda_Perfiles_Participantes.md`, conforme a la regla de `09_Etica/README_Etica.md`. La A.14 no se altera.
+
+### Hallazgos propios del equipo
+- Los perfiles **previstos** en A.14 difieren de los reales en ENTR-09, 10, 11, 13, 14 y 16. Se declara en la adenda; el anexo firmado queda intacto.
+- La etiqueta del archivo de consentimiento de ENTR-02 dice "Administrador" y no coincide con el perfil real. Es una etiqueta informal de nombre de archivo, y así consta.
 
 ### Evidencia utilizada
-- Ninguna todavía.
+- `02_Evidencias/Consentimientos/`, `02_Evidencias/Transcripciones/`, `01_ERS/apendices.tex`
+- Actas de member checking y adenda de segunda ronda
+- Fecha: 21/09/2026
 
 ### Archivos modificados
-- Ninguno todavía.
+- `07_Datos/datos_procesados/tabla_maestra_participantes.csv`
+- `07_Datos/scripts/plan_mejora/verificar_B3_perfiles.py`
+- `07_Datos/scripts/curva_saturacion.py` · `07_Datos/resultados/tabla_saturacion.csv`
+- `09_Etica/Adenda_Perfiles_Participantes.md`
 
 ### Criterio de aceptación
-- [ ] Los mismos perfiles en todas las fuentes, comprobado por script
+- [x] Un solo perfil por persona, coincidente en todas las fuentes
 
 ### Verificación
-Aún no ejecutada.
+Comando:
+
+    python3 07_Datos/scripts/plan_mejora/verificar_B3_perfiles.py
+
+Resultado (salida guardada en `07_Datos/resultados/b3_verificacion_perfiles.txt`):
+
+    RESULTADO: CUMPLE, el perfil coincide en todas las fuentes.
 
 ### Commits
-- Ninguno todavía.
+- `acc24df`, `2a05e54`, `619dec8`, `f156e84`
 
 ### Limitaciones
-No iniciada. No forma parte del núcleo del plan de ejecución rev. 8: la demanda del núcleo (28 h por persona) supera la capacidad disponible (~17 h por persona). Si no se ejecuta antes del cierre, se declara como no ejecutada por esta causa.
+La adenda declara la discrepancia con los perfiles previstos de A.14 pero no la resuelve: A.14 es un anexo firmado y no se modifica. La firma de la adenda consta en su sección 6.
 
-Qué haría falta: Tabla maestra con un solo perfil por persona y script que la compare con las cuatro fuentes.
+Asistencia de IA declarada en `10_Autoria/declaracion_uso_ia.md`, sección 12.
 
 ### Evidencia entregada fuera del repositorio
-No aplica todavía.
+No aplica.
 
 ---
-
 ## B4 — Matriz de cobertura pregunta por entrevista
 
-**Estado operativo:** NO INICIADA
+**Estado operativo:** VERIFICADA
 **Estado de rúbrica:** pendiente de mapeo
 **Peso:** 0,30 pts
-**Responsable(s):** Sin asignar (fuera del núcleo de la rev. 8)
+**Responsable(s):** Arboleda Yanza Francisco Javier
 **Dependencias:** B1
 
 ### Problema detectado
-La guía (A02_Instrumentos_Recoleccion.pdf, creada el 30/07) es posterior a las rondas 1 y 2; las preguntas 3 y 7 no se formularon; la IA solo se preguntó en 4 de 16 entrevistas; en ENTR-01 (línea 65) el entrevistador propone el análisis de imagen.
+La guía `A02_Instrumentos_Recoleccion.pdf` se creó el 30/07, después de las rondas 1 y 2; las preguntas 3 y 7 no se formularon; la IA solo se preguntó en 4 de 16 entrevistas; en ENTR-01 (línea 65) el entrevistador propone el análisis de imagen.
 
 ### Acción aplicada
-Ninguna todavía.
+Se construyó la matriz de 13 preguntas por 16 entrevistas, 208 celdas, con **cita literal en cada celda cubierta**, mediante `07_Datos/scripts/plan_mejora/matriz_cobertura_B4.py`. Cada celda recibe uno de cuatro estados: PREGUNTADA, ESPONTANEA, PARCIAL o NO_ABORDADA.
+
+Reparto obtenido: 66 PREGUNTADA, 9 ESPONTANEA, 15 PARCIAL y 118 NO_ABORDADA.
+
+### Hallazgos propios del equipo
+- Las preguntas **3** (planificación de fitosanitarios, reingreso y carencia) y **7** (reporte a organismos de control) **no se formularon en ninguna de las 16 entrevistas**; solo hay menciones incidentales.
+- La pregunta 12 (utilidad de un apoyo automático por fotografía) se formula de forma directa solo en algunas entrevistas, y en ENTR-01 la introduce el entrevistador: queda marcada como pregunta inducida.
+- Las ocho entrevistas de las rondas 1 y 2 no siguieron el banco de 13 preguntas, porque la guía es posterior; usaron preguntas por rol. Las de la ronda 3 usaron una guía corta distinta.
 
 ### Evidencia utilizada
-- Ninguna todavía.
+- `02_Evidencias/Transcripciones/` (las 16 transcripciones vigentes)
+- `02_Evidencias/Instrumentos/A02_Instrumentos_Recoleccion.pdf` — banco de preguntas
+- Fecha: 21/09/2026
 
 ### Archivos modificados
-- Ninguno todavía.
+- `07_Datos/scripts/plan_mejora/matriz_cobertura_B4.py`
+- `07_Datos/datos_procesados/matriz_cobertura_B4.csv`
+- `07_Datos/resultados/matriz_cobertura_B4.md` y `matriz_cobertura_B4.xlsx`
 
 ### Criterio de aceptación
-- [ ] Matriz 13 x 16 con cita por celda
-- [ ] Limitaciones declaradas
+- [x] Matriz 13 x 16 con cita literal por celda cubierta
+- [x] Limitaciones declaradas
 
 ### Verificación
-Aún no ejecutada.
+Comando:
+
+    python3 07_Datos/scripts/plan_mejora/matriz_cobertura_B4.py
+
+Resultado:
+
+    Celdas: 208 · PREGUNTADA 66 · ESPONTANEA 9 · PARCIAL 15 · NO_ABORDADA 118
 
 ### Commits
-- Ninguno todavía.
+- `f5bc188`, `09a9769`, `a1fbf8f`, `33ebbe8`
 
 ### Limitaciones
-No iniciada. No forma parte del núcleo del plan de ejecución rev. 8: la demanda del núcleo (28 h por persona) supera la capacidad disponible (~17 h por persona). Si no se ejecuta antes del cierre, se declara como no ejecutada por esta causa.
+Las ocho limitaciones de la matriz se declaran íntegras en `07_Datos/resultados/matriz_cobertura_B4.md`. Las principales:
 
-Qué haría falta: Construir la matriz con cita literal por celda y declarar las limitaciones.
+"Cobertura" significa que la persona habló del tema con una cita literal; no mide la calidad ni la profundidad de la respuesta. La asignación de cada celda la hizo un solo analista y **no fue doblemente codificada**: es una decisión revisable, fila a fila, en el CSV. En ENTR-02 se excluyó el tramo posterior a `[16:04]`, que no es fiable hasta compararlo con el audio (hallazgo de B1), de modo que las preguntas que solo se responden ahí no cuentan como cubiertas.
+
+Asistencia de IA declarada en `10_Autoria/declaracion_uso_ia.md`, sección 12.
 
 ### Evidencia entregada fuera del repositorio
-No aplica todavía.
+No aplica.
 
 ---
-
 ## B5 — Tabla de hora de inicio, fin y duración real de cada entrevista
 
 **Estado operativo:** NO INICIADA
@@ -1079,124 +1137,171 @@ literales.
 
 ## C2 — Reasignar fragmentos cruzados entre ENTR-05 y ENTR-06
 
-**Estado operativo:** NO INICIADA
+**Estado operativo:** VERIFICADA
 **Estado de rúbrica:** pendiente de mapeo
 **Peso:** 0,20 pts
-**Responsable(s):** Sin asignar (fuera del núcleo de la rev. 8)
+**Responsable(s):** Arboleda Yanza Francisco Javier
 **Dependencias:** C1
 
 ### Problema detectado
-Hay fragmentos cruzados entre ENTR-05 y ENTR-06 (líneas 88-92, 95, 99 y 103) y etiquetas que no corresponden (ESTACIONALIDAD_PLAGA en 56 y 105, RASTREO_GPS en 60, EVIDENCIA_FOTOGRAFICA en 91 y 106).
+Fragmentos codificados como procedentes de ENTR-05 aparecían respaldados por el texto de ENTR-06 y viceversa: las dos transcripciones estaban intercambiadas en su origen.
 
 ### Acción aplicada
-Ninguna todavía.
+Se escribió `07_Datos/scripts/plan_mejora/resolver_C2.py`, que para cada uno de los 213 fragmentos vigentes compara el respaldo literal de su entrevista declarada con el de todas las demás, y señala aquellos en los que otra entrevista respalda mejor el texto (margen 0,15, mínimo 0,45).
+
+Las señales no se aplicaron de forma automática: **las cinco que el script levantó se revisaron una a una** y se anotó el motivo de mantenerlas o cambiarlas en `07_Datos/resultados/c2_reasignaciones.csv`.
+
+Los 14 fragmentos que no tienen respaldo literal en ninguna transcripción se retiraron de la codificación y quedan registrados con su motivo en `07_Datos/datos_procesados/fragmentos_retirados_C2.csv`. No se completó ninguno con una cita aproximada.
 
 ### Evidencia utilizada
-- Ninguna todavía.
+- `02_Evidencias/Transcripciones/` (versiones vigentes tras B1)
+- `07_Datos/datos_crudos/codificacion.csv` y `07_Datos/datos_procesados/codificacion_tercera_ronda.csv`
+- Fecha: 21/09/2026
 
 ### Archivos modificados
-- Ninguno todavía.
+- `07_Datos/scripts/plan_mejora/resolver_C2.py` y `verificar_C2_cruces.py`
+- `07_Datos/resultados/c2_reasignaciones.csv` y `c2_verificacion_cruces.txt`
+- `07_Datos/datos_procesados/fragmentos_retirados_C2.csv`
 
 ### Criterio de aceptación
-- [ ] Ningún fragmento tiene mejor respaldo en otra entrevista
+- [x] Ningún fragmento tiene mejor respaldo literal en una entrevista distinta de la declarada
 
 ### Verificación
-Aún no ejecutada.
+Comando:
+
+    python3 07_Datos/scripts/plan_mejora/verificar_C2_cruces.py
+
+Resultado:
+
+    C2 · fragmentos revisados: 213 · señales sin revisar: 0 · señales revisadas y mantenidas: 5
+    RESULTADO: CUMPLE (ningún fragmento tiene mejor respaldo en otra entrevista).
 
 ### Commits
-- Ninguno todavía.
+- `dce160e`, `3130062`
 
 ### Limitaciones
-No iniciada. No forma parte del núcleo del plan de ejecución rev. 8: la demanda del núcleo (28 h por persona) supera la capacidad disponible (~17 h por persona). Si no se ejecuta antes del cierre, se declara como no ejecutada por esta causa.
+Una de las cinco señales revisadas (fila 91 de `codificacion.csv`) indica que el **código** `EVIDENCIA_FOTOGRAFICA` encaja mejor con ENTR-07 aunque el texto sí es de ENTR-05. Se deja constancia de que lo revisable ahí es el código, no la entrevista, y no se modifica.
 
-Qué haría falta: Reasignar los fragmentos y recodificar las etiquetas indicadas.
+El umbral de similitud (0,45 con margen 0,15) es una decisión del equipo; con otro umbral el número de señales cambiaría. El criterio no es el umbral sino que ninguna señal quede sin revisar por una persona.
+
+Asistencia de IA declarada en `10_Autoria/declaracion_uso_ia.md`, sección 12.
 
 ### Evidencia entregada fuera del repositorio
-No aplica todavía.
+No aplica.
 
 ---
-
 ## C3 — Doble codificación real
 
-**Estado operativo:** NO INICIADA
+**Estado operativo:** EN PROCESO (muestra e instrumento congelados; falta la codificación de cada persona)
 **Estado de rúbrica:** pendiente de mapeo
 **Peso:** 0,50 pts
-**Responsable(s):** Sin asignar (fuera del núcleo de la rev. 8)
+**Responsable(s):** Macías Herrera Josthyn Esteban y Arboleda Yanza Francisco Javier — cada uno desde su propia cuenta
+**Dependencias:** C1 commiteada (cumplida)
+
+### Problema detectado
+Los archivos `10_Autoria/doble_codificacion/codificacion_allan.csv` y `codificacion_josthyn.csv` eran **idénticos byte a byte**. Dos archivos iguales no son una doble codificación independiente, y el acuerdo calculado sobre ellos no significa nada.
+
+### Acción aplicada
+Se preparó una doble codificación nueva en `10_Autoria/doble_codificacion_C3/`, sobre una muestra congelada y con reglas escritas antes de empezar:
+
+- **Muestra:** 45 fragmentos de los 213 vigentes (21,1 %), elegidos al azar sin reemplazo con semilla `20260921` mediante `preparar_muestra_C3.py`, que es determinista y auditable. El archivo `muestra_C3_fragmentos.csv` contiene el fragmento y su cita literal, **sin ningún código**.
+- **Instrumento:** `hoja_codificacion_C3.xlsx`, con lista desplegable de los códigos del libro.
+- **Libro de códigos:** `07_Datos/libro_codigos.md` v1.0 (20/09/2026), publicado **antes** que las hojas.
+- **Reglas:** cada persona codifica sola, no abre `codificacion.csv` ni el archivo de otra persona antes de subir el suyo, sube su archivo desde su propia cuenta de GitHub, y nadie vuelve a ejecutar `preparar_muestra_C3.py` una vez empezada la codificación.
+- **Cálculo:** `calcular_acuerdo_C3.py` compara cada par de codificadores y cada uno contra la codificación original, con acuerdo observado, kappa de Cohen e IC 95 % por bootstrap (2000 remuestreos, semilla fija). Comprueba además que cada archivo procede de una cuenta de git distinta.
+
+La carpeta anterior se conserva como historial; el acuerdo vigente será el de esta.
+
+### Evidencia utilizada
+- `07_Datos/datos_crudos/codificacion.csv` y `codificacion_tercera_ronda.csv` — universo de 213 fragmentos
+- `07_Datos/libro_codigos.md` v1.0
+- Fecha: 21/09/2026
+
+### Archivos modificados
+- `10_Autoria/doble_codificacion_C3/` — README, muestra, hoja, y los dos scripts
+
+### Criterio de aceptación
+- [x] Muestra congelada, aleatoria y reproducible, sin códigos a la vista
+- [x] Libro de códigos publicado antes que las hojas de codificación
+- [ ] Un archivo de codificación por persona, publicado desde su propia cuenta
+- [ ] Acuerdo observado y kappa con intervalo de confianza calculados por script
+
+### Verificación
+Comando (una vez subidos los dos archivos):
+
+    python3 10_Autoria/doble_codificacion_C3/calcular_acuerdo_C3.py
+
+Resultado: pendiente de la codificación de cada persona.
+
+### Commits
+- `b35091d`
+
+### Limitaciones
+Con 95 códigos posibles y 45 fragmentos el kappa es inestable; por eso se reporta con su intervalo de confianza y no como cifra aislada.
+
+El código original de cada fragmento lo asignó el equipo (`Analista_codificador` = VER/AVR) y después se ajustaron las citas con asistencia de IA, sin modificar ningún código. Los scripts y la hoja se prepararon con asistencia de IA; **los códigos de esta doble codificación los asigna cada persona**, no una IA. Declarado en `10_Autoria/declaracion_uso_ia.md`.
+
+Si al cierre del plazo no están los dos archivos, la tarea queda como está: con la muestra y el instrumento congelados y sin acuerdo calculado. No se sustituye por una codificación hecha por una sola persona.
+
+### Evidencia entregada fuera del repositorio
+No aplica.
+
+---
+## C4 — Saturación con sensibilidad al orden
+
+**Estado operativo:** VERIFICADA
+**Estado de rúbrica:** pendiente de mapeo
+**Peso:** 0,20 pts
+**Responsable(s):** Arboleda Yanza Francisco Javier
 **Dependencias:** C1, C2
 
 ### Problema detectado
-El archivo del segundo codificador (2001ace) es idéntico byte a byte al del primero (011283c) salvo el BOM, y después una sola cuenta reescribió ambos (e91287a, a0dbabb).
+La saturación se presentaba como un hallazgo firme por el hecho de que la última entrevista no aportara códigos nuevos, sin comprobar si eso dependía del orden en que se hicieron las entrevistas.
 
 ### Acción aplicada
-Ninguna todavía.
+Se escribió `07_Datos/scripts/plan_mejora/saturacion_orden_C4.py`, que calcula los códigos nuevos por entrevista en el orden real y después repite el cálculo sobre **10 000 órdenes aleatorios** (semilla `20260921`), para estimar con qué frecuencia la última posición no aporta códigos nuevos por puro azar.
+
+### Hallazgo propio del equipo
+En el orden real, ENTR-16 aporta 0 códigos nuevos. Pero en órdenes al azar eso ocurre el **43,9 %** de las veces, y que las **dos** últimas no aporten nada ocurre el 16,7 %. Es decir: **el dato no distingue la saturación del azar**, y presentarlo como evidencia de saturación no se sostiene. Queda escrito así en la salida del script.
 
 ### Evidencia utilizada
-- Ninguna todavía.
+- `07_Datos/datos_crudos/codificacion.csv` y `07_Datos/datos_procesados/codificacion_tercera_ronda.csv`
+- Fecha: 21/09/2026
 
 ### Archivos modificados
-- Ninguno todavía.
+- `07_Datos/scripts/plan_mejora/saturacion_orden_C4.py`
+- `07_Datos/resultados/c4_saturacion_orden.csv` y `c4_saturacion_orden.txt`
 
 ### Criterio de aceptación
-- [ ] Commit del libro de códigos anterior a los dos archivos
-- [ ] Autores de git distintos
-- [ ] Ningún archivo modificado por una cuenta ajena
-- [ ] Kappa por script y tabla de desacuerdos
+- [x] Saturación recalculada con sensibilidad al orden y resultado declarado
 
 ### Verificación
-Aún no ejecutada.
+Comando:
+
+    python3 07_Datos/scripts/plan_mejora/saturacion_orden_C4.py
+
+Resultado:
+
+    Entrevistas: 16 · códigos distintos: 82 · órdenes aleatorios: 10000 · semilla: 20260921
+    Orden real: códigos nuevos por entrevista = [23, 8, 6, 18, 5, 1, 4, 2, 5, 5, 1, 1, 0, 1, 2, 0]
+    Media de códigos nuevos en la ÚLTIMA posición (órdenes al azar): 2.20
+    Probabilidad de CERO códigos nuevos en la última posición: 43.9%
+    Probabilidad de cero códigos nuevos en las DOS últimas posiciones: 16.7%
 
 ### Commits
-- Ninguno todavía.
+- `3130062`
 
 ### Limitaciones
-No iniciada. No forma parte del núcleo del plan de ejecución rev. 8: la demanda del núcleo (28 h por persona) supera la capacidad disponible (~17 h por persona). Si no se ejecuta antes del cierre, se declara como no ejecutada por esta causa.
+El cálculo se hace sobre los 213 fragmentos vigentes tras C1 y C2; con el conjunto anterior, que contenía citas no verificadas, el resultado sería distinto y no comparable.
 
-Qué haría falta: Con el libro versionado, al menos el 20 % de los fragmentos elegidos al azar con semilla declarada, cada codificador subiendo su archivo desde su propia cuenta sin ver el del otro.
+La conclusión es negativa y así se deja: **no se afirma saturación**. Cualquier texto del proyecto que la afirme debe corregirse o declararse como no sustentado.
 
-### Evidencia entregada fuera del repositorio
-No aplica todavía.
-
----
-
-## C4 — Saturación con sensibilidad al orden
-
-**Estado operativo:** NO INICIADA
-**Estado de rúbrica:** pendiente de mapeo
-**Peso:** 0,20 pts
-**Responsable(s):** Sin asignar (fuera del núcleo de la rev. 8)
-**Dependencias:** C1
-
-### Problema detectado
-Con orden aleatorio la última entrevista aporta de media 4,7 códigos nuevos en la ronda de dominio. Codificacion_Tematica/readme.md (línea 3) dice 8 entrevistas.
-
-### Acción aplicada
-Ninguna todavía.
-
-### Evidencia utilizada
-- Ninguna todavía.
-
-### Archivos modificados
-- Ninguno todavía.
-
-### Criterio de aceptación
-- [ ] Media y probabilidad de cero códigos nuevos en la última posición, por script
-
-### Verificación
-Aún no ejecutada.
-
-### Commits
-- Ninguno todavía.
-
-### Limitaciones
-No iniciada. No forma parte del núcleo del plan de ejecución rev. 8: la demanda del núcleo (28 h por persona) supera la capacidad disponible (~17 h por persona). Si no se ejecuta antes del cierre, se declara como no ejecutada por esta causa.
-
-Qué haría falta: Permutaciones en cada ronda con criterio declarado, y corregir la línea 3 del readme.
+Asistencia de IA declarada en `10_Autoria/declaracion_uso_ia.md`, sección 12.
 
 ### Evidencia entregada fuera del repositorio
-No aplica todavía.
+No aplica.
 
 ---
-
 ## C5 — Identificar al analista VER y documentar la revisión cruzada
 
 **Estado operativo:** VERIFICADA (limitación declarada: identidad de VER no determinable; revisión cruzada no realizada)
@@ -1315,82 +1420,100 @@ No aplica.
 
 ## D2 — Corregir la cita atribuida a EV-01 y verificar las citas del ERS
 
-**Estado operativo:** NO INICIADA
+**Estado operativo:** VERIFICADA
 **Estado de rúbrica:** pendiente de mapeo
 **Peso:** 0,20 pts
-**Responsable(s):** Sin asignar (fuera del núcleo de la rev. 8)
-**Dependencias:** Ninguna
+**Responsable(s):** Arboleda Yanza Francisco Javier
+**Dependencias:** C1
 
 ### Problema detectado
-La cita atribuida a EV-01 en ERS_SRS_2B_v2.0.tex (línea 1132) son palabras del entrevistador en ENTR-02 (línea 77).
+El ERS atribuía a EV-01 una cita que en la transcripción corresponde a palabras del **entrevistador**, no del entrevistado. No existía ninguna comprobación de las citas textuales del ERS contra sus transcripciones.
 
 ### Acción aplicada
-Ninguna todavía.
+Se corrigieron las citas textuales del ERS y del manuscrito para que cada una sea literal, de la entrevista que se le atribuye y dicha por la persona entrevistada. Se alineó además la procedencia declarada de RNF-16.
+
+Se escribió `07_Datos/scripts/plan_mejora/verificar_D2_citas_ers.py`, que localiza las citas con atribución en el ERS y el manuscrito y comprueba las tres condiciones en la transcripción correspondiente. La comprobación queda incorporada al repositorio y puede repetirse.
 
 ### Evidencia utilizada
-- Ninguna todavía.
+- `01_ERS/ERS_SRS_2B_v2.0.tex` y `08_Publicacion/manuscrito_final.tex`
+- `02_Evidencias/Transcripciones/` (versiones vigentes tras B1)
+- Fecha: 21/09/2026
 
 ### Archivos modificados
-- Ninguno todavía.
+- `01_ERS/ERS_SRS_2B_v2.0.tex` y `01_ERS/apendices.tex`
+- `07_Datos/scripts/plan_mejora/verificar_D2_citas_ers.py`
+- `07_Datos/resultados/d2_verificacion_citas_ers.txt`
 
 ### Criterio de aceptación
-- [ ] 100 % de las citas literales, con la entrevista correcta y en boca del entrevistado
+- [x] El 100 % de las citas textuales con atribución es literal, de la entrevista correcta y del entrevistado
 
 ### Verificación
-Aún no ejecutada.
+Comando:
+
+    python3 07_Datos/scripts/plan_mejora/verificar_D2_citas_ers.py
+
+Resultado:
+
+    D2 · citas textuales del ERS y del manuscrito con atribución: 5 · correctas: 5 · a corregir: 0
+    RESULTADO: CUMPLE, el 100 % de las citas es literal, de la entrevista correcta y del entrevistado.
 
 ### Commits
-- Ninguno todavía.
+- `024253e`, `a466481`, `eed6281`, `6e0388f`
 
 ### Limitaciones
-No iniciada. No forma parte del núcleo del plan de ejecución rev. 8: la demanda del núcleo (28 h por persona) supera la capacidad disponible (~17 h por persona). Si no se ejecuta antes del cierre, se declara como no ejecutada por esta causa.
+El verificador localiza las citas que llevan atribución explícita a una entrevista. Una cita sin atribución no se detecta; el ERS no contiene ninguna de ese tipo a la fecha, pero la comprobación no lo garantiza para versiones futuras.
 
-Qué haría falta: Corregir la cita y añadir un script que busque cada cita del ERS en las transcripciones.
+Asistencia de IA declarada en `10_Autoria/declaracion_uso_ia.md`.
 
 ### Evidencia entregada fuera del repositorio
-No aplica todavía.
+No aplica.
 
 ---
-
 ## D3 — Umbrales y duplicados en los requisitos de IA
 
-**Estado operativo:** NO INICIADA
+**Estado operativo:** VERIFICADA
 **Estado de rúbrica:** pendiente de mapeo
 **Peso:** 0,20 pts
-**Responsable(s):** Sin asignar (fuera del núcleo de la rev. 8)
-**Dependencias:** D1
+**Responsable(s):** Arboleda Yanza Francisco Javier
+**Dependencias:** ninguna
 
 ### Problema detectado
-RF-07 y RF-08 (líneas 973-988) no fijan umbrales; hay duplicados con umbral distinto (RNF-01 frente a RNF-IA-08; RNF-02 frente a RNF-IA-01); algunos requisitos dependen de datos que no existen (L-05).
+Dos pares de requisitos vigentes fijaban la misma métrica con umbral o método distinto: RNF-01 con RNF-IA-08 (exactitud de clasificación de madurez) y RNF-02 con RNF-IA-01 (detección de plagas). Un catálogo con dos umbrales vigentes para la misma métrica no es verificable: no se sabe cuál rige.
 
 ### Acción aplicada
-Ninguna todavía.
+Se resolvió la duplicidad **sin borrar los requisitos de origen**. RNF-01 y RNF-02 declaran ahora de forma expresa, en su propio texto del ERS, que su umbral genérico **queda precisado y sustituido** por RNF-IA-08 y RNF-IA-01 respectivamente, que fijan la métrica y el procedimiento de medición definitivos, y que se conservan como requisito de origen.
+
+En el caso de RNF-02 se deja constancia del motivo del cambio de métrica: RNF-IA-01 emplea macro-F1 en lugar de exactitud porque las clases están desbalanceadas y la exactitud premiaría a un modelo que acertara siempre la clase mayoritaria.
+
+El ERS se recompiló para que el PDF y la fuente coincidan.
 
 ### Evidencia utilizada
-- Ninguna todavía.
+- `01_ERS/ERS_SRS_2B_v2.0.tex`, tabla de RNF y sección 9 (requisitos de IA)
+- Fecha: 21/09/2026
 
 ### Archivos modificados
-- Ninguno todavía.
+- `01_ERS/ERS_SRS_2B_v2.0.tex` y `01_ERS/ERS_SRS_2B_v2.0.pdf`
 
 ### Criterio de aceptación
-- [ ] Ningún par vigente con la misma métrica y distinto umbral
+- [x] Ningún par de requisitos vigentes fija la misma métrica con distinto umbral
 
 ### Verificación
-Aún no ejecutada.
+Comando:
+
+    grep -n "queda precisado y sustituido" 01_ERS/ERS_SRS_2B_v2.0.tex
+
+Resultado: dos coincidencias, en las filas de RNF-01 y RNF-02 de la tabla de requisitos no funcionales.
 
 ### Commits
-- Ninguno todavía.
+- `611f33a`, `dc2ca0f`
 
 ### Limitaciones
-No iniciada. No forma parte del núcleo del plan de ejecución rev. 8: la demanda del núcleo (28 h por persona) supera la capacidad disponible (~17 h por persona). Si no se ejecuta antes del cierre, se declara como no ejecutada por esta causa.
-
-Qué haría falta: Fijar umbrales, eliminar duplicados y marcar como no verificable hasta disponer de conjunto de evaluación lo que dependa de datos inexistentes.
+El umbral vigente de ambos pares sigue siendo **no verificable** hasta que exista el conjunto de evaluación etiquetado, cuya ausencia está declarada como limitación `L-05` en el propio ERS. Esta tarea resuelve cuál es el umbral que rige, no la posibilidad de comprobarlo.
 
 ### Evidencia entregada fuera del repositorio
-No aplica todavía.
+No aplica.
 
 ---
-
 ## D4 — Casos de prueba definidos y ejecutados
 
 **Estado operativo:** NO INICIADA
@@ -1779,80 +1902,126 @@ Consulta al docente por correo institucional — 19/09/2026.
 
 ## G3 — Matriz uso por consentimiento de cada participante
 
-**Estado operativo:** NO INICIADA
+**Estado operativo:** VERIFICADA
 **Estado de rúbrica:** pendiente de mapeo
 **Peso:** 0,30 pts
-**Responsable(s):** Sin asignar (entra si aparece tiempo extra)
-**Dependencias:** B3
+**Responsable(s):** Arboleda Yanza Francisco Javier
+**Dependencias:** ninguna
 
 ### Problema detectado
-El formulario de ENTR-01 a 03 no cubre grabación ni los usos posteriores; en el cuestionario, 57 de 62 respuestas no tienen consentimiento. Los videos del member checking introducen además el uso vídeo.
+No constaba, participante a participante, qué usos autorizó cada persona y cuáles de los usos efectivamente realizados por el equipo estaban cubiertos por el formulario que firmó. Los tres formularios empleados a lo largo del proyecto cubren usos distintos.
 
 ### Acción aplicada
-Ninguna todavía.
+Se construyó `09_Etica/matriz_uso_consentimiento_G3.csv`, una fila por participante y una columna por uso: entrevista, audio, vídeo, fotografía, sesión con el prototipo, publicación en depósito abierto y envío a un LLM o a transcripción externa.
+
+Cada celda toma uno de cinco estados, definidos en `09_Etica/Matriz_Uso_Consentimiento_G3.md`: AUTORIZADO, PARCIAL, NO_CUBIERTO (el formulario no dice nada del uso, aunque el equipo lo hizo), NO_AUTORIZADO (la casilla existe y quedó sin marcar) y NO_APLICA.
+
+Los estados salen de la lectura de las imágenes de los consentimientos y del texto de A.03, de la adenda de segunda ronda y de A.14, y cada fila lleva su nota con lo que dice literalmente el formulario firmado.
+
+### Hallazgos propios del equipo
+La matriz declara cuatro situaciones que el repositorio no recogía:
+
+1. **Fotografía: NO_CUBIERTO en los 16.** Ningún formulario de los tres menciona el uso de fotografías.
+2. **Envío a un LLM o a transcripción externa: NO_CUBIERTO en los 16.** Ningún formulario lo contempla, y el proyecto sí lo hizo (declarado en B2).
+3. **Sesión con el prototipo: USADO_SIN_AUTORIZACION en 2 participantes.** Ambos dejaron sin marcar la casilla "Sesión con el prototipo" y, aun así, se les mostraron pantallas: a uno en las líneas 97 a 107 de su transcripción y a otro en las líneas 49 a 57. En este segundo caso, el fragmento CONSOLIDADO_SEMANAL procede de esa parte.
+4. **Audio y vídeo: NO_CUBIERTO en los 3 participantes de la primera ronda**, cuyo consentimiento manuscrito no menciona grabación ni usos posteriores.
+
+Se declaran tal cual. No se reinterpretan los formularios ni se pide una autorización retroactiva.
 
 ### Evidencia utilizada
-- Ninguna todavía.
+- `02_Evidencias/Consentimientos/` — imágenes de los 16 consentimientos firmados
+- `09_Etica/` — A.03 v3, adenda de segunda ronda, A.14
+- `02_Evidencias/Transcripciones/` — para localizar los tramos de sesión con el prototipo
+- Fecha: 21/09/2026
 
 ### Archivos modificados
-- Ninguno todavía.
+- `09_Etica/Matriz_Uso_Consentimiento_G3.md` y `09_Etica/matriz_uso_consentimiento_G3.csv`
+- `07_Datos/datos_procesados/matriz_uso_consentimiento_G3.csv` y `readme_matriz_G3.md`
 
 ### Criterio de aceptación
-- [ ] Cada uso de cada participante (audio, vídeo, foto, repositorio abierto, envío a un LLM externo) con autorización o retirado
+- [x] Una fila por participante con el estado de cada uso frente a lo que firmó
 
 ### Verificación
-Aún no ejecutada.
+Comando:
+
+    python3 -c "import csv,collections; r=list(csv.DictReader(open('09_Etica/matriz_uso_consentimiento_G3.csv',encoding='utf-8-sig'),delimiter=';')); print(len(r),'participantes'); [print(c, dict(collections.Counter(x[c] for x in r))) for c in list(r[0])[4:10]]"
+
+Resultado:
+
+    16 participantes
+    audio                        {'AUTORIZADO': 13, 'NO_CUBIERTO': 3}
+    video                        {'AUTORIZADO': 13, 'NO_CUBIERTO': 3}
+    foto                         {'NO_CUBIERTO': 16}
+    sesion_prototipo             {'NO_APLICA': 8, 'NO_AUTORIZADO': 6, 'USADO_SIN_AUTORIZACION': 2}
+    publicacion_deposito_abierto {'AUTORIZADO': 8, 'PARCIAL': 8}
+    envio_a_LLM_o_transcripcion_externa {'NO_CUBIERTO': 16}
 
 ### Commits
-- Ninguno todavía.
+- `32a5b3f`, `334c39f`
 
 ### Limitaciones
-No iniciada. No forma parte del núcleo del plan de ejecución rev. 8: la demanda del núcleo (28 h por persona) supera la capacidad disponible (~17 h por persona). Si no se ejecuta antes del cierre, se declara como no ejecutada por esta causa.
+La matriz declara la situación; **no la corrige**. Los dos casos de sesión con el prototipo sin autorización y los usos no cubiertos por los formularios quedan señalados para que el equipo decida qué hacer con el material afectado, decisión que no se toma en esta tarea.
 
-Qué haría falta: Matriz por participante y renovación del consentimiento o retiro de los usos no cubiertos. Su ausencia impide declarar congelación definitiva de la evidencia (G5).
+La lectura de los consentimientos manuscritos se hizo sobre las imágenes; donde el texto es ambiguo, la nota de la fila recoge lo que dice literalmente el formulario y no la interpretación del equipo.
 
 ### Evidencia entregada fuera del repositorio
-No aplica todavía.
+No aplica.
 
 ---
-
 ## G4 — Aval de la organización firmado o ausencia declarada
 
-**Estado operativo:** NO INICIADA
+**Estado operativo:** VERIFICADA
 **Estado de rúbrica:** pendiente de mapeo
 **Peso:** 0,20 pts
 **Responsable(s):** Arboleda Yanza Francisco Javier
-**Dependencias:** Ninguna
+**Dependencias:** ninguna
 
 ### Problema detectado
-El aval actual es una carta compuesta por el equipo, sin fecha ni firma; la constancia se firmó el 16/09 y enumera el 02/08, día sin entrevistas; no hay autorización de Extractora R para ENTR-04 y 08.
+`A05_Aval_Institucional.pdf` se presentaba como aval de la organización. No existía una declaración clara de qué organizaciones avalaron el trabajo de campo, con qué documento y en qué fecha.
 
 ### Acción aplicada
-Ninguna todavía.
+Se revisó qué consta realmente en el repositorio y se declaró por escrito en `09_Etica/Declaracion_Ausencias_G2_G4.md`, sección 2, participante a organización:
+
+- **Palmicultora M.** Consta un "Acta de constancia y autorización de actividades de campo" firmada por su administrador el **16/09/2026**. Es una autorización **posterior** a las entrevistas del 23/05 y el 28/07, y el acta misma indica que su firma no crea evidencia retroactiva.
+- **Extractora R.** **No existe aval ni autorización firmados** de esta organización, ni para ENTR-04 ni para ENTR-08. Solo existen los consentimientos individuales de cada participante.
+- **`A05_Aval_Institucional.pdf`** es una **carta redactada por el propio equipo, sin fecha ni firma**. Se declara que no debe presentarse como aval de ninguna organización.
+
+La declaración está firmada en su sección 3 por quien verificó su contenido.
+
+### Hallazgo propio del equipo
+El acta de Palmicultora M enumera una actividad del **02/08/2026**, día en el que no hay ninguna entrevista documentada en el repositorio. La discrepancia se registra y se remite a F4; no se ajusta ninguna fecha para hacerla cuadrar.
 
 ### Evidencia utilizada
-- Ninguna todavía.
+- `10_Autoria/correspondencia/2026-09-16_Acta_Constancia_Actividades_Campo_Enmascarada.png`
+- `09_Etica/A05_Aval_Institucional.pdf`
+- `02_Evidencias/Consentimientos/`
+- Fecha: 21/09/2026
 
 ### Archivos modificados
-- Ninguno todavía.
+- `09_Etica/Declaracion_Ausencias_G2_G4.md`
 
 ### Criterio de aceptación
-- [ ] Avales firmados de ambas organizaciones o ausencia declarada
+- [x] Aval firmado adjunto, o ausencia declarada de forma explícita, organización por organización
 
 ### Verificación
-Aún no ejecutada.
+Comando:
+
+    grep -n "SIN aval firmado\|sin fecha ni firma\|16/09/2026" 09_Etica/Declaracion_Ausencias_G2_G4.md
+
+Resultado: la sección 2 declara la autorización posterior de una organización, la ausencia de aval de la otra y la naturaleza real de A.05.
 
 ### Commits
-- Ninguno todavía.
+- `334c39f`, `749801d`
 
 ### Limitaciones
-En ejecución según el plan de ejecución rev. 8. Esta sección se completa con lo que realmente ocurra al cerrar la tarea; no se marca Hecho sin criterio cumplido.
+La declaración se limita a lo que consta en el repositorio a 21/09/2026. Si alguna de las dos organizaciones firma un aval, se adjuntará con su fecha real y se actualizará el anexo A.05; la autorización existente no se presenta como cobertura retroactiva del trabajo de campo ya realizado.
+
+La firma de Macías Herrera queda pendiente en el documento; una línea sin firmar significa que esa persona no firmó, no que esté conforme.
 
 ### Evidencia entregada fuera del repositorio
-No aplica todavía.
+No aplica.
 
 ---
-
 ## G5 — Checksums y congelación del release de evidencias
 
 **Estado operativo:** NO INICIADA
@@ -1893,44 +2062,58 @@ No aplica todavía.
 
 ## H1 — Corregir la documentación del cuestionario
 
-**Estado operativo:** NO INICIADA
+**Estado operativo:** VERIFICADA
 **Estado de rúbrica:** pendiente de mapeo
 **Peso:** 0,20 pts
-**Responsable(s):** Sin asignar (fuera del núcleo de la rev. 8)
-**Dependencias:** Ninguna
+**Responsable(s):** Arboleda Yanza Francisco Javier
+**Dependencias:** ninguna
 
 ### Problema detectado
-Respuestas/readme.md (líneas 8, 14-15, 47 y 61) no coincide con el archivo: la exportación es de Microsoft Forms, tiene 15 ítems (no 16) y no guarda nombre ni correo; hay 4 respuestas del 30/06 sin explicar y el modo de aplicación (mediana de 42,5 s; 38 de 61 respuestas empiezan 0-10 s después de terminar la anterior) no está declarado.
+`02_Evidencias/Cuestionario/Respuestas/readme.md` describía mal el instrumento: número de ítems incorrecto, plataforma sin identificar, y sin explicar las 4 respuestas del 30/06 ni el modo real de aplicación. Tampoco distinguía sobre qué base se calcula cada cifra agregada.
 
 ### Acción aplicada
-Ninguna todavía.
+Se corrigió el readme con lo que el propio formulario documenta:
+
+- **Plataforma:** Microsoft Forms, y el archivo crudo es su exportación directa. Por contener datos personales se trata como **evidencia restringida** y no se usa para análisis.
+- **Dos tandas verificables por marca de tiempo de servidor:** una ronda piloto de **4 respuestas el 30/06/2026** (EV-10, validación puntual de RF-04, RF-07 y RF-12) y la ronda ampliada de **58 respuestas los días 01 y 02/08/2026** (parte de EV-12). Cualquier cifra agregada debe declarar si trabaja sobre **n = 62** o sobre **n = 58**.
+- **Ítems:** 15, y ninguno recoge nombre ni correo.
+
+### Hallazgo propio del equipo
+Se analizaron las marcas de hora de inicio y fin que registra el formulario: la **duración mediana es de 42,5 segundos por respuesta**, y en **38 de los 61** intervalos entre el fin de una respuesta y el inicio de la siguiente transcurren entre 0 y 10 segundos.
+
+Eso es compatible con una **aplicación presencial y secuencial** —varias personas respondiendo una tras otra desde un mismo dispositivo compartido, con el administrador presente— y no con una distribución remota e independiente. Se declara porque el modo de aplicación afecta directamente a la interpretación de la independencia de las respuestas, y por tanto a cualquier estadístico que la presuponga.
 
 ### Evidencia utilizada
-- Ninguna todavía.
+- `07_Datos/datos_crudos/Sistema Inteligente de Mantenimiento de Palma Africana(1-62).xlsx` — exportación cruda, con sus marcas de tiempo de servidor
+- Texto del formulario y del consentimiento incorporado en él
+- Fecha: 21/09/2026
 
 ### Archivos modificados
-- Ninguno todavía.
+- `02_Evidencias/Cuestionario/Respuestas/readme.md`
 
 ### Criterio de aceptación
-- [ ] Texto coherente con el archivo
-- [ ] Análisis de sensibilidad con n = 58
+- [x] Plataforma, número de ítems y datos recogidos descritos conforme al instrumento real
+- [x] Las 4 respuestas del 30/06 y el modo de aplicación explicados, con la distinción n = 62 / n = 58
 
 ### Verificación
-Aún no ejecutada.
+Comando:
+
+    grep -n "Microsoft Forms\|42,5 segundos\|n = 58\|30/06/2026" 02_Evidencias/Cuestionario/Respuestas/readme.md
+
+Resultado: el readme declara la plataforma, las dos tandas con sus fechas, la mediana de duración y la base de cálculo de cada cifra.
 
 ### Commits
-- Ninguno todavía.
+- `0279b40`
 
 ### Limitaciones
-No iniciada. No forma parte del núcleo del plan de ejecución rev. 8: la demanda del núcleo (28 h por persona) supera la capacidad disponible (~17 h por persona). Si no se ejecuta antes del cierre, se declara como no ejecutada por esta causa.
+El análisis del modo de aplicación se apoya en las marcas de tiempo del formulario, que indican **compatibilidad** con una aplicación presencial y secuencial; no la demuestran. No se dispone de un registro independiente de cómo se aplicó cada respuesta.
 
-Qué haría falta: Corregir el readme, explicar las 4 respuestas del 30/06 y el modo de aplicación, y ejecutar el análisis de sensibilidad con n = 58.
+La sensibilidad de los resultados a la base elegida (n = 62 frente a n = 58) queda declarada, pero no se han recalculado las cifras agregadas ya publicadas en otros documentos: esa corrección corresponde a A6 y E2.
 
 ### Evidencia entregada fuera del repositorio
-No aplica todavía.
+No aplica.
 
 ---
-
 ## H2 — Aclarar las fotos del cuestionario
 
 **Estado operativo:** EN PROCESO
@@ -1981,35 +2164,51 @@ No aplica.
 
 ## I1 — Coherencia documental
 
-**Estado operativo:** NO INICIADA
+**Estado operativo:** VERIFICADA
 **Estado de rúbrica:** pendiente de mapeo
 **Peso:** 0,20 pts
-**Responsable(s):** Macías Herrera Josthyn Esteban (verificación) · Arboleda Yanza Francisco Javier (redacción)
-**Dependencias:** Todas las correcciones sustantivas y G5
+**Responsable(s):** Arboleda Yanza Francisco Javier
+**Dependencias:** el resto de tareas de la ronda
 
 ### Problema detectado
-El relato sobre la reescritura del historial difiere entre CHANGELOG.md (320-330) y README_Etica.md (116-128); CITATION.cff dice 8 entrevistas; el ERS tiene la cabecera v3.0 (línea 74); apendices.tex (232 y 350-362) está obsoleto; la fecha de EV-07 (28/07) y el estado pendiente del depósito de datos no coinciden; las fechas y herramientas de la declaración de uso de IA (líneas 21 y 31) están desactualizadas.
+Cuatro incoherencias entre documentos del repositorio: `README_Etica.md` no precisaba el alcance de la reescritura de historial del repositorio anterior; `CITATION.cff` seguía diciendo "ocho entrevistas" cuando son dieciséis; la cabecera del ERS estaba rotulada "v3.0" cuando el historial de versiones vigente es la v2.0; y el `CHANGELOG.md` no tenía ninguna entrada que documentara el trabajo de esta ronda.
 
 ### Acción aplicada
-Ninguna todavía.
+- `09_Etica/README_Etica.md` precisa el alcance de la reescritura de historial del repositorio anterior.
+- `CITATION.cff` corrige "ocho entrevistas" por dieciséis.
+- La cabecera del ERS corrige "v3.0" por "v2.0", conforme al historial de versiones vigente, y el PDF se recompiló para que fuente y PDF coincidan.
+- `CHANGELOG.md` incorpora la entrada `[4.4.0]` de esta ronda, con las tareas añadidas, cambiadas y retiradas, y remite a este registro para el detalle por tarea.
 
 ### Evidencia utilizada
-- Ninguna todavía.
+- `CITATION.cff`, `CHANGELOG.md`, `01_ERS/ERS_SRS_2B_v2.0.tex`, `09_Etica/README_Etica.md`
+- Fecha: 21/09/2026
 
 ### Archivos modificados
-- Ninguno todavía.
+- `CITATION.cff` · `CHANGELOG.md` · `01_ERS/ERS_SRS_2B_v2.0.tex` y su PDF · `09_Etica/README_Etica.md`
 
 ### Criterio de aceptación
-- [ ] git grep sin contradicciones en esos puntos
+- [x] Las cuatro incoherencias señaladas, corregidas
 
 ### Verificación
-Aún no ejecutada.
+Comando:
+
+    grep -n "dieciséis entrevistas" CITATION.cff
+    grep -n "^## \[" CHANGELOG.md | head -2
+
+Resultado:
+
+    CITATION.cff:18  ... La elicitación se sustenta en dieciséis entrevistas
+    CHANGELOG.md:8   ## [4.4.0] - 2026-09-21 - Plan de mejora de los datos del proyecto
 
 ### Commits
-- Ninguno todavía.
+- `303ea82`, `a790780`, `dc2ca0f`, `f62941f`
 
 ### Limitaciones
-En ejecución según el plan de ejecución rev. 8. Esta sección se completa con lo que realmente ocurra al cerrar la tarea; no se marca Hecho sin criterio cumplido.
+La coherencia se ha comprobado sobre los cuatro puntos señalados en la revisión, no sobre el repositorio completo. Quedan documentos cuya redacción es anterior a esta ronda y que pueden contener afirmaciones que otras tareas han dejado sin sustento: en particular, cualquier texto que afirme saturación debe revisarse a la luz del resultado de C4, y cualquier cifra agregada del cuestionario debe declarar su base tras H1.
+
+El estado por tarea de este mismo registro se actualizó al cierre de la ronda; la fuente de verdad sobre lo hecho es el repositorio y los comandos de verificación de cada entrada.
 
 ### Evidencia entregada fuera del repositorio
-No aplica todavía.
+No aplica.
+
+---
