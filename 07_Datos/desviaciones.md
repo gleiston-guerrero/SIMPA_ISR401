@@ -73,7 +73,16 @@ Los datos y resultados verificables se conservan en:
 - `07_Datos/resultados/acuerdo_krippendorff.csv`;
 - `07_Datos/resultados/acuerdo_kappa_ponderado.csv`.
 
-No se incorporaron resultados hipotéticos ni observaciones fabricadas.
+No se incorporaron resultados hipotéticos ni observaciones fabricadas: cada
+puntuación de esos archivos procede de una hoja de evaluación real.
+
+Que los datos sean reales no significa que los resultados sean interpretables.
+El acuerdo entre evaluadores es nulo —alfa de Krippendorff de -0,015 a 0,027,
+ICC(2,1) de 0,09 a 0,12— y el diseño solo podía detectar efectos de d = 0,81 o
+mayores. Por eso la comparación entre el conjunto humano y el del LLM **se
+retira como hallazgo** y se conserva únicamente como registro de lo ejecutado
+(tarea A6 del Plan de mejora de datos; cifras en
+`07_Datos/resultados/fiabilidad_potencia_A6.txt`).
 
 ---
 

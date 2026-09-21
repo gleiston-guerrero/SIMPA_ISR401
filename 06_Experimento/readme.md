@@ -127,7 +127,12 @@ Script:
 
 `06_Experimento/scripts_analisis/calcular_acuerdo_evaluadores.py`
 
-El acuerdo bajo se conserva como resultado del experimento y debe discutirse como una limitación de medición y de validez de conclusión.
+El acuerdo obtenido no es "bajo": es **nulo**. Un alfa de Krippendorff en torno
+a cero significa que los evaluadores no coincidieron mas de lo que coincidirian
+al azar. Esto no se discute solo como una limitacion de validez de conclusion:
+**invalida la lectura sustantiva de cualquier comparacion construida sobre
+estas puntuaciones**, y asi se declara en la seccion de resultados y en
+`07_Datos/resultados/fiabilidad_potencia_A6.txt`.
 
 ## RQ1 — Comparación Humano frente a LLM
 
@@ -159,7 +164,28 @@ Los cinco modelos finalizaron sin advertencias.
 | COR | 0.738786 | 0.347637 | 1.000 |
 | CON | 0.765750 | 0.392092 | 1.000 |
 
-En las cinco dimensiones el odds ratio fue inferior a 1, lo que indica una tendencia estimada hacia puntuaciones menores para el conjunto LLM respecto del conjunto humano.
+En las cinco dimensiones el odds ratio estimado fue inferior a 1. **Esa
+diferencia no se interpreta como un hallazgo del dominio**, y no debe leerse
+como una tendencia de calidad entre los dos conjuntos, por la razon que se
+explica a continuacion.
+
+> **Por que estos numeros no sostienen una conclusion.** El acuerdo entre los
+> tres evaluadores es nulo: el alfa de Krippendorff ordinal va de **-0,015 a
+> 0,027** y el ICC(2,1) de **0,09 a 0,12** (ver
+> `07_Datos/resultados/fiabilidad_potencia_A6.txt`). Es decir, la puntuacion
+> que recibe un requisito depende mas de quien lo evalua que del requisito
+> mismo. Un odds ratio calculado sobre mediciones sin fiabilidad describe el
+> comportamiento de los evaluadores, no la calidad de los requisitos.
+>
+> A eso se suma la potencia: con 25 requisitos por conjunto, alfa 0,05
+> bilateral y potencia 0,80, el diseno solo podia detectar diferencias de
+> **d = 0,81** o mayores. No encontrar diferencia significativa era el
+> resultado esperable, y **no es evidencia de equivalencia** entre los dos
+> conjuntos.
+>
+> Las cinco filas de la tabla anterior se conservan porque documentan lo que
+> se ejecuto, no porque sostengan una conclusion sobre el dominio. Las tres
+> cifras salen de `07_Datos/scripts/plan_mejora/fiabilidad_potencia_A6.py`.
 
 Sin embargo, ninguna diferencia fue estadísticamente significativa y todos los intervalos de confianza del odds ratio incluyeron 1.
 

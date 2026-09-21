@@ -743,42 +743,112 @@ No aplica.
 
 ## A6 — Retirar los resultados del experimento como hallazgo
 
-**Estado operativo:** NO INICIADA
+**Estado operativo:** VERIFICADA
 **Estado de rúbrica:** pendiente de mapeo
 **Peso:** 0,20 pts
-**Responsable(s):** Macías Herrera Josthyn Esteban
-**Dependencias:** Ninguna
+**Responsable(s):** Arboleda Yanza Francisco Javier
+**Dependencias:** ninguna
 
 ### Problema detectado
-Los resultados actuales (modelo_ordinal_mixto.csv y archivos de acuerdo en 07_Datos/resultados/; 06_Experimento/readme.md líneas 26 y 125) se presentan como hallazgo, y desviaciones.md (línea 76) afirma que no se incorporaron observaciones fabricadas. La fiabilidad real es alfa entre -0,015 y 0,027 e ICC(2,1) entre 0,09 y 0,12; con 25 por grupo el efecto mínimo detectable es d aprox. 0,81.
+La comparación entre el conjunto humano y el generado por el LLM se presentaba como un resultado interpretable: `06_Experimento/readme.md` afirmaba que «en las cinco dimensiones el odds ratio fue inferior a 1, lo que indica una tendencia estimada hacia puntuaciones menores para el conjunto LLM», y describía el acuerdo entre evaluadores como «bajo». La fiabilidad real de la medición no estaba calculada en ninguna parte, ni la potencia del diseño.
 
 ### Acción aplicada
-Ninguna todavía.
+Se escribió `07_Datos/scripts/plan_mejora/fiabilidad_potencia_A6.py`, que
+calcula sobre las puntuaciones reales las tres cifras que determinan si esa
+comparación puede leerse como un hallazgo:
+
+- el **alfa de Krippendorff** ordinal por dimensión;
+- el **ICC(2,1)** por dimensión —efectos aleatorios en dos vías, medición
+  única, acuerdo absoluto—, que no estaba calculado;
+- el **efecto mínimo detectable** en d de Cohen para dos grupos de 25, con
+  alfa 0,05 bilateral y potencia 0,80, mediante la distribución t no central.
+
+**El alfa no se recalcula**: se lee de `07_Datos/resultados/acuerdo_krippendorff.csv`,
+que produce `calcular_acuerdo_evaluadores.py` con la librería `krippendorff`
+0.8.2. Reimplementarlo habría dado una segunda cifra para lo mismo, que es
+justo el defecto que este plan corrige.
+
+Con esas cifras se retiró la lectura sustantiva del resultado en los tres
+puntos donde se afirmaba:
+
+1. `06_Experimento/readme.md`, sección de resultados de RQ1: la frase sobre la
+   tendencia se sustituye por la declaración de que el odds ratio estimado
+   **no se interpreta como un hallazgo del dominio**, con las tres cifras y su
+   explicación. La tabla de los cinco modelos se conserva porque documenta lo
+   ejecutado, no porque sostenga una conclusión.
+2. `06_Experimento/readme.md`, sección de acuerdo: el acuerdo deja de
+   describirse como «bajo». Un alfa en torno a cero significa que los
+   evaluadores no coincidieron más de lo que coincidirían al azar, y eso no es
+   solo una limitación de validez de conclusión: invalida la lectura
+   sustantiva de cualquier comparación construida sobre esas puntuaciones.
+3. `07_Datos/desviaciones.md`: la afirmación «no se incorporaron resultados
+   hipotéticos ni observaciones fabricadas» se conserva —es cierta, cada
+   puntuación procede de una hoja real— y se acota: que los datos sean reales
+   no significa que los resultados sean interpretables.
+
+### Cifras obtenidas
+| Dimensión | alfa de Krippendorff | ICC(2,1) |
+|---|---:|---:|
+| COM | −0,0151 | 0,0900 |
+| AMB | −0,0033 | 0,1081 |
+| VER | 0,0270 | 0,1223 |
+| COR | −0,0025 | 0,0963 |
+| CON | −0,0151 | 0,0900 |
+
+Efecto mínimo detectable con 25 por grupo, alfa 0,05 bilateral y potencia
+0,80: **d = 0,81**.
+
+### Lectura declarada
+Con un alfa entre −0,015 y 0,027 y un ICC entre 0,09 y 0,12, la puntuación que
+recibe un requisito depende más de quién la asigna que del requisito. Un odds
+ratio calculado sobre mediciones sin fiabilidad describe el comportamiento de
+los evaluadores, no la calidad de los requisitos.
+
+Y con un efecto mínimo detectable de d = 0,81, **no encontrar diferencia
+significativa era el resultado esperable**, no evidencia de equivalencia entre
+los dos conjuntos. Ambas cosas quedan escritas donde antes se leía la
+tendencia.
 
 ### Evidencia utilizada
-- Ninguna todavía.
+- `07_Datos/datos_procesados/puntuaciones_experimento_con_origen.csv` — 750 puntuaciones reales
+- `07_Datos/resultados/acuerdo_krippendorff.csv` — alfa por dimensión
+- Fecha: 21/09/2026
 
 ### Archivos modificados
-- Ninguno todavía.
+- `07_Datos/scripts/plan_mejora/fiabilidad_potencia_A6.py`
+- `07_Datos/resultados/fiabilidad_potencia_A6.csv` y `fiabilidad_potencia_A6.txt`
+- `06_Experimento/readme.md`
+- `07_Datos/desviaciones.md`
 
 ### Criterio de aceptación
-- [ ] Ningún documento presenta esos resultados como hallazgo
-- [ ] Fiabilidad y potencia declaradas, con cifras que salen de un script
+- [x] Ningún documento presenta esos resultados como hallazgo
+- [x] Fiabilidad y potencia declaradas, con cifras que salen de un script
 
 ### Verificación
-Aún no ejecutada.
+Comando:
 
-### Commits
-- Ninguno todavía.
+    python3 07_Datos/scripts/plan_mejora/fiabilidad_potencia_A6.py
+
+Resultado:
+
+    Dimensiones: 5 | requisitos: 50 | evaluadores: 3
+    alfa de Krippendorff: -0.0151 a 0.0270
+    ICC(2,1):             0.0900 a 0.1223
+    Efecto minimo detectable (25 por grupo, alfa 0.05, potencia 0.8): d = 0.81
 
 ### Limitaciones
-En ejecución según el plan de ejecución rev. 8. Esta sección se completa con lo que realmente ocurra al cerrar la tarea; no se marca Hecho sin criterio cumplido.
+El experimento se conserva íntegro en el repositorio: no se borra ningún
+resultado ni ningún archivo. Lo que se retira es su lectura como hallazgo
+sobre la calidad de los requisitos.
+
+La fiabilidad nula no se corrige con esta tarea y no puede corregirse
+a posteriori: exigiría repetir la evaluación con un instrumento y un
+entrenamiento de evaluadores distintos, que es lo que pide la tarea A1.
 
 ### Evidencia entregada fuera del repositorio
-No aplica todavía.
+No aplica.
 
 ---
-
 ## B1 — Retranscribir literalmente las entrevistas de las rondas 1 y 2
 
 **Estado operativo:** EN PROCESO (ocho entrevistas retranscritas; ENTR-03 incompleta y declarada)

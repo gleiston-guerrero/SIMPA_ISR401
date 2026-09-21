@@ -1,0 +1,36 @@
+A6 - Fiabilidad y potencia del experimento humano frente a LLM
+==============================================================
+
+Fuente de las puntuaciones: 07_Datos/datos_procesados/puntuaciones_experimento_con_origen.csv
+Fuente del alfa: 07_Datos/resultados/acuerdo_krippendorff.csv (calculado por calcular_acuerdo_evaluadores.py)
+Requisitos: 50 (25 por conjunto) · Evaluadores: 3 · Dimensiones: 5
+
+Dimension      alfa Krippendorff    ICC(2,1)
+--------------------------------------------
+AMB                      -0.0033      0.1081
+COM                      -0.0151      0.0900
+CON                      -0.0151      0.0900
+COR                      -0.0025      0.0963
+VER                       0.0270      0.1223
+--------------------------------------------
+rango         -0.0151 a 0.0270  0.0900 a 0.1223
+
+Efecto minimo detectable con 25 por grupo,
+alfa = 0.05 bilateral y potencia = 0.8:  d = 0.81
+
+Lectura
+-------
+El alfa de Krippendorff mide cuanto coinciden los evaluadores mas alla
+del azar: 0 significa que no coinciden mas que al azar. El ICC(2,1) mide
+que parte de la variacion observada corresponde al requisito evaluado y
+no a quien lo evalua.
+
+Con un alfa entre -0.015 y 0.027 y un ICC entre
+0.09 y 0.12, la puntuacion de un requisito depende
+mas de quien la asigna que del requisito. La medicion no es fiable, y una
+diferencia estimada sobre ella no puede leerse como una propiedad de los
+requisitos.
+
+El diseno solo podia detectar diferencias de d = 0.81 o mayores, que
+es un efecto grande. No encontrar diferencia significativa era el
+resultado esperable con esta muestra, y no es evidencia de equivalencia.
