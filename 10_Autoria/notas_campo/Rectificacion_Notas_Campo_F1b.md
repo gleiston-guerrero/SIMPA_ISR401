@@ -84,7 +84,7 @@ se deja sin firmar: no se firma por otra persona.
 | Integrante | Nombre completo | Fecha | Cuenta que publica |
 |---|---|---|---|
 | Arboleda Yanza Francisco Javier | Arboleda Yanza Francisco Javier | 21/09/2026 | `farboleday-wq` |
-| Macías Herrera Josthyn Esteban | | | `jmaciasherr4` |
+| Macías Herrera Josthyn Esteban | Macías Herrera Josthyn Esteban | 21/09/2026 | `jmaciasherr4` |
 | Villafuerte Rosero Allan Noé | | | |
 | Rizzo Vélez Edson Nagib | Rizzo Velez Edson Nagib | 21/09/2026 | `erizzov-boop` |
 | Huilcapi León Denisses Fabiola | Huilcapi Leon Denisses Fabiola | 21/09/2026 | `huilcapi`|
