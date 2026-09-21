@@ -88,7 +88,7 @@ se deja sin firmar: no se firma por otra persona.
 | Villafuerte Rosero Allan Noé | | | |
 | Rizzo Vélez Edson Nagib | Rizzo Velez Edson Nagib | 21/09/2026 | `erizzov-boop` |
 | Huilcapi León Denisses Fabiola | Huilcapi Leon Denisses Fabiola | 21/09/2026 | `huilcapi`|
-| Alcívar Vélez Anderson Adonis | | | |
+| Alcívar Vélez Anderson Adonis | Alcívar Vélez Anderson Adonis | 21/09/2026 | `AdonisAlcivar` |
 
 > **Estado de la firma al cierre del plazo:** las líneas que queden en blanco
 > significan que esa persona no firmó antes del cierre. No se completan por
