@@ -1,0 +1,9 @@
+D2 · citas textuales del ERS y del manuscrito con atribución: 5 · correctas: 5 · a corregir: 0
+
+[OK] 01_ERS/ERS_SRS_2B_v2.0.tex:456 (ENTR-07) «Más sería el equipo de campo que hace las labores manuales como fertilización, polinización y poda.»
+[OK] 01_ERS/ERS_SRS_2B_v2.0.tex:1132 (ENTR-01) «las personas que no tienen tanto conocimiento en el tema de plagas»
+[OK] 01_ERS/ERS_SRS_2B_v2.0.tex:1135 (ENTR-11) «Primero, una imagen donde me compruebe sobre ese problema»
+[OK] 01_ERS/ERS_SRS_2B_v2.0.tex:1136 (ENTR-10) «No tendría mucha confianza, pero si con el tiempo veo que la información que me da es correcta, volvería mi co»
+[OK] 01_ERS/ERS_SRS_2B_v2.0.tex:1138 (ENTR-14) «sea precisa en qué es lo que necesita la planta»
+
+RESULTADO: CUMPLE, el 100 % de las citas es literal, de la entrevista correcta y del entrevistado.
