@@ -274,7 +274,7 @@ La verificación automática confirma:
 - `tabla_saturacion.csv`: 16 filas × 11 columnas;
 - 8 entrevistas en el estrato de dominio;
 - 8 entrevistas en el estrato de contraste;
-- 79 códigos agregados al cierre;
+- 79 códigos agregados al cierre (cifra del paquete congelado de Zenodo; el repositorio vivo tiene hoy 82 tras C2);
 - SHA-256 del dataset Zenodo:
   `b40ab460fc1d3d931beebaf5dd3037f564db8774559feee1ec1d371fa01b39b9`.
 
