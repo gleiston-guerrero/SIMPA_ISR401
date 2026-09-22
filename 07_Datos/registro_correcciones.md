@@ -1611,82 +1611,165 @@ No aplica.
 ---
 ## D4 — Casos de prueba definidos y ejecutados
 
-**Estado operativo:** NO INICIADA
+**Estado operativo:** VERIFICADA
 **Estado de rúbrica:** pendiente de mapeo
 **Peso:** 0,30 pts
-**Responsable(s):** Sin asignar (fuera del núcleo de la rev. 8)
-**Dependencias:** E1
+**Responsable(s):** Arboleda Yanza Francisco Javier (ejecución sobre el prototipo desplegado)
+**Dependencias:** E1 (cumplida)
 
 ### Problema detectado
-Los 68 CP de la matriz son solo identificadores (en 40 filas copian el número del RF y en 25 el de la fila).
+Los 68 casos de prueba de la matriz eran solo identificadores: en 40 filas repetían el número del RF y en 25 el de la fila. No había pasos, ni dato de entrada, ni resultado esperado, ni ejecución registrada.
 
 ### Acción aplicada
-Ninguna todavía.
+Se definieron y **se ejecutaron** los casos de prueba de los RF con prioridad
+Must sobre el prototipo desplegado en `https://simpa-v3-prototipo.netlify.app/`,
+entrando como Administrador en una sola ventana de incógnito. El resultado de
+cada uno queda en `04_Trazabilidad/D4_casos_prueba_RF_Must.md`, con el
+resultado **observado**, no el esperado.
+
+Cinco RF Must no se repiten aquí porque ya se ejecutaron y registraron en E1:
+RF-01, RF-22, RF-40, RF-41 y RF-42. Quedaban **19 por probar**, y se probaron
+los 19.
+
+### Resultado
+| | RF | Cuáles |
+|---|---:|---|
+| Cumplen | 16 | RF-02, 03, 04, 07, 08, 12, 13, 14, 18, 19, 21, 26, 28, 35, 36, 37 |
+| Parcial | 1 | RF-10 — permite elegir entre variedades predefinidas pero no escribir texto libre |
+| **No cumplen** | **2** | **RF-05** y **RF-30** |
+
+### Hallazgos propios del equipo
+- **RF-05** (registro de monitoreo fitosanitario) **no está implementado**: no
+  existe pantalla ni botón separado; lo que hay es el mismo análisis de imagen
+  de RF-07 y RF-08. Coincide con lo que ya señalaba E2, donde RF-05 era el
+  único RF Must sin rótulo propio en ninguna pantalla.
+- **RF-30** (reporte de incidencia desde campo con evidencia fotográfica)
+  **tampoco**: no existe la opción en el módulo de mapa.
+
+Los dos se declaran como incumplimientos. No se reformula el requisito ni se
+ajusta el criterio para que dé por bueno lo que hay.
 
 ### Evidencia utilizada
-- Ninguna todavía.
+- `07_Datos/datos_procesados/cobertura_rf_must_E2.csv` — lista de RF Must y su cobertura declarada
+- `05_MVP/evidencia_e2e/registro_prueba_e2e.md` — los cinco ya ejecutados en E1
+- Prototipo desplegado, ejecución del 21/09/2026
+- Fecha: 21/09/2026
 
 ### Archivos modificados
-- Ninguno todavía.
+- `04_Trazabilidad/D4_casos_prueba_RF_Must.md`
+- `04_Trazabilidad/matriz_e2e.xlsx` — hoja `Ejecucion_D4`
 
 ### Criterio de aceptación
-- [ ] Cada CP Must especificado (pasos, dato, resultado esperado) y con resultado Pasa/Falla y evidencia
+- [x] Cada CP Must especificado y con resultado Pasa/Falla y evidencia observada
 
 ### Verificación
-Aún no ejecutada.
+Comando:
 
-### Commits
-- Ninguno todavía.
+    grep -c "^### RF-" 04_Trazabilidad/D4_casos_prueba_RF_Must.md
+    grep -o "¿Cumple?\*\* [A-Za-zí]*" 04_Trazabilidad/D4_casos_prueba_RF_Must.md | sort | uniq -c
+
+Resultado: 19 RF evaluados · 16 Sí · 1 Parcial · 2 No.
 
 ### Limitaciones
-No iniciada. No forma parte del núcleo del plan de ejecución rev. 8: la demanda del núcleo (28 h por persona) supera la capacidad disponible (~17 h por persona). Si no se ejecuta antes del cierre, se declara como no ejecutada por esta causa.
+Los pasos y el «resultado esperado» de cada caso se redactaron leyendo el
+código del prototipo, no probándolo: **lo único que cuenta es el resultado
+observado al ejecutarlo**, y así está declarado en el propio documento. RF-05
+se corrigió el mismo 21/09/2026 al volver a mirar la aplicación y confirmar
+que no existe una pantalla separada de monitoreo fitosanitario.
 
-Qué haría falta: Definir cada CP de los RF Must y registrar ejecuciones reales con evidencia.
+La ejecución la hizo una sola persona, en una sola sesión y con un solo rol
+(Administrador). No se probó el comportamiento de cada RF bajo los demás
+roles, salvo lo ya cubierto por E1.
+
+La preparación del documento contó con asistencia de IA, declarada en su
+encabezado y en `10_Autoria/declaracion_uso_ia.md`; la ejecución y el
+resultado observado son de la persona que firma.
 
 ### Evidencia entregada fuera del repositorio
-No aplica todavía.
+No aplica.
 
 ---
-
 ## D5 — Corregir matriz_e2e.xlsx
 
-**Estado operativo:** NO INICIADA
+**Estado operativo:** EN PROCESO (restos de LaTeX y hojas de cálculo resueltos; cobertura y granularidad pendientes)
 **Estado de rúbrica:** pendiente de mapeo
 **Peso:** 0,20 pts
-**Responsable(s):** Sin asignar (fuera del núcleo de la rev. 8)
-**Dependencias:** D4
+**Responsable(s):** Arboleda Yanza Francisco Javier
+**Dependencias:** D4 (cumplida)
 
 ### Problema detectado
-matriz_e2e.xlsx cubre 68 de 89 identificadores (76 %), tiene duplicados (RF-04, 07, 08, 12, 21), 36 filas sin historia, hojas Diagnostico y Sincronizacion sin calcular, restos de LaTeX (filas 56 a 61) y el título v1.1.
+`matriz_e2e.xlsx` cubría 68 de 89 identificadores (76 %), tenía duplicados de RF-04, RF-07, RF-08, RF-12 y RF-21, 36 filas sin historia, las hojas `Diagnostico` y `Sincronizacion` sin calcular, restos de LaTeX en las filas 56 a 61 y el título «v1.1».
 
 ### Acción aplicada
-Ninguna todavía.
+Se reconstruyó la matriz: **73 filas de trazabilidad**, sin restos de LaTeX,
+con las hojas `Diagnostico` y `Sincronizacion` calculadas y con sus valores
+guardados, y con una hoja nueva `Ejecucion_D4` que recoge la ejecución de los
+casos de prueba.
+
+El diagnóstico que arroja la propia hoja: 73 filas, 73 trazas completas, 0
+parciales, 0 huérfanas.
+
+### Lo que sigue sin estar resuelto, y se declara
+**1. Los cinco «duplicados» no son duplicados, pero tampoco están explicados.**
+RF-04, RF-07, RF-08, RF-12 y RF-21 aparecen en dos filas cada uno. Al
+compararlas, las dos filas de cada par son idénticas **salvo en la columna
+Evidencia** (y en RF-12, también en Interesado): son el mismo requisito
+trazado desde dos fuentes de evidencia distintas.
+
+Es decir, la matriz tiene una fila por par requisito-evidencia, no una por
+requisito. Eso es legítimo, pero **no está declarado en ninguna parte**, y por
+eso 73 filas se leen como 73 requisitos cuando en realidad son 68.
+
+**2. La cobertura real es de 66 de los 79 requisitos del ERS (83,5 %).**
+Faltan trece, todos RNF: RNF-02, 03, 04, 06, 07, 09, 10, 12, 13, 15, 17, 18 y
+19. **No se añaden filas para ellos**: completar su cadena de trazabilidad
+—caso de uso, historia, clase, proceso, prototipo y criterio BDD— exigiría
+decidir esos valores, y decidirlos a esta altura sería escribirlos, no
+trazarlos.
+
+**3. El título sigue diciendo «ERS SIMPA v1.1»** cuando el ERS vigente es la
+v2.0.
+
+**4. Aparecen RD-07 y RD-10**, que son restricciones de diseño y no requisitos
+del ERS. No es un error, pero conviene distinguirlo de los 79.
 
 ### Evidencia utilizada
-- Ninguna todavía.
+- `04_Trazabilidad/matriz_e2e.xlsx`, hojas `Matriz_E2E`, `Diagnostico`, `Sincronizacion` y `Ejecucion_D4`
+- `01_ERS/ERS_SRS_2B_v2.0.tex` — catálogo de los 79 requisitos
+- Fecha: 21/09/2026
 
 ### Archivos modificados
-- Ninguno todavía.
+- `04_Trazabilidad/matriz_e2e.xlsx`
 
 ### Criterio de aceptación
-- [ ] La hoja abre sin fórmulas vacías y coincide con la matriz
+- [ ] La hoja abre sin fórmulas vacías y coincide con la matriz — las fórmulas calculan, pero la cobertura es de 66 de 79 y la granularidad de las filas no está declarada
 
 ### Verificación
-Aún no ejecutada.
+Comando:
 
-### Commits
-- Ninguno todavía.
+    python3 -c "import openpyxl,collections;wb=openpyxl.load_workbook('04_Trazabilidad/matriz_e2e.xlsx',data_only=True);ws=wb['Matriz_E2E'];ids=[str(r[3]).strip() for r in ws.iter_rows(min_row=9,max_row=81,values_only=True) if r[3]];print(len(ids),'filas',len(set(ids)),'requisitos');print({k:v for k,v in collections.Counter(ids).items() if v>1})"
+
+Resultado:
+
+    73 filas 68 requisitos
+    {'RF-04': 2, 'RF-07': 2, 'RF-08': 2, 'RF-12': 2, 'RF-21': 2}
 
 ### Limitaciones
-No iniciada. No forma parte del núcleo del plan de ejecución rev. 8: la demanda del núcleo (28 h por persona) supera la capacidad disponible (~17 h por persona). Si no se ejecuta antes del cierre, se declara como no ejecutada por esta causa.
+Trece RNF del ERS no están trazados en la matriz y **no se completan de
+memoria**: se declaran por su identificador para que la ausencia sea
+verificable.
 
-Qué haría falta: Declarar la cobertura real, quitar duplicados, versionar el script que la generó, calcular las hojas y limpiar los restos.
+La granularidad de las filas —una por par requisito-evidencia— debe declararse
+en el encabezado de la hoja, y el título debe pasar de v1.1 a v2.0. Ninguna de
+las dos cosas se hizo de forma programática porque editar el libro con una
+librería descarta los valores calculados de las fórmulas y devolvería la hoja
+al estado que esta misma tarea corrige: hay que abrirla y guardarla desde una
+hoja de cálculo.
 
 ### Evidencia entregada fuera del repositorio
-No aplica todavía.
+No aplica.
 
 ---
-
 ## E2 — Recalcular la cobertura de RF Must
 
 **Estado operativo:** VERIFICADA
