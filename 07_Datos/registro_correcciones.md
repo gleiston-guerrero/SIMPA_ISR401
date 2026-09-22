@@ -480,47 +480,104 @@ El despliegue de Netlify se publica manualmente y no está enlazado al repositor
 
 ## A1 — Repetir la evaluación con evaluadores externos
 
-**Estado operativo:** NO EJECUTADA POR FALTA DE TIEMPO (avance real documentado, sin evaluación completa)
+**Estado operativo:** NO EJECUTADA POR FALTA DE TIEMPO (1 de 5 criterios cumplido; avance documental real)
 **Estado de rúbrica:** pendiente de mapeo
 **Peso:** 0,80 pts
-**Responsable(s):** Sin asignar (fuera del núcleo de la rev. 8)
-**Dependencias:** A2, A3
+**Responsable(s):** Arboleda Yanza Francisco Javier
+**Dependencias:** A2 y A3 (ambas cumplidas)
 
 ### Problema detectado
 Las tres hojas de puntuación se subieron el 12/09 con 25 y 27 segundos de diferencia. En 131 de 150 filas las puntuaciones siguen un ciclo por posición de fila; en 139 de 150 las cinco dimensiones valen lo mismo; los comentarios de dos evaluadores citan términos que no aparecen en los requisitos; el registro de evaluadores fecha la evaluación antes de que existieran el archivo cegado y las instrucciones.
 
 ### Acción aplicada
-Se consiguieron 3 evaluadores externos reales (EVA-A01, EVA-A02, EVA-A03), cada uno con consentimiento informado y declaración de ausencia de conflicto de interés firmados el 19/09/2026, todos con "No" en los 7 ítems de conflicto. No se alcanzó a completar la sesión de puntuación de los 47 requisitos por falta de tiempo antes del cierre del plan.
+**1. Explicación escrita de cómo se produjeron las hojas actuales.** Se
+reconstruyó desde el historial de git cómo llegaron al repositorio las tres
+hojas cuestionadas, y se entregó en
+`06_Experimento/evaluadores/Explicacion_Hojas_Actuales_A1.md`. Es el punto 5
+del criterio de aceptación, y se cumple.
+
+**2. Tres evaluadores externos reales.** Se consiguieron EVA-A01, EVA-A02 y
+EVA-A03, cada uno con consentimiento informado y declaración de ausencia de
+conflicto de interés firmados el 19/09/2026, con «No» en los siete ítems de
+conflicto. Los seis documentos están en
+`06_Experimento/A1_repeticion_correctiva/evaluadores/`.
+
+**3. Verificador preparado.** `07_Datos/scripts/plan_mejora/verificar_A1_evaluadores.py`
+comprueba los cuatro criterios restantes sobre las hojas nuevas cuando
+existan. Ejecutado hoy, informa de que todavía no hay hojas que verificar.
+
+**No se completó la sesión de puntuación** de los requisitos por falta de
+tiempo antes del cierre del plan. **No se inventó ninguna puntuación** ni se
+reutilizaron las hojas cuestionadas.
+
+### Lo que la explicación documenta
+Reconstruido del propio historial, sin atribuir intención:
+
+- El archivo de requisitos cegados se creó el **12/09 a la 01:08** (`41618dd`); el registro de evaluadores declara que los tres firmaron e iniciaron la evaluación el **11/09**. No es posible evaluar un archivo antes de que exista.
+- Las tres hojas, atribuidas a tres personas distintas, se subieron **desde una sola cuenta** (`erizzov-boop`) en una ventana de **cuatro minutos**.
+- En cada hoja la mayoría de las filas repite el mismo valor en las cinco dimensiones: 44 de 50, 48 de 50 y 47 de 50.
+
+La conclusión que se declara es que **las tres hojas no se sostienen como una
+evaluación externa independiente**, y que lo verificable es la cronología y el
+patrón, no la intención de quien las produjo.
 
 ### Evidencia utilizada
-- Ninguna todavía.
+- Historial de git del repositorio — commits `41618dd`, `ef3939d`, `3b7a319`, `c56ac39`, `6c1b597`, `520524a`
+- `06_Experimento/evaluadores/` — las tres hojas cuestionadas y el registro de evaluadores
+- Consentimientos y declaraciones de conflicto de EVA-A01 a EVA-A03, firmados el 19/09/2026
+- Fecha: 22/09/2026
 
 ### Archivos modificados
-- Ninguno todavía.
+- `06_Experimento/evaluadores/Explicacion_Hojas_Actuales_A1.md`
+- `06_Experimento/A1_repeticion_correctiva/evaluadores/consentimiento/` — tres consentimientos
+- `06_Experimento/A1_repeticion_correctiva/evaluadores/declaración conflicto/` — tres declaraciones
+- `07_Datos/scripts/plan_mejora/verificar_A1_evaluadores.py`
 
 ### Criterio de aceptación
 - [ ] Ninguna hoja con periodicidad por posición (coincidencia menor del 80 % para periodos 2 a 10)
 - [ ] COM distinta de CON en al menos el 20 % de las filas
 - [ ] Cada término citado en un comentario aparece en su requisito
 - [ ] Fechas posteriores al archivo cegado
-- [ ] Explicación escrita de cómo se produjeron las hojas actuales (ver A12 del plan de ejecución)
+- [x] **Explicación escrita de cómo se produjeron las hojas actuales** — entregada en `06_Experimento/evaluadores/Explicacion_Hojas_Actuales_A1.md`
+
+Los cuatro primeros criterios se refieren a hojas de evaluación nuevas, que no
+llegaron a producirse. El quinto es independiente de ellas y está cumplido.
 
 ### Verificación
-Aún no ejecutada.
+Comando:
+
+    python3 07_Datos/scripts/plan_mejora/verificar_A1_evaluadores.py
+
+Resultado:
+
+    Falta .../registro_evaluadores_A1.csv.
+    Este script se corre DESPUES de recibir las 3 hojas reales;
+    todavia no hay nada que verificar.
+
+El verificador declara por sí mismo que la evaluación no se ejecutó. No se
+fuerza una salida favorable.
 
 ### Commits
-- Ninguno todavía.
+- `34b2ab5`, `ba79362` — consentimientos y declaraciones de conflicto
+- `1eb8aac` — explicación de las hojas históricas
+- `0532ae9` — verificador
+- `40a3a9b` — registro del avance y del cierre por falta de tiempo
 
 ### Limitaciones
-Se avanzó la parte documental (consentimientos y declaraciones de 3 evaluadores reales, verificados uno por uno), pero no se ejecutó la evaluación de los 47 requisitos por falta de tiempo del equipo antes del cierre del plan. Se declara así, sin inventar puntuaciones.
+**La evaluación con evaluadores externos no se ejecutó.** Se consiguieron las
+personas y se firmaron sus consentimientos, pero no hubo tiempo para la sesión
+de puntuación antes del cierre del plan. Se declara así, y las hojas
+cuestionadas **no se sustituyen ni se reutilizan**: quedan en el repositorio
+con la explicación de por qué no se sostienen.
 
-Qué haría falta: Evaluadores reales de otro paralelo, sin participación en el proyecto, con consentimiento firmado y declaración de conflicto de interés; cada evaluador sube su propia hoja o la sube un custodio ajeno al equipo. Depende de A2 y A3. La explicación escrita se entrega por correo aunque no se repita la evaluación.
+Las tres hojas nuevas, cuando se produzcan, debe subirlas cada evaluador desde
+su propia cuenta o un custodio ajeno al equipo, y pasar el verificador. Nada
+de eso puede darse por hecho hoy.
 
 ### Evidencia entregada fuera del repositorio
-No aplica todavía.
+No aplica.
 
 ---
-
 ## A2 — Normalizar el estilo de los dos conjuntos antes de cegar
 
 **Estado operativo:** VERIFICADA
