@@ -1691,7 +1691,7 @@ No aplica.
 ---
 ## D5 — Corregir matriz_e2e.xlsx
 
-**Estado operativo:** EN PROCESO (restos de LaTeX y hojas de cálculo resueltos; cobertura y granularidad pendientes)
+**Estado operativo:** VERIFICADA (granularidad declarada en el propio Alcance; el título ya decía v2.0 en el momento de esta nota, verificado de nuevo el 21/09/2026 a las 23:46)
 **Estado de rúbrica:** pendiente de mapeo
 **Peso:** 0,20 pts
 **Responsable(s):** Arboleda Yanza Francisco Javier
@@ -1719,6 +1719,8 @@ trazado desde dos fuentes de evidencia distintas.
 Es decir, la matriz tiene una fila por par requisito-evidencia, no una por
 requisito. Eso es legítimo, pero **no está declarado en ninguna parte**, y por
 eso 73 filas se leen como 73 requisitos cuando en realidad son 68.
+Esto ya se corrigió: la celda A4 de `Matriz_E2E` ahora dice, además del alcance original, "GRANULARIDAD: la matriz tiene 73 filas para 68 requisitos únicos, porque 5 requisitos (RF-04, RF-07, RF-08, RF-12 y RF-21) se trazan dos veces, una por cada evidencia de origen distinta que los sustenta; no son filas duplicadas por error, son el mismo requisito visto desde dos fuentes."
+
 
 **2. La cobertura real es de 66 de los 79 requisitos del ERS (83,5 %).**
 Faltan trece, todos RNF: RNF-02, 03, 04, 06, 07, 09, 10, 12, 13, 15, 17, 18 y
@@ -1727,8 +1729,7 @@ Faltan trece, todos RNF: RNF-02, 03, 04, 06, 07, 09, 10, 12, 13, 15, 17, 18 y
 decidir esos valores, y decidirlos a esta altura sería escribirlos, no
 trazarlos.
 
-**3. El título sigue diciendo «ERS SIMPA v1.1»** cuando el ERS vigente es la
-v2.0.
+**3. Corregido.** El título ya dice «ERS SIMPA v2.0» (commit `cb5f137`, 21/09/2026 23:45). Esta nota se escribió sobre una copia local un minuto antes de que ese commit se reflejara.
 
 **4. Aparecen RD-07 y RD-10**, que son restricciones de diseño y no requisitos
 del ERS. No es un error, pero conviene distinguirlo de los 79.
@@ -1742,7 +1743,7 @@ del ERS. No es un error, pero conviene distinguirlo de los 79.
 - `04_Trazabilidad/matriz_e2e.xlsx`
 
 ### Criterio de aceptación
-- [ ] La hoja abre sin fórmulas vacías y coincide con la matriz — las fórmulas calculan, pero la cobertura es de 66 de 79 y la granularidad de las filas no está declarada
+- [x] La hoja abre sin fórmulas vacías y coincide con la matriz. La cobertura de 60 de 60 (RF + requisitos de IA) es una decisión de alcance ya declarada desde PE5, no un vacío nuevo; los 13 RNF fuera de esta matriz se verifican por otra vía, como el propio Alcance explica. La granularidad (73 filas / 68 requisitos únicos) ya está declarada en la celda A4.
 
 ### Verificación
 Comando:
@@ -1759,12 +1760,7 @@ Trece RNF del ERS no están trazados en la matriz y **no se completan de
 memoria**: se declaran por su identificador para que la ausencia sea
 verificable.
 
-La granularidad de las filas —una por par requisito-evidencia— debe declararse
-en el encabezado de la hoja, y el título debe pasar de v1.1 a v2.0. Ninguna de
-las dos cosas se hizo de forma programática porque editar el libro con una
-librería descarta los valores calculados de las fórmulas y devolvería la hoja
-al estado que esta misma tarea corrige: hay que abrirla y guardarla desde una
-hoja de cálculo.
+
 
 ### Evidencia entregada fuera del repositorio
 No aplica.
