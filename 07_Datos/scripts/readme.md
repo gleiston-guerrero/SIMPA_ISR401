@@ -59,7 +59,7 @@ La verificación confirmó:
 - 62 × 34 en respuestas anonimizadas;
 - 64 × 7 en el dataset agregado de Zenodo;
 - 16 × 11 en la tabla de saturación;
-- 79 códigos únicos agregados;
+- 79 códigos únicos agregados (cifra del paquete congelado de Zenodo; el repositorio vivo tiene hoy 82 tras C2);
 - conservación del SHA-256 publicado del dataset Zenodo.
 
 El experimento comparativo humano–LLM fue ejecutado y analizado mediante los

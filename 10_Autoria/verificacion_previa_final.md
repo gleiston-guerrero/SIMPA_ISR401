@@ -65,7 +65,7 @@ terminó con `OK: cadena reproducible completada correctamente.` y reprodujo:
 - `respuestas_zenodo_agregadas.csv`: 64 filas × 7 columnas;
 - `tabla_saturacion.csv`: 16 filas × 11 columnas;
 - 8 entrevistas de dominio y 8 de contraste;
-- 79 códigos acumulados al cierre;
+- 79 códigos acumulados al cierre (cifra del paquete congelado de Zenodo; el repositorio vivo tiene hoy 82 tras C2);
 - SHA-256 Zenodo:
   `b40ab460fc1d3d931beebaf5dd3037f564db8774559feee1ec1d371fa01b39b9`.
 
