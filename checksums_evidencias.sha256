@@ -7,25 +7,93 @@
 # alojados en el repositorio de evidencias audiovisuales:
 #   https://github.com/erizzov-boop/SIMPA_ISR401_Evidencias
 #
-# Las rutas son relativas a la raiz de cada contenedor, tal como
-# figuran en la columna ruta_en_contenedor de
-#   02_Evidencias/00_Restringido/fichas_tecnicas.csv
+# Cobertura: 76 originales declarados, repartidos en 16
+# contenedores. Es el total de filas de
+# 02_Evidencias/00_Restringido/fichas_tecnicas.csv.
+#
+# PROCEDENCIA DE LOS HASHES
+#   Este archivo se genera con
+#     07_Datos/scripts/plan_mejora/regenerar_checksums_evidencias.py
+#   que copia la columna sha256 de fichas_tecnicas.csv y la ruta de la
+#   columna ruta_en_contenedor. Ningun hash se escribe a mano.
+#
+#   Los hashes proceden del inventario que el equipo levanto al cifrar
+#   los originales; no se han vuelto a calcular sobre los contenedores en
+#   esta ronda. El script se detiene si alguno contradice al manifiesto
+#   anterior. Al generarse esta version no hubo ninguna contradiccion.
+#
+# RUTAS
+#   Cada ruta es relativa a la raiz de SU contenedor, no a una raiz comun.
+#   Dos contenedores distintos pueden empezar por carpetas distintas
+#   (`videos/`, `videos 2/`, `Entrevista_09/`): es como estan dentro.
+#   Las 76 rutas son distintas entre si, de modo que extraer todos
+#   los contenedores en un mismo directorio no solapa ningun archivo.
 #
 # PROCEDIMIENTO DE VERIFICACION
-#   1. Descargar el contenedor indicado en la columna url_release
+#   1. Descargar los contenedores indicados en la columna url_release
 #      de fichas_tecnicas.csv.
-#   2. Descomprimirlo con la contrasena entregada por el SGA:
-#        7z x evidencias_entrevistas_audios_01.7z -o./verificacion
-#   3. Situarse en la raiz comun del contenido extraido.
-#      Las rutas de este manifiesto se resuelven desde ese directorio.
-#      Para verificar todos los contenedores extraidos:
+#   2. Descomprimirlos con la contrasena entregada por el SGA, todos
+#      sobre el mismo directorio:
+#        7z x <contenedor>.7z -o./verificacion
+#   3. Situarse en ./verificacion y verificar:
 #        sha256sum -c /ruta/al/SIMPA_ISR401/checksums_evidencias.sha256
-#      Para verificar solo los archivos descargados:
+#      Si solo se descargaron algunos contenedores:
 #        sha256sum -c --ignore-missing /ruta/al/SIMPA_ISR401/checksums_evidencias.sha256
+#
+# DISCREPANCIA DECLARADA (ENTR-03)
+#   El inventario declara el video de ENTR-03 como un unico archivo,
+#   `videos/Entrevista_03/P03_video_01.mp4`. El manifiesto anterior no lo
+#   contenia: contenia en su lugar siete archivos `Parte1..Parte6` y
+#   `Proceso_de_polinizacion_antes_de_entrevista.mp4` bajo esa misma
+#   carpeta. Ambos juegos de hashes se conservan aqui -los siete, al
+#   final, bajo su propio epigrafe- porque resolver cual refleja el
+#   contenido real exige abrir el contenedor, y no se ha abierto en esta
+#   ronda. Hasta entonces, la verificacion de ENTR-03 se hace con
+#   --ignore-missing y la discrepancia queda declarada, no encubierta.
 #
 # Para verificar los archivos de ESTE repositorio, use checksums.sha256
 # desde la raiz del repositorio.
 # =====================================================================
+
+# --- Acta_Constancia_Actividades_Campo.7z
+c1d7b7936057504a0c621f1d143f59fbf9b523701bd87d9f38e717e5069c323a  Acta_Constancia_Actividades_Campo/2026-09-16_Acta_Constancia_Actividades_Campo.jpg
+
+# --- Actas_MemberCheck_Originales.7z
+21441a03bc6dd26bdf2e64332afce2ea5ab1a90728f9e3f1768784fe3e87a688  2026-09-04_MemberCheck_ENTR-01_Acta_Original.pdf
+81dcaa0a7c9d6171a15bcf63ea6b76d5a9e5586d824d353dc7f1c7632da7950c  2026-09-04_MemberCheck_ENTR-02_Acta_Original.pdf
+b1ad33c50a6296c30e87588d74ce8bb6c4428debacada08b0507a3cbb8c168f1  2026-09-04_MemberCheck_ENTR-13_Acta_Original.pdf
+
+# --- Actas_MemberCheck_consolidada_original.7z
+5f172d0c59087b86b394efe36d71df9182797044c3bea568b41020e5d7686555  Actas_MemberCheck_consolidada/2026-09-04_MemberChecking_ActaConsolidada_Original.pdf
+
+# --- Actas_Walkthrough_Originales.7z
+d008d5c4d9f4698c82d5fb3393f00465d52ff8f51f529242d7fd7553e0297ebb  2026-09-03_Walkthrough_NoTecnico_WT-01_Acta_Original.pdf
+6a80e0195f5ee73fb4d078c0d942c2445a722465a9d20a8abd2a3e39f9bf4d17  2026-09-03_Walkthrough_NoTecnico_WT-05_Acta_Original.pdf
+7046414c22980535e06961480ba94217809f6356ecbae25076717b2ac9b756dc  2026-09-03_Walkthrough_NoTecnico_WT-06_Acta_Original.pdf
+a00ae0ff69616c84065812edf9ca62e98c9313b938a441dd5e7a2d2e729431b6  2026-09-03_Walkthrough_Tecnico_WT-02_Acta_Original.pdf
+a8ac067245c2cb2ae56a2eeaa19bafd8ecd2810502885f4729c4d1746ebd66e9  2026-09-03_Walkthrough_Tecnico_WT-03_Acta_Original.pdf
+73c5b28293585a28316988ac3a38bbe71fa5a65734bd7d14ef4857f91998805a  2026-09-03_Walkthrough_Tecnico_WT-04_Acta_Original.pdf
+
+# --- Audios_Member_Checking.7z
+1e0e1980c32bc0dbc4ded2b1dbbbdf0abc3fe6c20bbce897b367c248f4e9a315  Audios_Member_Checking/04-09-2026_Audio_Entr-01_Member_Checking.mp3
+8a8d132b094e9cba741458d50122d1ca6869ab297c1ab590bd2e8a1d069c8f50  Audios_Member_Checking/04-09-2026_Audio_Entr-02_Member_Checking.mpeg
+e9dcb6762d8f386c10d8ccbdc0bf3d858304052a1930cfc6bf9811037071039d  Audios_Member_Checking/04-09-2026_Audio_Entr-13_Member_Checking.mpeg
+
+# --- Consentimiento_informado_cuestionario.7z
+3222eb8c9ddd37d56237cbb1c051c74e60611aa9216a776ac483bcf83521a50b  Consentimiento_informado_cuestionario/2026-09-15_Consentimiento_informado-Proyecto_SIMPA(1-5).xlsx
+
+# --- Consentimientos_Walkthrough_Originales.7z
+c95a1c3e5bbecd3ee83670058e83ee9e80525625164925d5e0906d744a529132  Consentimientos_Walkthrough_Originales/2026-09-03_Walkthrough_NoTecnico_WT-01_Consentimiento_Original.pdf
+a6d1000eaa3d223ae19806820e81bda287839c8f8ecc24fb25b3c83f324f605f  Consentimientos_Walkthrough_Originales/2026-09-03_Walkthrough_NoTecnico_WT-05_Consentimiento_Original.pdf
+1d378487b623c3a00a9781d1b37c17ba45fc3037f3f544ed472308e9bac4bdc8  Consentimientos_Walkthrough_Originales/2026-09-03_Walkthrough_NoTecnico_WT-06_Consentimiento_Original.pdf
+5793c2768aa4c24fe8ca8b2da18ade816d1734894a1bef3912c374d64d5abae6  Consentimientos_Walkthrough_Originales/2026-09-03_Walkthrough_Tecnico_WT-02_Consentimiento_Original.pdf
+2b36e8f82be43874530d37f1208f0160a9fe9c6b4c5a3fa8876184277034f060  Consentimientos_Walkthrough_Originales/2026-09-03_Walkthrough_Tecnico_WT-03_Consentimiento_Original.pdf
+eb3c0e2569ebb1716f538767682118cc5de2aa1a222a14a4f6c74b87d758e966  Consentimientos_Walkthrough_Originales/2026-09-03_Walkthrough_Tecnico_WT-04_Consentimiento_Original.pdf
+
+# --- Declaracion_Identidades_git_original.7z
+1e03df3c1b6962a4e1e21ec36a77df5dcc8117cd11a33067418acb5543b3c8d1  Declaracion_Identidades_git/2026-09-06_DeclaracionIdentidadesGit_Original.pdf
+
+# --- evidencias_entrevistas_audios.7z
 a0693a22fe0bc38cfd27215b8408a95c8b4095caa60c7e4d8fa691966561b1e1  audios/2026-05-23_AdministradorGeneral_ENTR-01_Entrevista.mp3
 79ba84ddc33269d7e37e53a4154c888925873c43ddf3b431e3c8de4ac800d1da  audios/2026-05-23_Administrador_ENTR-02_Entrevista.mp3
 2ad85cf8bc40439fc674a66ccb6ba7cc8c95e94a7cb7daca690aa5240e497aa4  audios/2026-05-23_JefePolinizacion_ENTR-03_Entrevista.mp3
@@ -34,6 +102,16 @@ f79a3399214fd83328ba8b18400b8446850ad29798e752b7ed468be878ee7d87  audios/2026-07
 3d3f449417afd9638f58df0af36d2cb4a7ba9f278d9ce08c6f26ae3f16f8c7c0  audios/2026-07-28_TecnicoExtractora_ENTR-08_Entrevista.mp3
 961189b285f845c53de566a5b6b5d9055d86414d9ff1909561d9178903ed8ec4  audios/2026-07-28_TrabajadorAgricola_ENTR-05_Entrevista.mp3
 1e9fabc0f30c71b2f84aa4de7417e4508415d9131ef706c60007ed17de4892a7  audios/2026-07-28_TrabajadorAgricola_ENTR-06_Entrevista.mp3
+2e7ca9b53f3f768d247da9dcd4c2031c647a438f6af5afe4a0f421fa00da77b3  audios/2026-08-31_AsistenteTecnico_ENTR-09_Entrevista.mp3
+2a6f8c453dbe5b914629c6b1e5d486120fc0bb3f370384a898e03d00297dcf53  audios/2026-08-31_EstudianteCarreraAfin_ENTR-10_Entrevista.mp3
+5c44bc1bf901ab400a017d69c5541f87e7be8c68f86e11f3db6599a41a2c3b38  audios/2026-08-31_EstudianteCarreraAfin_ENTR-11_Entrevista.mp3
+e2fb5d71ff6dda2ce107fb90cab8b0dd8bbb3515c2de818a8c4495a129af4a5b  audios/2026-08-31_IngenieraBiotecnologia_ENTR-12_Entrevista.mp3
+e9912832068878be9a006b972fe85c60e4a893b71a1e5b4733fc38003801ad72  audios/2026-09-01_EstudianteCarreraAfin_ENTR-15_Entrevista.mp3
+c58d2dfefa4cdb914866723566ea3420ec204fc81e3d93d57ee4d8d99d61a920  audios/2026-09-01_IngenieroAgronomo_ENTR-13_Entrevista.mp3
+a23edf2a9a0e6267cbe1651569274dd2c5560d0b3f911af078387ede3e8930ad  audios/2026-09-01_IngenieroAgropecuario_ENTR-14_Entrevista.mp3
+d3724501ec7116c58c04b6f715a3d91ca819529e1ae52923f1e4e925727d79b7  audios/2026-09-01_IngenieroSitemas_ENTR-16_Entrevista.mp3
+
+# --- evidencias_entrevistas_consentimientos.7z
 17ce5864fc5f7e8cb68ec6f816fea67013700d0dd8d361e03cd04acfb67587e0  consentimientos_firmados/2026-05-23_AdministradorGeneral_ENTR-01_Consentimiento_orig.jpeg
 043c9bf359e9ce5699c3ab6cbd32de571acd784152030d3da1b298101f798ecd  consentimientos_firmados/2026-05-23_Administrador_ENTR-02_Consentimiento_orig.jpg
 2f5c6036a190c7b61a4ee29bd95959b63a66d3ddea18902f41e1b9b854d9cd1f  consentimientos_firmados/2026-05-23_JefePolinizacion_ENTR-03_Consentimiento_orig.jpeg
@@ -42,8 +120,55 @@ ec5fe6f141f791cdcfab0d347177bc3834fc272b4e174f7037457a4fea756304  consentimiento
 5cddb1fe42b829118b02b73fe30c440025ab3439ed49651a1511190800cab802  consentimientos_firmados/2026-07-28_TecnicoExtractora_ENTR-08_Consentimiento_orig.jpg
 42bb9116f650a57987963a667e244c9cc55204b2ee6fd9d46c66f32fe02d6c4f  consentimientos_firmados/2026-07-28_TrabajadorAgricola_ENTR-05_Consentimiento_orig.jpg
 85f30b5704a5770996e597394581a0428f0d20b9a17c750fd8cad944996a8cad  consentimientos_firmados/2026-07-28_TrabajadorAgricola_ENTR-06_Consentimiento_orig.jpg
-68c627b0b57479c928091722e0393388b18f2e415a6b7f4022fd92572de5f7ec  videos/Entrevista_01/P01_video_01.mp4
-af40e51e3e7599fad314f9d0aa7d583d480996e651184dba4aaf568ffb18e5db  videos/Entrevista_02/P02_video_01.mp4
+16a3d0fc8590f0f471ee273ae72f2b406ac57fcb6fcd96d4a93860213ab00553  consentimientos_firmados/2026-08-31_AsistenteTecnico_ENTR-09_Consentimiento_orig.jpeg
+f22b4eabdba19bdbdc63907c27cbb2fcf9e732e6814ac396748ce2f21a93e043  consentimientos_firmados/2026-08-31_EstudianteCarreraAfin_ENTR-10_Consentimiento_orig.jpeg
+620e5ebdf8ce3d72e482133155fdfaaadf716f4b1a0bba2635609791720b7f13  consentimientos_firmados/2026-08-31_EstudianteCarreraAfin_ENTR-11_Consentimiento_orig.jpeg
+6042488ceef49756392c8a4c250b325782d0413fe01a33e495748a3565342bbf  consentimientos_firmados/2026-08-31_IngenieraBiotecnologia_ENTR-12_Consentimiento_orig.jpeg
+9309dfabcf022aab62f3b346f584c7ec7a9fe42f3e291cae2f8399942a7b812e  consentimientos_firmados/2026-09-01_EstudianteCarreraAfin_ENTR-15_Consentimiento_orig.jpeg
+0342a3d7f817011831e745ad0b7d8c310d0f9ec48d0f15562f0cf729046467c5  consentimientos_firmados/2026-09-01_IngenieroAgronomo_ENTR-13_Consentimiento_orig.jpeg
+2a356a29a6f10e9bbea305d2c26dd162b7467d23455c3f809a588c8574a9439c  consentimientos_firmados/2026-09-01_IngenieroAgropecuario_ENTR-14_Consentimiento_orig.jpeg
+3c2babbb4b4b8ca387fcb8b9eda827b1fe3e51ce53a3a21454fcfd705b95c2b7  consentimientos_firmados/2026-09-01_IngenieroSistemas_ENTR-16_Consentimiento_orig.png
+
+# --- evidencias_entrevistas_videos_01.7z
+68c627b0b57479c928091722e0393388b18f2e415a6b7f4022fd92572de5f7ec  Entrevista_01/P01_video_01.mp4
+
+# --- evidencias_entrevistas_videos_02.7z
+af40e51e3e7599fad314f9d0aa7d583d480996e651184dba4aaf568ffb18e5db  Entrevista_02/P02_video_01.mp4
+
+# --- evidencias_entrevistas_videos_03.7z
+bb5069cc900f98051c68aea521c0e3a8e5d34f4595d289a9cdd1c4c9f4d80bff  videos/Entrevista_03/P03_video_01.mp4
+89612cbf6e187f31bcbbb50b779d5fb74c9ba2069637b22e89ebb2f1272d49ba  videos/Entrevista_04/P04_video_01.MOV
+
+# --- evidencias_entrevistas_videos_04.7z
+bdaf0826a99340a632606e2919388a55eb1feed4d5e768d0fa78abcd8bbbcdff  videos 2/Entrevista_05/P05_video_01.MOV
+0fcb2838d470749518443f6edf4d6c701d4bf3d9ddf8e608846da390f993de8a  videos 2/Entrevista_06/P06_video_01.MOV
+cb0243cef6a8f74cc83cc470d79b2e2ed18068c4f85009de0283172fb9538c39  videos 2/Entrevista_07/P07_video_01.MOV
+7b8b59080c0435cd54d7c8e0f8c4dfd87df68d788a482911ccf57a047cb68059  videos 2/Entrevista_08/P08_video_01.MOV
+
+# --- evidencias_entrevistas_videos_05.7z
+a9154c6828758abc4b88f459b6188015eab830a60cc9e796d6288da67499d2ea  Entrevista_09/P09_video_01.mp4
+be4eab0d6e3eb01ae2cae306d86685fe2758cdcb9e87dae1a8bc0f4167d6a6a7  Entrevista_10/P10_video_01.mp4
+026136662b03944570b43c5fbaff41ec57af21be77c0f7005304518837ed6750  Entrevista_11/P11_video_01.mp4
+cb5a48e4dd17f81c97ed8e93564fb309f445b99cf6aee6d6e5db7dcb9d6df995  Entrevista_12/P12_video_01.mp4
+1f38c22d0a9b55b8ad7f75d70d21cd1dabf7cf5a3889835e4c12d7a8efdb47d1  Entrevista_13/P13_video_01.mp4
+9dc30d64e0cedf3121b0cbfc43f6c7e1dc66f4f480137c8fee80d88c5d16edc9  Entrevista_14/P14_video_01.mp4
+deb008178a7f607402e49129bec41857f65bfd848c57c020d0936173e3c32289  Entrevista_15/P15_video_01.mp4
+0e96aa34c35196ca18d050d0f0caf12f24e8a9650a9a8f2300ad34bda37f7c9b  Entrevista_16/P16_video_01.mp4
+
+# --- evidencias_walkthrough_videos.7z
+caa796ecbc97caefcf6fe9d786a0ad93cd2289bb35b73b1fcba6067bd10178a4  Walkthrough_NoTecnico/2026-09-03_Walkthrough_NoTecnico_WT-01_Pantalla.mp4
+d5d709b052aa5d3072d9dc58c54d77add9896665affc8a63f49c78de518b144f  Walkthrough_NoTecnico/2026-09-03_Walkthrough_NoTecnico_WT-05_Pantalla.mp4
+943b31aa9cde2f818cbafc6d72c53c510aeaae3f1950e525b5689fd58d2e211e  Walkthrough_NoTecnico/2026-09-03_Walkthrough_NoTecnico_WT-06_Pantalla.mp4
+b164ad611531a5708c3c278092d67b3828a57ef5a8ab815eee9e460ab9031fe0  Walkthrough_Tecnico/2026-09-03_Walkthrough_Tecnico_WT-02_Pantalla.mp4
+cc092e97e62c23657106586a07cc6798d9bfc27efad0ef1f7c7ea872d499743e  Walkthrough_Tecnico/2026-09-03_Walkthrough_Tecnico_WT-03_Pantalla.mp4
+7c4eb1d1d25f5c6de8d2740c853cb504aa86d345de6f4b0e4d1fefa4d7458c2b  Walkthrough_Tecnico/2026-09-03_Walkthrough_Tecnico_WT-04_Pantalla.mp4
+
+# ---------------------------------------------------------------------
+# Hashes presentes en el manifiesto anterior que fichas_tecnicas.csv no
+# declara como originales. Se conservan porque son datos reales que el
+# equipo ya habia registrado; su incorporacion al inventario queda
+# pendiente (ver DISCREPANCIA DECLARADA, arriba).
+# ---------------------------------------------------------------------
 99dfe8a0bf660a204ea9eb1a52166fc27964a122589cc53a4caf97af558652bc  videos/Entrevista_03/Parte1_Introduccion_a_la_polinizacion_en_palma_africana.mp4
 6757176592eb7f4ff70eed4c9dffa23cc680a68d844fbb3b849fd24994ba37e8  videos/Entrevista_03/Parte2_Tecnica_y_ejecucion.mp4
 79de4cc563d40182126734c78d77bc3fc17e93922770c294d5a2252467a540de  videos/Entrevista_03/Parte3_Identificacion_del_momento_optimo.mp4
@@ -51,12 +176,3 @@ ea45f47fb09199073a57dc140388a85266636290b22161098eb1eaedd3e7c2f5  videos/Entrevi
 53715f976eb4c866b26747ddab3c88458ca614fdd0c1bae77cde6fb6a1942a7e  videos/Entrevista_03/Parte5_Verificacion_y_clima.mp4
 d0aacd5ad47eb16abb1b80f2c7abaa6cd189a5479335ae3205e2d6dffad0d672  videos/Entrevista_03/Parte6_Innovacion_y_control.mp4
 ce618394419e9d0737b89371bdd2828ac643060408526a9c14cba5aea865033e  videos/Entrevista_03/Proceso_de_polinizacion_antes_de_entrevista.mp4
-89612cbf6e187f31bcbbb50b779d5fb74c9ba2069637b22e89ebb2f1272d49ba  videos/Entrevista_04/P04_video_01.MOV
-bdaf0826a99340a632606e2919388a55eb1feed4d5e768d0fa78abcd8bbbcdff  videos/Entrevista_05/P05_video_01.MOV
-0fcb2838d470749518443f6edf4d6c701d4bf3d9ddf8e608846da390f993de8a  videos/Entrevista_06/P06_video_01.MOV
-cb0243cef6a8f74cc83cc470d79b2e2ed18068c4f85009de0283172fb9538c39  videos/Entrevista_07/P07_video_01.MOV
-7b8b59080c0435cd54d7c8e0f8c4dfd87df68d788a482911ccf57a047cb68059  videos/Entrevista_08/P08_video_01.MOV
-3222eb8c9ddd37d56237cbb1c051c74e60611aa9216a776ac483bcf83521a50b  Consentimiento_informado_cuestionario/2026-09-15_Consentimiento_informado-Proyecto_SIMPA(1-5).xlsx
-1e0e1980c32bc0dbc4ded2b1dbbbdf0abc3fe6c20bbce897b367c248f4e9a315  Audios_Member_Checking/04-09-2026_Audio_Entr-01_Member_Checking.mp3
-8a8d132b094e9cba741458d50122d1ca6869ab297c1ab590bd2e8a1d069c8f50  Audios_Member_Checking/04-09-2026_Audio_Entr-02_Member_Checking.mpeg
-e9dcb6762d8f386c10d8ccbdc0bf3d858304052a1930cfc6bf9811037071039d  Audios_Member_Checking/04-09-2026_Audio_Entr-13_Member_Checking.mpeg

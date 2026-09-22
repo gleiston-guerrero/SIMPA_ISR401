@@ -2429,42 +2429,152 @@ No aplica.
 ---
 ## G5 — Checksums y congelación del release de evidencias
 
-**Estado operativo:** NO INICIADA
+**Estado operativo:** VERIFICADA (cobertura completa del inventario; discrepancia de ENTR-03 declarada, no resuelta)
 **Estado de rúbrica:** pendiente de mapeo
 **Peso:** 0,10 pts
-**Responsable(s):** Macías Herrera Josthyn Esteban
+**Responsable(s):** Arboleda Yanza Francisco Javier
 **Dependencias:** F1 y F2 cerradas
 
 ### Problema detectado
-checksums_evidencias.sha256 no cubre ENTR-09 a 16, walkthrough ni actas, y los archivos del release de evidencias se volvieron a subir hasta el 16/09.
+
+El docente señaló que `checksums_evidencias.sha256` no cubría ENTR-09 a
+ENTR-16, ni el walkthrough, ni las actas, y que los archivos del release de
+evidencias se siguieron subiendo hasta el 16/09.
+
+Al verificarlo el 22/09/2026 se confirmó y se midió:
+
+- El manifiesto traía **34 líneas de hash**, de las cuales **27 correspondían
+  a originales declarados** en `02_Evidencias/00_Restringido/fichas_tecnicas.csv`.
+  El inventario declara **76**. Faltaban **49**: los ocho audios y los ocho
+  consentimientos de ENTR-09 a ENTR-16, los ocho vídeos de esas mismas
+  entrevistas, los seis vídeos de pantalla del walkthrough, sus seis
+  consentimientos y sus seis actas, las tres actas de miembro-verificación y
+  su acta consolidada, la declaración de identidades git y el acta de
+  constancia de actividades de campo.
+- **Seis** de las 27 líneas que sí existían tenían una ruta que no coincide
+  con la del inventario (`videos/Entrevista_01/…` frente a
+  `Entrevista_01/…`, y `videos/Entrevista_05..08/…` frente a
+  `videos 2/Entrevista_05..08/…`). Con esas rutas, `sha256sum -c` no
+  encuentra el archivo aunque el hash sea correcto.
+- La columna `estado_hash` de `fichas_tecnicas.csv` decía `OK` en las 76
+  filas, incluidas las 49 que no tenían ninguna línea en el manifiesto.
+
+Es decir: el manifiesto cubría el **36 %** de lo que el propio repositorio
+declaraba como original, y el inventario afirmaba una verificación que no
+existía.
 
 ### Acción aplicada
-Ninguna todavía.
+
+Se regeneró el manifiesto completo con
+`07_Datos/scripts/plan_mejora/regenerar_checksums_evidencias.py`, que:
+
+1. lee `fichas_tecnicas.csv` y escribe una línea por cada uno de los 76
+   originales declarados, agrupadas por contenedor;
+2. **copia** el hash de la columna `sha256` del inventario y la ruta de la
+   columna `ruta_en_contenedor`. Ningún hash se calcula ni se escribe a mano;
+3. **compara** cada hash con el que traía el manifiesto anterior y **aborta
+   sin escribir nada** si alguno discrepa;
+4. **conserva** los hashes que el manifiesto anterior tenía y el inventario no
+   declara, en una sección propia y rotulada, para no perder datos reales.
+
+La cabecera del manifiesto se reescribió para decir de dónde salen los
+hashes, que las rutas son relativas a la raíz de *cada* contenedor —no a una
+raíz común— y cómo verificarlos.
+
+### Procedencia de los hashes, declarada
+
+Los hashes **no se han recalculado sobre los contenedores en esta ronda**.
+Proceden del inventario que el equipo levantó al cifrar los originales.
+Lo que sí se comprobó es que **los 27 que ya estaban en el manifiesto
+coinciden exactamente con los del inventario, sin una sola discrepancia**:
+esa coincidencia es lo que sostiene que la columna sea fiable para los 49
+restantes. Recalcularlos exigiría descargar y descifrar los 16 contenedores,
+y se deja anotado como pendiente en vez de afirmarlo como hecho.
+
+### Discrepancia declarada (ENTR-03)
+
+El inventario declara el vídeo de ENTR-03 como un único archivo,
+`videos/Entrevista_03/P03_video_01.mp4`. El manifiesto anterior no lo
+contenía: contenía en su lugar siete archivos (`Parte1` a `Parte6` y
+`Proceso_de_polinizacion_antes_de_entrevista.mp4`) bajo esa misma carpeta.
+
+**No se ha resuelto cuál refleja el contenido real del contenedor**, porque
+eso exige abrirlo. Se conservan los dos juegos de hashes, los siete bajo un
+epígrafe propio que dice que el inventario no los declara, y la discrepancia
+queda escrita en la cabecera del manifiesto. Se declara en lugar de elegir
+uno, porque elegir sin abrir el contenedor sería afirmar lo que no se ha
+comprobado.
 
 ### Evidencia utilizada
-- Ninguna todavía.
+
+- `02_Evidencias/00_Restringido/fichas_tecnicas.csv` (76 originales, columna
+  `sha256` completa y válida en las 76 filas).
+- `checksums_evidencias.sha256` en el commit `9309e3c`, como término de
+  comparación.
 
 ### Archivos modificados
-- Ninguno todavía.
+
+- `checksums_evidencias.sha256` — de 34 a **83 líneas** de hash: las 76
+  declaradas más las 7 no declaradas que se conservan.
+- `07_Datos/scripts/plan_mejora/regenerar_checksums_evidencias.py` — nuevo.
+- `checksums.sha256` — regenerado sobre el estado final del repositorio.
 
 ### Criterio de aceptación
-- [ ] Un hash por cada original declarado
-- [ ] Sin cambios tras la etiqueta
+
+- [x] **Un hash por cada original declarado** — 76 de 76, verificable con el
+      comando de abajo.
+- [x] **Sin cambios tras la etiqueta** — la etiqueta `baseline-v7.0-datos` se
+      coloca sobre el commit que cierra esta tarea, y el manifiesto raíz se
+      regenera inmediatamente antes, con 0 fallos.
 
 ### Verificación
-Aún no ejecutada.
+
+```bash
+# 1. Cada original declarado tiene su linea en el manifiesto (debe imprimir 0)
+python 07_Datos/scripts/plan_mejora/regenerar_checksums_evidencias.py
+git diff --stat checksums_evidencias.sha256   # sin cambios: es idempotente
+
+# 2. Cobertura declarada (debe imprimir 76 y 83)
+awk -F';' 'NR>1 && NF>1 {n++} END {print n}' 02_Evidencias/00_Restringido/fichas_tecnicas.csv
+grep -cE '^[0-9a-f]{64}' checksums_evidencias.sha256
+
+# 3. El manifiesto raiz verifica sin fallos (debe imprimir 0)
+sha256sum -c checksums.sha256 2>/dev/null | grep -c FAILED
+
+# 4. La etiqueta existe y es anotada (debe imprimir: tag)
+git cat-file -t baseline-v7.0-datos
+```
 
 ### Commits
-- Ninguno todavía.
+
+- `G5: completar checksums_evidencias.sha256 sobre los 76 originales declarados`
+  (22/09/2026, cuenta `farboleday-wq`).
+- `G5: regenerar checksums.sha256 sobre el estado final del plan` — commit
+  `9309e3c`, rehecho sobre el estado final.
 
 ### Limitaciones
-En ejecución según el plan de ejecución rev. 8. Esta sección se completa con lo que realmente ocurra al cerrar la tarea; no se marca Hecho sin criterio cumplido.
+
+1. Los hashes no se recalcularon sobre los contenedores en esta ronda; su
+   procedencia es el inventario del equipo, y así queda dicho en la cabecera
+   del manifiesto. Queda pendiente un recálculo íntegro descargando los 16
+   contenedores.
+2. La discrepancia de ENTR-03 queda declarada y sin resolver.
+3. `checksums_evidencias.sha256` **no puede verificarse con `sha256sum -c`
+   desde este repositorio**: sus rutas apuntan al interior de contenedores
+   cifrados alojados en otro repositorio. El procedimiento para verificarlo
+   está en su propia cabecera.
+4. La congelación vale para el estado etiquetado. Cualquier commit posterior
+   a `baseline-v7.0-datos` invalida `checksums.sha256` y obliga a
+   regenerarlo.
 
 ### Evidencia entregada fuera del repositorio
-No aplica todavía.
+
+Los 16 contenedores `.7z` están en los releases `v1.0-evidencias` y
+`v1.1-evidencias` de `https://github.com/erizzov-boop/SIMPA_ISR401_Evidencias`.
+La contraseña la entrega el SGA y no consta en ningún archivo de este
+repositorio.
 
 ---
-
 ## H1 — Corregir la documentación del cuestionario
 
 **Estado operativo:** VERIFICADA
