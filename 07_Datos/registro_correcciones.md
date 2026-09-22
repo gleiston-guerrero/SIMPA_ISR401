@@ -1782,7 +1782,7 @@ No aplica.
 ---
 ## F1 — Notas de campo: retirar o rotular los 16 PDF y rectificar
 
-**Estado operativo:** EN PROCESO (F1a hecha; falta la rectificación firmada, F1b)
+**Estado operativo:** VERIFICADA (F1a y F1b hechas; firmada por 5 de 6 integrantes)
 **Estado de rúbrica:** pendiente de mapeo
 **Peso:** 0,40 pts
 **Responsable(s):** Arboleda Yanza Francisco Javier
