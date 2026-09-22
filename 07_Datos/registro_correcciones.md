@@ -430,9 +430,9 @@ redacción debe revisarse.
 
 ## E1 — Prototipo y prueba de extremo a extremo
 
-**Estado operativo:** VERIFICADA (granularidad declarada en el propio Alcance; el título ya decía v2.0 en el momento de esta nota, verificado de nuevo el 21/09/2026 a las 23:46)
+**Estado operativo:** VERIFICADA
 **Estado de rúbrica:** pendiente de mapeo
-**Responsable:** Macías Herrera Josthyn Esteban
+**Responsable(s):** Macías Herrera Josthyn Esteban (implementación de RF-40/41/42) y Arboleda Yanza Francisco Javier (prueba de extremo a extremo por rol)
 **Dependencias:** ninguna
 
 ### Problema detectado
@@ -463,7 +463,7 @@ Ejecución de los tres flujos sobre el estado del prototipo:
 | RF-42 exige relación laboral terminada | Rechaza el intento sobre ficha activa |
 | RF-42 sustituye por identificador disociado | `Trabajador 1` → `ANON-0001`, contacto vaciado |
 | RF-42 conserva los totales de avance | Idénticos antes y después |
-| RF-42 no deja el nombre recuperable | Cero apariciones tras la supresión |
+| RF-42 no deja el nombre recuperable | Parcial: no aparece en pantallas ni exportaciones, pero por lectura del código el nombre permanece en `localStorage` (campo interno `registeredBy`); no verificado en el despliegue (ver prueba E2E) |
 
 ### Commits
 
@@ -473,13 +473,9 @@ Ejecución de los tres flujos sobre el estado del prototipo:
 
 ### Limitaciones
 
-La verificación de los criterios se realizó ejecutando la lógica de la
-aplicación fuera del navegador, lo que valida el comportamiento pero no la
-interfaz. La prueba de extremo a extremo por rol, con evidencia gráfica en
-`05_MVP/evidencia_e2e/`, está pendiente.
+**Actualización del 21/09/2026.** La prueba de extremo a extremo por rol ya se ejecutó sobre el despliegue (no solo la lógica fuera del navegador): `05_MVP/evidencia_e2e/registro_prueba_e2e.md`, con fecha, ejecutor y evidencia gráfica en `05_MVP/evidencia_e2e/`. Resultado: el control de acceso restringe `Personal` (Administrador) y `Reportes` (Supervisor y Administrador) — más de lo que el README declaraba originalmente, y ya corregido; RF-40 y RF-41 cumplen sus criterios; RF-42 rechaza la supresión con relación activa y disocia la ficha en pantalla, bitácora y exportaciones, pero el nombre permanece en el almacenamiento local del navegador (no verificado en el despliegue); RF-22 es funcional parcial (umbral global, no por variedad).
 
-El despliegue de Netlify se publica manualmente y no está enlazado al
-repositorio, por lo que ambos pueden volver a divergir.
+El despliegue de Netlify se publica manualmente y no está enlazado al repositorio; el comportamiento observado coincide con el código del commit declarado en varios puntos comprobados, pero eso no prueba que sean exactamente el mismo commit.
 ---
 
 ## A1 — Repetir la evaluación con evaluadores externos
