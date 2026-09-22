@@ -219,7 +219,7 @@ codificacion.csv + codificacion_tercera_ronda.csv
   → curva_saturacion_agregada.png / .pdf
 ```
 
-**Resultado esperado:** 62 × 34 en respuestas anonimizadas, 64 × 7 en el dataset agregado para Zenodo y 16 × 11 en la tabla de saturación. El análisis integra 16 entrevistas y cierra con 79 códigos únicos en la vista agregada.
+**Resultado esperado:** 62 × 34 en respuestas anonimizadas, 64 × 7 en el dataset agregado para Zenodo y 16 × 11 en la tabla de saturación. El análisis integra 16 entrevistas y cierra con 79 códigos únicos en la vista agregada (cifra del paquete congelado de Zenodo, DOI 10.5281/zenodo.22236500; el repositorio vivo tiene hoy 82 tras la tarea C2 del 21/09/2026).
 
 Verificar la integridad del paquete publicado, antes de regenerar artefactos:
 
