@@ -1804,7 +1804,7 @@ F1a: se reescribió `10_Autoria/notas_campo/readme.md`: se rotulan los 16 PDF co
 
 ### Criterio de aceptación
 - [x] Ningún PDF presentado como escaneo contemporáneo (en el readme de la carpeta)
-- [ ] Rectificación firmada por el equipo (F1b, pendiente)
+- [x] Rectificación firmada por el equipo (F1b: 5 de 6 firmas, cada una desde su propia cuenta de git; falta Villafuerte Rosero)
 
 ### Verificación
 Comando:
@@ -1818,7 +1818,7 @@ Resultado: presente en el aviso de estado y en el título de la tabla.
 - `61ec1f3` — fila de notas de campo de verificacion_seccion15 corregida
 
 ### Limitaciones
-Sigue pendiente F1b (rectificación firmada). Además, la columna `evidencia_nota_campo` de la bitácora y `Notas_de_Campo_SIMPA_16_Entrevistas.md` siguen presentando esos PDF como notas de campo; se revisan en I1.
+Falta la firma de Villafuerte Rosero en F1b. La columna `evidencia_nota_campo` de la bitácora ya declara "NO EXISTE nota de campo" en las cuatro sesiones de campo (verificado el 21/09/2026), y `Notas_de_Campo_SIMPA_16_Entrevistas.md` ya trae un aviso al inicio: es una síntesis analítica posterior de Macías Herrera con apoyo de IA, no una nota tomada en campo. Ambas correcciones quedan cerradas por I1.
 
 ### Evidencia entregada fuera del repositorio
 Pendiente: rectificación firmada por el equipo (por correo institucional).
