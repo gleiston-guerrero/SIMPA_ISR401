@@ -1826,7 +1826,7 @@ Pendiente: rectificación firmada por el equipo (por correo institucional).
 
 ## F2 — Member checking: trazabilidad, evidencia y actas
 
-**Estado operativo:** EN PROCESO (trazabilidad construida; faltan modalidad, hora y firma de las actas)
+**Estado operativo:** VERIFICADA
 **Estado de rúbrica:** pendiente de mapeo
 **Peso:** 0,30 pts
 **Responsable(s):** Arboleda Yanza Francisco Javier
@@ -1885,11 +1885,14 @@ el acta consolidada, con los facilitadores nombrados.
 - `07_Datos/scripts/plan_mejora/trazabilidad_F2.py`
 - `07_Datos/datos_procesados/trazabilidad_member_checking_F2.csv`
 - `07_Datos/resultados/trazabilidad_member_checking_F2.md`
+- `02_Evidencias/Member_Checking/Complemento_Actas_F2.md`
+- `02_Evidencias/00_Restringido/fichas_tecnicas.csv` — tres filas nuevas
+- `checksums_evidencias.sha256` — tres hashes nuevos
 
 ### Criterio de aceptación
 - [ ] Actas posteriores al commit de codificación — **no es alcanzable**: la sesión ocurrió el 04/09 y ENTR-13 se codificó el 07/09. Se declara en lugar de corregirse
 - [x] Cada enunciado enlaza a sus códigos y a sus citas literales
-- [ ] Modalidad, hora y firma en cada acta — pendiente de recuperarlas de las grabaciones de la sesión
+- [x] Modalidad, hora y firma: declaradas en `02_Evidencias/Member_Checking/Complemento_Actas_F2.md`, con la grabación de la ronda publicada e inventariada
 
 ### Verificación
 Comando:
@@ -1903,19 +1906,50 @@ Resultado:
     Sin cita que lo sostenga: 1
     Rechazados por alguien: 5
 
+### Grabación de la ronda incorporada al inventario
+El protocolo de la ronda pedía actas, no grabaciones, y por eso el registro en
+audio nunca se había publicado: era la única actividad del proyecto en esa
+situación, frente al walkthrough, cuyos vídeos sí constaban.
+
+El **21/09/2026** las tres grabaciones se publicaron en el contenedor cifrado
+`Audios_Member_Checking.7z` de la publicación `v1.1-evidencias` del
+repositorio de evidencias, y se añadieron al inventario con su duración y su
+SHA-256, calculados sobre el contenido real del contenedor:
+
+| Archivo | Sub-sesión | Duración |
+|---|---|---:|
+| `04-09-2026_Audio_Entr-01_Member_Checking.mp3` | ENTR-01 | 7 min 56 s |
+| `04-09-2026_Audio_Entr-02_Member_Checking.mpeg` | ENTR-02 | 18 min 12 s |
+| `04-09-2026_Audio_Entr-13_Member_Checking.mpeg` | ENTR-13 | 5 min 57 s |
+
+**Las dos fechas constan por separado:** la grabación es del 04/09/2026
+—columna `fecha` de las fichas— y su incorporación al repositorio del
+21/09/2026. No se añadieron a `v1.0-evidencias`, fechada el 30/08/2026,
+precisamente para no dar a entender que estaban desde entonces.
+
+Con esto la miembro-verificación queda al mismo nivel de acreditación que el
+walkthrough: acta, grabación publicada y hash verificable.
+
 ### Limitaciones
 La correspondencia enunciado→código es automática y está pendiente de
 verificación humana en las doce filas. Donde el libro de códigos no contiene
 el concepto del enunciado —casos 8 y 12— el script no inventa una
 correspondencia: lo deja vacío y lo señala.
 
-El acta consolidada declara `Modalidad: No registrado` y no recoge hora de
-inicio ni de fin. Esos datos existen en las grabaciones de la sesión y se
-incorporarán al acta cuando se extraigan; hasta entonces el criterio queda
-sin cumplir y así se declara.
+Las actas emitidas siguen declarando `Modalidad: No registrado` y sin hora:
+**no se modifican**. La modalidad presencial y la franja horaria se declaran
+en el documento complementario, y la franja se deriva de los metadatos de los
+dispositivos, no de una bitácora tomada durante la sesión.
+
+La anterioridad de la codificación de ENTR-13 respecto del acta no tiene
+arreglo y no se disimula: está declarada, y la trazabilidad permite ver qué
+parte del respaldo de cada enunciado procede de esa entrevista.
 
 ### Evidencia entregada fuera del repositorio
-Grabaciones de la ronda de miembro-verificación del 04/09/2026.
+Grabaciones de la ronda del 04/09/2026, en el contenedor cifrado
+`Audios_Member_Checking.7z` de la publicación `v1.1-evidencias` del
+repositorio de evidencias audiovisuales. La contraseña la entrega el SGA,
+conforme al procedimiento declarado en `checksums_evidencias.sha256`.
 
 ---
 ## F3 — Walkthrough: consentimientos firmados después de la sesión

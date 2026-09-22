@@ -18,27 +18,32 @@ audio**.
 
 ## 2. Registro en audio de la ronda
 
-Existen las siguientes grabaciones, conservadas por el equipo en los
-dispositivos con que se registró la sesión:
+La ronda quedó registrada en audio. Las grabaciones están publicadas en el
+repositorio de evidencias audiovisuales, en el contenedor cifrado
+`Audios_Member_Checking.7z` de la publicación **v1.1-evidencias**, e
+inventariadas en `02_Evidencias/00_Restringido/fichas_tecnicas.csv`.
 
-| Archivo | Tamaño | Fecha | Marca de hora |
-|---|---:|---|---|
-| `04-09-2026 15.57(2).m4a` | 17,68 MB | 04/09/2026 | inicio 15:57 · última modificación 16:34 |
-| `04-09-2026 18.05.m4a` | 790,58 KB | 04/09/2026 | inicio 18:05 |
-| `04-09-2026 18.06.m4a` | 5,78 MB | 04/09/2026 | inicio 18:06 · última modificación 19:33 |
-| `Grabadora - 20260904-1821.wav` | 137 MB | 04/09/2026 | inicio 18:21 · marca del archivo 18:29 |
+| Archivo | Sub-sesión | Duración | Tamaño |
+|---|---|---:|---:|
+| `04-09-2026_Audio_Entr-01_Member_Checking.mp3` | ENTR-01 | 7 min 56 s | 16.857.957 B |
+| `04-09-2026_Audio_Entr-02_Member_Checking.mpeg` | ENTR-02 | 18 min 12 s | 20.574.348 B |
+| `04-09-2026_Audio_Entr-13_Member_Checking.mpeg` | ENTR-13 | 5 min 57 s | 5.782.237 B |
+| | **total** | **32 min 5 s** | |
 
-**Cómo se leen estas horas.** El nombre de cada archivo lo genera la aplicación
-de grabación con la hora de inicio; la «última modificación» corresponde al
-momento en que el archivo se cerró. No existe una bitácora tomada durante la
-sesión: **la franja horaria se deriva de los metadatos de los archivos**, y por
-eso se declara así y no como hora registrada en acta.
+Las tres duraciones y los tres SHA-256 se calcularon sobre el contenido real
+del contenedor y constan en las fichas técnicas y en
+`checksums_evidencias.sha256`. Ninguna cifra de esta tabla está escrita a
+mano: cualquiera puede descargar el contenedor y comprobarla.
 
-Los archivos proceden de más de un dispositivo, lo que explica que dos
-grabaciones se solapen en el tiempo: la sesión fue registrada en paralelo por
-más de una persona del equipo.
-
-**Franja que cubren las grabaciones:** de 15:57 a 19:33 del 04/09/2026.
+**Franja horaria de la jornada.** Los archivos de los dispositivos con que se
+grabó llevaban en su nombre la hora de inicio —15:57, 18:05, 18:06 y 18:21— y
+una última modificación de hasta las 19:33. De ahí se sigue que las tres
+sub-sesiones se desarrollaron entre las **15:57 y las 19:33** del 04/09/2026.
+Esa franja **se deriva de los metadatos de los dispositivos**, no de una
+bitácora tomada durante la sesión, y por eso se declara así y no como hora
+registrada en acta. Al incorporarse al inventario, los archivos se
+renombraron a la nomenclatura del proyecto y se reagruparon por participante,
+de modo que sus nombres actuales ya no conservan esa marca de hora.
 
 ## 3. Qué acredita el contenido de las grabaciones
 
@@ -84,17 +89,20 @@ este documento.
 
 ## 4 bis. Estado de incorporación
 
-- [ ] Las grabaciones se incorporan al repositorio de evidencias y se añaden
+- [x] Las grabaciones se incorporan al repositorio de evidencias y se añaden
       sus filas a `02_Evidencias/00_Restringido/fichas_tecnicas.csv` con su
       SHA-256, igual que el resto del material audiovisual del proyecto.
 
-Mientras esa casilla siga sin marcar, **lo que consta es la declaración del
-equipo y los metadatos que muestran los dispositivos**, no una verificación
-por hash. Se declara así y no de otro modo.
+**Se incorporaron el 21/09/2026**, diecisiete días después de la sesión, en la
+publicación `v1.1-evidencias`. No se añadieron a `v1.0-evidencias` —fechada el
+30/08/2026— precisamente para que no parezca que formaban parte del
+inventario desde entonces. La grabación es del 04/09/2026; su incorporación al
+repositorio es del 21/09/2026, y las dos fechas constan: la primera en la
+columna `fecha` de las fichas técnicas, la segunda aquí y en el historial de
+commits.
 
-**Si se incorporan, se hará constar que se incorporaron el 21/09/2026**, con
-los metadatos originales de los archivos, y no se presentarán como si
-hubieran formado parte del inventario desde el 04/09/2026.
+Con esto la miembro-verificación queda al mismo nivel de acreditación que el
+walkthrough: acta, grabación publicada y hash verificable.
 
 ## 5. Firma de las actas
 
