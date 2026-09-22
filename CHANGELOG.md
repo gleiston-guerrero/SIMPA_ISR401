@@ -31,6 +31,21 @@ comando de verificación, en `07_Datos/registro_correcciones.md`.
   resultado observado (E1).
 - Muestra congelada y hoja de doble codificación independiente (C3).
 
+- Casos de prueba de los 24 RF "Must" definidos y ejecutados sobre el
+  prototipo desplegado; hoja `04_Trazabilidad/D4_casos_prueba_RF_Must.md`
+  (D4).
+- Cobertura de los RF Must recalculada por script, con el reparto entre
+  ejercitado en pantalla, declarado en pantalla y solo indicio (E2).
+- Hoja `Ejecucion_D4` en `04_Trazabilidad/matriz_e2e.xlsx`, que cruza los
+  24 RF Must con el resultado real de su ejecución (D5).
+- Análisis de sensibilidad n = 62 frente a n = 58 sobre las respuestas del
+  cuestionario, con diferencia máxima de 0,04 puntos / 2,0 puntos
+  porcentuales (H1).
+- Complemento de modalidad, hora y firma de las actas de member checking, y
+  tabla de trazabilidad de los 12 enunciados con sus códigos y citas (F2).
+- Declaración sobre las fechas de firma y la coherencia de perfiles del
+  walkthrough (F3).
+
 ### Cambiado
 
 - Las ocho entrevistas de las rondas 1 y 2 se retranscribieron desde el audio
@@ -43,6 +58,23 @@ comando de verificación, en `07_Datos/registro_correcciones.md`.
   presencial y secuencial, y la distinción entre n = 62 y n = 58 (H1).
 - Una sola URL vigente del prototipo; los despliegues anteriores quedan
   rotulados como históricos (E3).
+- La doble codificación independiente (C3) se completó: kappa de Cohen
+  0,655 entre los dos codificadores, cada uno desde su propia cuenta de
+  git; 55 desacuerdos documentados en `desacuerdos_C3.csv`.
+- La cobertura de ENTR-03 frente al audio pasa de 82 % a 100 %, tras
+  verificar por escucha directa que el tramo final es ruido ambiental sin
+  habla (B1).
+- La matriz de uso por consentimiento (G3) queda cerrada: decisión
+  aplicada en los 5 usos no cubiertos, declarando como desviación
+  irreversible los casos en que retirar el uso habría invalidado evidencia
+  ya verificada (audio y vídeo de ENTR-01 a 03; sesión con el prototipo de
+  ENTR-11 y 12; depósito abierto de ENTR-01 a 08).
+- La rectificación de notas de campo (F1b) queda firmada por 5 de los 6
+  integrantes, cada uno desde su cuenta.
+- La bitácora de sesiones incorpora la visita del 21/08/2026, declarada
+  como evidencia parcial sin acta que la autorice (F4).
+- Las fórmulas de `matriz_e2e.xlsx` (hojas Diagnóstico y Sincronización)
+  se recalculan: la hoja ya no abre con casillas vacías (D5).
 - `CITATION.cff` corrige "ocho entrevistas" por dieciséis y la cabecera del
   ERS corrige "v3.0" por "v2.0" (I1).
 
