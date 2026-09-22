@@ -118,7 +118,7 @@ persona no firmó.
 |---|---|---|---|---|
 | Arboleda Yanza Francisco Javier | integrante del equipo, responsable de F2 | Arboleda Yanza Francisco Javier | 21/09/2026 | `farboleday-wq` |
 | Huilcapi León Denisses Fabiola | facilitadora de las sub-sesiones ENTR-02 y ENTR-13 | Huilcapi León Denisses Fabiola | 21/09/2026| `huilcapi` |
-| *(analista líder)* | facilitador de la sub-sesión ENTR-01 | | | |
+| *(analista líder)* | facilitador de la sub-sesión ENTR-01 | Villafuerte Rosero Allan Noe | 21/09/2026 | `AlanNVR` |
 
 **Lo que esta firma no es.** No sustituye la conformidad de los participantes.
 Los tres participantes **no firmaron** las actas: lo que consta de su posición
