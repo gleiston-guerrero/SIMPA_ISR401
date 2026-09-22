@@ -1,0 +1,9 @@
+C3 · muestra de 45 fragmentos (semilla 20260921); archivos: codificacion_C3_Arboleda.xlsx, codificacion_C3_Macias.xlsx
+  codificacion_C3_Arboleda.xlsx: codificador declarado = ['Arboleda Yanza Francisco Javier']; autores git = ['farboleday-wq']
+  codificacion_C3_Macias.xlsx: codificador declarado = ['Macías Herrera Josthyn Esteban']; autores git = ['jmaciasherr4']
+  Arboleda vs Macias: acuerdo observado 66.7% · kappa 0.655 (IC 95 % 0.506 a 0.789)
+  Arboleda vs ORIGINAL: acuerdo observado 57.8% · kappa 0.566 (IC 95 % 0.409 a 0.698)
+  Macias vs ORIGINAL: acuerdo observado 53.3% · kappa 0.521 (IC 95 % 0.375 a 0.653)
+  desacuerdos registrados: 55 (ver desacuerdos_C3.csv)
+Limitación: 95 códigos y solo 45 fragmentos: el kappa es inestable; interpretar con el IC 95 %.
+Reglas de C3: sin problemas detectados.
