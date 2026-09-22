@@ -480,7 +480,7 @@ El despliegue de Netlify se publica manualmente y no está enlazado al repositor
 
 ## A1 — Repetir la evaluación con evaluadores externos
 
-**Estado operativo:** NO INICIADA
+**Estado operativo:** NO EJECUTADA POR FALTA DE TIEMPO (avance real documentado, sin evaluación completa)
 **Estado de rúbrica:** pendiente de mapeo
 **Peso:** 0,80 pts
 **Responsable(s):** Sin asignar (fuera del núcleo de la rev. 8)
@@ -490,7 +490,7 @@ El despliegue de Netlify se publica manualmente y no está enlazado al repositor
 Las tres hojas de puntuación se subieron el 12/09 con 25 y 27 segundos de diferencia. En 131 de 150 filas las puntuaciones siguen un ciclo por posición de fila; en 139 de 150 las cinco dimensiones valen lo mismo; los comentarios de dos evaluadores citan términos que no aparecen en los requisitos; el registro de evaluadores fecha la evaluación antes de que existieran el archivo cegado y las instrucciones.
 
 ### Acción aplicada
-Ninguna todavía.
+Se consiguieron 3 evaluadores externos reales (EVA-A01, EVA-A02, EVA-A03), cada uno con consentimiento informado y declaración de ausencia de conflicto de interés firmados el 19/09/2026, todos con "No" en los 7 ítems de conflicto. No se alcanzó a completar la sesión de puntuación de los 47 requisitos por falta de tiempo antes del cierre del plan.
 
 ### Evidencia utilizada
 - Ninguna todavía.
@@ -512,7 +512,7 @@ Aún no ejecutada.
 - Ninguno todavía.
 
 ### Limitaciones
-No iniciada. No forma parte del núcleo del plan de ejecución rev. 8: la demanda del núcleo (28 h por persona) supera la capacidad disponible (~17 h por persona). Si no se ejecuta antes del cierre, se declara como no ejecutada por esta causa.
+Se avanzó la parte documental (consentimientos y declaraciones de 3 evaluadores reales, verificados uno por uno), pero no se ejecutó la evaluación de los 47 requisitos por falta de tiempo del equipo antes del cierre del plan. Se declara así, sin inventar puntuaciones.
 
 Qué haría falta: Evaluadores reales de otro paralelo, sin participación en el proyecto, con consentimiento firmado y declaración de conflicto de interés; cada evaluador sube su propia hoja o la sube un custodio ajeno al equipo. Depende de A2 y A3. La explicación escrita se entrega por correo aunque no se repita la evaluación.
 
