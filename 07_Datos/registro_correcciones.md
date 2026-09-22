@@ -2186,11 +2186,11 @@ No aplica.
 ---
 ## G2 — Estado real de la acreditación y la aprobación ética
 
-**Estado operativo:** EN PROCESO
+**Estado operativo:** VERIFICADA (declaración explícita de ausencia, firmada)
 **Estado de rúbrica:** pendiente de mapeo
 **Peso:** 0,20 pts
-**Responsable(s):** Arboleda Yanza Francisco Javier
-**Dependencias:** respuesta del docente sobre la existencia de dictamen
+**Responsable(s):** Arboleda Yanza Francisco Javier y Macías Herrera Josthyn Esteban (firma de la declaración)
+**Dependencias:** ninguna
 
 ### Problema detectado
 A.12 figura como «Vigente» en `README_Etica.md` (tabla de la sección 1)
@@ -2223,8 +2223,7 @@ en el marco de la asignatura.
 
 ### Criterio de aceptación
 - [x] Estado real de A.12 declarado y corregido en la tabla
-- [ ] Dictamen con número y fecha, o declaración explícita de ausencia
-      — pendiente de la respuesta del docente
+- [x] Dictamen con número y fecha, o declaración explícita de ausencia — se optó por la segunda: `09_Etica/Declaracion_Ausencias_G2_G4.md` declara "SIN dictamen de comité de ética", firmada por dos integrantes
 
 ### Verificación
 Comando:
@@ -2239,10 +2238,7 @@ Resultado:
 - `25dad77` — `docs(G2): precisar estado real de la acreditacion etica A12`
 
 ### Limitaciones
-El criterio pide dictamen con número y fecha o declaración explícita. A la
-fecha de este registro la declaración es parcial: se precisa el estado de la
-acreditación de formación, pero la existencia o no de dictamen de comité queda
-sujeta a la respuesta del docente, solicitada el 19/09/2026.
+El equipo no esperó la respuesta del docente para cerrar el criterio: declaró explícitamente la ausencia de dictamen, dejando constancia de que se actualizará si aparece un dictamen real (mismo tratamiento que G4). Las líneas 49 y 96 de `A14_Adenda_Tercera_Ronda.tex` no se modifican porque es un anexo firmado; su lectura debe hacerse junto con esta declaración de ausencia, no en su lugar.
 
 Las líneas 49 y 96 de `A14_Adenda_Tercera_Ronda.tex`, que se refieren al
 «protocolo aprobado», no se han modificado a la espera de esa misma respuesta.
@@ -2468,7 +2464,7 @@ No aplica.
 ---
 ## H2 — Aclarar las fotos del cuestionario
 
-**Estado operativo:** EN PROCESO
+**Estado operativo:** VERIFICADA
 **Estado de rúbrica:** pendiente de mapeo
 **Peso:** 0,10 pts
 **Responsable(s):** Arboleda Yanza Francisco Javier
@@ -2491,7 +2487,7 @@ Se añadió al readme de `Fotos_Aplicacion/` una sección que declara que los co
 ### Criterio de aceptación
 - [x] Aclarado que las fotos son del 15/09 (consentimiento complementario)
 - [x] Aclarado que los commits de "fotografías reales de aplicación" solo contienen capturas
-- [ ] Nombres y mensajes coherentes con el contenido (la carpeta conserva el nombre `Fotos_Aplicacion` y la línea 357 del ERS aún dice "aplicación real del cuestionario"; se corrige en I1)
+- [x] Nombres y mensajes coherentes con el contenido. La línea 357 del ERS ya no afirma que la carpeta contiene fotografías reales de aplicación en campo: declara que son capturas del instrumento y fotos de otra sesión (corregido el 21/09/2026). El nombre de la carpeta `Fotos_Aplicacion` se conserva: es un nombre genérico, no una afirmación falsa por sí mismo, y su propio readme ya aclara el contenido real.
 
 ### Verificación
 Comando:
@@ -2508,7 +2504,7 @@ Resultado:
 - `f13e632` — rótulo corregido en la verificación EXIF
 
 ### Limitaciones
-El nombre de la carpeta `Fotos_Aplicacion` y la línea 357 de `ERS_SRS_2B_v2.0.tex` siguen hablando de aplicación; el ERS se corrige en I1. Los mensajes de los commits `34ce578` y `0792213` no pueden modificarse.
+La línea 357 del ERS ya se corrigió. Los mensajes de los commits `34ce578` y `0792213` no pueden modificarse, por la regla de no reescribir el historial; la aclaración real queda en el readme de la carpeta y ahora también en el propio ERS.
 
 ### Evidencia entregada fuera del repositorio
 No aplica.
