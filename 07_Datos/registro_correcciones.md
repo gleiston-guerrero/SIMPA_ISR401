@@ -1274,7 +1274,7 @@ No aplica.
 ---
 ## C3 — Doble codificación real
 
-**Estado operativo:** EN PROCESO (muestra e instrumento congelados; falta la codificación de cada persona)
+**Estado operativo:** VERIFICADA
 **Estado de rúbrica:** pendiente de mapeo
 **Peso:** 0,50 pts
 **Responsable(s):** Macías Herrera Josthyn Esteban y Arboleda Yanza Francisco Javier — cada uno desde su propia cuenta
@@ -1305,18 +1305,31 @@ La carpeta anterior se conserva como historial; el acuerdo vigente será el de e
 ### Criterio de aceptación
 - [x] Muestra congelada, aleatoria y reproducible, sin códigos a la vista
 - [x] Libro de códigos publicado antes que las hojas de codificación
-- [ ] Un archivo de codificación por persona, publicado desde su propia cuenta
-- [ ] Acuerdo observado y kappa con intervalo de confianza calculados por script
+- [x] Un archivo de codificación por persona, publicado desde su propia cuenta
+- [x] Acuerdo observado y kappa con intervalo de confianza calculados por script
 
 ### Verificación
 Comando (una vez subidos los dos archivos):
 
     python3 10_Autoria/doble_codificacion_C3/calcular_acuerdo_C3.py
 
-Resultado: pendiente de la codificación de cada persona.
+Resultado (`10_Autoria/doble_codificacion_C3/desacuerdos_C3.csv` para el detalle):
+
+    Arboleda vs Macías   : acuerdo observado 66.7 %  ·  kappa 0.655 (IC 95 % 0.506–0.789)
+    Arboleda vs ORIGINAL : acuerdo observado 57.8 %  ·  kappa 0.566 (IC 95 % 0.409–0.698)
+    Macías vs ORIGINAL   : acuerdo observado 53.3 %  ·  kappa 0.521 (IC 95 % 0.375–0.653)
+    Desacuerdos registrados: 55
+    Reglas de C3 (identidad de archivo/autor git): sin problemas detectados.
+
+El kappa entre codificadores (0,655) corresponde a acuerdo sustancial según
+los umbrales convencionales del área, con un intervalo de confianza amplio
+por el tamaño de la muestra frente al número de códigos posibles.
 
 ### Commits
-- `b35091d`
+- `b35091d` — preparación de muestra e instrumento
+- `8ca5ed7` — codificación de Macías (autor `jmaciasherr4`)
+- `f7f6a8e` — codificación de Arboleda (autor `farboleday-wq`)
+- `39fb436` — resultado del cálculo de acuerdo y desacuerdos
 
 ### Limitaciones
 Con 95 códigos posibles y 45 fragmentos el kappa es inestable; por eso se reporta con su intervalo de confianza y no como cifra aislada.
